@@ -7,7 +7,7 @@ The General Modeling Network Specification (GMNS) defines a common human and mac
 How do I use GMNS?
 1.  Read the [__specification reference__](../../wiki) to learn about the GMNS format.
 2.	Look at our [__small examples__](Small_Network_Examples), including a freeway interchange, a portion of a multimodal city network, and a small city.
-3.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](Conversion_Tools) and [__validation__](NetworkX_Validation_Tools/Validation).  
+3.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](Conversion_Tools) and [__validation__](Validation_Tools).  
 
 ## GMNS Overview
 Version 0.80 includes the following features for use in static models:
