@@ -23,7 +23,7 @@ The following GMNS-formatted tables are output by the script:
 - LANE.csv
 - MOVEMENT.csv
  
- The script performs two main tasks: first, it converts the DynusT input files into CSV tables, and then manipulates those tables into GMNS format. The first task (converting to tables) was also separated into a stand-alone script called [DynusT/DynusT_to_CSV.R](DynusT_to_CSV.R).
+ The script performs two main tasks: first, it converts the DynusT input files into CSV tables, and then manipulates those tables into GMNS format. The first task (converting to tables) was also separated into a stand-alone script called [DynusT_to_CSV.R](DynusT/DynusT_to_CSV.R).
  
  Note the following limitations observed while testing the conversion:
  - DynusT allows a single default length for pocket lanes to be specified for the entire network. However, links may exist in a dataset where pocket lanes were present but the length of the link was less than the specified pocket-lane length. The result is a segment where the `start_distance` is negative.

@@ -7,7 +7,7 @@ These scripts are a work-in-progress; they were originally written using a prior
 ## Requirements:
 - [Python](https://www.python.org/downloads/)
 - The [NetworkX](https://networkx.github.io/) package for Python (for directed_validation.py and undirected_validation.py)
-- A GMNS network with each table as its own CSV file. The field names in each table should match the specification exactly (all lower case). For examples, see the [Small Network Examples](../../Small_Network_Examples) folder.
+- A GMNS network with each table as its own CSV file. The field names in each table should match the specification exactly (all lower case). For examples, see the [Small Network Examples](../Small_Network_Examples) folder.
 	- All required fields (and, for some validation tests, certain optional fields; see details below) must contain data.
 	- The user will need to modify each script to include the path and filenames to these tables instead of the example tables.
 
