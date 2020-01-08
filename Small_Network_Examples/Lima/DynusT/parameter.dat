@@ -1,0 +1,51 @@
+800 =  SIR1:SIR (speed influence region) length (ft) for Freeway (LT = 1,2,6,8,9,10)
+500 =  SIR2:SIR (speed influence region) length (ft) for Arterials (LT= 5,7)
+500 =  SIR3:SIR length for on ramp (LT=3)
+500 =  SIR4:SIR length for off ramp (LT=4)
+1 =  Basepce:Reduce PCE during 1st half of iterations for all vehicle types
+80000 =  Entrymx:Maximum entry volume rate per lane-mile per hour. It is the max vehicles can be loaded for each link
+1.00 =  Multf:Factor to adjust multiplication factor in demand.dat for all classes.
+1 =  Vehtraj:1 - output final vehtrajectory, 0=no
+1 =  Amsflag:0 - Original meso simulation : 1- AMS (default)
+0 =  Asgflag:In assignment module: 0 - Keep the initial path, 1- discard initial path
+1.00 =  Vhpcereturn:Ratio of number ite reduced mtnum will be restored.
+0 =  Gencheck:enforce at least one generation link for a zone 0:no enforcement 1:enforce
+1 =  Keppcls:Keep veh cls in vehicle.dat. 0= use new class distribution defined in scenario/usercalss.dat, 1= original
+1 =  keeptype:Keep veh cls in vehicle.dat. 0= use new type distribution defined in scenario/userclass.dat, 1= original
+1000000 =  Tmparysize:size of the temp arrays for storing vehicle paths when path.dat is used.
+1.05 =  Nv_vebuffer:memory buffer ratio for storing vehicles
+0 =  Logout:flag to write to runlog.dat for debugging. 1: write
+1 =  Trajalt:flag to write AltVeh.dat, AltPath.dat, AltEnQ.dat, AltTime.dat
+0 =  IncClsFlag:0: enable capacity reduction in work zone and incidents; 1: ignore
+200 =  Ibaytmp:Average bay length in feet
+1800 =  LTSat:Left-turn saturation flow rate per lane-mile
+1800 =  RTSat:Right-turn saturation flow rate per lane-mile
+5.00 =  T_Cr:critical gap for left-turn vehicles (sec)
+1.50 =  MivaScale:Scaling factor for GFV assignment approach. The higher the more likely the vehicles will be assigned to shortest path. Recommended value in range between 1 to 3
+0.50 =  FactorCap:Max 127372374f total flow that can be assignment to one single routes for one ODT.
+0 =  Shelter_use:0: no shelter.dat to be used for evacuation. 1: with shelter
+12 =  nThreads:number of threads
+0 = FuelOut:Write fuel consumption in ouput_vehicle.dat (require fuel_par.dat)
+0 =  DemFormat:Demand.dat format. 0: old 6-column format 1=free format
+0 = ReadTransit:Read Transit flag. 0: no read
+0 = GenTransit:1: Generate Transit from TransitRouteSchedule.dat
+1 = TflSwitch:Traffic flow model switch. 0: old format. 1: new format with 3 number in 1st line of each model
+1 =  ReadHistArr:Read habitual path node arrival time (AltPath_Pre.dat AltTime_Pre.dat, AltHist_Pre.dat). This activates the diversion if vehicle is delayed when comparing with the baseline case.
+0 =  DllFlagRM:DLLFlagRM ramp meter. 0: Use static library; 1: Fortran DLL; 2: CDLL
+15.00 =  DelTolMean:Delay tolerance mean (min) for re-assign
+2.00 =  DelTolStd:Delay tolerance std (min) for re-assign
+500 =  Maxnu_pa:size of temporary veh path array (number of nodes)
+0 =  KnowTemp:Capacity Aware if transit is present. It is for P&R-available spot and is only valid for intermodal transfer. 0: not capacity aware; 1: capacity aware
+122.00 =  InfoStartTime:Start Time of Pre-trip and en-route information for diversion
+0 = SkimFlag:skim  switch: 0: no skim table, 1: with skim table by epoch interval
+0 =  MixedVehGenMap:output switch for mixed vehicle generation id mapping (output_vehicle_map.dat)
+0 =  MOVESFlag:Switch for MOVES outputs. 0: no output, 1: output MOVES related outputs (require moves_input.dat)
+2 = VehFormat:0=original short format 1=original long format 2=new long format
+500 =  v_IncreaseSize:VehArray Increase Size by nodes
+0 = Reliability_Flag:compute reliability Flag (require reliability_input.dat)
+0 =  assignMode_Flag:Assignment Mode
+0 =  Turbo_Flag:turbo flag 0=less optimal paths 1=more optimal paths
+0 =  VASTO1:BDI dll flag
+0 =  VASTO2:whether produce traj and dich para within ABMS route choice
+1 = binaryFlag:1: link based MOE ouput as well as traj are binary
+1 = indiAssignFlag:1=use individual VOT assignment

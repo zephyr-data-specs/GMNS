@@ -1,0 +1,55 @@
+lane_id,road_link_id,segment_id,lane_number,allowed_uses,barrier_r,barrier_l,width,notes
+2610,384306521,101,-1,ALL,,,,EB LT pocket
+2611,384306521,,1,ALL,,,,EB Thru lane
+2612,384306521,104,2,ALL,,,,EB RT Pocket
+2613,384306521,,3,BIKE,,,,EB Bike Lane
+1921,576786011,,1,BIKE,,,,Contraflow NB bike lane
+1211,356677798,,1,ALL,,,,WB Thru lane
+1212,356677798,103,2,ALL,,,,WB RT lane
+1213,356677798,,3,BIKE,,,,WB Bike lane
+2221,86154099,,1,ALL,,,,SB Thru lane
+2222,86154099,,2,BIKE,,,,SB Bike Thru lane
+2223,86154099,102,3,ALL,,,,SB RT pocket
+2224,86154099,102,4,BIKE,,,,SB RT bike pocket
+1911,34065677,,1,ALL,,,,SB/WB Thru lane
+1912,34065677,,2,BIKE,,,,SB/WB Bike lane
+2621,533596803,,1,ALL,,,,WB Thru lane
+2622,533596803,,2,BIKE,,,,WB Bike lane
+2211,8615409,,1,ALL,,,,NB thru lane
+2212,8615409,,2,BIKE,,,,NB bike lane
+1811,356677797,,1,ALL,,,,EB Thru lane
+1812,356677797,,2,ALL,,,,EB Thru lane
+1813,356677797,,3,BIKE,,,,EB Bike Lane
+9901,591217337,,1,ALL,,,,EB Main (Vassar to Ames)
+9902,591217337,,2,BIKE,,,,EB Main (Vassar to Ames) bike lane
+9903,370197761,,1,ALL,,,,WB Main (Ames to Vassar)
+9904,370197761,,2,BIKE,,,,WB Main (Ames to Vassar) bike lane
+9905,370197761,105,-1,ALL,,,,WB Main (Ames to Vassar) LT pocket
+9906,3566784619,,1,ALL,,,,EB Main (ames to 3rd)
+9907,3566784619,,2,BIKE,,,,EB Main (ames to 3rd) bike lane
+9908,35667846199,,1,ALL,,,,WB Main (ames to 3rd)
+9909,35667846199,,2,BIKE,,,,WB Main (ames to 3rd) bike lane
+9910,356674425,,1,ALL,,,,EB Thru lane
+9911,356674425,,2,ALL,,,,EB Thru lane
+9912,356674425,,3,BIKE,,,,EB Bike Lane
+9913,533596803,106,-1,ALL,,,,WB LT Pocket
+9914,533596803,110,-1,ALL,,,,"WB LT Pocket (mid-block to parking garage, associated w/ Location #3)"
+9915,356678461,,1,ALL,,,,EB Main
+9916,356678461,,2,BIKE,,,,EB Main bike lane
+9917,668954220,,1,BIKE,,,,Path west of Volpe SB
+9918,6689542209,,1,BIKE,,,,Path west of Volpe NB
+9919,42769910,,1,ALL,,,,Ames S of Main NB
+9920,427699109,,1,ALL,,,,Ames S of Main SB
+9921,8614848,,1,ALL,,,,Broadway EB (Galileo to Ames)
+9922,8614848,107,2,ALL,,,,Broadway EB (Galileo to Ames)  RT pocket
+9923,8614848,,3,BIKE,,,,Broadway EB (Galileo to Ames) bike lane
+9924,6689542229,,1,BIKE,,,,Ames cycletrack NB
+9925,668954222,,1,BIKE,,,,Ames cycletrack SB
+9926,426493082,108,-1,ALL,,,,Broadway WB LT pocket
+9927,426493082,,1,ALL,,,,Broadway WB
+9928,426493082,109,2,ALL,,,,Broadway second lane (disappears b/c construction)
+9929,426493082,,3,BIKE,,,,Broadway WB bike lane
+9930,302156851,,1,ALL,,,,Ames NB
+9931,3021568519,,1,ALL,,,,Ames SB
+9932,302156851,110,-1,ALL,,,,Ames NB LT pocket
+9933,3021568519,111,2,ALL,,,,Ames SB RT pocket

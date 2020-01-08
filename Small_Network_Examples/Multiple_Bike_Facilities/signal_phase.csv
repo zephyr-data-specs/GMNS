@@ -1,0 +1,67 @@
+node_id,movement_id,offroad_link_id,phase_number,protection,notes
+22,2201,,5,Protected,EB Left turn
+22,2202,,5,Protected,EB Left turn (Bike)
+22,2203,,6,Protected,EB Thru
+22,2204,,6,Protected,EB Thru
+22,2205,,6,Protected,EB Thru (Bike)
+22,2206,,6,Permissive,EB Right
+22,2207,,6,Permissive,EB Right (Bike)
+22,2209,,5,Protected,NB Thru (Bike)
+22,2210,,5,Permissive,NB Right (Bike)
+22,2211,,6,Protected,WB Thru
+22,2212,,4,Protected,WB Right
+22,2213,,6,Protected,WB Thru (Bike)
+22,2214,,4,Protected,WB Right (Bike)
+22,2214,,6,Permissive,WB Right (Bike)
+22,2215,,5,Protected,SB Right
+22,2216,,5,Protected,SB Right (Bike)
+22,2217,,4,Protected,SB Thru
+22,2218,,4,Protected,SB Thru (Bike)
+22,2219,,4,Protected,SB Left
+22,2220,,4,Protected,SB Left (Bike)
+11,1101,,1,Protected,Ames NB R to Broadway
+11,1102,,8,Protected,Ames NB L to Broadway
+11,1103,,8,Protected,Ames NB L to Broadway
+11,1104,,8,Protected,Ames Cycletrack to bike path
+11,1105,,8,Permissive,Ames Cycletrack L to Broadway
+11,1106,,8,Permissive,Ames Cycletrack R to Broadway
+11,1106,,1,Protected,Ames Cycletrack R to Broadway
+11,1107,,2,Protected,Broadway EB thru @ Ames
+11,1108,,8,Protected,Broadway EB R to Ames
+11,1109,,2,Protected,Broadway EB thru @ Ames (bike)
+11,1110,,8,Protected,Broadway EB R to Ames (bike)
+11,1110,,2,Permissive,Broadway EB R to Ames (bike)
+11,1111,,2,Permissive,Broadway EB L to Volpe path
+11,1112,,1,Protected,Broadway WB L to Ames
+11,1113,,6,Protected,Broadway WB thru @ Ames
+11,1114,,6,Protected,Broadway WB thru @ Ames
+11,1115,,6,Protected,Broadway WB thru @ Ames (Bike)
+11,1116,,6,Permissive,Broadway WB R to Volpe path
+11,1117,,2,Permissive,Broadway WB L to Ames cycletrack
+11,1118,,8,Protected,Volpe path to Ames cycletrack
+11,1119,,1,Permissive,Volpe path to Broadway WB
+11,1120,,8,Permissive,Volpe path to Broadway EB
+7,701,,8,Permissive,Ames cycletrack thru to Ames roadway
+7,702,,8,Permissive,Ames cycletrack to Main EB
+7,703,,8,Permissive,Ames cycletrack to Main WB
+7,704,,4,Protected,Ames thru @ Main
+7,705,,4,Permissive,Ames SB L to Main
+7,706,,4,Permissive,Ames SB R to Main
+7,707,,2,Protected,Main WB thru @ Ames
+7,708,,2,Permissive,Main WB L to Ames 
+7,709,,2,Permissive,Main WB R to Ames
+7,710,,2,Protected,Main WB thru @ Ames (Bike)
+7,711,,2,Permissive,Main WB L to Ames (bike)
+7,712,,2,Permissive,Main WB R to Ames cycletrack
+7,713,,4,Protected,Ames NB thru @ Main
+7,714,,4,Permissive,Ames NB L to Main
+7,715,,4,Permissive,Ames NB R to Main
+7,716,,8,Protected,Ames NB thru @ Main (to cycletrack)
+7,717,,8,Permissive,Ames NB L to Main (bike)
+7,718,,8,Permissive,Ames NB R to Main (bike)
+7,719,,2,Protected,Main EB thru @ Ames
+7,720,,2,Permissive,Main EB L to Ames
+7,721,,2,Permissive,Main EB R to Ames
+7,722,,2,Protected,Main EB thru @ Ames (bike)
+7,723,,2,Permissive,Main EB L to Ames cycletrack
+7,724,,2,Permissive,Main EB R to Ames (bike)

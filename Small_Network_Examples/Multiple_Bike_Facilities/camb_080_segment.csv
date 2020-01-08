@@ -1,0 +1,13 @@
+segment_id,road_link_id,ref_node,start_lr,end_lr,capacity,free_speed,lanes_added_l,lanes_added_r,bike_facility,ped_facility,parking,allowed_uses,other fields
+101,384306521,11,572,932,,,1,,,,,,"left turn pocket, Broadway EB"
+102,86154099,29,854,1024,,,,1,,,,,"right turn pocket, Third St SB"
+103,356677798,27,215,415,,,,1,,,None,," right turn pocket, Broadway WB"
+104,384306521,11,762,932,,,1,1,,,None,,"right turn pocket, Broadway EB"
+105,370197761,7,88,288,,,1,,,,None,,"Left turn pocket, Main WB @ Vassar"
+106,533596803,22,732,932,,,1,,,,,,"LT pocket, Broadway WB @ Ames"
+107,8614848,3,458,708,,,1,,,,None,,"RT pocket, Broadway EB @ Ames"
+108,426493082,11,315,615,,,1,,,,,,"LT pocket, Broadway WB @ Galileo"
+109,426493082,11,0,200,,,,-1,,,,,second lane on Broadway (rest of it is closed for construction)
+110,533596803,22,450,550,,,1,,,,,,"LT pocket, Broadway WB mid-block (to garage)"
+111,3021568519,11,341,541,,,,1,,,,,Ames NB RT pocket (length estimated)
+112,302156851,7,341,541,,,,1,,,,,Ames SB RT pocket (length estimated)

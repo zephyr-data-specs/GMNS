@@ -1,0 +1,5 @@
+segment_id,road_link_id,ref_node,start_lr,end_lr,capacity,free_speed,lanes,bike_facility,ped_facility,parking,allowed_uses,other fields
+101,578761,4,1650,2100,,,4,,,,," left turn lanes, N1344 SB"
+102,578600,11,800,1100,,,3,,,,," multiple lanes, Ramp from I-95 SB"
+103,578597,13,0,200,,,2,,,,," multiple lanes, Ramp to I-95 SB"
+104,578570,9,200,500,,,4,,,,, right turn pocket for ramp
