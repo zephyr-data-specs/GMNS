@@ -3,7 +3,7 @@
 
 #### Setup ####
 rm(list = ls())
-setwd("~/GitHub/network_data_specification/Small_Network_Examples/Lima/DynusT")
+setwd("~/GitHub/GMNS/Small_Network_Examples/Lima/DynusT")
 
 library(dplyr) # install.packages(c("dplyr","readr","data.table"))
 library(data.table) # for fwrite table writing

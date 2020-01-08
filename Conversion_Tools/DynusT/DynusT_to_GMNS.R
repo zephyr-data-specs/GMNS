@@ -3,7 +3,7 @@
 
 #### Setup ####
 rm(list = ls())
-setwd("~/GitHub/network_data_specification/Small_Network_Examples/Lima/DynusT") # Once the GitHub directory is mapped to your local user 'Documents' folder.
+setwd("~/GitHub/GMNS/Small_Network_Examples/Lima/DynusT") # Once the GitHub directory is mapped to your local user 'Documents' folder.
 # install.packages(c("dplyr","readr","data.table"))
 library(dplyr)
 library(readr)
@@ -291,7 +291,7 @@ MOVEMENT <- MOVEMENT_joined %>% mutate(ib_lane = ifelse(type == "U-Turn" | type 
 sapply(MOVEMENT, class)
 
 #### Output the converted Datasets ####
-data.loc <- "~/GitHub/network_data_specification/Small_Network_Examples/Lima/GMNS"
+data.loc <- "~/GitHub/GMNS/Small_Network_Examples/Lima/GMNS"
 fwrite(NODE, file.path(data.loc, "NODE.csv"), row.names = F)
 fwrite(LINK_GEOMETRY, file.path(data.loc, "LINK_GEOMETRY.csv"), row.names = F)
 fwrite(ROAD_LINK, file.path(data.loc, "ROAD_LINK.csv"), row.names = F)
