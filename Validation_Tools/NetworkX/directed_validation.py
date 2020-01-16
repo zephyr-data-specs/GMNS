@@ -13,8 +13,8 @@ import networkx as nx
 import pandas as pd
 
 # importing the GNMS node and link files
-df_nodes = pd.read_csv(r'camb_080_node.csv', index_col='node_id') # Replace 'camb_nodes.csv' with the path to your nodes file
-df_edges = pd.read_csv(r'camb_080_road_link.csv', index_col='road_link_id') # Replace 'camb_links.csv' with the path to your links file
+df_nodes = pd.read_csv(r'node.csv', index_col='node_id') # Replace with the path to your nodes file
+df_edges = pd.read_csv(r'road_link.csv', index_col='road_link_id') # Replace with the path to your links file
 
 df_nodes['node_id'] = df_nodes.index
 df_edges['road_link_id'] = df_edges.index

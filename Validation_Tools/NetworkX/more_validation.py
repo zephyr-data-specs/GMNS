@@ -16,12 +16,12 @@ import numpy as np
 import pandas as pd
 
 # importing the GNMS node and link files
-df_nodes = pd.read_csv('camb_080_node.csv',index_col='node_id') # Replace with the path to your node file
-df_edges = pd.read_csv('camb_080_road_link.csv',index_col='road_link_id') # Replace with the path to your road_link file
-df_link_geom = pd.read_csv('camb_080_link_geometry.csv',index_col='link_geometry_id') # Replace with the path to your link_geometry file
-df_lanes = pd.read_csv('camb_080_lane.csv',index_col='lane_id') # Replace with the path to your lane file
-df_mvts = pd.read_csv('camb_080_movement.csv',index_col='movement_id') # Replace with the path to your movement file
-df_segs  = pd.read_csv('camb_080_segment.csv', index_col='segment_id') # Replace with the path to your segment file
+df_nodes = pd.read_csv('node.csv',index_col='node_id') # Replace with the path to your node file
+df_edges = pd.read_csv('road_link.csv',index_col='road_link_id') # Replace with the path to your road_link file
+df_link_geom = pd.read_csv('link_geometry.csv',index_col='link_geometry_id') # Replace with the path to your link_geometry file
+df_lanes = pd.read_csv('lane.csv',index_col='lane_id') # Replace with the path to your lane file
+df_mvts = pd.read_csv('movement.csv',index_col='movement_id') # Replace with the path to your movement file
+df_segs  = pd.read_csv('segment.csv', index_col='segment_id') # Replace with the path to your segment file
 df_nodes['node_id'] = df_nodes.index
 df_edges['road_link_id'] = df_edges.index
 df_link_geom['link_geometry_id'] = df_link_geom.index
