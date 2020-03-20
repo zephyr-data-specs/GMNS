@@ -292,12 +292,12 @@ sapply(MOVEMENT, class)
 
 #### Output the converted Datasets ####
 data.loc <- "~/GitHub/GMNS/Small_Network_Examples/Lima/GMNS"
-fwrite(NODE, file.path(data.loc, "NODE.csv"), row.names = F)
-fwrite(LINK_GEOMETRY, file.path(data.loc, "LINK_GEOMETRY.csv"), row.names = F)
-fwrite(ROAD_LINK, file.path(data.loc, "ROAD_LINK.csv"), row.names = F)
-fwrite(SEGMENT, file.path(data.loc, "SEGMENT.csv"), row.names = F)
-fwrite(LANE, file.path(data.loc, "LANE.csv"), row.names = F)
-fwrite(MOVEMENT, file.path(data.loc, "MOVEMENT.csv"), row.names = F)
+fwrite(NODE, file.path(data.loc, "node.csv"), row.names = F)
+fwrite(LINK_GEOMETRY, file.path(data.loc, "link_geometry.csv"), row.names = F)
+fwrite(ROAD_LINK, file.path(data.loc, "road_link.csv"), row.names = F)
+fwrite(SEGMENT, file.path(data.loc, "segment.csv"), row.names = F)
+fwrite(LANE, file.path(data.loc, "lane.csv"), row.names = F)
+fwrite(MOVEMENT, file.path(data.loc, "movement.csv"), row.names = F)
 
 # Some notes on fwrite()
 # # write.csv won't handle the sequences in the table
