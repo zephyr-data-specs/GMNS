@@ -1,4 +1,4 @@
-lane_id,road_link_id,segment_id,lane_number,allowed_uses,barrier_r,barrier_l,width,notes
+lane_id,road_link_id,segment_id,lane_num,allowed_uses,r_barrier,l_barrier,width,notes
 527001,578527,,1,AUTO,,,,Ramp to rejoin I-95 SB
 571001,578571,,1,AUTO,,,,Lane for US3 (or rejoin I-95 SB)
 597001,578597,,1,AUTO,,,,"Ramp from N1344 to US3, I-95"

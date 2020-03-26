@@ -1,4 +1,4 @@
-movement_id,node_id,name,ib_link,ib_lane,ob_link,ob_lane,type,penalty,speed,capacity,control,notes
+mvmt_id,node_id,name,ib_link_id,ib_lane,ob_link_id,ob_lane,type,penalty,speed,capacity,ctrl_type,notes
 1,13,,578761,-1,578597,1,LEFT,,,,Signal,SB Left Turn
 2,13,,578761,1,578597,2,LEFT,,,,Signal,SB Left Turn
 3,13,,578761,2,5785709,1,THRU,,,,Signal,SB Thru
