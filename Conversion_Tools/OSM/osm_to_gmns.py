@@ -100,7 +100,7 @@ gdf_nodes_joined = gdf_nodes_joined.to_crs('epsg:4326')
 gdf_nodes_joined.lon = gdf_nodes_joined.geometry.x
 gdf_nodes_joined.lat = gdf_nodes_joined.geometry.y
 
-NODE = pd.DataFrame(columns = ["node_id", "name", "x_coord", "y_coord", "z_coord", "node_type", "control_type", "zone"])
+NODE = pd.DataFrame(columns = ["node_id", "name", "x_coord", "y_coord", "z_coord", "node_type", "ctrl_type", "zone"])
 NODE["node_id"] = gdf_nodes_joined.index_right
 NODE["x_coord"] = gdf_nodes_joined.lon
 NODE["y_coord"] = gdf_nodes_joined.lat
@@ -111,9 +111,9 @@ NODE.to_csv("node.csv")
 # next, link_geometry, which remains unchanged (except for the links that were removed for being within an intersection)
 # this does create some GIS topology issues (that is, the geometries aren't all physically connected)
 # but we don't use the geometry except for visualization, so there isn't an effect on the rest of GMNS 
-LINK_GEOMETRY = pd.DataFrame(columns = ["link_geometry_id", "name", "facility_type", "grade", "geometry", "length", "row_width", "jurisdiction"])
-LINK_GEOMETRY["link_geometry_id"] = gdf_edges.index
-LINK_GEOMETRY = LINK_GEOMETRY.set_index("link_geometry_id")
+LINK_GEOMETRY = pd.DataFrame(columns = ["link_geom_id", "name", "geometry", "length", "row_width", "jurisdiction"])
+LINK_GEOMETRY["link_geom_id"] = gdf_edges.index
+LINK_GEOMETRY = LINK_GEOMETRY.set_index("link_geom_id")
 LINK_GEOMETRY["name"] = gdf_edges.name
 LINK_GEOMETRY["facility_type"] = gdf_edges.highway_x
 LINK_GEOMETRY["geometry"] = gdf_edges.geometry
@@ -128,36 +128,36 @@ LINK_GEOMETRY.to_csv("link_geometry.csv")
 # also,  osmnx automatically handles the oneway tag from OSM data and 
 # reverses any geometry so direction of digitization is always direction of oneway travel.
 
-ROAD_LINK_for = pd.DataFrame(columns = ["link_id", "name", "from_node", "to_node", "link_geometry_id", "facility_type", "shapepoint_flag", "capacity", "free_speed", "speed_limit","lanes", "bike_facility", "ped_facility", "parking", "allowed_uses"])
+ROAD_LINK_for = pd.DataFrame(columns = ["road_link_id", "name", "from_node", "to_node", "link_geom_id", "dir_flag", "capacity", "free_speed","lanes", "bike_facility", "ped_facility", "parking", "allowed_uses", "facility_type", "grade"])
 # first in the forward direction
 ROAD_LINK_for["name"] = gdf_edges.name
 ROAD_LINK_for["from_node"] = gdf_edges.u
 ROAD_LINK_for["to_node"] = gdf_edges.v
-ROAD_LINK_for["link_geometry_id"] = gdf_edges.index
+ROAD_LINK_for["link_geom_id"] = gdf_edges.index
 ROAD_LINK_for["facility_type"] = gdf_edges.highway_x
-ROAD_LINK_for["shapepoint_flag"] = 1
-ROAD_LINK_for["speed_limit"] = gdf_edges.maxspeed
+ROAD_LINK_for["dir_flag"] = 1
+ROAD_LINK_for["free_speed"] = gdf_edges.maxspeed
 ROAD_LINK_for["lanes"] = gdf_edges.lanes
 # may be able to get more attributes by editing ox.settings.useful_tags_path
 ROAD_LINK_for = ROAD_LINK_for.reset_index(drop=True)
 
-ROAD_LINK_rev = pd.DataFrame(columns = ["link_id", "name", "from_node", "to_node", "link_geometry_id", "facility_type", "shapepoint_flag", "capacity", "free_speed", "speed_limit","lanes", "bike_facility", "ped_facility", "parking", "allowed_uses"])
+ROAD_LINK_rev = pd.DataFrame(columns = ["road_link_id", "name", "from_node", "to_node", "link_geom_id", "dir_flag", "capacity", "free_speed","lanes", "bike_facility", "ped_facility", "parking", "allowed_uses", "facility_type", "grade"])
 # now do the same thing but only for links that have flow in the reverse direction (two-way streets)
 gdf_edges_rev = gdf_edges[gdf_edges["oneway"]==False]
 ROAD_LINK_rev["name"] = gdf_edges_rev.name
 ROAD_LINK_rev["from_node"] = gdf_edges_rev.v
 ROAD_LINK_rev["to_node"] = gdf_edges_rev.u
-ROAD_LINK_rev["link_geometry_id"] = gdf_edges_rev.index
+ROAD_LINK_rev["link_geom_id"] = gdf_edges_rev.index
 ROAD_LINK_rev["facility_type"] = gdf_edges_rev.highway_x
-ROAD_LINK_rev["shapepoint_flag"] = -1
-ROAD_LINK_rev["speed_limit"] = gdf_edges_rev.maxspeed
+ROAD_LINK_rev["dir_flag"] = -1
+ROAD_LINK_rev["free_speed"] = gdf_edges_rev.maxspeed
 ROAD_LINK_rev["lanes"] = gdf_edges_rev.lanes
 ROAD_LINK_rev = ROAD_LINK_rev.reset_index(drop=True)
 
 ROAD_LINK = ROAD_LINK_for.append(ROAD_LINK_rev, ignore_index=True)
-ROAD_LINK = ROAD_LINK.sort_values(by = ['link_geometry_id']).reset_index(drop = True)
-ROAD_LINK["link_id"] = ROAD_LINK.index
-ROAD_LINK = ROAD_LINK.set_index("link_id")
+ROAD_LINK = ROAD_LINK.sort_values(by = ['link_geom_id']).reset_index(drop = True)
+ROAD_LINK["road_link_id"] = ROAD_LINK.index
+ROAD_LINK = ROAD_LINK.set_index("road_link_id")
 ROAD_LINK.to_csv("road_link.csv")
 
 # (because osmnx combines some OSM links automatically cleaning the network up,
