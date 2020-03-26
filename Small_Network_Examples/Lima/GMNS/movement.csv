@@ -1,4 +1,4 @@
-movement_id,node_id,name,ib_link,ib_lane,ob_link,ob_lane,type,penalty,capacity,control
+mvmt_id,node_id,name,ib_link_id,ib_lane,ob_link_id,ob_lane,type,penalty,capacity,ctrl_type
 1,1,,100002 1,1,1 100002,1,U-Turn,,,
 2,1,,101990 1,1,1 101990,1,U-Turn,,,
 3,1,,101997 1,1,1 101997,1,U-Turn,,,

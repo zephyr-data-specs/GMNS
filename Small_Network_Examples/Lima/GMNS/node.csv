@@ -1,4 +1,4 @@
-node_id,name,x_coord,y_coord,z_coord,node_type,control_type,zone
+node_id,name,x_coord,y_coord,z_coord,node_type,ctrl_type,zone
 1,,1523373,1003235,,,,1
 2,,1523873,1003225,,,,2
 3,,1524263,1003205,,,,3

@@ -1,4 +1,4 @@
-lane_id,road_link_id,segment_id,lane_number,allowed_uses,barrier_r,barrier_l,width
+lane_id,road_link_id,segment_id,lane_num,allowed_uses,r_barrier,l_barrier,width
 1,1 100002,,1,,,,
 2,1 101990,,1,,,,
 3,1 101997,,1,,,,

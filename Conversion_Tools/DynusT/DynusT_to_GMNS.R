@@ -62,7 +62,7 @@ DynusTControlType <- data.frame(ControlType = 1:6
 
 #### Establish Business Rules and Convert DynusT to GMNS ####
 ## NODE
-NODE_names <- c("node_id", "name", "x_coord", "y_coord", "z_coord", "node_type", "control_type", "zone")
+NODE_names <- c("node_id", "name", "x_coord", "y_coord", "z_coord", "node_type", "ctrl_type", "zone")
 NODE <- data.frame(matrix(NA, ncol = length(NODE_names), nrow = nrow(xy), dimnames = list(1:nrow(xy), NODE_names)))
 
 xy <- xy %>% left_join(node.data, by = "Node")
@@ -89,10 +89,10 @@ od <- ab[,c("From","To")]
 od <- od[!duplicated(t(apply(od, 1, sort))),] # update od table to unique pairs
 od <- od %>% left_join(ab %>% dplyr::select("From","To", "Num_Pair", "Length", "Grade"), by = c("From","To"))
 
-LINK_GEOMETRY_names <- c("link_geometry_id", "name", "facility_type", "grade", "geometry", "length", "row_width", "jurisdiction", "a_node", "b_node", "ab_link", "ba_link")
+LINK_GEOMETRY_names <- c("link_geom_id", "name", "geometry", "length", "row_width", "jurisdiction", "a_node", "b_node", "ab_link", "ba_link")
 LINK_GEOMETRY <- data.frame(matrix(NA, ncol = length(LINK_GEOMETRY_names), nrow = nrow(od), dimnames = list(1:nrow(od), LINK_GEOMETRY_names)))
 
-LINK_GEOMETRY <- LINK_GEOMETRY %>% mutate(link_geometry_id = 1:nrow(od)
+LINK_GEOMETRY <- LINK_GEOMETRY %>% mutate(link_geom_id = 1:nrow(od)
                                           , a_node = od$From
                                           , b_node = od$To
                                           , ab_link = paste(a_node,b_node)
@@ -124,47 +124,47 @@ LINK_GEOMETRY <- LINK_GEOMETRY %>% mutate(name = Link_Name)
 LINK_GEOMETRY <- LINK_GEOMETRY %>% dplyr::select(LINK_GEOMETRY_names)
 
 # Get Link_Geometry_ID for the LINK_GEOMETRY table
-network <- network %>% left_join(LINK_GEOMETRY %>% dplyr::select(link_geometry_id, a_node, b_node), by = c("From" = "a_node", "To" = "b_node"))
-network <- network %>% left_join(LINK_GEOMETRY %>% dplyr::select(link_geometry_id, a_node, b_node), by = c("From" = "b_node", "To" = "a_node"))
+network <- network %>% left_join(LINK_GEOMETRY %>% dplyr::select(link_geom_id, a_node, b_node), by = c("From" = "a_node", "To" = "b_node"))
+network <- network %>% left_join(LINK_GEOMETRY %>% dplyr::select(link_geom_id, a_node, b_node), by = c("From" = "b_node", "To" = "a_node"))
 
 # exist duplicated rows?
-if(nrow(network[!is.na(network$link_geometry_id.x) & !is.na(network$link_geometry_id.y),]) > 0) {"Duplicates exist"} else {"No duplicates"}
-sum(!is.na(network$link_geometry_id.x)) + sum(!is.na(network$link_geometry_id.y)) # 6095
+if(nrow(network[!is.na(network$link_geom_id.x) & !is.na(network$link_geom_id.y),]) > 0) {"Duplicates exist"} else {"No duplicates"}
+sum(!is.na(network$link_geom_id.x)) + sum(!is.na(network$link_geom_id.y)) # 6095
 
 # combine the two columns to get the Link_Geometry_ID in network table.
-network$link_geometry_id = network$link_geometry_id.x
-network$link_geometry_id[is.na(network$link_geometry_id)] = network$link_geometry_id.y[is.na(network$link_geometry_id)]
+network$link_geom_id = network$link_geom_id.x
+network$link_geom_id[is.na(network$link_geom_id)] = network$link_geom_id.y[is.na(network$link_geom_id)]
 
 # (now we can add Facility Type to the LINK_GEOMETRY table)
 network_factypes <- network %>%
-  select(c("link_geometry_id", "LinkType")) %>%
-  distinct(link_geometry_id, .keep_all = TRUE)
+  select(c("link_geom_id", "LinkType")) %>%
+  distinct(link_geom_id, .keep_all = TRUE)
 
 # removing intermediate columns not in the specification
-LINK_GEOMETRY_names <- c("link_geometry_id", "name", "facility_type", "grade", "geometry", "length", "row_width", "jurisdiction")
+LINK_GEOMETRY_names <- c("link_geom_id", "name", "geometry", "length", "row_width", "jurisdiction")
 
-LINK_GEOMETRY <- LINK_GEOMETRY %>% 
-  left_join(network_factypes, by = c("link_geometry_id"="link_geometry_id")) %>%
-  left_join(DynusTLinkType, by = c("LinkType"="LinkType")) %>% 
-  mutate(facility_type = Desc) %>%
-  dplyr::select(LINK_GEOMETRY_names)
+LINK_GEOMETRY <- LINK_GEOMETRY %>% dplyr::select(LINK_GEOMETRY_names)
 
 
 ## ROAD_LINK
-ROAD_LINK_names <- c("road_link_id", "name", "from_node", "to_node", "link_geometry_id", "shapepoint_flag", "capacity", "free_speed", "speed_limit","lanes", "bike_facility", "ped_facility", "parking", "allowed_uses")
+ROAD_LINK_names <- c("road_link_id", "name", "from_node_id", "to_node_id", "link_geom_id", "dir_flag", "capacity", "free_speed","lanes", "bike_facility", "ped_facility", "parking", "allowed_uses", "facility_type", "grade")
 ROAD_LINK <- data.frame(matrix(NA, ncol = length(ROAD_LINK_names), nrow = nrow(network), dimnames = list(1:nrow(network), ROAD_LINK_names)))
 
 ROAD_LINK <- ROAD_LINK %>% mutate(road_link_id = network$Link_ID
                                   , name = network$Link_Name
                                   , from_node = network$From
                                   , to_node = network$To
-                                  , link_geometry_id = network$link_geometry_id
-                                  , shapepoint_flag = ifelse(!is.na(network$link_geometry_id.x), 1, -1)
-                                  , speed_limit = network$SpeedLimit # Suggest add SpeedLimit to road_link table.
+                                  , link_geom_id = network$link_geom_id
+                                  , dir_flag = ifelse(!is.na(network$link_geom_id.x), 1, -1)
+                                  , free_speed = network$SpeedLimit 
                                   , capacity = network$SaturationFlow # Is SaturationFlow equivalent to Capacity?
                                   , length = network$Length
                                   , lanes = network$Lanes
-)
+) %>% left_join(network_factypes, by = c("link_geom_id"="link_geom_id")) %>%
+  left_join(DynusTLinkType, by = c("LinkType"="LinkType")) %>% 
+  mutate(facility_type = Desc)
+
+
 
 
 ## SEGMENT
@@ -172,7 +172,7 @@ ROAD_LINK <- ROAD_LINK %>% mutate(road_link_id = network$Link_ID
 # Assumptions: any bay by default 200 ft (parameter.dat), create a location based on the LTBay or RTbay. This is based on network table.
 # Brian's comment: make the by default length as a global parameter. This parameter could change with road functional classes, speed limit, etc. to allow the simulation to work.
 
-SEGMENT_names <- c("segment_id", "road_link_id", "ref_node", "start_lr", "end_lr", "capacity", "free_speed", "bike_facility", "ped_facility", "parking", "allowed_uses")
+SEGMENT_names <- c("segment_id", "road_link_id", "ref_node_id", "start_lr", "end_lr", "capacity", "free_speed", "bike_facility", "ped_facility", "parking", "allowed_uses")
 SEGMENT <- data.frame(matrix(NA, ncol = length(SEGMENT_names), nrow = nrow(network), dimnames = list(1:nrow(network), SEGMENT_names)))
 
 pocket_length <- readLines("parameter.dat")[20] # line of parameter.dat that gets bay length
@@ -180,20 +180,20 @@ pocket_length <- parse_number(pocket_length) # extracts number from file line
 
 SEGMENT <- SEGMENT %>% mutate(segment_id = 1:nrow(network) # Primary key
                               , road_link_id = ROAD_LINK$road_link_id
-                              , ref_node = ifelse(network$LTBays != 0 | network$RTBays != 0, network$From, NA) # The From node is used as Reference Node, to match with SharedStreets.
+                              , ref_node_id = ifelse(network$LTBays != 0 | network$RTBays != 0, network$From, NA) # The From node is used as Reference Node, to match with SharedStreets.
                               , start_lr = network$Length - pocket_length # the pocket lane starts the default distance from the end of the link
                               , end_lr = network$Length # By default, pocket length ends at the to_node
                               , capacity = ROAD_LINK$capacity
-                              , lanes_added_l = network$LTBays
-                              , lanes_added_r = network$RTBays
+                              , l_lanes_added = network$LTBays
+                              , r_lanes_added = network$RTBays
                               
-) %>% filter(!is.na(ref_node)) # Filtering only links with pocket lane.
+) %>% filter(!is.na(ref_node_id)) # Filtering only links with pocket lane.
 
 
 
 ## LANE
 # Based on the network table
-LANE_name <- c("lane_id", "road_link_id", "segment_id", "lane_number", "allowed_uses", "barrier_r", "barrier_l", "width")
+LANE_name <- c("lane_id", "road_link_id", "segment_id", "lane_num", "allowed_uses", "r_barrier", "l_barrier", "width")
 LANE <- data.frame()
 
 # first do the thru lanes
@@ -201,29 +201,29 @@ for (index in 1:max(ROAD_LINK$lanes)) {
   lanesL <- ROAD_LINK %>% filter(lanes >= index)
   df <- data.frame(NA, lanesL$road_link_id, NA, index, lanesL$allowed_uses, NA, NA, NA)
   names(df) <- LANE_name
-  df <- df %>% mutate(lane_number = index)
+  df <- df %>% mutate(lane_num = index)
   LANE <- rbind(LANE, df)
 }
 
 # the right-turn pocket lanes
-rt_pockets <- SEGMENT %>% filter(lanes_added_r > 0) %>% 
+rt_pockets <- SEGMENT %>% filter(r_lanes_added > 0) %>% 
   left_join(ROAD_LINK, by = c("road_link_id" = "road_link_id")) %>%
-  dplyr::select(segment_id, road_link_id, lanes_added_r, lanes, allowed_uses.x)
+  dplyr::select(segment_id, road_link_id, r_lanes_added, lanes, allowed_uses.x)
 
-for (index in 1:max(rt_pockets$lanes_added_r)) {
-  lanesL <- rt_pockets %>% filter(lanes_added_r >= index)
+for (index in 1:max(rt_pockets$r_lanes_added)) {
+  lanesL <- rt_pockets %>% filter(r_lanes_added >= index)
   df <- data.frame(NA, lanesL$road_link_id, lanesL$segment_id, lanesL$lanes + index, lanesL$allowed_uses, NA, NA, NA)
   names(df) <- LANE_name
   LANE <- rbind(LANE, df)
 }
 
 # the left-turn pocket lanes
-lt_pockets <- SEGMENT %>% filter(lanes_added_l > 0) %>% 
+lt_pockets <- SEGMENT %>% filter(l_lanes_added > 0) %>% 
   left_join(ROAD_LINK,by = c("road_link_id" = "road_link_id")) %>%
-  dplyr::select(segment_id, road_link_id, lanes_added_l, allowed_uses.x)
+  dplyr::select(segment_id, road_link_id, l_lanes_added, allowed_uses.x)
 
-for (index in 1:max(lt_pockets$lanes_added_l)) {
-  lanesL <- lt_pockets %>% filter(lanes_added_l >= index)
+for (index in 1:max(lt_pockets$l_lanes_added)) {
+  lanesL <- lt_pockets %>% filter(l_lanes_added >= index)
   df <- data.frame(NA, lanesL$road_link_id, lanesL$segment_id, -1 * index, lanesL$allowed_uses, NA, NA, NA)
   names(df) <- LANE_name
   LANE <- rbind(LANE, df)
@@ -234,10 +234,10 @@ LANE <- LANE %>% arrange(road_link_id) %>% mutate (lane_id = row_number())
 
 ## MOVEMENT
 # MOVEMENT would need to use both DynusT's network and movement tables.
-MOVEMENT_name <- c("movement_id", "node_id", "name", "ib_link", "ib_lane", "ob_link", "ob_lane", "type", "penalty", "capacity", "control")
+MOVEMENT_name <- c("mvmt_id", "node_id", "name", "ib_link_id", "ib_lane", "ob_link_id", "ob_lane", "type", "penalty", "capacity", "ctrl_type")
 MOVEMENT <- data.frame()
 
-movement <- movement %>% mutate(ib_link = paste(From_Node, To_Node)) %>% mutate(U_Turn = if_else(U_Turn == 1, From_Node, U_Turn))
+movement <- movement %>% mutate(ib_link_id = paste(From_Node, To_Node)) %>% mutate(U_Turn = if_else(U_Turn == 1, From_Node, U_Turn))
 # U-turns can appear in both the O2_Node and the U_Turn field, we want to process the known U-Turns first
 loopFrame <- data.frame(c(names(movement)[3:6], names(movement)[8], names(movement)[7]),c("Left","Thru","Right","Other1","U-Turn","Other2"))
 names(loopFrame) <- c("Col","Dir")
@@ -251,13 +251,13 @@ for (index in 1:nrow(loopFrame)) {
   else {
     movementL <- movement
   } 
-  movementL <- movementL %>% filter(movementL[[toString(Col)]] != 0) %>% mutate(ob_link = paste(!!!syms(c("To_Node",toString(Col))))) # concatenate the To_Node and Turning Node
-  df <- data.frame(NA, movementL$To_Node, NA, movementL$ib_link, NA, movementL$ob_link, NA, Dir, NA, NA, NA)
+  movementL <- movementL %>% filter(movementL[[toString(Col)]] != 0) %>% mutate(ob_link_id = paste(!!!syms(c("To_Node",toString(Col))))) # concatenate the To_Node and Turning Node
+  df <- data.frame(NA, movementL$To_Node, NA, movementL$ib_link_id, NA, movementL$ob_link_id, NA, Dir, NA, NA, NA)
   names(df) <- MOVEMENT_name
   MOVEMENT <- rbind(MOVEMENT, df)
 }
 
-MOVEMENT <- MOVEMENT %>% arrange(node_id) %>% mutate(movement_id = row_number())
+MOVEMENT <- MOVEMENT %>% arrange(node_id) %>% mutate(mvmt_id = row_number())
 
 # now handle inputting the lanes
 # OK to use a list of lanes instead of creating new rows for each? Assuming yes
@@ -270,14 +270,14 @@ MOVEMENT <- MOVEMENT %>% arrange(node_id) %>% mutate(movement_id = row_number())
 
 # minimum and maximum lanes of a link or a segment
 minmax_lanes <- ROAD_LINK %>% left_join(SEGMENT, by = c("road_link_id" = "road_link_id")) %>%
-  dplyr::select(road_link_id, lanes, lanes_added_l, lanes_added_r) %>% 
-  mutate(minLane_IB = if_else(is.na(lanes_added_l),1,-1*lanes_added_l)) %>%
-  mutate(maxLane_IB = if_else(is.na(lanes_added_r), lanes, lanes + lanes_added_r)) %>%
+  dplyr::select(road_link_id, lanes, l_lanes_added, r_lanes_added) %>% 
+  mutate(minLane_IB = if_else(is.na(l_lanes_added),1,-1*l_lanes_added)) %>%
+  mutate(maxLane_IB = if_else(is.na(r_lanes_added), lanes, lanes + r_lanes_added)) %>%
   mutate(minLane_OB = 1) %>%
   mutate(maxLane_OB = lanes)
 
-MOVEMENT_joined <- MOVEMENT %>% left_join(dplyr::select(minmax_lanes, road_link_id, minLane_IB, maxLane_IB, lanes), by = c("ib_link" = "road_link_id")) %>%
-  left_join(dplyr::select(minmax_lanes, road_link_id, minLane_OB, maxLane_OB), by = c("ob_link" = "road_link_id"))
+MOVEMENT_joined <- MOVEMENT %>% left_join(dplyr::select(minmax_lanes, road_link_id, minLane_IB, maxLane_IB, lanes), by = c("ib_link_id" = "road_link_id")) %>%
+  left_join(dplyr::select(minmax_lanes, road_link_id, minLane_OB, maxLane_OB), by = c("ob_link_id" = "road_link_id"))
 
 MOVEMENT <- MOVEMENT_joined %>% mutate(ib_lane = ifelse(type == "U-Turn" | type == "Left", ifelse(minLane_IB<0, mapply(seq,rep(-1,nrow(MOVEMENT_joined)),minLane_IB), minLane_IB), ib_lane),
                                                   ob_lane = ifelse(type == "U-Turn" | type == "Left", minLane_OB, ob_lane), 
