@@ -1,4 +1,4 @@
-segment_id,road_link_id,ref_node,start_lr,end_lr,capacity,free_speed,lanes_added_l,lanes_added_r,bike_facility,ped_facility,parking,allowed_uses,other fields
+segment_id,road_link_id,ref_node_id,start_lr,end_lr,capacity,free_speed,l_lanes_added,r_lanes_added,bike_facility,ped_facility,parking,allowed_uses,other fields
 101,384306521,11,572,932,,,1,,,,,,"left turn pocket, Broadway EB"
 102,86154099,29,854,1024,,,,1,,,,,"right turn pocket, Third St SB"
 103,356677798,27,215,415,,,,1,,,None,," right turn pocket, Broadway WB"

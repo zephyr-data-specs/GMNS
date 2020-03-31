@@ -1,4 +1,4 @@
-road_link_id,name,from_node_id,to_node_id,link_geometry_id,dir_flag,capacity,free_speed,lanes,ped_facility,parking,bike_facility,allowed_uses,facility_type,grade,other fields
+road_link_id,name,from_node_id,to_node_id,link_geom_id,dir_flag,capacity,free_speed,lanes,ped_facility,parking,bike_facility,allowed_uses,facility_type,grade,other fields
 578653,US3 NB,5,1,578653,With,,55,1,None,None,None,AUTO,Ramp,,
 578527,R50175,5,2,578527,Against,,35,1,None,None,None,AUTO,Ramp,,
 578608,I95 SB,12,3,578608,With,,55,4,None,None,None,AUTO,Freeway,,

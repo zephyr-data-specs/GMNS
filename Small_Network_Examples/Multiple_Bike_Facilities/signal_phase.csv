@@ -1,4 +1,4 @@
-node_id,movement_id,offroad_link_id,phase_number,protection,notes
+node_id,mvmt_id,offroad_link_id,phase_num,protection,notes
 22,2201,,5,Protected,EB Left turn
 22,2202,,5,Protected,EB Left turn (Bike)
 22,2203,,6,Protected,EB Thru

@@ -1,2 +1,2 @@
-location_id,road_link_id,offroad_link_id,ref_node,lr,x_coord,y_coord,z_coord,location_type,zone_id,"other fields (e.g., area, subarea)"
-3,533596803,,22,500,-71.0861,42.3633,,Driveway (associated with LT pocket lane 9914 & Segment 110),,
+loc_id,road_link_id,offroad_link_id,ref_node_id,lr,x_coord,y_coord,z_coord,loc_type,zone_id,gtfs_stop_id,"other fields (e.g., area, subarea)"
+3,533596803,,22,500,-71.0861,42.3633,,Driveway (associated with LT pocket lane 9914 & Segment 110),,,

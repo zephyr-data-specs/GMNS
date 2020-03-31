@@ -1,4 +1,4 @@
-lane_id,road_link_id,segment_id,lane_number,allowed_uses,barrier_r,barrier_l,width,notes
+lane_id,road_link_id,segment_id,lane_num,allowed_uses,r_barrier,l_barrier,width,notes
 2610,384306521,101,-1,ALL,,,,EB LT pocket
 2611,384306521,,1,ALL,,,,EB Thru lane
 2612,384306521,104,2,ALL,,,,EB RT Pocket
