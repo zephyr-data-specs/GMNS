@@ -1,5 +1,5 @@
 #	Node	
-The node file is a list of vertices that locate points on a map. Typically, they will represent intersections, but may also represent other points, such as a transition between divided and undivided highway.  Nodes are the endpoints of a link (as opposed to the other type of vertex, [location](Location), which is used to represent points along a link).
+The node file is a list of vertices that locate points on a map. Typically, they will represent intersections, but may also represent other points, such as a transition between divided and undivided highway.  Nodes are the endpoints of a link (as opposed to the other type of vertex, [location](Location.md), which is used to represent points along a link).
 
 Field | Type | Required? | Comment
 ---|---|---|---
