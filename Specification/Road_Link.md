@@ -2,7 +2,7 @@
 
 A **road\_link** is a directed edge in a network, defined by the
 nodes it travels from and to. It may have associated geometry, as
-defined by a reference to the [link_geometry](Link_Geometry) table. Links have three
+defined by a reference to the [link_geometry](Link_Geometry.md) table. Links have three
 types of attributes:
 
   - Those that define the physical location of the link, inherited from
