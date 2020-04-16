@@ -20,6 +20,7 @@ road\_link data dictionary
 | name                                    | TEXT                  | Optional  |                                                                                                                                                                               |
 | from\_node_id                              | Node\_ID            | Required  | Foreign key (Nodes table)                                                                                                                                                     |
 | to\_node_id                                | Node\_ID            | Required  | Foreign key (Nodes table)                                                                                                                                                     |
+| geometry_id | Geometry_id | Optional  | Foreign key (Geometry table). Either the geometry_id OR the geometry is used  |
 | geometry                     | WKT    | Optional  | Link shapepoints (well known text)                                                                                                                                            |
 | dir\_flag                        | INTEGER               | Optional  | 1 = flow follows direction of shapepoints in the geometry (forward); -1 = flow is against shapepoint direction (backward)                                               |
 | length  |  DOUBLE | Optional  | Length of the link  |
