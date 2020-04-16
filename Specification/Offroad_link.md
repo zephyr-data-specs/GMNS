@@ -21,6 +21,7 @@ offroad\_link data dictionary
 | name                                    | TEXT                  | Optional  |                                                                                                                                                                                                            |
 | a\_node_id                                 | Node\_ID            | Required  | Foreign key (Node table)                                                                                                                                                                             |
 | b\_node_id                                 | Node\_ID            | Required  | Foreign key (Node table)                                                                                                                                                                                  |
+| geometry_id | Geometry_id | Optional  | Foreign key (Geometry table).  Either the geometry_id OR the geometry is used |
 | geometry                     | WKT    | Optional  | Link shapepoints (well known text)                                                                                                                                            |
 | dir\_flag                        | INTEGER               | Optional  | 1 = A->B follows direction of shapepoints in the geometry (forward); -1 = B->A follows shapepoint direction (backward)                                               |
 | length  |  DOUBLE | Optional  | Length of the link  |
