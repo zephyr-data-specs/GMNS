@@ -24,7 +24,7 @@ df_edges['road_link_id'] = df_edges.index
 # because we don't actually care about the minimum weight of a path, just whether one exists
 
 G = nx.DiGraph()
-G = nx.from_pandas_edgelist(df_edges, 'from_node', 'to_node', True, nx.DiGraph)
+G = nx.from_pandas_edgelist(df_edges, 'from_node_id', 'to_node_id', True, nx.DiGraph)
 # G.add_edges_from(nx.from_pandas_edgelist(df_edges[df_edges['BA_NumberOfLanes'] > 0], 'B_node', 'A_node', True, nx.DiGraph).edges)
 
 # adding the node attributes

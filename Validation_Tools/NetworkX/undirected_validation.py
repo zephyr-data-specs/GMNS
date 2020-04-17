@@ -22,7 +22,7 @@ df_edges['road_link_id'] = df_edges.index
 # creating the graph
 #(note: multigraphs allow for multiple edges to be defined by the same pair of nodes, which we might need)
 # it automatically creates a key to distinguish between edges with same pair of nodes
-G = nx.from_pandas_edgelist(df_edges, 'from_node', 'to_node', True, nx.MultiGraph)
+G = nx.from_pandas_edgelist(df_edges, 'from_node_id', 'to_node_id', True, nx.MultiGraph)
 
 # adding the node attributes
 for i in G.nodes():
