@@ -77,6 +77,3 @@ segment_tod data dictionary
 | l_barrier      | TEXT         | Optional   |    |
 | width          | DOUBLE       | Optional   |    |
 | notes          | TEXT         | Optional   |     |
-
-## Relationships
-![Relationships with the link_tod table](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/ER_diagrams/link_tod.png)

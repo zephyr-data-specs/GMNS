@@ -3,22 +3,15 @@
 The lane file allocates portions of the physical right-of-way that might
 be used for travel. It might be a travel lane, bike lane, or a parking
 lane. Lanes can be determined by examining a high-resolution aerial
-photo. Lanes only are included in road\_links; offroad\_links are
+photo. Lanes only are included in directed links; undirected links are
 assumed to have no lane controls or directionality. Lanes are uniquely
-identified in one of two ways:
-
-If it is on a segment of a road\_link
-
-  - Associated segment
-
-  - Lane number
-
-If it is not on a segment of a road\_link (i.e., it traverses the entire
-link)
+identified by:
 
   - Associated link
 
   - Lane number
+
+If a lane is added, dropped, or changes properties along the link, those changes are recorded on the segment_link table.
 
 Lanes are numbered sequentially, starting at either the centerline (on a
 two-way street) or the left shoulder (on a one-way street or divided
@@ -38,7 +31,7 @@ _Lanes leading to an intersection._ Source: MATSim documentation (2016), with te
 It is challenging to represent a lane that has different purposes on
 different sections of a lane (e.g., a merge lane downstream of a signal,
 which then becomes a parking lane, and then becomes a right-turn
-pocket). Segments are used to identify the places where lane
+pocket). Segments and segment_lanes are used to identify the places where lane
 transitions occur.
 
 The lane file includes the typical allocation of lanes. It does not
@@ -64,16 +57,10 @@ lane data dictionary
 | Field                                       | Type           | Required?                   | Comment                                                                                         |
 | ------------------------------------------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
 | lane\_id     | Lane\_ID       | Required                    | Primary key                                                                                     |
-| road_link\_id     | Road\_Link\_ID | Conditionally Required (See note) | Foreign key, Road\_link\_id                                                                     |
-| segment\_id  | Segment\_ID    | Conditionally Required      | Associated segment (Blank = lane traverses entire link) Foreign key (Segment table)             |
+| link\_id     | Road\_Link\_ID |  Required | Foreign key, link\_id                                                                     |
 | lane\_num | INTEGER        | Required                    | e.g., -1, 1, 2 (use left-to-right numbering)                                                    |
 | allowed\_uses                               | Use\_Set       | Required                    | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.     |
 | r_barrier                              | Barrier\_ID    | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE) |
 | l_barrier                               | Barrier\_ID    | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the left (default is NONE)  |
 | width                                       | DOUBLE         | Optional                    | Width of the lane                                                                               |
 | notes                                       | TEXT           | Optional                    |                                                                                                 |
-
-Note: Either the link_id OR the segment_id are required. When segment_id is used, link_id is still recommended (for human readability). 
-
-## Relationships
-![Relationships with the Lane table](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/ER_diagrams/lane.png)

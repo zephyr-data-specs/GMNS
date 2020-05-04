@@ -10,8 +10,7 @@ y_coord | DOUBLE | Required |
 z_coord | DOUBLE | Optional | Altitude
 node_type | TEXT | Optional | What it represents (intersection, transit station, park & ride)
 ctrl_type | ControlType_Set | Optional | Intersection control type
-zone | TEXT | Optional | Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block
+zone_id | TEXT | Optional | Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block
+parent_node_id | Node_ID | Optional | The parent of this node; for example, a pedestrian node at one corner of an intersection's parent is the intersection itself.
 Other fields (e.g., area, subarea) | TEXT | Optional | 
 
-## Relationships
-![Relationships with the node table](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/ER_diagrams/node.png)

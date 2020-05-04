@@ -1,7 +1,7 @@
-# road\_link
+link
 
-A **road\_link** is a directed edge in a network, defined by the
-nodes it travels from and to. It may have associated geometry Links have three
+A **link** is an edge in a network, defined by the
+nodes it travels from and to. It may have associated geometry information. Links have three
 types of attributes:
 
   - Those that define the physical location of the link (e.g., shape information, length,
@@ -12,17 +12,18 @@ types of attributes:
   - Those that define properties in the direction of travel: capacity,
     free flow speed, number of lanes, permitted uses, grade, facility type
 
-road\_link data dictionary
+link data dictionary
 
 | Field                                   | Type                  | Required? | Comment                                                                                                                                                                       |
 | --------------------------------------- | --------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| road_link\_id | Link\_ID              | Required  | Primary key – could be SharedStreets Reference ID                                                                                                                             |
+| link_id | Link\_ID              | Required  | Primary key – could be SharedStreets Reference ID                                                                                                                             |
 | name                                    | TEXT                  | Optional  |                                                                                                                                                                               |
 | from\_node_id                              | Node\_ID            | Required  | Foreign key (Nodes table)                                                                                                                                                     |
 | to\_node_id                                | Node\_ID            | Required  | Foreign key (Nodes table)                                                                                                                                                     |
 | geometry_id | Geometry_id | Optional  | Foreign key (Geometry table). Either the geometry_id OR the geometry is used  |
 | geometry                     | WKT    | Optional  | Link shapepoints (well known text)                                                                                                                                            |
-| dir\_flag                        | INTEGER               | Optional  | 1 = flow follows direction of shapepoints in the geometry (forward); -1 = flow is against shapepoint direction (backward)                                               |
+|parent_link_id | link_id | Optional | The parent of this link. For example, for a sidewalk, this is the adjacent road.
+| dir\_flag                        | INTEGER               | Optional  | 1 = flow follows direction of shapepoints in the geometry (forward); -1 = flow is against shapepoint direction (backward); 0 = link is undirected (e.g., a sidewalk).                                               |
 | length  |  DOUBLE | Optional  | Length of the link  |
 | grade | DOUBLE  | Optional  |  Percent grade of the link (<0 is down) |
 | facility_type | TEXT | Optional | Facility type (e.g., freeway, arterial, etc.) |
@@ -44,6 +45,3 @@ Note on the _lanes_ field: This field is maintained for compatibility with stati
     permanent lanes (not including turn pockets) open to motor vehicles.
     Therefore, a link which acts solely as a contra-flow bike lane will
     have a number of lanes = 0.
-
-## Relationships
-![Relationships with the Road_Link table](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/ER_diagrams/road_link.png)

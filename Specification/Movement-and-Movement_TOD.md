@@ -41,6 +41,3 @@ movement_tod data dictionary
 | time_day               | TimeDay\_Set          | Optional  | Define the availability/role of lane at different dates and times        |
 | allowed\_uses                                        | Use\_Set              | Required  | A turn prohibition for all vehicles would have NONE as the allowed uses. |
 | notes                                                | TEXT                  | Optional  |                                                                          |
-
-## Relationships
-![Relationships with the Movement and Movement_TOD tables](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/ER_diagrams/movement.png)
