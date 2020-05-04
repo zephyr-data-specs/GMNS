@@ -1,4 +1,4 @@
-seg_lane_id,link_id,segment_id,parent_lane,lane_num,allowed_uses,r_barrier,l_barrier,width,notes
+seg_lane_id,link_id,segment_id,parent_lane_id,lane_num,allowed_uses,r_barrier,l_barrier,width,notes
 1122011,1122,112201,,-1,ALL,,,,EB LT pocket
 11220202,1122,112202,,2,ALL,,,,EB RT Pocket
 11220203,1122,112202,1122002,3,BIKE,,,,EB Bike Lane during pocket
