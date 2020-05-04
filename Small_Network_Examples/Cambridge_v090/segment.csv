@@ -1,0 +1,10 @@
+segment_id,link_id,ref_node_id,start_lr,end_lr,capacity,free_speed,l_lanes_added,r_lanes_added,bike_facility,ped_facility,parking,allowed_uses,notes
+112201,1122,11,572,932,,,1,,,,,,"left turn pocket, Broadway EB"
+112202,1122,11,762,932,,,,1,,,None,,"right turn pocket, Broadway EB"
+221101,2211,22,732,932,,,1,,,,,,"LT pocket, Broadway WB @ Ames"
+31101,311,3,458,708,,,1,,,,None,,"RT pocket, Broadway EB @ Ames"
+11301,113,11,315,615,,,1,,,,,,"LT pocket, Broadway WB @ Galileo"
+11302,113,11,0,200,,,,-1,,,,,second lane on Broadway (rest of it is closed for construction)
+221102,2211,22,450,550,,,1,,,,,,"LT pocket, Broadway WB mid-block (to garage)"
+71101,711,7,341,541,,,,1,,,,,Ames NB RT pocket (length estimated)
+11701,117,11,341,541,,,,1,,,,,Ames SB RT pocket (length estimated)
