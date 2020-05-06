@@ -62,5 +62,6 @@ lane data dictionary
 | allowed\_uses                               | Use\_Set       | Required                    | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.     |
 | r_barrier                              | Barrier\_ID    | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE) |
 | l_barrier                               | Barrier\_ID    | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the left (default is NONE)  |
-| width                                       | DOUBLE         | Optional                    | Width of the lane                                                                               |
-| notes                                       | TEXT           | Optional                    |                                                                                                 |
+| width                                       | DOUBLE         | Optional                    | Width of the lane (feet)                                                                               |
+
+Ad hoc fields may also be added to the lanes table.  
