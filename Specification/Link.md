@@ -27,7 +27,7 @@ link data dictionary
 | length  |  DOUBLE | Optional  | Length of the link  |
 | grade | DOUBLE  | Optional  |  Percent grade of the link (<0 is down) |
 | facility_type | TEXT | Optional | Facility type (e.g., freeway, arterial, etc.) |
-| capacity                                | INTEGER               | Optional  | Capacity (veh / hr)                                                                                                                                                           |
+| capacity                                | INTEGER               | Optional  | Capacity (veh / hr / lane)                                                                                                                                                           |
 | free_speed                               | INTEGER               | Optional  | Free flow speed                                                                                                                                                               |
 | lanes                           | INTEGER               | Optional  | Number of lanes in the direction of travel                                                                                                                                       |
 | bike_facility                            | TEXT                  | Optional  | Type of bicycle accommodation: Unknown, None, WCL, Bikelane, Cycletrack                                                                                                       |
@@ -36,12 +36,12 @@ link data dictionary
 | allowed\_uses                           | Use\_Set              | Optional  | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.                                                                                   |
 | jurisdiction  | TEXT  | Optional  | Owner/operator of the link  |
 | row_width | DOUBLE  | Optional  |  Width of the entire right-of-way (both directions).  | 
-| Other fields                            | INTEGER, DOUBLE, TEXT | Optional  | Examples of other fields might include jam density, wave speed, traffic message channel (TMC) identifier, traffic count sensor identifier and location, average daily traffic |
-| 
 
+
+Ad hoc fields may also be added. Examples might include jam density, wave speed, traffic message channel (TMC) identifier, traffic count sensor identifier and location, average daily traffic 
 
 Note on the _lanes_ field: This field is maintained for compatibility with static models, where
     the Lanes table is not used. Here, it is treated as the number of
-    permanent lanes (not including turn pockets) open to motor vehicles.
+    permanent lanes (not including turn pockets) open to motor vehicles.  It does not include bike lanes, shoulders or parking lanes.
     Therefore, a link which acts solely as a contra-flow bike lane will
     have a number of lanes = 0.
