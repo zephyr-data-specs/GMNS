@@ -77,3 +77,5 @@ segment_tod data dictionary
 | l_barrier      | TEXT         | Optional   |    |
 | width          | DOUBLE       | Optional   |    |
 | notes          | TEXT         | Optional   |     |
+
+Ad hoc fields may also be added to any of these tables.

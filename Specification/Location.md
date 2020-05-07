@@ -18,7 +18,7 @@ location data dictionary
 | gtfs\_stop\_id                              | TEXT       | Optional                    | For bus stops and transit station entrances, provides a link to the General Transit Feed Specification                                  |
 
 
-Ad hoc fields (e.g., area, subarea) may also be added
+Ad hoc fields (e.g., area, subarea) may also be added.
 
 Note on lr: If link geometry exists, it is used; otherwise the link geometry is assumed to be the straight line distance between the from_node and to_node
 

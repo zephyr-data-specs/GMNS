@@ -38,7 +38,7 @@ link data dictionary
 | row_width | DOUBLE  | Optional  |  Width of the entire right-of-way (both directions).  | 
 
 
-Ad hoc fields may also be added. Examples might include jam density, wave speed, traffic message channel (TMC) identifier, traffic count sensor identifier and location, average daily traffic 
+Ad hoc fields may also be added. Examples might include jam density, wave speed, traffic message channel (TMC) identifier, traffic count sensor identifier and location, average daily traffic, etc. 
 
 Note on the _lanes_ field: This field is maintained for compatibility with static models, where
     the Lanes table is not used. Here, it is treated as the number of

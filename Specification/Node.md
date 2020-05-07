@@ -13,5 +13,5 @@ ctrl_type | ControlType_Set | Optional | Intersection control type
 zone_id | TEXT | Optional | Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block
 parent_node_id | Node_ID | Optional | The parent of this node; for example, a pedestrian node at one corner of an intersection's parent is the intersection itself.
 
-Ad hoc fields (e.g., area, subarea, associated GTFS stop) may also be added 
+Ad hoc fields (e.g., area, subarea, associated GTFS stop) may also be added. 
 

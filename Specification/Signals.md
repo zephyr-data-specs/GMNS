@@ -37,7 +37,7 @@ concurrently.
 ![Phase numbering convention, described in the body of the text.](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/signal_phase.png)  
 _Phase numbering convention._ Source: MassDOT, ACST Final Plan (2014)
 
-The signal phase table associates Movements and Offroad_Links (e.g., crosswalks) with signal phases. A
+The signal phase table associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A
 signal phase may be associated with several Movements. A Movement
 may also run on more than one phase.
 
@@ -46,8 +46,8 @@ signal_phase data dictionary
 | Field                                          | Type            | Required?              | Comment                                                                                                                           |
 | ---------------------------------------------- | --------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | <span class="underline">node\_id</span>        | Node\_ID        | Optional               | Redundant with Movement ID, but helps with clarity. Foreign key                                                                 |
-| <span class="underline">mvmt\_id</span>  | Movement\_ID  | Conditionally Required | Foreign key. Either Movement\_ID (for phases used by vehicles), or OffroadLink\_id (for phases used by pedestrians) is required |
-| <span class="underline">offroad_link\_id</span> | Offroad_Link\_ID | Conditionally Required | Foreign key                                                                                                                       |
+| <span class="underline">mvmt\_id</span>  | Movement\_ID  | Conditionally Required | Foreign key. Either Movement\_ID (for phases used by vehicles), or Link\_id (for phases used by pedestrians) is required |
+| <span class="underline">link\_id</span> | Link\_ID | Conditionally Required | Foreign key                                                                                                                       |
 | <span class="underline">phase\_num</span>   | INTEGER         | Required               | The phase number; each phase has one or more Movements associated with it                                                       |
 | protection                                       | TEXT              | Optional  | Indicates whether the phase is Protected, Permissive, right-turn-on-red (RTOR).                           |
 | notes                                          | Text            | Optional               |                                                                                                                                   |

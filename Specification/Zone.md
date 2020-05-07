@@ -9,7 +9,7 @@ Zones are represented as polygons in geographic information systems.
 | Zone\_Name                              | TEXT     | Optional  |                                                                                                    |
 | Boundary                                | Geometry | Required  | The zone polygon                                                                                   |
 | Super\_Zone                             | Zone\_ID | Optional  | If there is a hierarchy of zones (e.g., parcels and TAZs), indicates the zone of next higher level |
-| Other numeric fields                    | DOUBLE   | Optional  | Could be used for population, employment, area, etc.                                               |
-| Other text fields                       | TEXT     | Optional  | Could be used for jurisdiction, etc.                                                               |
 
-#
+Ad hoc fields may also be added.
+Other numeric fields could be used for population, employment, area, etc. 
+Other text fields could be used for jurisdiction, etc.

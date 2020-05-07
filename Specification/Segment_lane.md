@@ -2,7 +2,7 @@
 
 The segment_lane table defines added and dropped lanes, and changes to lane parameters. If a lane is added, it has no parent. If it is changed or dropped, the parent_lane_id field keys to the associated lane on the lane table.
 
-lane data dictionary
+segment_lane data dictionary
 
 | Field                                       | Type           | Required?                   | Comment                                                                                         |
 | ------------------------------------------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
