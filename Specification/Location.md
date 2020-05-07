@@ -13,7 +13,7 @@ location data dictionary
 | x_coord                                      | DOUBLE     | Optional                    | Either provided, or derived from Link, Ref\_Node and LR                                                                                                     |
 | y_coord                                      | DOUBLE     | Optional                    | Either provided, or derived from Link, Ref\_Node and LR                                                                                                     |
 | z_coord                                      | DOUBLE     | Optional                    | Altitude                                                                                                                                |
-| loc\_type                              | TEXT       | Optional                    | What it represents (driveway, bus stop, etc.)                                                                                           |
+| loc\_type                              | TEXT       | Optional                    | What it represents (driveway, bus stop, etc.) OpenStreetMap [map feature names](https://wiki.openstreetmap.org/wiki/Map_Features) are recommended.                                                                                          |
 | zone\_id                                    | Zone\_ID   | Optional                    | Foreign Key, Associated zone                                                                                                            |
 | gtfs\_stop\_id                              | TEXT       | Optional                    | For bus stops and transit station entrances, provides a link to the General Transit Feed Specification                                  |
 
