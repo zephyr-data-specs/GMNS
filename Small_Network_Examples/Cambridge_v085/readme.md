@@ -1,6 +1,6 @@
 # Broadway at Ames Street, Cambridge, MA
 
-This example shows the proposed GMNS v0.90 specification around one
+This example shows the proposed GMNS v0.85 specification around one
 intersection in Cambridge, MA, down the street from the Volpe Center.
 
 There are many interesting features nearby, including:
