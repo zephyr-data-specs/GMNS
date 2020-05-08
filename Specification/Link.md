@@ -24,7 +24,7 @@ link data dictionary
 | geometry_id | Geometry_id | Optional  | Foreign key (Geometry table). Either the geometry_id OR the geometry is used  |
 | geometry                     | WKT    | Optional  | Link shapepoints (well known text)                                                                                                                                            |
 |parent_link_id | link_id | Optional | The parent of this link. For example, for a sidewalk, this is the adjacent road.
-| dir\_flag                        | enum               | Optional  | 1 = flow follows direction of shapepoints in the geometry (forward); -1 = flow is against shapepoint direction (backward); 0 = link is undirected or no geometry information is provided.                                               |
+| dir\_flag                        | enum               | Optional  | 1 = shapepoints go from from_node to to_node;  -1 shapepoints go in the reverse direction; 0 = link is undirected or no geometry information is provided.                                               |
 | length  |  DOUBLE | Optional  | Length of the link  |
 | grade | DOUBLE  | Optional  |  Percent grade of the link (<0 is down) |
 | facility_type | TEXT | Optional | Facility type (e.g., freeway, arterial, etc.) |
