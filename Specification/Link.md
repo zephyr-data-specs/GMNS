@@ -20,10 +20,11 @@ link data dictionary
 | name                                    | TEXT                  | Optional  |                                                                                                                                                                               |
 | from\_node_id                              | Node\_ID            | Required  | Foreign key (Nodes table)                                                                                                                                                     |
 | to\_node_id                                | Node\_ID            | Required  | Foreign key (Nodes table)                                                                                                                                                     |
+| directed | boolean | Required | Whether the link is directed (travel only occurs from the from_node to the to_node) or undirected. |
 | geometry_id | Geometry_id | Optional  | Foreign key (Geometry table). Either the geometry_id OR the geometry is used  |
 | geometry                     | WKT    | Optional  | Link shapepoints (well known text)                                                                                                                                            |
 |parent_link_id | link_id | Optional | The parent of this link. For example, for a sidewalk, this is the adjacent road.
-| dir\_flag                        | INTEGER               | Optional  | 1 = flow follows direction of shapepoints in the geometry (forward); -1 = flow is against shapepoint direction (backward); 0 = link is undirected (e.g., a sidewalk).                                               |
+| dir\_flag                        | enum               | Optional  | 1 = flow follows direction of shapepoints in the geometry (forward); -1 = flow is against shapepoint direction (backward); 0 = link is undirected or no geometry information is provided.                                               |
 | length  |  DOUBLE | Optional  | Length of the link  |
 | grade | DOUBLE  | Optional  |  Percent grade of the link (<0 is down) |
 | facility_type | TEXT | Optional | Facility type (e.g., freeway, arterial, etc.) |
