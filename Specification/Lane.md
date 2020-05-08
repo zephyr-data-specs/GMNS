@@ -57,7 +57,7 @@ lane data dictionary
 | Field                                       | Type           | Required?                   | Comment                                                                                         |
 | ------------------------------------------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
 | lane\_id     | Lane\_ID       | Required                    | Primary key                                                                                     |
-| link\_id     | Road\_Link\_ID |  Required | Foreign key, link\_id                                                                     |
+| link\_id     | Link\_ID |  Required | Foreign key, link\_id                                                                     |
 | lane\_num | INTEGER        | Required                    | e.g., -1, 1, 2 (use left-to-right numbering)                                                    |
 | allowed\_uses                               | Use\_Set       | Required                    | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.     |
 | r_barrier                              | Barrier\_ID    | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE) |
