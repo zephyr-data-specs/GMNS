@@ -2,6 +2,26 @@
 
 Four time-of-day files handle day-of-week and time-of-day restrictions and other attributes on links, segments, lanes, lane_segments and movements
 
+# time_set_definitions
+The specification currently allows for times of day to be represented in the following format: 
+`XXXXXXXX_HHMM_HHMM`, where `XXXXXXXX` is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times. This is adapted from the Synchro Universal Traffic Data Format (UTDF) TimeOfDay table structure. For example, Monday-Friday 0700-0900 would be `01111100_0700_0900`. Alternatively, these can be coded in the following time_set_definitions table and `timeday_id` referenced instead of this format. 
+
+Field Name | Type |  Description
+-- | -- | --
+timeday_id | ID | Primary key, similar to service_id in GTFS. Unique name of the time of day. Preferable legible rather than a number.
+monday | boolean | whether Mondays are included (and so on for the other boolean fields)
+tuesday | boolean | 0 or 1
+wednesday | boolean | 0 or 1
+thursday | boolean | 0 or 1
+friday | boolean | 0 or 1
+saturday | boolean | 0 or 1
+sunday | boolean | 0 or 1
+holiday | boolean | 0 or 1
+start_time | timeofday | HH:MM  (24hr format)
+end_time | timeofday | HH:MM  (24hr format)
+
+Optional ad-hoc fields could define other types of day (`snow`, `unknown`, etc.).
+
 # link_tod
 
 link_tod is an optional file that handles day-of-week and time-of-day
@@ -16,6 +36,7 @@ link_tod data dictionary
 | link_tod\_id  | Link_TOD\_ID  | Required  | Primary key                               |
 | link\_id 		| Link\_ID 		| Required  | Foreign key, link table                    |
 | time_day      | TimeDay\_Set 	| Optional  | Define the availability/role of lane at different dates and times    |
+| timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
 | capacity 		| INTEGER 		| Optional  | 											 |
 | freespeed		| INTEGER		| Optional	|											|
 | lanes			| INTEGER		| Optional	|											|
@@ -38,6 +59,7 @@ segment_tod data dictionary
 | segment\_tod\_id  | Segment\_TOD\_ID  | Required  | Primary key                               |
 | segment\_id 	| Segment\_ID 	| Required	| Foreign key, segment table.  |
 | time_day      | TimeDay\_Set 	| Required | Define the availability/role of lane at different dates and times    |
+| timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
 | capacity 		| INTEGER 		| Optional  | 											 |
 | freespeed		| INTEGER		| Optional	|											|
 | lanes			| INTEGER		| Optional	|											|
@@ -57,6 +79,7 @@ segment_tod data dictionary
 | link_tod\_id  | Link_TOD\_ID  | Required  | Primary key                               |
 | link\_id 		| Link\_ID 		| Required  | Foreign key, link table                    |
 | time\_day      | TimeDay\_Set 	| Required  | Define the availability/role of lane at different dates and times    |
+| timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  |   |
 | allowed\_uses  | Use\_Set     | Required  |   |
 | r_barrier      | TEXT         | Optional  |    |
@@ -71,6 +94,7 @@ segment_tod data dictionary
 | segment\_tod\_id  | Segment\_TOD\_ID  | Required  | Primary key                               |
 | segment\_id 	| Segment\_ID 	| Required	| Foreign key, segment table.  |
 | time_day      | TimeDay\_Set 	| Required | Define the availability/role of lane at different dates and times    |
+| timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  |   |
 | allowed\_uses  | Use\_Set     | Required  |   |
 | r_barrier      | TEXT         | Optional  |    |

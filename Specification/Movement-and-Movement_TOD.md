@@ -39,5 +39,6 @@ movement_tod data dictionary
 | mvmt_tod\_id | Movement_TOD\_ID | Required  | Primary key                                                              |
 | mvmt\_id        | Movement\_ID        | Required  | Foreign key, the Movement to be restricted                             |
 | time_day               | TimeDay\_Set          | Optional  | Define the availability/role of lane at different dates and times        |
+| timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
 | allowed\_uses                                        | Use\_Set              | Required  | A turn prohibition for all vehicles would have NONE as the allowed uses. |
 | notes                                                | TEXT                  | Optional  |                                                                          |

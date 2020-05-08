@@ -6,15 +6,17 @@ The following units are recommended:
 - Long lengths (link lengths): miles
 - Speed: miles per hour
 
+The specification also provides for optional tables to define datatypes for use and time sets:
+- [use_definition and use_group](Use_Definition-and-Use_Group.md)  
+- [time_set_definitions](TOD.md#time_set_definitions)
 
 ## Specification Tables
-### __Basic Data Elements__  
-- [use_definition and use_group](Use_Definition-and-Use_Group.md)  
+### Basic Data Elements
 - [node](Node.md)  
-- [link](Link.md)  
-- [geometry](Geometry.md)     
+- [link](Link.md)
+- [geometry](Geometry.md)       
 - [zone](Zone.md)
-### __Advanced Data Elements__
+### Advanced Data Elements
 - [segment](Segment.md)  
 - [location](Location.md)  
 - [lane](Lane.md)  
@@ -29,5 +31,3 @@ The following units are recommended:
 - [signal_phase_concurrency](Signals.md#Signal_Phase_Concurrency)  
 - [signal_timing_plan](Signals.md#Signal_Timing_Plan)
 - [signal_timing_phase](Signals.md#Signal_Timing_Phase)  
-
-
