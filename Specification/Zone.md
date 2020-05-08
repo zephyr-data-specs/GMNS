@@ -5,7 +5,7 @@ Zones are represented as polygons in geographic information systems.
 
 | Field                                   | Type     | Required? | Comment                                                                                            |
 | --------------------------------------- | -------- | --------- | -------------------------------------------------------------------------------------------------- |
-| <span class="underline">zone\_ID</span> | Zone\_ID | Required  | Primary Key (Unique)                                                                               |
+| <span class="underline">zone\_id</span> | Zone\_ID | Required  | Primary Key (Unique)                                                                               |
 | zone\_name                              | TEXT     | Optional  |                                                                                                    |
 | boundary                                | Geometry | Required  | The zone polygon                                                                                   |
 | super\_zone                             | Zone\_ID | Optional  | If there is a hierarchy of zones (e.g., parcels and TAZs), indicates the zone of next higher level |
