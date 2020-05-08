@@ -1,4 +1,4 @@
-link
+# link
 
 A **link** is an edge in a network, defined by the
 nodes it travels from and to. It may have associated geometry information. Links have three
