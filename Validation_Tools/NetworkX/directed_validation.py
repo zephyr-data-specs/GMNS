@@ -1,4 +1,6 @@
 # GMNS Validation Tool: Directed Validation With NetworkX
+# Warning: this script has not been updated to reflect the latest version of GMNS.
+
 
 # Inputs: Node.csv and Road_Link.csv from a GMNS formatted network
 

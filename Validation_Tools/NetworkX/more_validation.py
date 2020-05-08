@@ -1,4 +1,6 @@
 # GMNS Validation Tool: Basic File Structure Validation
+# Warning: this script has not been updated to reflect the latest version of GMNS.
+
 
 # Inputs: Nodes, Links, Lanes, Movements, Segments from a GMNS formatted network
 # Portions of the script do use optional fields, as listed below:

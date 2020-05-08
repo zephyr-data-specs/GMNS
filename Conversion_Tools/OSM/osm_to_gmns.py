@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 OpenStreetMap to GMNS [Work In Progress]
+WARNING: This script has not been updated to reflect the latest version of GMNS.
 
 A script that inputs a location from which to pull a network from OpenStreetMap,
 and then converts it to basic GMNS format. 
