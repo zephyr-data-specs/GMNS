@@ -35,8 +35,8 @@ link_tod data dictionary
 | ------------- | ------------- | --------- | ----------------------------------------- |
 | link_tod\_id  | Link_TOD\_ID  | Required  | Primary key                               |
 | link\_id 		| Link\_ID 		| Required  | Foreign key, link table                    |
-| time_day      | TimeDay\_Set 	| Optional  | Define the availability/role of lane at different dates and times    |
-| timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
+| time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required   |
+| timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | capacity 		| INTEGER 		| Optional  | 											 |
 | freespeed		| INTEGER		| Optional	|											|
 | lanes			| INTEGER		| Optional	|											|
@@ -58,8 +58,8 @@ segment_tod data dictionary
 | ------------- | ------------- | --------- | ----------------------------------------- |
 | segment\_tod\_id  | Segment\_TOD\_ID  | Required  | Primary key                               |
 | segment\_id 	| Segment\_ID 	| Required	| Foreign key, segment table.  |
-| time_day      | TimeDay\_Set 	| Required | Define the availability/role of lane at different dates and times    |
-| timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
+| time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required   |
+| timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | capacity 		| INTEGER 		| Optional  | 											 |
 | freespeed		| INTEGER		| Optional	|											|
 | lanes			| INTEGER		| Optional	|											|
@@ -78,8 +78,8 @@ segment_tod data dictionary
 | ------------- | ------------- | --------- | ----------------------------------------- |
 | link_tod\_id  | Link_TOD\_ID  | Required  | Primary key                               |
 | link\_id 		| Link\_ID 		| Required  | Foreign key, link table                    |
-| time\_day      | TimeDay\_Set 	| Required  | Define the availability/role of lane at different dates and times    |
-| timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
+| time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required   |
+| timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  |   |
 | allowed\_uses  | Use\_Set     | Required  |   |
 | r_barrier      | TEXT         | Optional  |    |
@@ -93,8 +93,8 @@ segment_tod data dictionary
 | ------------- | ------------- | --------- | ----------------------------------------- |
 | segment\_tod\_id  | Segment\_TOD\_ID  | Required  | Primary key                               |
 | segment\_id 	| Segment\_ID 	| Required	| Foreign key, segment table.  |
-| time_day      | TimeDay\_Set 	| Required | Define the availability/role of lane at different dates and times    |
-| timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
+| time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required   |
+| timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  |   |
 | allowed\_uses  | Use\_Set     | Required  |   |
 | r_barrier      | TEXT         | Optional  |    |
