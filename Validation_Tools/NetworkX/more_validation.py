@@ -1,4 +1,6 @@
 # GMNS Validation Tool: Basic File Structure Validation
+# Warning: this script has not been updated to reflect the latest version of GMNS.
+
 
 # Inputs: Nodes, Links, Lanes, Movements, Segments from a GMNS formatted network
 # Portions of the script do use optional fields, as listed below:
@@ -18,15 +20,15 @@ import pandas as pd
 # importing the GNMS node and link files
 df_nodes = pd.read_csv('node.csv',index_col='node_id') # Replace with the path to your node file
 df_edges = pd.read_csv('road_link.csv',index_col='road_link_id') # Replace with the path to your road_link file
-df_link_geom = pd.read_csv('link_geometry.csv',index_col='link_geometry_id') # Replace with the path to your link_geometry file
+df_link_geom = pd.read_csv('link_geometry.csv',index_col='link_geom_id') # Replace with the path to your link_geometry file
 df_lanes = pd.read_csv('lane.csv',index_col='lane_id') # Replace with the path to your lane file
-df_mvts = pd.read_csv('movement.csv',index_col='movement_id') # Replace with the path to your movement file
+df_mvts = pd.read_csv('movement.csv',index_col='mvmt_id') # Replace with the path to your movement file
 df_segs  = pd.read_csv('segment.csv', index_col='segment_id') # Replace with the path to your segment file
 df_nodes['node_id'] = df_nodes.index
 df_edges['road_link_id'] = df_edges.index
-df_link_geom['link_geometry_id'] = df_link_geom.index
+df_link_geom['link_geom_id'] = df_link_geom.index
 df_lanes['lane_id'] = df_lanes.index
-df_mvts['movement_id'] = df_mvts.index
+df_mvts['mvmt_id'] = df_mvts.index
 df_segs['segment_id'] = df_segs.index
 
 ### rounding the XY and WKT to the same # of decimal places
@@ -58,7 +60,7 @@ if len(too_short) > 0:
 
 ## checking that the number of lanes in the links table is correct
 # If errors exist, the NumberOfLanes, or the Lanes table, should be corrected before using this network
-for [linkID,numLanes,a,b] in df_edges[['road_link_id','lanes','from_node','to_node']].values:
+for [linkID,numLanes,a,b] in df_edges[['road_link_id','lanes','from_node_id','to_node_id']].values:
     linkLanes = df_lanes[df_lanes['road_link_id']==linkID]
     lanes_actual = 0
     for [modes, segment] in linkLanes[['allowed_uses', 'segment_id']].values:
@@ -69,14 +71,14 @@ for [linkID,numLanes,a,b] in df_edges[['road_link_id','lanes','from_node','to_no
 
 ## checking that the lanes exist for all movements in the movements table
 # If errors exist, the movements table or the Lanes table should be corrected before using this network
-for [mvtID, node,ibLinkID,ibLaneNo,obLinkID,obLaneNo] in df_mvts[['movement_id', 'node_id', 'ib_link', 'ib_lane', 'ob_link', 'ob_lane']].values:
+for [mvtID, node,ibLinkID,ibLaneNo,obLinkID,obLaneNo] in df_mvts[['mvmt_id', 'node_id', 'ib_link_id', 'ib_lane', 'ob_link_id', 'ob_lane']].values:
     # first check the lane information associated with the IB link/lane pair exists
     try:
-        if df_edges[df_edges['road_link_id'] == ibLinkID].iloc[0]["to_node"] != node:
+        if df_edges[df_edges['road_link_id'] == ibLinkID].iloc[0]["to_node_id"] != node:
             raise ValueError
         ibLane = df_lanes[(df_lanes['road_link_id'] == ibLinkID) &
-                           # (df_lanes['to_node'] == node) &
-                           (df_lanes['lane_number'] == ibLaneNo)]
+                           # (df_lanes['to_node_id'] == node) &
+                           (df_lanes['lane_num'] == ibLaneNo)]
 
         # creates an array of matching lane IDs,
         # only one should have that linkID/direction/laneNo combo, so that is the one we pick
@@ -92,11 +94,11 @@ for [mvtID, node,ibLinkID,ibLaneNo,obLinkID,obLaneNo] in df_mvts[['movement_id',
 
     # now for the OB link/lane pairs
     try:
-        if (df_edges[df_edges['road_link_id'] == obLinkID].iloc[0]["from_node"] != node):
+        if (df_edges[df_edges['road_link_id'] == obLinkID].iloc[0]["from_node_id"] != node):
             raise ValueError
         obLane = df_lanes[(df_lanes['road_link_id'] == obLinkID) &
                            # (df_lanes['To_Node'] != node) &
-                           (df_lanes['lane_number'] == obLaneNo)]
+                           (df_lanes['lane_num'] == obLaneNo)]
 
         # creates an array of matching lane IDs,
         # only one should have that linkID/direction/laneNo combo, so that is the one we pick
@@ -126,7 +128,7 @@ for field in fields:
         print("Missing required node field:", field)
 
 # required for Road_Links
-fields = ['road_link_id', 'from_node', 'to_node']
+fields = ['road_link_id', 'from_node_id', 'to_node_id']
 for field in fields:
     try:
         if df_edges[field].isnull().any():
@@ -135,7 +137,7 @@ for field in fields:
         print("Missing required road_link field:", field)
         
 # required for Link_Geometry:
-fields = ['link_geometry_id']
+fields = ['link_geom_id']
 for field in fields:
     try:
         if df_link_geom[field].isnull().any():
@@ -144,7 +146,7 @@ for field in fields:
         print("Missing required link_geometry field:", field)
 
 # required for Segments
-fields = ['segment_id', 'road_link_id', 'ref_node', 'start_lr', 'end_lr']
+fields = ['segment_id', 'road_link_id', 'ref_node_id', 'start_lr', 'end_lr']
 for field in fields:
     try:
         if df_segs[field].isnull().any():
@@ -154,7 +156,7 @@ for field in fields:
 
 # required for Lanes
 # Note: still need to handle checking either the presence (Link_ID + To_Node) or (Segment_ID), as outlined in the spec
-fields = ['lane_id', 'road_link_id', 'segment_id', 'lane_number', 'allowed_uses']
+fields = ['lane_id', 'road_link_id', 'segment_id', 'lane_num', 'allowed_uses']
 for field in fields:
     try:
         if df_lanes[field].isnull().any():
@@ -163,7 +165,7 @@ for field in fields:
         print("Missing required lane field:", field)
 
 # required for Movements
-fields = ['movement_id', 'node_id', 'ib_link', 'ib_lane', 'ob_link', 'ob_lane', 'type', 'control']
+fields = ['mvmt_id', 'node_id', 'ib_link_id', 'ib_lane', 'ob_link_id', 'ob_lane', 'type', 'ctrl_type']
 for field in fields:
     try:
         if df_mvts[field].isnull().any():
@@ -174,12 +176,12 @@ for field in fields:
 
 # segments: overlapping segments are only allowed if one is contained in the other
 # group segments by link
-for link,fromNode,toNode in df_edges[['road_link_id','from_node','to_node']].values:
+for link,fromNode,toNode in df_edges[['road_link_id','from_node_id','to_node_id']].values:
     
-    if (df_segs[df_segs['road_link_id'] == link]['ref_node'] != fromNode).any():
+    if (df_segs[df_segs['road_link_id'] == link]['ref_node_id'] != fromNode).any():
         print("At least one segment on ", link, " is referenced using the to_node instead of the from_node. Correct this before proceeding.")
         continue
-    segs = df_segs[df_segs['road_link_id'] == link][['segment_id', 'ref_node', 'start_lr', 'end_lr']].values.tolist()
+    segs = df_segs[df_segs['road_link_id'] == link][['segment_id', 'ref_node_id', 'start_lr', 'end_lr']].values.tolist()
 
     for i in segs:
         checkList = segs

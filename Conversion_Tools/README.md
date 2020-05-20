@@ -3,6 +3,9 @@ Basic conversion tools are available to get GMNS-formatted tables from the follo
 - A network in [DynusT](https://www.dynust.com) format
 - A network pulled from [OpenStreetMap](https://www.openstreetmap.org) using the [osmnx](https://github.com/gboeing/osmnx) python package. 
 
+## :warning: Warning: Out of Date
+These tools were developed using a prior version of GMNS and **have not been updated** to reflect recent changes to the specification.
+
 ## [DynusT](DynusT/DynusT_to_GMNS.R)    
 ### Requirements and Inputs  
 - [R](https://www.r-project.org) and a few packages: `dplyr`, `readr`, and `data.table`, all available using the `install.packages()` function.

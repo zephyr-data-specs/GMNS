@@ -1,8 +1,9 @@
 # Validation Tools
 The current set of validation tools are contained in three separate Python scripts.
 
-## Note
-These scripts are a work-in-progress; they were originally written using a prior version of the GMNS specification and may not be fully up-to-date. In particular, they are not very efficient, especially for networks that contain more than a handful of nodes. 
+## :warning: Warning: Out of Date
+These tools were developed using a prior version of GMNS and **have not been updated** to reflect recent changes to the specification.
+In addition, they are not very efficient, especially for networks that contain more than a handful of nodes. 
 
 ## Requirements:
 - [Python](https://www.python.org/downloads/)

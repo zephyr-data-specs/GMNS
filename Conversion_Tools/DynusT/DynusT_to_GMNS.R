@@ -1,4 +1,5 @@
 # Purpose: Convert Lima network in DynusT format to General Modeling Network Specification (GMNS) v0.74.
+# WARNING: This script has not been updated to the latest version of GMNS.
 # Authors: Volpe Center
 
 #### Setup ####
