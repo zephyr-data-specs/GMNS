@@ -13,9 +13,11 @@ Table 14 movement data dictionary
 | <span class="underline">node\_id</span>         | Node\_ID         | Required  | Foreign key (from Nodes table)                               |
 | name                                            | TEXT             | Optional  |                                                              |
 | <span class="underline">ib_link_id</span>         | Link\_ID         | Required  | Foreign key (from Road\_link table)                          |
-| <span class="underline">ib_lane</span>         | INTEGER          | Optional  | Uses lane number                                             |
+| <span class="underline">start_ib_lane</span>         | INTEGER          | Optional  | Innermost lane number the movement applies to at the inbound end                                            |
+| end_ib_lane	|INTEGER	| Optional	| Outermost lane number the movement applies to at the inbound end. Blank indicates a movement with a single inbound lane.	|
 | <span class="underline">ob_link_id</span>         | Link\_ID         | Required  | Foreign key (from Road\_link table)                          |
-| <span class="underline">ob_lane</span>         | INTEGER          | Optional  | Uses lane numbers or ranges of numbers                       |
+| <span class="underline">start_ob_lane</span>         | INTEGER          | Optional  | Innermost lane number the movement applies to at the inbound end                       |
+| end_ob_lane	|	|	| Outermost lane number the movement applies to at the outbound end. Blank indicates a movement with a single outbound lane.	|
 | type                                            | TEXT             | Required  | LEFT, RIGHT, UTURN, THRU, MERGE, etc.                        |
 | penalty                                         | INTEGER          | Optional  | Turn penalty (seconds)                                       |
 | capacity                                        | INTEGER          | Optional  |                                                              |
@@ -40,5 +42,13 @@ movement_tod data dictionary
 | mvmt\_id        | Movement\_ID        | Required  | Foreign key, the Movement to be restricted                             |
 | time_day               | TimeDay\_Set          | Optional  | Define the availability/role of lane at different dates and times        |
 | timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
-| allowed\_uses                                        | Use\_Set              | Required  | A turn prohibition for all vehicles would have NONE as the allowed uses. |
-| notes                                                | TEXT                  | Optional  |                                                                          |
+| start_ib_lane	| INTEGER          | Optional  | Innermost lane number the movement applies to at the inbound end |
+| end_ib_lane	| INTEGER          | Optional  | Outermost lane number the movement applies to at the inbound end. Blank indicates a movement with a single inbound lane.	|
+| start_ob_lane	| INTEGER          | Optional  | Innermost lane number the movement applies to at the outbound end	|
+| end_ob_lane	| INTEGER          | Optional  | Outermost lane number the movement applies to at the outbound end. Blank indicates a movement with a single outbound lane.	|
+| type                                            | TEXT             | Required  | LEFT, RIGHT, UTURN, THRU, MERGE, etc.                        |
+| penalty                                         | INTEGER          | Optional  | Turn penalty (seconds)                                       |
+| capacity                                        | INTEGER          | Optional  |                                                              |
+| ctrl_type                                         | ControlType\_Set | Required  | From ControlType\_Set: No Control, Stop, Yield, Signal, etc. |
+| notes                                           | TEXT             | Optional  |                                                              |
+                                                             |
