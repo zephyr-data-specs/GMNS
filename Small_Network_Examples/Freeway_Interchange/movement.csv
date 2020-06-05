@@ -1,18 +1,18 @@
-mvmt_id,node_id,name,ib_link_id,ib_lane,ob_link_id,ob_lane,type,penalty,speed,capacity,ctrl_type,notes
-1,13,,578761,-1,578597,1,LEFT,,,,Signal,SB Left Turn
-2,13,,578761,1,578597,2,LEFT,,,,Signal,SB Left Turn
-3,13,,578761,2,5785709,1,THRU,,,,Signal,SB Thru
-4,13,,578761,3,5785709,2,THRU,,,,Signal,SB Thru
-5,13,,578570,1,5787619,1,THRU,,,,Signal,NB Thru
-6,13,,578570,2,5787619,2,THRU,,,,Signal,NB Thru
-7,13,,578570,3,5787619,3,THRU,,,,Signal,NB Thru
-8,13,,578570,4,578597,1,RIGHT,,,,Yield,NB Right Turn
-9,13,,578600,-1,5785709,1,LEFT,,,,Signal,"From ramp, left turn"
-10,13,,578600,1,5785709,2,LEFT,,,,Signal,"From ramp, left turn"
-11,13,,578600,2,5787619,3,RIGHT,,,,Yield,"From ramp, right turn"
-12,5,,578556,1,578527,1,DIVERGE,,,,Free,To I95 SB
-13,5,,578556,2,578653,1,DIVERGE,,,,Free,To US3
-14,10,,578571,1,578556,1,THRU,,,,Free,
-15,10,,578597,1,578556,2,MERGE,,,,Yield,Ramp from N1344
-16,11,,578607,1,578571,1,DIVERGE,,,,Free,Continue to US3
-17,11,,578607,2,578600,1,DIVERGE,,,,Free,Off ramp
+mvmt_id,node_id,name,ib_link_id,start_ib_lane,end_ib_lane,ob_link_id,start_ob_lane,end_ob_lane,type,penalty,capacity,ctrl_type,notes
+1,13,,578761,-1,,578597,1,,LEFT,,,Signal,SB Left Turn
+2,13,,578761,1,,578597,2,,LEFT,,,Signal,SB Left Turn
+3,13,,578761,2,,5785709,1,,THRU,,,Signal,SB Thru
+4,13,,578761,3,,5785709,2,,THRU,,,Signal,SB Thru
+5,13,,578570,1,,5787619,1,,THRU,,,Signal,NB Thru
+6,13,,578570,2,,5787619,2,,THRU,,,Signal,NB Thru
+7,13,,578570,3,,5787619,3,,THRU,,,Signal,NB Thru
+8,13,,578570,4,,578597,1,,RIGHT,,,Yield,NB Right Turn
+9,13,,578600,-1,,5785709,1,,LEFT,,,Signal,"From ramp, left turn"
+10,13,,578600,1,,5785709,2,,LEFT,,,Signal,"From ramp, left turn"
+11,13,,578600,2,,5787619,3,,RIGHT,,,Yield,"From ramp, right turn"
+12,5,,578556,1,,578527,1,,DIVERGE,,,Free,To I95 SB
+13,5,,578556,2,,578653,1,,DIVERGE,,,Free,To US3
+14,10,,578571,1,,578556,1,,THRU,,,Free,
+15,10,,578597,1,,578556,2,,MERGE,,,Yield,Ramp from N1344
+16,11,,578607,1,,578571,1,,DIVERGE,,,Free,Continue to US3
+17,11,,578607,2,,578600,1,,DIVERGE,,,Free,Off ramp
