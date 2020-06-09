@@ -1,0 +1,23 @@
+controller_id,node_id,movement_id,link_id,phase_number,protection,notes
+11,11,1101,,1,protected,Ames NB R to Broadway
+11,11,1102,,8,protected,Ames NB L to Broadway
+11,11,1104,,8,protected,Ames Cycletrack to Volpe path
+11,11,1105,,8,permitted,Ames Cycletrack L to Broadway
+11,11,1106,,8,permitted,Ames Cycletrack R to Broadway
+11,11,1106,,1,protected,Ames Cycletrack R to Broadway
+11,11,1107,,2,protected,Broadway EB thru @ Ames
+11,11,1108,,8,protected,Broadway EB R to Ames
+11,11,1110,,8,protected,Broadway EB R to Ames (bike)
+11,11,1110,,2,permitted,Broadway EB R to Ames (bike)
+11,11,1111,,2,permitted,Broadway EB L to Volpe path
+11,11,1112,,1,protected,Broadway WB L to Ames
+11,11,1113,,6,protected,Broadway WB thru @ Ames
+11,11,1116,,6,permitted,Broadway WB R to Volpe path
+11,11,1117,,1,permitted,Broadway WB L to Ames cycletrack
+11,11,1118,,8,protected,Volpe path to Ames cycletrack
+11,11,1119,,1,permitted,Volpe path to Broadway WB
+11,11,1120,,8,permitted,Volpe path to Broadway EB
+11,11,,11001,8,permitted,Crosswalk - east side crossing Bwy
+11,11,,11002,5,permitted,Crosswalk - west side crossing Bwy
+11,11,,11003,2,permitted,Crosswalk - south side crossing Ames
+11,11,,11004,6,permitted,Crosswalk - north side crossing bikepath
