@@ -1,16 +1,20 @@
 # Broadway at Ames Street, Cambridge, MA
 
-This example shows the proposed GMNS v0.85 specification around one
-intersection in Cambridge, MA, down the street from the Volpe Center.
+This example shows the proposed GMNS v0.85 specification around one intersection in Cambridge, MA, near the Volpe Center.
 
-There are many interesting features nearby, including:
+It includes several intermodal features:
 
-  - A bike path and pedestrian walkway, to the west of Volpe
+An east-west road (Broadway) with marked bike lanes and sidewalks. The sidewalks are their own links, while the bikelanes are an attribute of the road.
 
-  - A mid-block crossing on Broadway, in front of Volpe
+A bike path and a separate pedestrian path approaching from the north
 
-  - A floating bus stop and cycletrack on Ames Street
+A road (Ames Street) with two-way cycletrack and sidewalks approaching from the south.
 
-The QGZ file in this folder can be used for visualizing the network; you
-may need to change the filepaths to where GitHub is located on your
-machine.
+The QGZ file in this folder can be used for visualizing the network; you may need to change the filepaths to where GitHub is located on your machine.
+
+The nodes and links are shown below. Red links are roads, green links are sidewalks and other pedestrian pathways, blue links are bicycle facilities. 
+![Nodes and links](https://github.com/zephyr-data-specs/GMNS/blob/SignalsJune2020/Images/Node11Network.png)
+
+An aerial image of the intersection, and signal phasings are shown below. Note that these may not be the current phasings and timings; they are only used to illustrate how the signal files are used.
+
+![Aerial image, movements and signal phase/timing](https://github.com/zephyr-data-specs/GMNS/blob/SignalsJune2020/Images/node11.png)
