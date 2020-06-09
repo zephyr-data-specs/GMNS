@@ -131,4 +131,4 @@ signal_timing_phase data dictionary
 | ped_clearance                                        | INTEGER           | Required  | If a pedestrian phase exists, the flashing don’t walk time.                                                                       |
 
 ## Relationships
-![Relationships with and among the Signal tables](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/ER_diagrams/signals.png)
+![Relationships with and among the Signal tables](https://github.com/zephyr-data-specs/GMNS/raw/SignalsJune2020/Images/signalER.png)
