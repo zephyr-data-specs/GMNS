@@ -1,4 +1,4 @@
-segment_id,road_link_id,ref_node_id,start_lr,end_lr,capacity,free_speed,bike_facility,ped_facility,parking,allowed_uses,l_lanes_added,r_lanes_added
+segment_id,link_id,ref_node_id,start_lr,end_lr,capacity,free_speed,bike_facility,ped_facility,parking,allowed_uses,l_lanes_added,r_lanes_added
 977,100000 100001,100000,64,264,1330,,,,,,1,0
 980,100001 100000,100001,64,264,1497,,,,,,1,0
 986,100002 100003,100002,15,215,1497,,,,,,1,0
