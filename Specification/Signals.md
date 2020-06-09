@@ -1,5 +1,25 @@
 #	Signals	
 
+Representation of traffic controls (e.g., stop signs, signals, etc.) includes several considerations:  
+- For static networks, the node may include the type of traffic control (e.g., unknown, no control, yield, 4-way stop, signal, 2-way stop, roundabout)
+- The link includes functional class and number of lanes
+- With basic information on the node and link, a reasonable approximation of traffic control configuration (e.g., which approach is being stopped) for static models can be made from the above information
+- For dynamic models, basic control information can be included in the movement file.  Controls include unknown, no control, yield, 4-way stop, 2-way stop, signal, signal_with_RTOR. Note that different movements and lanes at an intersection may have different controls (e.g., a Stop Except Right Turn sign)   
+
+Traffic signals call for several additional files:
+- Signal controller has one record for each signal controller.  Typically, each node that represents an intersection has one signal controller, but there are cases where one signal controller might be associated with several nodes (e.g.,  two sides of a divided highway at a crossroads)
+- A controller is associated with several signal phase concurrency records, with one record for each phase.  The signal phase concurrency record indicates the ring, barrier, and position (RBP) for each phase of the signal
+- Each signal phase is associated a controller, a node, and with one or more movements (for traffic movements) or links (for crosswalks) that may move on that phase.  Similarly, movements may move on more than one signal phase. 
+- A signal phase is associated with at least one signal timing plan.  If timing plans vary by time of day or day or week, the signal phase will be associated with multiple timing plans.  
+
+## signal_controller
+
+The signal controller is associated with an intersection or a cluster of intersections. 
+
+| Field                                            | Type     | Required? | Comment                   |
+| ------------------------------------------------ | -------- | --------- | ------------------------- |
+| <span class="underline">controller\_id</span>          | Controller\_ID | Required  | Primary key |
+
 ## signal_phase
 
 The following conventions are typically used for phase numbers (see figure):
@@ -73,7 +93,7 @@ signal_phase_concurrency data dictionary
 | <span class="underline">signal\_phase_id</span>     | INTEGER  | Required  | Primary key               |
 | <span class="underline">ring</span> | INTEGER  | Required  |                           |
 | <span class="underline">barrier</span> | INTEGER  | Required  |                           |
-
+| <span class="underline">position</span> | INTEGER  | Required  |                           |
 
 ## signal_timing_plan
 
@@ -83,11 +103,11 @@ signal_timing_plan data dictionary
 
 | Field                                             | Type             | Required? | Comment                                                                  |
 | ------------------------------------------------- | ---------------- | --------- | ------------------------------------------------------------------------ |
-| <span class="underline">node\_id</span>           | Node\_ID         | Required  | Foreign key (Nodes table)                                                |
+| <span class="underline">controller\_id</span>           | Controller\_ID         | Required  | Foreign key (signal_controller table)                                                |
 | <span class="underline">timing\_plan\_id</span>   | Timing\_Plan\_ID | Required  | Primary key                                                              |
 | <span class="underline">time_day</span>          | TimeDay\_Set     | Required  |                                                                          |
 | <span class="underline">cycle\_length</span>      | INTEGER          | Optional  | Cycle length in seconds                                                  |
-| <span class="underline">coord\_node_id</span>        | Node\_ID         | Optional  | For coordinated signals, the “master” signal location for coordination   |
+| <span class="underline">coord\_contr_id</span>        | Node\_ID         | Optional  | For coordinated signals, the “master” signal controller for coordination   |
 | <span class="underline">coord_phase</span> | INTEGER          | Optional  | For coordinated signals, the phase at which coordination starts (time 0) |
 | offset                                            | INTEGER          | Optional  | Offset in seconds                                                        |
 
@@ -111,4 +131,4 @@ signal_timing_phase data dictionary
 | ped_clearance                                        | INTEGER           | Required  | If a pedestrian phase exists, the flashing don’t walk time.                                                                       |
 
 ## Relationships
-![Relationships with and among the Signal tables](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/ER_diagrams/signals.png)
+![Relationships with and among the Signal tables](https://github.com/zephyr-data-specs/GMNS/blob/SignalsJune2020/Images/SignalER.png)
