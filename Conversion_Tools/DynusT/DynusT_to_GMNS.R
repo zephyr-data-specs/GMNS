@@ -246,7 +246,7 @@ SEGMENT_LANE <- SEGMENT_LANE %>% arrange(link_id) %>% mutate (lane_id = nrow(LAN
 
 ## MOVEMENT
 # MOVEMENT needs to use both DynusT's network and movement tables.
-MOVEMENT_name <- c("mvmt_id", "node_id", "name", "ib_link_id", "ib_lane", "ob_link_id", "ob_lane", "type", "penalty", "capacity", "ctrl_type")
+MOVEMENT_name <- c("mvmt_id", "node_id", "name", "ib_link_id", "start_ib_lane", "end_ib_lane", "ob_link_id", "start_ob_lane", "end_ob_lane","type", "penalty", "capacity", "ctrl_type")
 MOVEMENT <- data.frame()
 
 movement <- movement %>% mutate(ib_link_id = paste(From_Node, To_Node)) %>% mutate(U_Turn = if_else(U_Turn == 1, From_Node, U_Turn))
@@ -264,7 +264,7 @@ for (index in 1:nrow(loopFrame)) {
     movementL <- movement
   } 
   movementL <- movementL %>% filter(movementL[[toString(Col)]] != 0) %>% mutate(ob_link_id = paste(!!!syms(c("To_Node",toString(Col))))) # concatenate the To_Node and Turning Node
-  df <- data.frame(NA, movementL$To_Node, NA, movementL$ib_link_id, NA, movementL$ob_link_id, NA, Dir, NA, NA, NA)
+  df <- data.frame(NA, movementL$To_Node, NA, movementL$ib_link_id, NA, NA, movementL$ob_link_id, NA, NA, Dir, NA, NA, NA)
   names(df) <- MOVEMENT_name
   MOVEMENT <- rbind(MOVEMENT, df)
 }
@@ -291,13 +291,29 @@ minmax_lanes <- LINK %>% left_join(SEGMENT, by = c("link_id" = "link_id")) %>%
 MOVEMENT_joined <- MOVEMENT %>% left_join(dplyr::select(minmax_lanes, link_id, minLane_IB, maxLane_IB, lanes), by = c("ib_link_id" = "link_id")) %>%
   left_join(dplyr::select(minmax_lanes, link_id, minLane_OB, maxLane_OB), by = c("ob_link_id" = "link_id"))
 
-MOVEMENT <- MOVEMENT_joined %>% mutate(ib_lane = ifelse(type == "U-Turn" | type == "Left", ifelse(minLane_IB<0, mapply(seq,rep(-1,nrow(MOVEMENT_joined)),minLane_IB), minLane_IB), ib_lane),
-                                                  ob_lane = ifelse(type == "U-Turn" | type == "Left", minLane_OB, ob_lane), 
-                                                  ib_lane = ifelse(type == "Right", ifelse(maxLane_IB > lanes, mapply(seq,lanes,maxLane_IB), maxLane_IB), ib_lane),
-                                                  ob_lane = ifelse(type == "Right", maxLane_OB, ob_lane),
-                                                  ib_lane = ifelse(type == "Thru", mapply(seq,rep(1,nrow(MOVEMENT_joined)),lanes), ib_lane),
-                                                  ob_lane = ifelse(type == "Thru", mapply(seq,rep(1,nrow(MOVEMENT_joined)),lanes), ob_lane)) %>% dplyr::select(MOVEMENT_name)
-# %>% mutate(Ib_Lane = as.character(Ib_Lane),Ob_Lane = as.character(Ob_Lane)) 
+# MOVEMENT <- MOVEMENT_joined %>% mutate(ib_lane = ifelse(type == "U-Turn" | type == "Left", ifelse(minLane_IB<0, mapply(seq,rep(-1,nrow(MOVEMENT_joined)),minLane_IB), minLane_IB), ib_lane),
+#                                                   ob_lane = ifelse(type == "U-Turn" | type == "Left", minLane_OB, ob_lane), 
+#                                                   ib_lane = ifelse(type == "Right", ifelse(maxLane_IB > lanes, mapply(seq,lanes,maxLane_IB), maxLane_IB), ib_lane),
+#                                                   ob_lane = ifelse(type == "Right", maxLane_OB, ob_lane),
+#                                                   ib_lane = ifelse(type == "Thru", mapply(seq,rep(1,nrow(MOVEMENT_joined)),lanes), ib_lane),
+#                                                   ob_lane = ifelse(type == "Thru", mapply(seq,rep(1,nrow(MOVEMENT_joined)),lanes), ob_lane)) %>% dplyr::select(MOVEMENT_name)
+# # %>% mutate(Ib_Lane = as.character(Ib_Lane),Ob_Lane = as.character(Ob_Lane)) 
+
+MOVEMENT <- MOVEMENT_joined %>% mutate(start_ib_lane = ifelse(type == "U-Turn" | type == "Left", minLane_IB, start_ib_lane),
+                                       end_ib_lane =   ifelse(type == "U-Turn" | type == "Left", ifelse(minLane_IB<0, -1, minLane_IB), end_ib_lane),
+                                       start_ob_lane = ifelse(type == "U-Turn" | type == "Left", minLane_OB, start_ob_lane),
+                                       end_ob_lane =   ifelse(type == "U-Turn" | type == "Left", minLane_OB, end_ob_lane),
+                                       start_ib_lane = ifelse(type == "Right",ifelse(maxLane_IB > lanes, lanes+1,lanes), start_ib_lane),
+                                       end_ib_lane =   ifelse(type == "Right", maxLane_IB, end_ib_lane),
+                                       start_ob_lane = ifelse(type == "Right", maxLane_OB, start_ob_lane),
+                                       end_ob_lane =   ifelse(type == "Right", maxLane_OB, end_ob_lane),
+                                       start_ib_lane = ifelse(type == "Thru", 1, start_ib_lane),
+                                       end_ib_lane =   ifelse(type == "Thru", lanes, end_ib_lane),
+                                       start_ob_lane = ifelse(type == "Thru", 1, start_ob_lane),
+                                       end_ob_lane =   ifelse(type == "Thru", maxLane_OB, end_ob_lane)
+                                       ) %>% dplyr::select(MOVEMENT_name)
+
+
 
 # looks like Ib_Lane and Ob_Lane are lists, which is the reason why the table cannot be saved using write.csv()
 sapply(MOVEMENT, class)
