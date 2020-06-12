@@ -15,7 +15,9 @@ Not done:
     setting in graph_from_place. Current behavior when a road changes attributes in the 
     middle of a link is that all values are given in an array (e.g., lanes = ['2', '3']).
     As an aside, this doesn't cooperate well with exporting to a shapefile.
-- Lanes depend on developing the segments table.
+- Segment_lanes depend on developing the segments table; the lanes table (for full-link 
+    lanes) would be relatively trivial but not add much value since OSM doesn't have 
+    lane-level detail.
 - Turn restrictions are not available via osmnx, so a movements table wouldn't add much value
     (esp. since lane-level detail on turning movements isn't available either). 
 
@@ -29,6 +31,7 @@ import osmnx as ox
 from geopandas import gpd
 from shapely.geometry import Polygon
 
+# get unprojected graph
 G_up = ox.graph_from_place('Cambridge, MA', network_type='drive')
 # project_graph converts from WGS84 lat-long to the appropriate UTM zone
 # (so distance calculations will use meters instead of degrees)
@@ -41,8 +44,8 @@ tolerance=10 # this must be checked for reasonableness with the network at hand
 #e.g., with Cambridge, I decreased this to 10, which isn't perfect, but better than 15
 
 
-# This section of the code is the osmnx.simplify.clean_intersections function
-# (copied from https://github.com/gboeing/osmnx/blob/master/osmnx/simplify.py)
+# This section of the code is the osmnx.simplification.consolidate_intersections function
+# (copied from https://github.com/gboeing/osmnx/blob/master/osmnx/simplification.py)
 # using the source code directly to access the local variables he uses  
 
 # (here there was a section of code if you want to remove external nodes, but we want to keep them)
@@ -59,7 +62,10 @@ if isinstance(buffered_nodes, Polygon):
 # get the centroids of the merged intersection polygons
 unified_intersections = gpd.GeoSeries(list(buffered_nodes))
 intersection_centroids = unified_intersections.centroid
-# return intersection_centroids # (end of osmnx.simplify.clean_intersections function)
+# return intersection_centroids 
+# (end of osmnx.simplification.consolidate_intersections function)
+
+
 
 # name the series
 intersection_centroids.name = "centroid"
