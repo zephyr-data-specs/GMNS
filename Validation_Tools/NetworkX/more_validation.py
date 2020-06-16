@@ -20,13 +20,13 @@ import pandas as pd
 # importing the GNMS node and link files
 df_nodes = pd.read_csv('node.csv',index_col='node_id') # Replace with the path to your node file
 df_edges = pd.read_csv('link.csv',index_col='link_id') # Replace with the path to your link file
-df_geom = pd.read_csv('geometry.csv',index_col='geometry_id') # Replace with the path to your geometry file
+# df_geom = pd.read_csv('geometry.csv',index_col='geometry_id') # Replace with the path to your geometry file
 df_lanes = pd.read_csv('lane.csv',index_col='lane_id') # Replace with the path to your lane file
 df_mvts = pd.read_csv('movement.csv',index_col='mvmt_id') # Replace with the path to your movement file
 df_segs  = pd.read_csv('segment.csv', index_col='segment_id') # Replace with the path to your segment file
 df_nodes['node_id'] = df_nodes.index
 df_edges['link_id'] = df_edges.index
-df_geom['geometry_id'] = df_geom.index
+# df_geom['geometry_id'] = df_geom.index
 df_lanes['lane_id'] = df_lanes.index
 df_mvts['mvmt_id'] = df_mvts.index
 df_segs['segment_id'] = df_segs.index
@@ -49,14 +49,14 @@ df_segs['segment_id'] = df_segs.index
 ##    newWkt += ')'
 ##    df_edges.loc[index,'WKT'] = newWkt
         
-#checking min_length of an edge
-#(user will have to verify the results of this with their specific network 
+# checking min_length of an edge
+# (user will have to verify the results of this with their specific network)
 min_length = 10 # reasonableness of this value depends on units and coord system -- user should adjust.
-too_short = df_geom[df_geom['length'] < min_length] # can also change to > to check max length
+too_short = df_edges[df_edges['length'] < min_length] # can also change to > to check max length
 if len(too_short) > 0:
-    print("The following link geometries are too short in length:")
+    print("The following links are too short in length:")
     for edge in too_short.index:
-        print("geometry_id #", edge)
+        print("link_id #", edge)
 
 ## checking that the number of lanes in the links table is correct
 # If errors exist, the NumberOfLanes, or the Lanes table, should be corrected before using this network
@@ -134,14 +134,14 @@ for field in fields:
     except KeyError:
         print("Missing required link field:", field)
         
-required for Geometry:
-fields = ['geometry_id', 'geometry']
-for field in fields:
-    try:
-        if df_geom[field].isnull().any():
-            print("Missing info in required geometry field:", field, ", geometry_ids:", df_geom[df_geom[field].isnull()].index.values)
-    except KeyError:
-        print("Missing required geometry field:", field)
+# required for Geometry:
+# fields = ['geometry_id', 'geometry']
+# for field in fields:
+#     try:
+#         if df_geom[field].isnull().any():
+#             print("Missing info in required geometry field:", field, ", geometry_ids:", df_geom[df_geom[field].isnull()].index.values)
+#     except KeyError:
+#         print("Missing required geometry field:", field)
 
 # required for Segments
 fields = ['segment_id', 'link_id', 'ref_node_id', 'start_lr', 'end_lr']
