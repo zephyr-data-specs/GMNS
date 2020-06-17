@@ -89,6 +89,7 @@ signal_phase_mvmt data dictionary
 
 | Field                                          | Type            | Required?              | Comment                                                                                                                           |
 | ---------------------------------------------- | --------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| signal_phase_mvmt_id | signal_phase_mvmt_id | Required | Primary key |
 | <span class="underline">signal\_phase\_id</span>  | Signal\_Phase\_ID  |  Required | Foreign key  |
 | <span class="underline">controller\_id</span>        | Controller\_ID        | Optional               | Redundant with field in the signal\_phase table.           |
 | <span class="underline">phase\_num</span>   | INTEGER         | Optional               | Redundant with field in the signal\_phase table.    ; each phase has one or more Movements associated with it  
