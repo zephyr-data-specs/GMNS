@@ -8,8 +8,8 @@ Representation of traffic controls (e.g., stop signs, signals, etc.) includes se
 
 Traffic signals call for several additional files:
 - Signal controller has one record for each signal controller.  Typically, each node that represents an intersection has one signal controller, but there are cases where one signal controller might be associated with several nodes (e.g.,  two sides of a divided highway at a crossroads)
-- A controller is associated with several signal phase concurrency records, with one record for each phase.  The signal phase concurrency record indicates the ring, barrier, and position (RBP) for each phase of the signal
-- Each signal phase is associated a controller, a node, and with one or more movements (for traffic movements) or links (for crosswalks) that may move on that phase.  Similarly, movements may move on more than one signal phase. 
+- A controller is associated with several signal phase records, with one record for each phase.  The signal phase concurrency record indicates the ring, barrier, and position (RBP) for each phase of the signal
+- Each signal phase is associated with a controller and with one or more movements (for traffic movements) or links (for crosswalks) that may move on that phase.  Similarly, movements may move on more than one signal phase. These are indicated in the signal_phase_mvmt table. 
 - A signal phase is associated with at least one signal timing plan.  If timing plans vary by time of day or day or week, the signal phase will be associated with multiple timing plans.  
 
 ## signal_controller
@@ -20,7 +20,7 @@ The signal controller is associated with an intersection or a cluster of interse
 | ------------------------------------------------ | -------- | --------- | ------------------------- |
 | <span class="underline">controller\_id</span>          | Controller\_ID | Required  | Primary key |
 
-## signal_phase
+## signal_phase_mvmt
 
 The following conventions are typically used for phase numbers (see figure):
 
@@ -58,21 +58,21 @@ concurrently.
 _Phase numbering convention._ Source: MassDOT, ACST Final Plan (2014)
 
 The signal phase table associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A
-signal phase may be associated with several Movements. A Movement
-may also run on more than one phase.
+signal phase may be associated with several Movements. A Movement may also run on more than one phase.
 
-signal_phase data dictionary
+signal_phase_mvmt data dictionary
 
 | Field                                          | Type            | Required?              | Comment                                                                                                                           |
 | ---------------------------------------------- | --------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| <span class="underline">node\_id</span>        | Node\_ID        | Optional               | Redundant with Movement ID, but helps with clarity. Foreign key                                                                 |
+| <span class="underline">signal\_phase\_id</span>  | Signal\_Phase\_ID  |  Required | Foreign key  |
+| <span class="underline">controller\_id</span>        | Controller\_ID        | Optional               | Redundant with field in the signal\_phase table.           |
+| <span class="underline">phase\_num</span>   | INTEGER         | Optional               | Redundant with field in the signal\_phase table.    ; each phase has one or more Movements associated with it  
 | <span class="underline">mvmt\_id</span>  | Movement\_ID  | Conditionally Required | Foreign key. Either Movement\_ID (for phases used by vehicles), or Link\_id (for phases used by pedestrians) is required |
 | <span class="underline">link\_id</span> | Link\_ID | Conditionally Required | Foreign key                                                                                                                       |
-| <span class="underline">phase\_num</span>   | INTEGER         | Required               | The phase number; each phase has one or more Movements associated with it                                                       |
-| protection                                       | TEXT              | Optional  | Indicates whether the phase is Protected, Permissive, right-turn-on-red (RTOR).                           |
+| protection                                       | TEXT              | Optional  | Indicates whether the phase is Protected or  Permissive.                           |
 | notes                                          | Text            | Optional               |                                                                                                                                   |
 
-## signal_phase_concurrency
+## signal_phase
 
 For signalized nodes, establishes phases that may run concurrently, using ring-barrier notation.  Each phase is associated with a ring and a barrier.  In order to run concurrently, two phases must be in:
 -	the same barrier, and
@@ -89,8 +89,9 @@ signal_phase_concurrency data dictionary
 
 | Field                                            | Type     | Required? | Comment                   |
 | ------------------------------------------------ | -------- | --------- | ------------------------- |
-| <span class="underline">node\_id</span>          | Node\_ID | Required  | Foreign key (Nodes table) |
-| <span class="underline">signal\_phase_id</span>     | INTEGER  | Required  | Primary key               |
+| <span class="underline">signal\_phase\_id</span> | Signal\_Phase\_ID | Required | Primary key |
+| <span class="underline">controller\_id</span>          | Controller\_ID | Required  | Foreign key (Signal_controller table) |
+| <span class="underline">signal\_phase\_num</span>     | INTEGER  | Required  | controller_id and signal_phase_num are unique              |
 | <span class="underline">ring</span> | INTEGER  | Required  |                           |
 | <span class="underline">barrier</span> | INTEGER  | Required  |                           |
 | <span class="underline">position</span> | INTEGER  | Required  |                           |
@@ -120,9 +121,9 @@ signal_timing_phase data dictionary
 | Field                                            | Type              | Required? | Comment                                                                                                   |
 | ------------------------------------------------ | ----------------- | --------- | --------------------------------------------------------------------------------------------------------- |
 | <span class="underline">timing\_phase\_id</span> | Timing\_Phase\_ID | Required  | Primary key                                                                                               |
-| <span class="underline">node\_id</span>          | Node\_ID          | Optional  | Redundant with Movement ID, but helps with clarity. Foreign key                                         |
-| <span class="underline">timing\_plan\_id</span>  | Timing\_Plan\_ID  | Optional  | Foreign key                                                                                               |
-| <span class="underline">phase\_num</span>     | INTEGER           | Required  | The phase number; each phase has one or more movements associated with it                                 |
+| <span class="underline">signal\_phase\_id</span>          | Signal\_Phase\_ID          | Required  | The associated signal phase.  Foreign key                                      |
+| <span class="underline">timing\_plan\_id</span>  | Timing\_Plan\_ID  | Optional  | Foreign key. If it is not provided, the timing applies all day                  |
+| <span class="underline">phase\_num</span>     | INTEGER           | Optional  | Redundant with the record in the signal_phase table                               |
 | <span class="underline">min\_green</span>        | INTEGER           | Required  | The minimum green time in seconds for an actuated signal. Green time in seconds for a fixed time signal   |
 | <span class="underline">max\_green</span>        | INTEGER           | Optional  | The maximum green time in seconds for an actuated signal; the default is minimum green plus one extension |
 | extension                                        | INTEGER           | Optional  | The number of seconds the green time is extended each time vehicles are detected                          |
