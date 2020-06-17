@@ -7,8 +7,8 @@ Representation of traffic controls (e.g., stop signs, signals, etc.) includes se
 - For dynamic models, basic control information can be included in the movement file.  Controls include unknown, no control, yield, 4-way stop, 2-way stop, signal, signal_with_RTOR. Note that different movements and lanes at an intersection may have different controls (e.g., a Stop Except Right Turn sign)   
 
 Traffic signals call for several additional files:
-- Signal controller has one record for each signal controller.  Typically, each node that represents an intersection has one signal controller, but there are cases where one signal controller might be associated with several nodes (e.g.,  two sides of a divided highway at a crossroads)
-- A controller is associated with several signal phase records, with one record for each phase.  The signal phase concurrency record indicates the ring, barrier, and position (RBP) for each phase of the signal
+- `signal_controller` has one record for each signal controller.  Typically, each node that represents an intersection has one signal controller, but there are cases where one signal controller might be associated with several nodes (e.g.,  two sides of a divided highway at a crossroads)
+- A controller is associated with several signal phase records, with one record for each phase.  The signal phase record indicates the ring, barrier, and position (RBP) for each phase of the signal
 - Each signal phase is associated with a controller and with one or more movements (for traffic movements) or links (for crosswalks) that may move on that phase.  Similarly, movements may move on more than one signal phase. These are indicated in the signal_phase_mvmt table. 
 - A signal phase is associated with at least one signal timing plan.  If timing plans vary by time of day or day or week, the signal phase will be associated with multiple timing plans.  
 
@@ -20,7 +20,7 @@ The signal controller is associated with an intersection or a cluster of interse
 | ------------------------------------------------ | -------- | --------- | ------------------------- |
 | <span class="underline">controller\_id</span>          | Controller\_ID | Required  | Primary key |
 
-## signal_phase_mvmt
+## signal_phase
 
 The following conventions are typically used for phase numbers (see figure):
 
@@ -57,7 +57,32 @@ concurrently.
 ![Phase numbering convention, described in the body of the text.](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/signal_phase.png)  
 _Phase numbering convention._ Source: MassDOT, ACST Final Plan (2014)
 
-The signal phase table associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A
+For signalized nodes, establishes phases that may run concurrently, using ring-barrier notation.  Each phase is associated with a ring and a barrier.  In order to run concurrently, two phases must be in:
+-	the same barrier, and
+-	different rings
+
+For example, in the diagram above, the phases are associated with rings and barriers as follows:
+<table>
+<tr> <td>Phases</td> <th colspan="2">Barrier 1</th> <th colspan="2">Barrier 2</th> </tr>
+<tr> <th>Ring 1</th> <td>2</td> <td>1</td> <td>3</td> <td>4</td> </tr>
+<tr> <th>Ring 2</th> <td>5</td> <td>6</td> <td>7</td> <td>8</td> </tr>
+</table>
+
+signal_phase data dictionary
+
+| Field                                            | Type     | Required? | Comment                   |
+| ------------------------------------------------ | -------- | --------- | ------------------------- |
+| <span class="underline">signal\_phase\_id</span> | Signal\_Phase\_ID | Required | Primary key |
+| <span class="underline">controller\_id</span>          | Controller\_ID | Required  | Foreign key (Signal_controller table) |
+| <span class="underline">signal\_phase\_num</span>     | INTEGER  | Required  | controller_id and signal_phase_num are unique              |
+| <span class="underline">ring</span> | INTEGER  | Required  |                           |
+| <span class="underline">barrier</span> | INTEGER  | Required  |                           |
+| <span class="underline">position</span> | INTEGER  | Required  |                           |
+
+
+## signal_phase_mvmt
+
+The `signal_phase_mvmt` table associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A
 signal phase may be associated with several Movements. A Movement may also run on more than one phase.
 
 signal_phase_mvmt data dictionary
@@ -72,29 +97,6 @@ signal_phase_mvmt data dictionary
 | protection                                       | TEXT              | Optional  | Indicates whether the phase is Protected or  Permissive.                           |
 | notes                                          | Text            | Optional               |                                                                                                                                   |
 
-## signal_phase
-
-For signalized nodes, establishes phases that may run concurrently, using ring-barrier notation.  Each phase is associated with a ring and a barrier.  In order to run concurrently, two phases must be in:
--	the same barrier, and
--	different rings
-
-For example, in the diagram above, the phases are associated with rings and barriers as follows:
-<table>
-<tr> <td>Phases</td> <th colspan="2">Barrier 1</th> <th colspan="2">Barrier 2</th> </tr>
-<tr> <th>Ring 1</th> <td>2</td> <td>1</td> <td>3</td> <td>4</td> </tr>
-<tr> <th>Ring 2</th> <td>5</td> <td>6</td> <td>7</td> <td>8</td> </tr>
-</table>
-
-signal_phase_concurrency data dictionary
-
-| Field                                            | Type     | Required? | Comment                   |
-| ------------------------------------------------ | -------- | --------- | ------------------------- |
-| <span class="underline">signal\_phase\_id</span> | Signal\_Phase\_ID | Required | Primary key |
-| <span class="underline">controller\_id</span>          | Controller\_ID | Required  | Foreign key (Signal_controller table) |
-| <span class="underline">signal\_phase\_num</span>     | INTEGER  | Required  | controller_id and signal_phase_num are unique              |
-| <span class="underline">ring</span> | INTEGER  | Required  |                           |
-| <span class="underline">barrier</span> | INTEGER  | Required  |                           |
-| <span class="underline">position</span> | INTEGER  | Required  |                           |
 
 ## signal_timing_plan
 
