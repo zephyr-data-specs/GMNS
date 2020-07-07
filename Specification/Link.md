@@ -36,7 +36,7 @@ link data dictionary
 | parking                                 | TEXT                  | Optional  | Type of parking: Unknown, None, Parallel, Angle, Other                                                                                                                        |
 | allowed\_uses                           | Use\_Set              | Optional  | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.                                                                                   |
 | jurisdiction  | TEXT  | Optional  | Owner/operator of the link  |
-| row_width | DOUBLE  | Optional  |  Width of the entire right-of-way (both directions).  | 
+| row_width | DOUBLE  | Optional  |  Width (in feet) of the entire right-of-way (both directions).  | 
 
 
 Ad hoc fields may also be added. Examples might include jam density, wave speed, traffic message channel (TMC) identifier, traffic count sensor identifier and location, average daily traffic, etc. 
