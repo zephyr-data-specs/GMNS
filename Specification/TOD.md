@@ -8,7 +8,7 @@ The specification currently allows for times of day to be represented in the fol
 
 Field Name | Type |  Description
 -- | -- | --
-timeday_id | ID | Primary key, similar to service_id in GTFS. Unique name of the time of day. Preferable legible rather than a number.
+timeday_id | TimeDay\_ID | Primary key, similar to service_id in GTFS. Unique name of the time of day. Preferable legible rather than a number.
 monday | boolean | whether Mondays are included (and so on for the other boolean fields)
 tuesday | boolean | 0 or 1
 wednesday | boolean | 0 or 1
