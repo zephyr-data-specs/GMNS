@@ -5,19 +5,19 @@ connect at an intersection. The simplified structure for offroad\_links
 implies that travel can occur from a given offroad link to any offroad
 link sharing a node (including U-turn movements); no movements table is necessary.
 
-Table 14 movement data dictionary
+movement data dictionary
 
 | Field                                           | Type             | Required? | Comment                                                      |
 | ----------------------------------------------- | ---------------- | --------- | ------------------------------------------------------------ |
 | <span class="underline">mvmt\_id</span> | Movement\_ID | Required  | Primary key                                                  |
 | <span class="underline">node\_id</span>         | Node\_ID         | Required  | Foreign key (from Nodes table)                               |
 | name                                            | TEXT             | Optional  |                                                              |
-| <span class="underline">ib_link_id</span>         | Link\_ID         | Required  | Foreign key (from Road\_link table)                          |
+| <span class="underline">ib_link_id</span>         | Link\_ID         | Required  | Foreign key (from Link table)                          |
 | <span class="underline">start_ib_lane</span>         | INTEGER          | Optional  | Innermost lane number the movement applies to at the inbound end                                            |
 | end_ib_lane	|INTEGER	| Optional	| Outermost lane number the movement applies to at the inbound end. Blank indicates a movement with a single inbound lane.	|
-| <span class="underline">ob_link_id</span>         | Link\_ID         | Required  | Foreign key (from Road\_link table)                          |
-| <span class="underline">start_ob_lane</span>         | INTEGER          | Optional  | Innermost lane number the movement applies to at the inbound end                       |
-| end_ob_lane	|	|	| Outermost lane number the movement applies to at the outbound end. Blank indicates a movement with a single outbound lane.	|
+| <span class="underline">ob_link_id</span>         | Link\_ID         | Required  | Foreign key (from Link table)                          |
+| <span class="underline">start_ob_lane</span>         | INTEGER          | Optional  | Innermost lane number the movement applies to at the outbound end                       |
+| end_ob_lane	| INTEGER   	|	Optional  | Outermost lane number the movement applies to at the outbound end. Blank indicates a movement with a single outbound lane.	|
 | type                                            | TEXT             | Required  | LEFT, RIGHT, UTURN, THRU, MERGE, etc.                        |
 | penalty                                         | INTEGER          | Optional  | Turn penalty (seconds)                                       |
 | capacity                                        | INTEGER          | Optional  |                                                              |
@@ -40,8 +40,8 @@ movement_tod data dictionary
 | ---------------------------------------------------- | --------------------- | --------- | ------------------------------------------------------------------------ |
 | mvmt_tod\_id | Movement_TOD\_ID | Required  | Primary key                                                              |
 | mvmt\_id        | Movement\_ID        | Required  | Foreign key, the Movement to be restricted                             |
-| time_day               | TimeDay\_Set          | Optional  | Define the availability/role of lane at different dates and times        |
-| timeday_id      | TimeDay\_ID 	| Optional  | Used if times-of-day are defined on the time_set_definitions table   |
+| time_day               | TimeDay\_Set          | Conditionally required | Define the availability/role of movement at different dates and times (either time_day or timeday_id is required)       |
+| timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | start_ib_lane	| INTEGER          | Optional  | Innermost lane number the movement applies to at the inbound end |
 | end_ib_lane	| INTEGER          | Optional  | Outermost lane number the movement applies to at the inbound end. Blank indicates a movement with a single inbound lane.	|
 | start_ob_lane	| INTEGER          | Optional  | Innermost lane number the movement applies to at the outbound end	|
