@@ -39,7 +39,8 @@ Required optional fields:
 There is also one additional parameter that the user will need to edit, based on their specific network: min_length (script line 51). As the user wishes, this can also be easily changed to a maximum length, if such filtering is useful for their network.
 
 Output, information and warnings printed to the screen: 
-- A list of geometries that fall below the user-set minimum length, 
-- A list of links where the lanes field does not match the number of automotive travel lanes present in that direction in the lanes table, 
-- A list of movements where the inbound or outbound link & lane specified in the movements table do not exist in the links or lanes table, and  
+- A list of geometries that fall below the user-set minimum length.
+- A list of links where the lanes field does not match the number of automotive travel lanes present in that direction in the lanes table. 
+- A list of movements where the inbound or outbound link & lane specified in the movements table do not exist in the links or lanes table.
+	- :warning: This section still needs to be updated to reflect the new `segment_lane` table.
 - A list of required fields that are not present in each table, and a list of records in each table that have data missing from required fields
