@@ -1,4 +1,4 @@
-controller_id,node_id,movement_id,link_id,phase_number,protection,notes
+controller_id,node_id,movement_id,link_id,phase_num,protection,notes
 11,11,1101,,1,protected,Ames NB R to Broadway
 11,11,1102,,8,protected,Ames NB L to Broadway
 11,11,1104,,8,protected,Ames Cycletrack to Volpe path
