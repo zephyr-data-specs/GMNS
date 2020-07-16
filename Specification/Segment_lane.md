@@ -6,8 +6,7 @@ segment_lane data dictionary
 
 | Field                                       | Type           | Required?                   | Comment                                                                                         |
 | ------------------------------------------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
-| lane\_id     | Lane\_ID       | Required                    | Primary key                                                                                     |
-| link\_id     | Link\_ID |  Required | Foreign key, link\_id                                                                     |
+| segment\_lane\_id     | Segment_\Lane\_ID       | Required                    | Primary key                                                |
 | segment\_id  | Segment\_ID    |  Required      | Foreign key, associated segment  |
 | lane\_num | INTEGER        | Required                    | e.g., -1, 1, 2 (use left-to-right numbering). 0 signifies a lane that is dropped on the segment.                                                    |
 | parent_lane_id | Lane\_ID | Optional | If a lane drops or changes characteristics on the segment, the lane_id for that lane. |
@@ -15,4 +14,3 @@ segment_lane data dictionary
 | r_barrier                              | Barrier\_ID    | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE) |
 | l_barrier                               | Barrier\_ID    | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the left (default is NONE)  |
 | width                                       | DOUBLE         | Optional                    | Width of the lane                                                                               |
-| notes                                       | TEXT           | Optional                    |                                                                                                 |
