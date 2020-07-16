@@ -52,6 +52,9 @@ segment data dictionary
 | bike_facility                            | TEXT                 | Optional  | Type of bicycle accommodation: Unknown, None, WCL, Bikelane, Cycletrack                                                                                                                                                          |
 | ped_facility                             | TEXT                 | Optional  | Type of pedestrian accommodation: Unknown, None, Shoulder, Sidewalk                                                                                                                                                              |
 | parking                                 | TEXT                 | Optional  | Type of parking: Unknown, None, Parallel, Angle, Other                                                                                                                                                                           |
-| allowed\_uses                           | Use\_Set             | Optional  | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.                                                                                                                                      |
+| allowed\_uses                           | Use\_Set             | Optional  | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.                                                                                    |
+| toll          | INTEGER       | Optional  | cents                                     |
+| jurisdiction  | TEXT  | Optional  | Owner/operator of the segment  |
+| row_width | DOUBLE  | Optional  |  Width (in feet) of the entire right-of-way (both directions).  | 
 
 Ad hoc fields may also be added. Examples of other fields might include jam density, wave speed, traffic message channel (TMC) identifier, traffic count sensor identifier and location, average daily traffic, and location of the link (political jurisdiction).
