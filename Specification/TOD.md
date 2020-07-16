@@ -89,7 +89,7 @@ segment_tod data dictionary
 | Field			| Type 			| Required? | Comment									|
 | ------------- | ------------- | --------- | ----------------------------------------- |
 | segment\_tod\_id  | Segment\_TOD\_ID  | Required  | Primary key                               |
-| segment\_lane\_id 		| Lane\_ID 		| Required  | Foreign key, lane table                    |
+| segment\_lane\_id 		| Segment\_Lane\_ID 		| Required  | Foreign key, segment_lane table                    |
 | time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required)   |
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  | e.g., -1, 1, 2 (use left-to-right numbering)   |
