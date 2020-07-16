@@ -74,7 +74,7 @@ segment_tod data dictionary
 
 | Field			| Type 			| Required? | Comment									|
 | ------------- | ------------- | --------- | ----------------------------------------- |
-| link_tod\_id  | Link_TOD\_ID  | Required  | Primary key                               |
+| lane_tod\_id  | Lane_TOD\_ID  | Required  | Primary key                               |
 | lane\_id 		| Lane\_ID 		| Required  | Foreign key, lane table                    |
 | time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required)   |
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
@@ -88,7 +88,7 @@ segment_tod data dictionary
 
 | Field			| Type 			| Required? | Comment									|
 | ------------- | ------------- | --------- | ----------------------------------------- |
-| segment\_tod\_id  | Segment\_TOD\_ID  | Required  | Primary key                               |
+| segment\_lane\_tod\_id  | Segment\_Lane\_TOD\_ID  | Required  | Primary key                               |
 | segment\_lane\_id 		| Segment\_Lane\_ID 		| Required  | Foreign key, segment_lane table                    |
 | time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required)   |
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
