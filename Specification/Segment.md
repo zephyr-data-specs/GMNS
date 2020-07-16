@@ -57,4 +57,4 @@ segment data dictionary
 | jurisdiction  | TEXT  | Optional  | Owner/operator of the segment  |
 | row_width | DOUBLE  | Optional  |  Width (in feet) of the entire right-of-way (both directions).  | 
 
-Ad hoc fields may also be added. Examples of other fields might include jam density, wave speed, traffic message channel (TMC) identifier, traffic count sensor identifier and location, average daily traffic, and location of the link (political jurisdiction).
+Ad hoc fields may also be added. Examples of other fields might include jam density, wave speed, traffic message channel (TMC) identifier, traffic count sensor identifier and location, average daily traffic, etc.
