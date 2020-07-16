@@ -6,19 +6,19 @@ Four time-of-day files handle day-of-week and time-of-day restrictions and other
 The specification currently allows for times of day to be represented in the following format: 
 `XXXXXXXX_HHMM_HHMM`, where `XXXXXXXX` is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times. This is adapted from the Synchro Universal Traffic Data Format (UTDF) TimeOfDay table structure. For example, Monday-Friday 0700-0900 would be `01111100_0700_0900`. Alternatively, these can be coded in the following time_set_definitions table and `timeday_id` referenced instead of this format. 
 
-Field Name | Type |  Description
--- | -- | --
-timeday_id | TimeDay\_ID | Primary key, similar to service_id in GTFS. Unique name of the time of day. Preferable legible rather than a number.
-monday | boolean | whether Mondays are included (and so on for the other boolean fields)
-tuesday | boolean | 0 or 1
-wednesday | boolean | 0 or 1
-thursday | boolean | 0 or 1
-friday | boolean | 0 or 1
-saturday | boolean | 0 or 1
-sunday | boolean | 0 or 1
-holiday | boolean | 0 or 1
-start_time | timeofday | HH:MM  (24hr format)
-end_time | timeofday | HH:MM  (24hr format)
+Field Name | Type | Required? | Description
+-- | -- | -- | --
+timeday_id | TimeDay\_ID | Required | Primary key, similar to service_id in GTFS. Unique name of the time of day. Preferable legible rather than a number.
+monday | boolean | Required | Whether Mondays are included (and so on for the other boolean fields)
+tuesday | boolean | Required | 0 or 1
+wednesday | boolean | Required | 0 or 1
+thursday | boolean | Required | 0 or 1
+friday | boolean | Required | 0 or 1
+saturday | boolean | Required | 0 or 1
+sunday | boolean | Required | 0 or 1
+holiday | boolean | Required | 0 or 1
+start_time | timeofday | Required | HH:MM  (24hr format)
+end_time | timeofday | Required | HH:MM  (24hr format)
 
 Optional ad-hoc fields could define other types of day (`snow`, `unknown`, etc.).
 
@@ -45,7 +45,6 @@ link_tod data dictionary
 | parking	| TEXT			| Optional	|	Type of parking: Unknown, None, Parallel, Angle, Other    |
 | allowed\_uses | Use\_Set      | Required  | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.   |
 | toll          | INTEGER       | Optional  | cents                                     |
-| notes         | TEXT          | Optional  |                                           |
 
 # segment_tod
 
@@ -70,15 +69,13 @@ segment_tod data dictionary
 | parking	| TEXT			| Optional	|	Type of parking: Unknown, None, Parallel, Angle, Other    |
 | allowed\_uses | Use\_Set      | Required  | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.   |
 | toll          | INTEGER       | Optional  | cents                                     |
-| notes         | TEXT          | Optional  |                                           |
 
-# link_lane_tod
+# lane_tod
 
 | Field			| Type 			| Required? | Comment									|
 | ------------- | ------------- | --------- | ----------------------------------------- |
 | link_tod\_id  | Link_TOD\_ID  | Required  | Primary key                               |
 | lane\_id 		| Lane\_ID 		| Required  | Foreign key, lane table                    |
-| link\_id 		| Link\_ID 		| Required  | Foreign key, link table                    |
 | time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required)   |
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  | e.g., -1, 1, 2 (use left-to-right numbering)   |
@@ -86,24 +83,19 @@ segment_tod data dictionary
 | r_barrier      | Barrier_ID   | Optional  | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
 | l_barrier      | Barrier_ID   | Optional   | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
 | width          | DOUBLE       | Optional   | Width of the lane (feet)   |
-| notes          | TEXT         | Optional   |     |
 
 # segment_lane_tod
 
 | Field			| Type 			| Required? | Comment									|
 | ------------- | ------------- | --------- | ----------------------------------------- |
 | segment\_tod\_id  | Segment\_TOD\_ID  | Required  | Primary key                               |
-| lane\_id 		| Lane\_ID 		| Required  | Foreign key, lane table                    |
-| link\_id 		| Link\_ID 		| Required  | Foreign key, link table                    |
-| segment\_id 	| Segment\_ID 	| Required	| Foreign key, segment table.  |
+| segment\_lane\_id 		| Lane\_ID 		| Required  | Foreign key, lane table                    |
 | time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required)   |
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  | e.g., -1, 1, 2 (use left-to-right numbering)   |
-| parent\_lane\_id 		| Lane\_ID 		| Optional  | If a lane drops or changes characteristics on the segment, the lane_id for that lane.   |
 | allowed\_uses  | Use\_Set     | Required  | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.   |
 | r_barrier      | Barrier_ID   | Optional  | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
 | l_barrier      | Barrier_ID   | Optional   | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
 | width          | DOUBLE       | Optional   | Width of the lane (feet)   |
-| notes          | TEXT         | Optional   |     |
 
-Ad hoc fields may also be added to any of these tables.
+Ad hoc fields, such as notes, may also be added to any of these tables.
