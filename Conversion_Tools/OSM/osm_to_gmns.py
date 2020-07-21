@@ -25,7 +25,6 @@ Pulling the network from OSM and cleaning it (removing excess nodes) are done
 using the osmnx package. 
 """
 
-import numpy as np
 import pandas as pd
 import osmnx as ox
 from geopandas import gpd
@@ -33,6 +32,9 @@ from shapely.geometry import Polygon
 
 # get unprojected graph
 G_up = ox.graph_from_place('Cambridge, MA', network_type='drive')
+# also can use bounding box instead of place name
+# G_up = ox.graph_from_bbox(42.367,42.361,-71.081,-71.09,network_type='drive') #Kendall Square area of Cambridge, MA
+
 # project_graph converts from WGS84 lat-long to the appropriate UTM zone
 # (so distance calculations will use meters instead of degrees)
 G = ox.project_graph(G_up)
@@ -108,8 +110,8 @@ gdf_nodes_joined.lat = gdf_nodes_joined.geometry.y
 
 NODE = pd.DataFrame(columns = ["node_id", "name", "x_coord", "y_coord", "z_coord", "node_type", "ctrl_type", "zone_id", "parent_node_id"])
 NODE["node_id"] = gdf_nodes_joined.index_right
-NODE["x_coord"] = gdf_nodes_joined.lon
-NODE["y_coord"] = gdf_nodes_joined.lat
+NODE["x_coord"] = gdf_nodes_joined.x
+NODE["y_coord"] = gdf_nodes_joined.y
 NODE["node_type"] = gdf_nodes_joined.highway
 NODE = NODE.set_index("node_id")
 NODE.to_csv("node.csv")
