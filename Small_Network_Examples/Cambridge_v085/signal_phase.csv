@@ -1,0 +1,6 @@
+signal_phase_id,controller_id,signal_phase_num,ring,barrier,position
+1,11,1,1,1,2
+2,11,2,1,1,1
+3,11,6,2,1,1
+4,11,5,2,1,2
+5,11,8,2,2,1
