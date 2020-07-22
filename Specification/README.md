@@ -31,3 +31,6 @@ The specification also provides for optional tables to define datatypes for use 
 - [signal_phase_concurrency](Signals.md#Signal_Phase_Concurrency)  
 - [signal_timing_plan](Signals.md#Signal_Timing_Plan)
 - [signal_timing_phase](Signals.md#Signal_Timing_Phase)  
+
+## Inheritance relationships
+![Inheritance relationships](../Images/inheritance.png)
