@@ -2,7 +2,7 @@
 
 There are two small examples in this folder where the properties of the network are greatly effected by time of day.
 
-## Connecticut Ave, Washington DC
+## [Connecticut Ave, Washington DC](https://github.com/zephyr-data-specs/GMNS/blob/updates/Small_Network_Examples/TOD_Examples/CT_Ave.md)
 
 ![Street view of CT Ave](https://github.com/zephyr-data-specs/GMNS/blob/updates/Images/CT_Ave_1.png)
 
@@ -15,7 +15,7 @@ It makes use of the following tables:
   - link_tod
   - lane_tod
 
-## I-93, North of Boston
+## [I-93, North of Boston](https://github.com/zephyr-data-specs/GMNS/blob/updates/Small_Network_Examples/TOD_Examples/I-93.md)
 
 ![Street view of I-93](https://github.com/zephyr-data-specs/GMNS/blob/updates/Images/I-93_1.png)
 
