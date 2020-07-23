@@ -1,6 +1,6 @@
-timing_phase_id,controller_id,node_id,timing_plan_id,phase_num,min_green,max_green,extension,clearance,walk_time,ped_clearance
-5,11,11,2,1,25,25,,5,5,20
-6,11,11,2,2,44,44,,5,24,20
-9,11,11,2,5,,,,,5,20
-7,11,11,2,6,44,44,,5,24,20
-8,11,11,2,8,21,21,,5,5,16
+timing_phase_id,signal_phase_id,timing_plan_id,phase_num,min_green,max_green,extension,clearance,walk_time,ped_clearance
+5,111,2,1,25,25,,5,5,20
+6,112,2,2,44,44,,5,24,20
+9,115,2,5,,,,,5,20
+7,116,2,6,44,44,,5,24,20
+8,118,2,8,21,21,,5,5,16
