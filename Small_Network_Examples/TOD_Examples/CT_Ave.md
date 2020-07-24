@@ -2,7 +2,7 @@
 
 This example is a stretch of Connecticut Avenue in NW Washington, DC. It demonstrates lane Time of Day (TOD) attributes. 
 
-Street view of Connecticut Ave:
+Street view of Connecticut Ave with Lanes labelled with Lane_IDs:
 
 ![Street view of CT Ave](https://github.com/zephyr-data-specs/GMNS/blob/updates/Images/CT_Ave_1.png)
 
@@ -62,14 +62,16 @@ Table 2: link
 
 ## Lanes
 
-The two travel lanes and the lane of parking for each link are noted in this table. Like the link table, the properties of the lanes are the properties that are true for the majority of the day. The parking lane does not count towards the lanes field in the link table as it is not a travel lane. Lanes with uses such as SHOULDER and PARKING are necessary to include in the lane table if they have TOD changes that cause them to be used as travel lanes.
+The two travel lanes and the lane of parking for each link are noted in this table. Like the link table, the properties of the lanes are the properties that are true for the majority of the day. The parking lane nor the entries for when a lane is reversed count towards the lanes field in the link table as they are not facilitating travel. Lanes with uses such as SHOULDER, PARKING, or NONE are necessary to include in the lane table if they have TOD changes that cause them to be used as travel lanes.
 
 Table 3: lane
 | lane_id | link_id | lane_num | allowed_uses | r_barrier | l_barrier | width |
 | ---     | ---     | ---      | ---          | ---       | ---       | ---   |
+| 50      | 5       | -1       | NONE         | --        | --        | 10    |
 | 51      | 5       | 1        | ALL          | --        | --        | 10    |
 | 52      | 5       | 2        | ALL          | --        | --        | 10    |
 | 53      | 5       | 3        | PARKING      | --        | --        | 10    | 
+| 60      | 6       | -1       | NONE         | --        | --        | 10    |
 | 61      | 6       | 1        | ALL          | --        | --        | 10    |
 | 62      | 6       | 2        | ALL          | --        | --        | 10    |
 | 63      | 6       | 3        | PARKING      | --        | --        | 10    |
@@ -95,11 +97,11 @@ Table 5: lane_tod
 | ---         | ---     | ---                | ---        | ---      | ---          | ---   |
 | 531         | 53      | 01111100_0700_0930 | ---        | 3        | ALL          | Parking lane used for travel (AM Peak)   |
 | 532         | 53      | 01111100_1600_1830 | ---        | 3        | ALL          | Parking lane used for travel (PM Peak)   |
-| 611         | 61      | 01111100_0700_0930 | ---        | -1       | ALL          | Reverses direction of lane from link 6   |
+| 501         | 50      | 01111100_0700_0930 | ---        | -1       | ALL          | Reverses direction of lane from link 6   |
 | 612         | 61      | 01111100_0700_0930 | ---        | 0        | NONE         | Lane used for link 5                     |
 | 631         | 63      | 01111100_1600_1830 | ---        | 3        | ALL          | Parking lane used for travel (PM Peak)   |
 | 632         | 63      | 01111100_0700_0930 | ---        | 3        | ALL          | Parking lane used for travel (AM Peak)   |
-| 511         | 51      | 01111100_1600_1830 | ---        | -1       | ALL          | Reverses direction of lane from link 5   |
+| 601         | 60      | 01111100_1600_1830 | ---        | -1       | ALL          | Reverses direction of lane from link 5   |
 | 512         | 51      | 01111100_1600_1830 | ---        | 0        | NONE         | Lane used for link 6                     |
 
 *Optional fields left blank for this example are: r_barrier, l_barrier, and width
