@@ -9,7 +9,7 @@ How do I use GMNS?
 2.	Look at our [__small examples__](Small_Network_Examples), including a freeway interchange, a portion of a multimodal city network, and a small city.
 3.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](Conversion_Tools) and [__validation__](Validation_Tools).  
 
-**Note**: Note: see the [**updates**](../../tree/updates) branch for the latest versions of the examples and tools, as well as planned changes to the specification. Some of the examples and tools are not in line with the current version of the specification. These are indicated by the following sign :warning: in their respective readme files. 
+**Note**: see the [**updates**](../../tree/updates) branch for the latest versions of the examples and tools, as well as planned changes to the specification. Some of the examples and tools are not in line with the current version of the specification. These are indicated by the following sign :warning: in their respective readme files. 
 
 ## GMNS Overview
 Version 0.85 includes the following features for use in static models:
