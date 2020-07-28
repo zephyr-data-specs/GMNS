@@ -150,7 +150,7 @@ GEOMETRY <- GEOMETRY %>% dplyr::select(GEOMETRY_names)
 
 
 ## LINK
-LINK_names <- c("link_id", "name", "from_node_id", "to_node_id", "directed", "geometry_id", "geometry", "parent_link_id", "dir_flag", "length", "grade", "facility_type","capacity", "free_speed","lanes", "bike_facility", "ped_facility", "parking", "allowed_uses", "jurisdiction", "row_width")
+LINK_names <- c("link_id", "name", "from_node_id", "to_node_id", "directed", "geometry_id", "geometry", "parent_link_id", "dir_flag", "length", "grade", "facility_type","capacity", "free_speed","lanes", "bike_facility", "ped_facility", "parking", "allowed_uses", "toll", "jurisdiction", "row_width")
 LINK <- data.frame(matrix(NA, ncol = length(LINK_names), nrow = nrow(network), dimnames = list(1:nrow(network), LINK_names)))
 
 LINK <- LINK %>% mutate(link_id = network$Link_ID
@@ -177,7 +177,7 @@ LINK <- LINK %>% mutate(link_id = network$Link_ID
 # Assumptions: any bay by default 200 ft (parameter.dat), create a location based on the LTBay or RTbay. This is based on network table.
 # Brian's comment: make the by default length as a global parameter. This parameter could change with road functional classes, speed limit, etc. to allow the simulation to work.
 
-SEGMENT_names <- c("segment_id", "link_id", "ref_node_id", "start_lr", "end_lr", "capacity", "free_speed", "bike_facility", "ped_facility", "parking", "allowed_uses")
+SEGMENT_names <- c("segment_id", "link_id", "ref_node_id", "start_lr", "end_lr", "grade", "capacity", "free_speed", "lanes", "l_lanes_added", "r_lanes_added", "bike_facility", "ped_facility", "parking", "allowed_uses", "toll", "jurisdiction", "row_width")
 SEGMENT <- data.frame(matrix(NA, ncol = length(SEGMENT_names), nrow = nrow(network), dimnames = list(1:nrow(network), SEGMENT_names)))
 
 pocket_length <- readLines("parameter.dat")[20] # line of parameter.dat that gets bay length
@@ -191,6 +191,8 @@ SEGMENT <- SEGMENT %>% mutate(segment_id = 1:nrow(network) # Primary key
                               , capacity = LINK$capacity
                               , l_lanes_added = network$LTBays
                               , r_lanes_added = network$RTBays
+                              , grade = network$Grade
+                              , lanes = network$Lanes + network$LTBays + network$RTBays
                               
 ) %>% filter(!is.na(ref_node_id)) # Filtering only links with pocket lane.
 
@@ -213,17 +215,18 @@ for (index in 1:max(LINK$lanes)) {
 
 # segment_lane table
 # all are added lanes; no parents needed
-SEGMENT_LANE_name <- c("lane_id", "link_id", "segment_id", "lane_num", "allowed_uses", "r_barrier", "l_barrier", "width")
+SEGMENT_LANE_name <- c("segment_lane_id", "segment_id", "lane_num", "parent_lane_id", "allowed_uses", "r_barrier", "l_barrier", "width")
 SEGMENT_LANE <- data.frame()
 
 # the right-turn pocket lanes
 rt_pockets <- SEGMENT %>% filter(r_lanes_added > 0) %>% 
   left_join(LINK, by = c("link_id" = "link_id")) %>%
-  dplyr::select(segment_id, link_id, r_lanes_added, lanes, allowed_uses.x)
+  dplyr::select(segment_id, link_id, r_lanes_added, lanes.x, allowed_uses.x) %>%
+  rename(lanes = lanes.x)
 
 for (index in 1:max(rt_pockets$r_lanes_added)) {
   lanesL <- rt_pockets %>% filter(r_lanes_added >= index)
-  df <- data.frame(NA, lanesL$link_id, lanesL$segment_id, lanesL$lanes + index, lanesL$allowed_uses, NA, NA, NA)
+  df <- data.frame(NA, lanesL$segment_id, lanesL$lanes + index, NA, lanesL$allowed_uses, NA, NA, NA)
   names(df) <- SEGMENT_LANE_name
   SEGMENT_LANE <- rbind(SEGMENT_LANE, df)
 }
@@ -235,13 +238,13 @@ lt_pockets <- SEGMENT %>% filter(l_lanes_added > 0) %>%
 
 for (index in 1:max(lt_pockets$l_lanes_added)) {
   lanesL <- lt_pockets %>% filter(l_lanes_added >= index)
-  df <- data.frame(NA, lanesL$link_id, lanesL$segment_id, -1 * index, lanesL$allowed_uses, NA, NA, NA)
+  df <- data.frame(NA, lanesL$segment_id, -1 * index, NA, lanesL$allowed_uses, NA, NA, NA)
   names(df) <- SEGMENT_LANE_name
   SEGMENT_LANE <- rbind(SEGMENT_LANE, df)
 }
 
 LANE <- LANE %>% arrange(link_id) %>% mutate (lane_id = row_number()) 
-SEGMENT_LANE <- SEGMENT_LANE %>% arrange(link_id) %>% mutate (lane_id = nrow(LANE)+row_number()) 
+SEGMENT_LANE <- SEGMENT_LANE %>% arrange(segment_id) %>% mutate (segment_lane_id = nrow(LANE)+row_number()) 
 
 
 ## MOVEMENT
@@ -282,7 +285,8 @@ MOVEMENT <- MOVEMENT %>% arrange(node_id) %>% mutate(mvmt_id = row_number())
 
 # minimum and maximum lanes of a link or a segment
 minmax_lanes <- LINK %>% left_join(SEGMENT, by = c("link_id" = "link_id")) %>%
-  dplyr::select(link_id, lanes, l_lanes_added, r_lanes_added) %>% 
+  dplyr::select(link_id, lanes.x, l_lanes_added, r_lanes_added) %>%
+  rename(lanes = lanes.x) %>%
   mutate(minLane_IB = if_else(is.na(l_lanes_added),1,-1*l_lanes_added)) %>%
   mutate(maxLane_IB = if_else(is.na(r_lanes_added), lanes, lanes + r_lanes_added)) %>%
   mutate(minLane_OB = 1) %>%
