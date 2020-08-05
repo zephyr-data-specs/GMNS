@@ -1,4 +1,4 @@
-node_id,name,x_coord,y_coord,z_coord,node_type,ctrl_type,zone_id,parent_node_id,"other fields (e.g., area, subarea)"
+node_id,name,x_coord,y_coord,z_coord,node_type,ctrl_type,zone_id,parent_node_id,notes
 1,,-71.22271369,42.48103112,,External,,,,
 2,,-71.22031517,42.47661657,,External,,,,
 3,,-71.21977983,42.47661122,,External,,,,
