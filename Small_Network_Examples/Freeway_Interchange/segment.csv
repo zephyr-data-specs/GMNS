@@ -1,5 +1,5 @@
-segment_id,link_id,ref_node_id,start_lr,end_lr,capacity,free_speed,l_lanes_added,r_lanes_added,bike_facility,ped_facility,parking,allowed_uses,notes
-101,578761,4,1650,2100,,,1,,,,,," left turn lanes, N1344 SB"
-102,578600,11,800,1100,,,1,1,,,,," multiple lanes, Ramp from I-95 SB"
-103,578597,13,0,200,,,,1,,,,," multiple lanes, Ramp to I-95 SB"
-104,578570,9,200,500,,,,1,,,,, right turn pocket for ramp
+segment_id,link_id,ref_node_id,start_lr,end_lr,grade,capacity,free_speed,lanes,l_lanes_added,r_lanes_added,bike_facility,ped_facility,parking,allowed_uses,toll,jurisdiction,row_width,notes
+101,578761,4,1650,2100,,,,4,1,,,,,,,,," left turn lanes, N1344 SB"
+102,578600,11,800,1100,,,,2,1,1,,,,,,,," multiple lanes, Ramp from I-95 SB"
+103,578597,13,0,200,,,,2,,1,,,,,,,," multiple lanes, Ramp to I-95 SB"
+104,578570,9,200,500,,,,4,,1,,,,,,,, right turn pocket for ramp
