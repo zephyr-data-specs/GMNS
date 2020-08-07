@@ -1,12 +1,12 @@
 # Time of Day Examples
 
-There are two small examples in this folder where the properties of the network are greatly effected by time of day.
+There are two small examples in this folder where the properties of the network are greatly affected by time of day.
 
 ## [Connecticut Ave, Washington DC](https://github.com/zephyr-data-specs/GMNS/blob/updates/Small_Network_Examples/TOD_Examples/CT_Ave.md)
 
 ![Street view of CT Ave](https://github.com/zephyr-data-specs/GMNS/blob/updates/Images/CT_Ave_1.png)
 
-In this example, to accomodate peak hour flows, lanes reverse direction and parking lanes are temporarily used as travel lanes. 
+In this example, to accommodate peak hour flows, lanes reverse direction and parking lanes are temporarily used as travel lanes. 
 
 It makes use of the following tables: 
   - node
