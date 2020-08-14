@@ -3,6 +3,9 @@ Basic conversion tools are available to get GMNS-formatted tables from the follo
 - A network in [DynusT](https://www.dynust.com) format
 - A network pulled from [OpenStreetMap](https://www.openstreetmap.org) using the [osmnx](https://github.com/gboeing/osmnx) python package. 
 
+And to convert a GMNS network to:
+- [Network Wrangler 2.0 Standard](https://github.com/wsp-sag/network_wrangler)
+
 ## [DynusT](DynusT/DynusT_to_GMNS.R)    
 ### Requirements and Inputs  
 - [R](https://www.r-project.org) and a few packages: `dplyr`, `readr`, and `data.table`, all available using the `install.packages()` function.
@@ -59,3 +62,22 @@ Generating segment tables may be possible by setting `simplify = False` in the o
 
 ### Example  
 This script was tested with input parameters `'Cambridge, MA'` as the location and `10` meters as the tolerance. Output files are located in the [OSM subfolder](OSM). Due to continual edits to OpenStreetMap, running this script may not result in identical output files to those located here.
+
+## [Network Wrangler](Network_Wrangler/GMNS_to_NW.py)
+This script takes a GMNS network as input, and outputs JSON files compatible with the [Network Wrangler](https://github.com/wsp-sag/network_wrangler) set of tools.
+### Requirements and Inputs  
+[Python](https://www.python.org/downloads/) is required, with the following packages and their dependencies installed: `pandas, json, copy`
+
+The script takes the following GMNS tables as inputs:
+- node.csv
+- location.csv
+- geometry.csv
+- link.csv
+### Outputs 
+The following JSON files are generated:
+- link.json
+- node.geojson
+- shape.geojson
+
+### Example  
+The small Cambridge network example, as processed by the script, is provided as an [example](Network_Wrangler/cambridge_example).
