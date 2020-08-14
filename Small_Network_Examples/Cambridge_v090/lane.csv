@@ -1,15 +1,15 @@
 lane_id,link_id,lane_num,allowed_uses,r_barrier,l_barrier,width,notes
-1122001,1122,1,ALL,,,,EB Thru lane
-1122002,1122,2,BIKE,,,,EB Bike Lane
-2211001,2211,1,ALL,,,,WB Thru lane
-2211002,2211,2,BIKE,,,,WB Bike lane
-1711001,1711,1,BIKE,,,,Path west of Volpe SB
-1117001,1117,1,BIKE,,,,Path west of Volpe NB
-311001,311,1,ALL,,,,Broadway EB (Galileo to Ames)
-311002,311,2,BIKE,,,,Broadway EB (Galileo to Ames) bike lane
-113001,113,1,ALL,,,,Broadway WB
-113002,113,2,BIKE,,,,Broadway WB bike lane
-711001,711,1,ALL,,,,Ames NB
-711002,117,1,ALL,,,,Ames SB
-711011,71101,1,BIKE,,,,Ames cycletrack NB
-117011,11701,1,BIKE,,,,Ames cycletrack SB
+1122001,1122,1,all,,,,EB Thru lane
+1122002,1122,2,bike,,,,EB Bike Lane
+2211001,2211,1,all,,,,WB Thru lane
+2211002,2211,2,bike,,,,WB Bike lane
+1711001,1711,1,bike,,,,Path west of Volpe SB
+1117001,1117,1,bike,,,,Path west of Volpe NB
+311001,311,1,all,,,,Broadway EB (Galileo to Ames)
+311002,311,2,bike,,,,Broadway EB (Galileo to Ames) bike lane
+113001,113,1,all,,,,Broadway WB
+113002,113,2,bike,,,,Broadway WB bike lane
+711001,711,1,all,,,,Ames NB
+711002,117,1,all,,,,Ames SB
+711011,71101,1,bike,,,,Ames cycletrack NB
+117011,11701,1,bike,,,,Ames cycletrack SB

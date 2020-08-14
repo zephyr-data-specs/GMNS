@@ -170,7 +170,7 @@ LINK <- LINK %>% mutate(link_id = network$Link_ID
   mutate(facility_type = Desc) %>% 
   select(LINK_names)
 
-
+LINK <- LINK %>% mutate(facility_type = tolower(facility_type))
 
 ## SEGMENT
 # In the current example, no way to identify a location, except the LTBays and RTBays, this actually might require us to look at the network in a map or dig into DynusT manual for more information on the indicator.
@@ -317,10 +317,10 @@ MOVEMENT <- MOVEMENT_joined %>% mutate(start_ib_lane = ifelse(type == "U-Turn" |
                                        end_ob_lane =   ifelse(type == "Thru", maxLane_OB, end_ob_lane)
                                        ) %>% dplyr::select(MOVEMENT_name)
 
-
+MOVEMENT <- MOVEMENT %>% mutate(type = tolower(type))
 
 # looks like Ib_Lane and Ob_Lane are lists, which is the reason why the table cannot be saved using write.csv()
-sapply(MOVEMENT, class)
+# sapply(MOVEMENT, class)
 
 # new geometry table is smaller (didn't change earlier because script relies on old fields)
 GEOMETRY_names <- c("geometry_id", "geometry")

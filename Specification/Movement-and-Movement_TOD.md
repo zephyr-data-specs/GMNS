@@ -18,15 +18,15 @@ movement data dictionary
 | <span class="underline">ob_link_id</span>         | Link\_ID         | Required  | Foreign key (from Link table)                          |
 | <span class="underline">start_ob_lane</span>         | INTEGER          | Optional  | Innermost lane number the movement applies to at the outbound end                       |
 | end_ob_lane	| INTEGER   	|	Optional  | Outermost lane number the movement applies to at the outbound end. Blank indicates a movement with a single outbound lane.	|
-| type                                            | TEXT             | Required  | LEFT, RIGHT, UTURN, THRU, MERGE, etc.                        |
+| type                                            | TEXT             | Required  | left, right, uturn, thru, merge, etc.                        |
 | penalty                                         | INTEGER          | Optional  | Turn penalty (seconds)                                       |
 | capacity                                        | INTEGER          | Optional  |                                                              |
-| ctrl_type                                         | ControlType\_Set | Required  | From ControlType\_Set: No Control, Stop, Yield, Signal, etc. |
+| ctrl_type                                         | ControlType\_Set | Required  | From ControlType\_Set: no control, stop, yield, signal, etc. |
 | notes                                           | TEXT             | Optional  |                                                              |
 
 A question is whether traffic controls should be included in the
-Movement file. Controls might include a type of control (e.g., YIELD,
-STOP, SIGNAL), and an indication of which Movements yield to other
+Movement file. Controls might include a type of control (e.g., yield,
+stop, signal), and an indication of which Movements yield to other
 Movements.
 
 # movement_tod
@@ -46,9 +46,9 @@ movement_tod data dictionary
 | end_ib_lane	| INTEGER          | Optional  | Outermost lane number the movement applies to at the inbound end. Blank indicates a movement with a single inbound lane.	|
 | start_ob_lane	| INTEGER          | Optional  | Innermost lane number the movement applies to at the outbound end	|
 | end_ob_lane	| INTEGER          | Optional  | Outermost lane number the movement applies to at the outbound end. Blank indicates a movement with a single outbound lane.	|
-| type                                            | TEXT             | Required  | LEFT, RIGHT, UTURN, THRU, MERGE, etc.                        |
+| type                                            | TEXT             | Required  | left, right, uturn, thru, merge, etc.                        |
 | penalty                                         | INTEGER          | Optional  | Turn penalty (seconds)                                       |
 | capacity                                        | INTEGER          | Optional  |                                                              |
-| ctrl_type                                         | ControlType\_Set | Required  | From ControlType\_Set: No Control, Stop, Yield, Signal, etc. |
+| ctrl_type                                         | ControlType\_Set | Required  | From ControlType\_Set: no control, stop, yield, signal, etc. |
 | notes                                           | TEXT             | Optional  |                                                              |
                                                              |

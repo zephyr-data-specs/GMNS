@@ -1,11 +1,11 @@
 node_id,name,x_coord,y_coord,z_coord,node_type,ctrl_type,zone_id,parent_node_id,notes
-1,,-71.22271369,42.48103112,,External,,,,
-2,,-71.22031517,42.47661657,,External,,,,
-3,,-71.21977983,42.47661122,,External,,,,
-4,,-71.21957791,42.48420925,,External,,,,
-5,,-71.21662727,42.47768979,,Diverge,,,,
-9,,-71.21520365,42.4777684,,External,,,,
-10,,-71.2144389,42.47836338,,Merge,,,,
-11,,-71.21229559,42.47898792,,Diverge,,,,
-12,,-71.20955834,42.47966035,,Diverge,,,,
-13,,-71.21604055,42.47908665,,Intersection,Signal,,,"combines original nodes 6, 7, 8 (parent_node would be another way to handle this)"
+1,,-71.22271369,42.48103112,,external,,,,
+2,,-71.22031517,42.47661657,,external,,,,
+3,,-71.21977983,42.47661122,,external,,,,
+4,,-71.21957791,42.48420925,,external,,,,
+5,,-71.21662727,42.47768979,,diverge,,,,
+9,,-71.21520365,42.4777684,,external,,,,
+10,,-71.2144389,42.47836338,,merge,,,,
+11,,-71.21229559,42.47898792,,diverge,,,,
+12,,-71.20955834,42.47966035,,diverge,,,,
+13,,-71.21604055,42.47908665,,intersection,signal,,,"combines original nodes 6, 7, 8 (parent_node would be another way to handle this)"

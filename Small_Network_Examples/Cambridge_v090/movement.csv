@@ -1,21 +1,21 @@
 mvmt_id,node_id,name,ib_link_id,start_ib_lane,end_ib_lane,ob_link_id,start_ob_lane,end_ob_lane,type,penalty,capacity,ctrl_type,notes
-1101,11,,711,1,1,1122,1,1,RIGHT,,,Signal,Ames NB R to Broadway
-1102,11,,711,-1,-1,113,1,1,LEFT,,,Signal,Ames NB L to Broadway
-1103,11,,711,-1,-1,113,2,2,LEFT,,,Signal,Ames NB L to Broadway
-1104,11,,71101,1,1,1117,1,1,THRU,,,Signal,Ames Cycletrack to Volpe path
-1105,11,,71101,1,1,113,3,3,LEFT,,,Signal,Ames Cycletrack L to Broadway
-1106,11,,71101,1,1,1122,3,3,RIGHT,,,Signal,Ames Cycletrack R to Broadway
-1107,11,,311,1,1,1122,1,1,THRU,,,Signal,Broadway EB thru @ Ames
-1108,11,,311,2,2,117,1,1,RIGHT,,,Signal,Broadway EB R to Ames
-1109,11,,311,3,3,1122,3,3,THRU,,,Signal,Broadway EB thru @ Ames (bike)
-1110,11,,311,3,3,11701,1,1,RIGHT,,,Signal,Broadway EB R to Ames (bike)
-1111,11,,311,3,3,1117,1,1,LEFT,,,Signal,Broadway EB L to Volpe path
-1112,11,,2211,-1,-1,117,1,1,LEFT,,,Signal,Broadway WB L to Ames
-1113,11,,2211,1,1,113,1,1,THRU,,,Signal,Broadway WB thru @ Ames
-1114,11,,2211,1,1,113,2,2,THRU,,,Signal,Broadway WB thru @ Ames
-1115,11,,2211,2,2,113,3,3,THRU,,,Signal,Broadway WB thru @ Ames (Bike)
-1116,11,,2211,2,2,1117,1,1,RIGHT,,,Signal,Broadway WB R to Volpe path
-1117,11,,2211,2,2,11701,1,1,LEFT,,,Signal,Broadway WB L to Ames cycletrack
-1118,11,,1711,1,1,11701,1,1,THRU,,,Signal,Volpe path to Ames cycletrack
-1119,11,,1711,1,1,113,3,3,RIGHT,,,Signal,Volpe path to Broadway WB
-1120,11,,1711,1,1,1122,3,3,LEFT,,,Signal,Volpe path to Broadway EB
+1101,11,,711,1,1,1122,1,1,right,,,signal,Ames NB R to Broadway
+1102,11,,711,-1,-1,113,1,1,left,,,signal,Ames NB L to Broadway
+1103,11,,711,-1,-1,113,2,2,left,,,signal,Ames NB L to Broadway
+1104,11,,71101,1,1,1117,1,1,thru,,,signal,Ames Cycletrack to Volpe path
+1105,11,,71101,1,1,113,3,3,left,,,signal,Ames Cycletrack L to Broadway
+1106,11,,71101,1,1,1122,3,3,right,,,signal,Ames Cycletrack R to Broadway
+1107,11,,311,1,1,1122,1,1,thru,,,signal,Broadway EB thru @ Ames
+1108,11,,311,2,2,117,1,1,right,,,signal,Broadway EB R to Ames
+1109,11,,311,3,3,1122,3,3,thru,,,signal,Broadway EB thru @ Ames (bike)
+1110,11,,311,3,3,11701,1,1,right,,,signal,Broadway EB R to Ames (bike)
+1111,11,,311,3,3,1117,1,1,left,,,signal,Broadway EB L to Volpe path
+1112,11,,2211,-1,-1,117,1,1,left,,,signal,Broadway WB L to Ames
+1113,11,,2211,1,1,113,1,1,thru,,,signal,Broadway WB thru @ Ames
+1114,11,,2211,1,1,113,2,2,thru,,,signal,Broadway WB thru @ Ames
+1115,11,,2211,2,2,113,3,3,thru,,,signal,Broadway WB thru @ Ames (Bike)
+1116,11,,2211,2,2,1117,1,1,right,,,signal,Broadway WB R to Volpe path
+1117,11,,2211,2,2,11701,1,1,left,,,signal,Broadway WB L to Ames cycletrack
+1118,11,,1711,1,1,11701,1,1,thru,,,signal,Volpe path to Ames cycletrack
+1119,11,,1711,1,1,113,3,3,right,,,signal,Volpe path to Broadway WB
+1120,11,,1711,1,1,1122,3,3,left,,,signal,Volpe path to Broadway EB

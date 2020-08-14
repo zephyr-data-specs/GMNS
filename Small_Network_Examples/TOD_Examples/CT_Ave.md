@@ -44,8 +44,8 @@ The nodes in this example represent the upstream and downstream intersections.
 Table 1: node
 | node_id | name | x_coord | y_coord | z_coord | node_type    | ctrl_type | zone_id | parent_node_id |
 | ---	  | ---  | ---     | ---     | ---     | ---          | ---       | ---     | --- |
-| 1	  | --   | 321828  | 4311071 | --      | INTERSECTION | SIGNAL    | --      | -- |
-| 2	  | --   | 321944  | 4310808 | --      | INTERSECTION | SIGNAL    | --      | -- |
+| 1	  | --   | 321828  | 4311071 | --      | intersection | signal    | --      | -- |
+| 2	  | --   | 321944  | 4310808 | --      | intersection | signal    | --      | -- |
 
 
 ## Links
@@ -55,8 +55,8 @@ Two links represent the southbound (Link 5) and northbound (Link 6) travel. For 
 Table 2: link
 | link_id | from_node_id | to_node_id | directed | parent_link_id | lanes | allowed_uses |
 | ---	  | ---	         | ---        | ---      | ---            | ---   | ---          |
-| 5	  | 1	         | 2          | TRUE     | --             | 2     | BIKE, AUTO, TRUCK, BUS |
-| 6       | 2	         | 1          | TRUE     | 5              | 2     | BIKE, AUTO, TRUCK, BUS |
+| 5	  | 1	         | 2          | true     | --             | 2     | bike, auto, truck, bus |
+| 6       | 2	         | 1          | true     | 5              | 2     | bike, auto, truck, bus |
 
 *Optional fields left blank for this example are: name, geometry_id, geometry, dir_flag, length, grade, facility_type, capacity, free_speed, bike_facility, ped_facility, parking, jurisdiction, & row_width
 
@@ -67,14 +67,14 @@ The two travel lanes and the lane of parking for each link are noted in this tab
 Table 3: lane
 | lane_id | link_id | lane_num | allowed_uses | r_barrier | l_barrier | width |
 | ---     | ---     | ---      | ---          | ---       | ---       | ---   |
-| 50      | 5       | -1       | NONE         | --        | --        | 10    |
-| 51      | 5       | 1        | ALL          | --        | --        | 10    |
-| 52      | 5       | 2        | ALL          | --        | --        | 10    |
-| 53      | 5       | 3        | PARKING      | --        | --        | 10    | 
-| 60      | 6       | -1       | NONE         | --        | --        | 10    |
-| 61      | 6       | 1        | ALL          | --        | --        | 10    |
-| 62      | 6       | 2        | ALL          | --        | --        | 10    |
-| 63      | 6       | 3        | PARKING      | --        | --        | 10    |
+| 50      | 5       | -1       | none         | --        | --        | 10    |
+| 51      | 5       | 1        | all          | --        | --        | 10    |
+| 52      | 5       | 2        | all          | --        | --        | 10    |
+| 53      | 5       | 3        | parking      | --        | --        | 10    | 
+| 60      | 6       | -1       | none         | --        | --        | 10    |
+| 61      | 6       | 1        | all          | --        | --        | 10    |
+| 62      | 6       | 2        | all          | --        | --        | 10    |
+| 63      | 6       | 3        | parking      | --        | --        | 10    |
 
 ## Link TOD
 
@@ -83,10 +83,10 @@ The link_tod table captures the change in the number of travel lanes for differe
 Table 4: link_tod
 | link_tod_id | link_id | time_day           | timeday_id | lanes | allowed_uses |
 | ---         | ---	| ---                | ---        | ---	  | ---          |
-| 7           | 5	| 01111100_0700_0930 | ---        | 4	  | BIKE, AUTO, TRUCK, BUS  |
-| 8           | 6	| 01111100_1600_1830 | ---        | 4	  | BIKE, AUTO, TRUCK, BUS  |
-| 9           | 6	| 01111100_0700_0930 | ---        | 2	  | BIKE, AUTO, TRUCK, BUS  |
-| 10          | 5	| 01111100_1600_1830 | ---        | 2	  | BIKE, AUTO, TRUCK, BUS  |
+| 7           | 5	| 01111100_0700_0930 | ---        | 4	  | bike, auto, truck, bus  |
+| 8           | 6	| 01111100_1600_1830 | ---        | 4	  | bike, auto, truck, bus  |
+| 9           | 6	| 01111100_0700_0930 | ---        | 2	  | bike, auto, truck, bus  |
+| 10          | 5	| 01111100_1600_1830 | ---        | 2	  | bike, auto, truck, bus  |
 
 ## Lane TOD
 
@@ -95,13 +95,13 @@ The lane_tod table is used for the lanes that reverse direction and the parking 
 Table 5: lane_tod
 | lane_tod_id | lane_id | time_day           | timeday_id | lane_num | allowed_uses | notes |
 | ---         | ---     | ---                | ---        | ---      | ---          | ---   |
-| 531         | 53      | 01111100_0700_0930 | ---        | 3        | ALL          | Parking lane used for travel (AM Peak)   |
-| 532         | 53      | 01111100_1600_1830 | ---        | 3        | ALL          | Parking lane used for travel (PM Peak)   |
-| 501         | 50      | 01111100_0700_0930 | ---        | -1       | ALL          | Reverses direction of lane from link 6   |
-| 612         | 61      | 01111100_0700_0930 | ---        | 0        | NONE         | Lane used for link 5                     |
-| 631         | 63      | 01111100_1600_1830 | ---        | 3        | ALL          | Parking lane used for travel (PM Peak)   |
-| 632         | 63      | 01111100_0700_0930 | ---        | 3        | ALL          | Parking lane used for travel (AM Peak)   |
-| 601         | 60      | 01111100_1600_1830 | ---        | -1       | ALL          | Reverses direction of lane from link 5   |
-| 512         | 51      | 01111100_1600_1830 | ---        | 0        | NONE         | Lane used for link 6                     |
+| 531         | 53      | 01111100_0700_0930 | ---        | 3        | all          | Parking lane used for travel (AM Peak)   |
+| 532         | 53      | 01111100_1600_1830 | ---        | 3        | all          | Parking lane used for travel (PM Peak)   |
+| 501         | 50      | 01111100_0700_0930 | ---        | -1       | all          | Reverses direction of lane from link 6   |
+| 612         | 61      | 01111100_0700_0930 | ---        | 0        | none         | Lane used for link 5                     |
+| 631         | 63      | 01111100_1600_1830 | ---        | 3        | all          | Parking lane used for travel (PM Peak)   |
+| 632         | 63      | 01111100_0700_0930 | ---        | 3        | all          | Parking lane used for travel (AM Peak)   |
+| 601         | 60      | 01111100_1600_1830 | ---        | -1       | all          | Reverses direction of lane from link 5   |
+| 512         | 51      | 01111100_1600_1830 | ---        | 0        | none         | Lane used for link 6                     |
 
 *Optional fields left blank for this example are: r_barrier, l_barrier, and width
