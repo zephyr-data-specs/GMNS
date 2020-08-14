@@ -1,0 +1,3002 @@
+[
+    {
+        "model_link_id": 311,
+        "osm_link_id": "311",
+        "shstReferenceId": "311",
+        "shstGeometryId": "9001",
+        "u": "3",
+        "v": "11",
+        "A": 3,
+        "B": 11,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 215.798,
+        "maxspeed": "25.0 mph",
+        "name": "Broadway",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.134,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 1,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0896646,
+                    42.3649006
+                ],
+                "distanceToNextRef": 215.798,
+                "bearing": 0,
+                "intersectionId": "3"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0873963,
+                    42.3639282
+                ],
+                "intersectionId": "11"
+            }
+        ]
+    },
+    {
+        "model_link_id": 711,
+        "osm_link_id": "711",
+        "shstReferenceId": "711",
+        "shstGeometryId": "9002",
+        "u": "7",
+        "v": "11",
+        "A": 7,
+        "B": 11,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 164.897,
+        "maxspeed": "25.0 mph",
+        "name": "Ames Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.102,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 1,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0881584,
+                    42.3626232
+                ],
+                "distanceToNextRef": 164.897,
+                "bearing": 0,
+                "intersectionId": "7"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0873963,
+                    42.3639282
+                ],
+                "intersectionId": "11"
+            }
+        ]
+    },
+    {
+        "model_link_id": 117,
+        "osm_link_id": "117",
+        "shstReferenceId": "117",
+        "shstGeometryId": "9002",
+        "u": "11",
+        "v": "7",
+        "A": 11,
+        "B": 7,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 164.897,
+        "maxspeed": "25.0 mph",
+        "name": "Ames Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.102,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 1,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0873963,
+                    42.3639282
+                ],
+                "distanceToNextRef": 164.897,
+                "bearing": 0,
+                "intersectionId": "11"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0881584,
+                    42.3626232
+                ],
+                "intersectionId": "7"
+            }
+        ]
+    },
+    {
+        "model_link_id": 1122,
+        "osm_link_id": "1122",
+        "shstReferenceId": "1122",
+        "shstGeometryId": "9003",
+        "u": "11",
+        "v": "22",
+        "A": 11,
+        "B": 22,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 284.074,
+        "maxspeed": "25.0 mph",
+        "name": "Broadway",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.177,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0873963,
+                    42.3639282
+                ],
+                "distanceToNextRef": 284.074,
+                "bearing": 0,
+                "intersectionId": "11"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0844086,
+                    42.3626504
+                ],
+                "intersectionId": "22"
+            }
+        ]
+    },
+    {
+        "model_link_id": 113,
+        "osm_link_id": "113",
+        "shstReferenceId": "113",
+        "shstGeometryId": "9004",
+        "u": "11",
+        "v": "3",
+        "A": 11,
+        "B": 3,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 215.798,
+        "maxspeed": "25.0 mph",
+        "name": "Broadway",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.134,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0873319,
+                    42.3640097
+                ],
+                "distanceToNextRef": 215.798,
+                "bearing": 0,
+                "intersectionId": "11"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0893354,
+                    42.364812
+                ],
+                "intersectionId": "3"
+            }
+        ]
+    },
+    {
+        "model_link_id": 2211,
+        "osm_link_id": "2211",
+        "shstReferenceId": "2211",
+        "shstGeometryId": "9005",
+        "u": "22",
+        "v": "11",
+        "A": 22,
+        "B": 11,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 284.074,
+        "maxspeed": "25.0 mph",
+        "name": "Broadway",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.177,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0843176,
+                    42.3627195
+                ],
+                "distanceToNextRef": 284.074,
+                "bearing": 0,
+                "intersectionId": "22"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0873319,
+                    42.3640097
+                ],
+                "intersectionId": "11"
+            }
+        ]
+    },
+    {
+        "model_link_id": 7797,
+        "osm_link_id": "7797",
+        "shstReferenceId": "7797",
+        "shstGeometryId": "9006",
+        "u": "22",
+        "v": "25",
+        "A": 22,
+        "B": 25,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 63.094,
+        "maxspeed": "25.0 mph",
+        "name": "Broadway",
+        "oneway": "True",
+        "tunnel": "",
+        "width": "",
+        "lanes": 2,
+        "distance": 0.039,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0844086,
+                    42.3626504
+                ],
+                "distanceToNextRef": 63.094,
+                "bearing": 0,
+                "intersectionId": "22"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0838224,
+                    42.3622846
+                ],
+                "intersectionId": "25"
+            }
+        ]
+    },
+    {
+        "model_link_id": 7798,
+        "osm_link_id": "7798",
+        "shstReferenceId": "7798",
+        "shstGeometryId": "9007",
+        "u": "27",
+        "v": "22",
+        "A": 27,
+        "B": 22,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 126.492,
+        "maxspeed": "25.0 mph",
+        "name": "Broadway",
+        "oneway": "True",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.079,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0830222,
+                    42.3621793
+                ],
+                "distanceToNextRef": 126.492,
+                "bearing": 0,
+                "intersectionId": "27"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0843176,
+                    42.3627195
+                ],
+                "intersectionId": "22"
+            }
+        ]
+    },
+    {
+        "model_link_id": 1711,
+        "osm_link_id": "1711",
+        "shstReferenceId": "1711",
+        "shstGeometryId": "9008",
+        "u": "17",
+        "v": "11",
+        "A": 17,
+        "B": 11,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Cycletrack",
+        "length": 263.347,
+        "maxspeed": "15.0 mph",
+        "name": "Knox Bikepath",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 0,
+        "distance": 0.164,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0861564,
+                    42.3661139
+                ],
+                "distanceToNextRef": 263.347,
+                "bearing": 0,
+                "intersectionId": "17"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0872319,
+                    42.3640097
+                ],
+                "intersectionId": "11"
+            }
+        ]
+    },
+    {
+        "model_link_id": 1117,
+        "osm_link_id": "1117",
+        "shstReferenceId": "1117",
+        "shstGeometryId": "9008",
+        "u": "11",
+        "v": "17",
+        "A": 11,
+        "B": 17,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Cycletrack",
+        "length": 263.347,
+        "maxspeed": "15.0 mph",
+        "name": "Knox Bikepath",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 0,
+        "distance": 0.164,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0872319,
+                    42.3640097
+                ],
+                "distanceToNextRef": 263.347,
+                "bearing": 0,
+                "intersectionId": "11"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0861564,
+                    42.3661139
+                ],
+                "intersectionId": "17"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11701,
+        "osm_link_id": "11701",
+        "shstReferenceId": "11701",
+        "shstGeometryId": "9009",
+        "u": "11",
+        "v": "7",
+        "A": 11,
+        "B": 7,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Cycletrack",
+        "length": 161.544,
+        "maxspeed": "25.0 mph",
+        "name": "Ames Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 0,
+        "distance": 0.1,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 0,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0873359,
+                    42.363905
+                ],
+                "distanceToNextRef": 161.544,
+                "bearing": 0,
+                "intersectionId": "11"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0880814,
+                    42.3626176
+                ],
+                "intersectionId": "7"
+            }
+        ]
+    },
+    {
+        "model_link_id": 71101,
+        "osm_link_id": "71101",
+        "shstReferenceId": "71101",
+        "shstGeometryId": "9009",
+        "u": "7",
+        "v": "11",
+        "A": 7,
+        "B": 11,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Cycletrack",
+        "length": 161.544,
+        "maxspeed": "25.0 mph",
+        "name": "Ames Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 0,
+        "distance": 0.1,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 0,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0880814,
+                    42.3626176
+                ],
+                "distanceToNextRef": 161.544,
+                "bearing": 0,
+                "intersectionId": "7"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0873359,
+                    42.363905
+                ],
+                "intersectionId": "11"
+            }
+        ]
+    },
+    {
+        "model_link_id": 5409,
+        "osm_link_id": "5409",
+        "shstReferenceId": "5409",
+        "shstGeometryId": "9010",
+        "u": "22",
+        "v": "29",
+        "A": 22,
+        "B": 29,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 312.115,
+        "maxspeed": "25.0 mph",
+        "name": "Third Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.194,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0843176,
+                    42.3627195
+                ],
+                "distanceToNextRef": 312.115,
+                "bearing": 0,
+                "intersectionId": "22"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0827235,
+                    42.3651668
+                ],
+                "intersectionId": "29"
+            }
+        ]
+    },
+    {
+        "model_link_id": 15409,
+        "osm_link_id": "15409",
+        "shstReferenceId": "15409",
+        "shstGeometryId": "9010",
+        "u": "29",
+        "v": "22",
+        "A": 29,
+        "B": 22,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 312.115,
+        "maxspeed": "25.0 mph",
+        "name": "Third Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.194,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0827235,
+                    42.3651668
+                ],
+                "distanceToNextRef": 312.115,
+                "bearing": 0,
+                "intersectionId": "29"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0843176,
+                    42.3627195
+                ],
+                "intersectionId": "22"
+            }
+        ]
+    },
+    {
+        "model_link_id": 5677,
+        "osm_link_id": "5677",
+        "shstReferenceId": "5677",
+        "shstGeometryId": "9011",
+        "u": "22",
+        "v": "21",
+        "A": 22,
+        "B": 21,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 3.048,
+        "maxspeed": "25.0 mph",
+        "name": "Main Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.002,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0844086,
+                    42.3626504
+                ],
+                "distanceToNextRef": 3.048,
+                "bearing": 0,
+                "intersectionId": "22"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.085119,
+                    42.362348
+                ],
+                "intersectionId": "21"
+            }
+        ]
+    },
+    {
+        "model_link_id": 4425,
+        "osm_link_id": "4425",
+        "shstReferenceId": "4425",
+        "shstGeometryId": "9012",
+        "u": "25",
+        "v": "28",
+        "A": 25,
+        "B": 28,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 89.306,
+        "maxspeed": "25.0 mph",
+        "name": "Main Street",
+        "oneway": "True",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.055,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0838224,
+                    42.3622846
+                ],
+                "distanceToNextRef": 89.306,
+                "bearing": 0,
+                "intersectionId": "25"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0827978,
+                    42.3620211
+                ],
+                "intersectionId": "28"
+            }
+        ]
+    },
+    {
+        "model_link_id": 4619,
+        "osm_link_id": "4619",
+        "shstReferenceId": "4619",
+        "shstGeometryId": "9013",
+        "u": "7",
+        "v": "21",
+        "A": 7,
+        "B": 21,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": "",
+        "maxspeed": "25.0 mph",
+        "name": "Main Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0881669,
+                    42.3625586
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "7"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0850211,
+                    42.3623099
+                ],
+                "intersectionId": "21"
+            }
+        ]
+    },
+    {
+        "model_link_id": 14619,
+        "osm_link_id": "14619",
+        "shstReferenceId": "14619",
+        "shstGeometryId": "9013",
+        "u": "21",
+        "v": "7",
+        "A": 21,
+        "B": 7,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": "",
+        "maxspeed": "25.0 mph",
+        "name": "Main Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0850211,
+                    42.3623099
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "21"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0881669,
+                    42.3625586
+                ],
+                "intersectionId": "7"
+            }
+        ]
+    },
+    {
+        "model_link_id": 8461,
+        "osm_link_id": "8461",
+        "shstReferenceId": "8461",
+        "shstGeometryId": "9014",
+        "u": "21",
+        "v": "25",
+        "A": 21,
+        "B": 25,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": "",
+        "maxspeed": "25.0 mph",
+        "name": "Main Street",
+        "oneway": "True",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0850211,
+                    42.3623099
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "21"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0838224,
+                    42.3622846
+                ],
+                "intersectionId": "25"
+            }
+        ]
+    },
+    {
+        "model_link_id": 7761,
+        "osm_link_id": "7761",
+        "shstReferenceId": "7761",
+        "shstGeometryId": "9015",
+        "u": "7",
+        "v": "1",
+        "A": 7,
+        "B": 1,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 87.782,
+        "maxspeed": "25.0 mph",
+        "name": "Main Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.055,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0881584,
+                    42.3626232
+                ],
+                "distanceToNextRef": 87.782,
+                "bearing": 0,
+                "intersectionId": "7"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0898,
+                    42.36275
+                ],
+                "intersectionId": "1"
+            }
+        ]
+    },
+    {
+        "model_link_id": 6011,
+        "osm_link_id": "6011",
+        "shstReferenceId": "6011",
+        "shstGeometryId": "9016",
+        "u": "21",
+        "v": "22",
+        "A": 21,
+        "B": 22,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 63.094,
+        "maxspeed": "25.0 mph",
+        "name": "Main Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.039,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0850211,
+                    42.3623099
+                ],
+                "distanceToNextRef": 63.094,
+                "bearing": 0,
+                "intersectionId": "21"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0844086,
+                    42.3626504
+                ],
+                "intersectionId": "22"
+            }
+        ]
+    },
+    {
+        "model_link_id": 7337,
+        "osm_link_id": "7337",
+        "shstReferenceId": "7337",
+        "shstGeometryId": "9017",
+        "u": "1",
+        "v": "7",
+        "A": 1,
+        "B": 7,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 147.218,
+        "maxspeed": "25.0 mph",
+        "name": "Main Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.091,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0899422,
+                    42.3627194
+                ],
+                "distanceToNextRef": 147.218,
+                "bearing": 0,
+                "intersectionId": "1"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0881669,
+                    42.3625586
+                ],
+                "intersectionId": "7"
+            }
+        ]
+    },
+    {
+        "model_link_id": 4222,
+        "osm_link_id": "4222",
+        "shstReferenceId": "4222",
+        "shstGeometryId": "9009",
+        "u": "11",
+        "v": "7",
+        "A": 11,
+        "B": 7,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 164.897,
+        "maxspeed": "25.0 mph",
+        "name": "Ames Street",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.102,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0873359,
+                    42.363905
+                ],
+                "distanceToNextRef": 164.897,
+                "bearing": 0,
+                "intersectionId": "11"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0880814,
+                    42.3626176
+                ],
+                "intersectionId": "7"
+            }
+        ]
+    },
+    {
+        "model_link_id": 9910,
+        "osm_link_id": "9910",
+        "shstReferenceId": "9910",
+        "shstGeometryId": "9018",
+        "u": "10",
+        "v": "7",
+        "A": 10,
+        "B": 7,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "",
+        "length": 285.902,
+        "maxspeed": "25.0 mph",
+        "name": "Ames Street",
+        "oneway": "True",
+        "tunnel": "",
+        "width": "",
+        "lanes": 1,
+        "distance": 0.178,
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 1,
+        "walk_access": 1,
+        "bike_access": 1,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0876411,
+                    42.3600151
+                ],
+                "distanceToNextRef": 285.902,
+                "bearing": 0,
+                "intersectionId": "10"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0881669,
+                    42.3625586
+                ],
+                "intersectionId": "7"
+            }
+        ]
+    },
+    {
+        "model_link_id": 31101,
+        "osm_link_id": "31101",
+        "shstReferenceId": "31101",
+        "shstGeometryId": "9019",
+        "u": "302",
+        "v": "1105",
+        "A": 302,
+        "B": 1105,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "Broadway sidewalk",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.089331,
+                    42.364648
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "302"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.087665,
+                    42.363938
+                ],
+                "intersectionId": "1105"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11301,
+        "osm_link_id": "11301",
+        "shstReferenceId": "11301",
+        "shstGeometryId": "9020",
+        "u": "1103",
+        "v": "301",
+        "A": 1103,
+        "B": 301,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "Broadway sidewalk",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.087488,
+                    42.364142
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1103"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.089277,
+                    42.364874
+                ],
+                "intersectionId": "301"
+            }
+        ]
+    },
+    {
+        "model_link_id": 71102,
+        "osm_link_id": "71102",
+        "shstReferenceId": "71102",
+        "shstGeometryId": "9021",
+        "u": "701",
+        "v": "711",
+        "A": 701,
+        "B": 711,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "Ames sidewalk",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.08801,
+                    42.36264
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "701"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0876685,
+                    42.363425
+                ],
+                "intersectionId": "711"
+            }
+        ]
+    },
+    {
+        "model_link_id": 71103,
+        "osm_link_id": "71103",
+        "shstReferenceId": "71103",
+        "shstGeometryId": "9022",
+        "u": "711",
+        "v": "1104",
+        "A": 711,
+        "B": 1104,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "Ames sidewalk",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0876685,
+                    42.363425
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "711"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.087329,
+                    42.363787
+                ],
+                "intersectionId": "1104"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11702,
+        "osm_link_id": "11702",
+        "shstReferenceId": "11702",
+        "shstGeometryId": "9023",
+        "u": "1105",
+        "v": "702",
+        "A": 1105,
+        "B": 702,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "Ames sidewalk",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.087665,
+                    42.363938
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1105"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.088395,
+                    42.362683
+                ],
+                "intersectionId": "702"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11221,
+        "osm_link_id": "11221",
+        "shstReferenceId": "11221",
+        "shstGeometryId": "9024",
+        "u": "1104",
+        "v": "1101",
+        "A": 1104,
+        "B": 1101,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "Broadway sidewalk",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.087329,
+                    42.363787
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1104"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.085966,
+                    42.363251
+                ],
+                "intersectionId": "1101"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11222,
+        "osm_link_id": "11222",
+        "shstReferenceId": "11222",
+        "shstGeometryId": "9025",
+        "u": "1101",
+        "v": "2202",
+        "A": 1101,
+        "B": 2202,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "Broadway sidewalk",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.085966,
+                    42.363251
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1101"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.08458,
+                    42.362604
+                ],
+                "intersectionId": "2202"
+            }
+        ]
+    },
+    {
+        "model_link_id": 22111,
+        "osm_link_id": "22111",
+        "shstReferenceId": "22111",
+        "shstGeometryId": "9026",
+        "u": "2201",
+        "v": "2211",
+        "A": 2201,
+        "B": 2211,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "Broadway sidewalk",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.084404,
+                    42.362856
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2201"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.085826,
+                    42.363431
+                ],
+                "intersectionId": "2211"
+            }
+        ]
+    },
+    {
+        "model_link_id": 22112,
+        "osm_link_id": "22112",
+        "shstReferenceId": "22112",
+        "shstGeometryId": "9027",
+        "u": "2211",
+        "v": "1102",
+        "A": 2211,
+        "B": 1102,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "Broadway sidewalk",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.085826,
+                    42.363431
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2211"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.087165,
+                    42.364
+                ],
+                "intersectionId": "1102"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11171,
+        "osm_link_id": "11171",
+        "shstReferenceId": "11171",
+        "shstGeometryId": "9028",
+        "u": "1102",
+        "v": "1701",
+        "A": 1102,
+        "B": 1701,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "Loughery Walkway",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.087165,
+                    42.364
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1102"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.086029,
+                    42.366009
+                ],
+                "intersectionId": "1701"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11001,
+        "osm_link_id": "11001",
+        "shstReferenceId": "11001",
+        "shstGeometryId": "9029",
+        "u": "1102",
+        "v": "1104",
+        "A": 1102,
+        "B": 1104,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.087165,
+                    42.364
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1102"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.087329,
+                    42.363787
+                ],
+                "intersectionId": "1104"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11002,
+        "osm_link_id": "11002",
+        "shstReferenceId": "11002",
+        "shstGeometryId": "9030",
+        "u": "1103",
+        "v": "1105",
+        "A": 1103,
+        "B": 1105,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.087488,
+                    42.364142
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1103"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.087665,
+                    42.363938
+                ],
+                "intersectionId": "1105"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11003,
+        "osm_link_id": "11003",
+        "shstReferenceId": "11003",
+        "shstGeometryId": "9031",
+        "u": "1104",
+        "v": "1105",
+        "A": 1104,
+        "B": 1105,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.087329,
+                    42.363787
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1104"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.087665,
+                    42.363938
+                ],
+                "intersectionId": "1105"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11004,
+        "osm_link_id": "11004",
+        "shstReferenceId": "11004",
+        "shstGeometryId": "9032",
+        "u": "1102",
+        "v": "1103",
+        "A": 1102,
+        "B": 1103,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.087165,
+                    42.364
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1102"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.087488,
+                    42.364142
+                ],
+                "intersectionId": "1103"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11005,
+        "osm_link_id": "11005",
+        "shstReferenceId": "11005",
+        "shstGeometryId": "9033",
+        "u": "711",
+        "v": "12231",
+        "A": 711,
+        "B": 12231,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.087744,
+                    42.363478
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "711"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.087704,
+                    42.363498
+                ],
+                "intersectionId": "12231"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11221,
+        "osm_link_id": "11221",
+        "shstReferenceId": "11221",
+        "shstGeometryId": "9034",
+        "u": "1101",
+        "v": "2211",
+        "A": 1101,
+        "B": 2211,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.085966,
+                    42.363251
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1101"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.085826,
+                    42.363431
+                ],
+                "intersectionId": "2211"
+            }
+        ]
+    },
+    {
+        "model_link_id": 70102,
+        "osm_link_id": "70102",
+        "shstReferenceId": "70102",
+        "shstGeometryId": "9035",
+        "u": "701",
+        "v": "702",
+        "A": 701,
+        "B": 702,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.08801,
+                    42.36264
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "701"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.088395,
+                    42.362683
+                ],
+                "intersectionId": "702"
+            }
+        ]
+    },
+    {
+        "model_link_id": 70203,
+        "osm_link_id": "70203",
+        "shstReferenceId": "70203",
+        "shstGeometryId": "9036",
+        "u": "702",
+        "v": "703",
+        "A": 702,
+        "B": 703,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.088395,
+                    42.362683
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "702"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.088335,
+                    42.362495
+                ],
+                "intersectionId": "703"
+            }
+        ]
+    },
+    {
+        "model_link_id": 70204,
+        "osm_link_id": "70204",
+        "shstReferenceId": "70204",
+        "shstGeometryId": "9037",
+        "u": "703",
+        "v": "704",
+        "A": 703,
+        "B": 704,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.088335,
+                    42.362495
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "703"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.088033,
+                    42.36246
+                ],
+                "intersectionId": "704"
+            }
+        ]
+    },
+    {
+        "model_link_id": 70104,
+        "osm_link_id": "70104",
+        "shstReferenceId": "70104",
+        "shstGeometryId": "9038",
+        "u": "701",
+        "v": "704",
+        "A": 701,
+        "B": 704,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0880101,
+                    42.36264107
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "701"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.088033,
+                    42.36246
+                ],
+                "intersectionId": "704"
+            }
+        ]
+    },
+    {
+        "model_link_id": 72101,
+        "osm_link_id": "72101",
+        "shstReferenceId": "72101",
+        "shstGeometryId": "9039",
+        "u": "701",
+        "v": "771",
+        "A": 701,
+        "B": 771,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0880101,
+                    42.36264107
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "701"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0861,
+                    42.362494
+                ],
+                "intersectionId": "771"
+            }
+        ]
+    },
+    {
+        "model_link_id": 72103,
+        "osm_link_id": "72103",
+        "shstReferenceId": "72103",
+        "shstGeometryId": "9040",
+        "u": "771",
+        "v": "2101",
+        "A": 771,
+        "B": 2101,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0861,
+                    42.362494
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "771"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.085115,
+                    42.362435
+                ],
+                "intersectionId": "2101"
+            }
+        ]
+    },
+    {
+        "model_link_id": 72102,
+        "osm_link_id": "72102",
+        "shstReferenceId": "72102",
+        "shstGeometryId": "9041",
+        "u": "704",
+        "v": "772",
+        "A": 704,
+        "B": 772,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.088033,
+                    42.36246
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "704"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.086123,
+                    42.362327
+                ],
+                "intersectionId": "772"
+            }
+        ]
+    },
+    {
+        "model_link_id": 72104,
+        "osm_link_id": "72104",
+        "shstReferenceId": "72104",
+        "shstGeometryId": "9042",
+        "u": "772",
+        "v": "2102",
+        "A": 772,
+        "B": 2102,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.086123,
+                    42.362327
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "772"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.085116,
+                    42.36226
+                ],
+                "intersectionId": "2102"
+            }
+        ]
+    },
+    {
+        "model_link_id": 21252,
+        "osm_link_id": "21252",
+        "shstReferenceId": "21252",
+        "shstGeometryId": "9043",
+        "u": "2102",
+        "v": "2502",
+        "A": 2102,
+        "B": 2502,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.085116,
+                    42.36226
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2102"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.083814,
+                    42.362205
+                ],
+                "intersectionId": "2502"
+            }
+        ]
+    },
+    {
+        "model_link_id": 25282,
+        "osm_link_id": "25282",
+        "shstReferenceId": "25282",
+        "shstGeometryId": "9044",
+        "u": "2502",
+        "v": "2802",
+        "A": 2502,
+        "B": 2802,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.083814,
+                    42.362205
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2502"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.082794,
+                    42.361942
+                ],
+                "intersectionId": "2802"
+            }
+        ]
+    },
+    {
+        "model_link_id": 21221,
+        "osm_link_id": "21221",
+        "shstReferenceId": "21221",
+        "shstGeometryId": "9045",
+        "u": "2101",
+        "v": "2202",
+        "A": 2101,
+        "B": 2202,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.085115,
+                    42.362435
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2101"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.08458003,
+                    42.36260445
+                ],
+                "intersectionId": "2202"
+            }
+        ]
+    },
+    {
+        "model_link_id": 22221,
+        "osm_link_id": "22221",
+        "shstReferenceId": "22221",
+        "shstGeometryId": "9046",
+        "u": "2201",
+        "v": "2202",
+        "A": 2201,
+        "B": 2202,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.084404,
+                    42.362856
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2201"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.08458003,
+                    42.36260445
+                ],
+                "intersectionId": "2202"
+            }
+        ]
+    },
+    {
+        "model_link_id": 22222,
+        "osm_link_id": "22222",
+        "shstReferenceId": "22222",
+        "shstGeometryId": "9047",
+        "u": "2202",
+        "v": "2203",
+        "A": 2202,
+        "B": 2203,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.08458003,
+                    42.36260445
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2202"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.084369,
+                    42.362476
+                ],
+                "intersectionId": "2203"
+            }
+        ]
+    },
+    {
+        "model_link_id": 22223,
+        "osm_link_id": "22223",
+        "shstReferenceId": "22223",
+        "shstGeometryId": "9048",
+        "u": "2203",
+        "v": "2204",
+        "A": 2203,
+        "B": 2204,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.084369,
+                    42.362476
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2203"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0840678,
+                    42.362731
+                ],
+                "intersectionId": "2204"
+            }
+        ]
+    },
+    {
+        "model_link_id": 22224,
+        "osm_link_id": "22224",
+        "shstReferenceId": "22224",
+        "shstGeometryId": "9049",
+        "u": "2201",
+        "v": "2204",
+        "A": 2201,
+        "B": 2204,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.084404,
+                    42.362856
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2201"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0840678,
+                    42.362731
+                ],
+                "intersectionId": "2204"
+            }
+        ]
+    },
+    {
+        "model_link_id": 22251,
+        "osm_link_id": "22251",
+        "shstReferenceId": "22251",
+        "shstGeometryId": "9050",
+        "u": "2203",
+        "v": "2501",
+        "A": 2203,
+        "B": 2501,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.084369,
+                    42.362476
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2203"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.083925,
+                    42.362269
+                ],
+                "intersectionId": "2501"
+            }
+        ]
+    },
+    {
+        "model_link_id": 25251,
+        "osm_link_id": "25251",
+        "shstReferenceId": "25251",
+        "shstGeometryId": "9051",
+        "u": "2501",
+        "v": "2502",
+        "A": 2501,
+        "B": 2502,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.083925,
+                    42.362269
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2501"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.083814,
+                    42.362205
+                ],
+                "intersectionId": "2502"
+            }
+        ]
+    },
+    {
+        "model_link_id": 22271,
+        "osm_link_id": "22271",
+        "shstReferenceId": "22271",
+        "shstGeometryId": "9052",
+        "u": "2204",
+        "v": "2701",
+        "A": 2204,
+        "B": 2701,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Sidewalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0840678,
+                    42.362731
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "2204"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.083018,
+                    42.362254
+                ],
+                "intersectionId": "2701"
+            }
+        ]
+    },
+    {
+        "model_link_id": 11771,
+        "osm_link_id": "11771",
+        "shstReferenceId": "11771",
+        "shstGeometryId": "9053",
+        "u": "1101",
+        "v": "771",
+        "A": 1101,
+        "B": 771,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Walkway",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.085966,
+                    42.363251
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "1101"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.0861,
+                    42.362494
+                ],
+                "intersectionId": "771"
+            }
+        ]
+    },
+    {
+        "model_link_id": 77102,
+        "osm_link_id": "77102",
+        "shstReferenceId": "77102",
+        "shstGeometryId": "9054",
+        "u": "771",
+        "v": "772",
+        "A": 771,
+        "B": 772,
+        "access": "",
+        "area": "",
+        "bridge": "",
+        "highway": "Crosswalk",
+        "length": "",
+        "maxspeed": " mph",
+        "name": "",
+        "oneway": "False",
+        "tunnel": "",
+        "width": "",
+        "lanes": "",
+        "distance": "",
+        "HOV_access": 0,
+        "trn_priority": 0,
+        "ttime_assert": 0,
+        "transit_access": 0,
+        "drive_access": 0,
+        "walk_access": 1,
+        "bike_access": 0,
+        "transit_walk_access": 0,
+        "locationReferences": [
+            {
+                "sequence": 1,
+                "point": [
+                    -71.0861,
+                    42.362494
+                ],
+                "distanceToNextRef": 0.0,
+                "bearing": 0,
+                "intersectionId": "771"
+            },
+            {
+                "sequence": 2,
+                "point": [
+                    -71.086123,
+                    42.362327
+                ],
+                "intersectionId": "772"
+            }
+        ]
+    }
+]

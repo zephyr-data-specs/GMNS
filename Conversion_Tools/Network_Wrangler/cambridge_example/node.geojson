@@ -1,0 +1,1011 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0899422,
+                    42.362719399999996
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "1",
+                "osm_node_id": "1",
+                "model_node_id": 1,
+                "transit_node": 0,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "7337"
+                ],
+                "inboundReferenceId": [
+                    "7761"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.089439,
+                    42.3648088
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "3",
+                "osm_node_id": "3",
+                "model_node_id": 3,
+                "transit_node": 1,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "311"
+                ],
+                "inboundReferenceId": [
+                    "113"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08811690000002,
+                    42.3626086
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "7",
+                "osm_node_id": "7",
+                "model_node_id": 7,
+                "transit_node": 1,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "711",
+                    "71101",
+                    "4619",
+                    "7761"
+                ],
+                "inboundReferenceId": [
+                    "117",
+                    "11701",
+                    "14619",
+                    "7337",
+                    "4222",
+                    "9910"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0876411,
+                    42.3600151
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "10",
+                "osm_node_id": "10",
+                "model_node_id": 10,
+                "transit_node": 0,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "9910"
+                ],
+                "inboundReferenceId": []
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0873463,
+                    42.3639782
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "11",
+                "osm_node_id": "11",
+                "model_node_id": 11,
+                "transit_node": 1,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "117",
+                    "1122",
+                    "113",
+                    "1117",
+                    "11701",
+                    "4222"
+                ],
+                "inboundReferenceId": [
+                    "311",
+                    "711",
+                    "2211",
+                    "1711",
+                    "71101"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08615640000001,
+                    42.366113899999995
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "17",
+                "osm_node_id": "17",
+                "model_node_id": 17,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "1711"
+                ],
+                "inboundReferenceId": [
+                    "1117"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08511899999999,
+                    42.362348
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "21",
+                "osm_node_id": "21",
+                "model_node_id": 21,
+                "transit_node": 0,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "14619",
+                    "8461",
+                    "6011"
+                ],
+                "inboundReferenceId": [
+                    "5677",
+                    "4619"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08435859999999,
+                    42.362700399999994
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "22",
+                "osm_node_id": "22",
+                "model_node_id": 22,
+                "transit_node": 0,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "2211",
+                    "7797",
+                    "5409",
+                    "5677"
+                ],
+                "inboundReferenceId": [
+                    "1122",
+                    "7798",
+                    "15409",
+                    "6011"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0838224,
+                    42.3622846
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "25",
+                "osm_node_id": "25",
+                "model_node_id": 25,
+                "transit_node": 0,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "4425"
+                ],
+                "inboundReferenceId": [
+                    "7797",
+                    "8461"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0830222,
+                    42.362179299999994
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "27",
+                "osm_node_id": "27",
+                "model_node_id": 27,
+                "transit_node": 0,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "7798"
+                ],
+                "inboundReferenceId": []
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0827978,
+                    42.3620211
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "28",
+                "osm_node_id": "28",
+                "model_node_id": 28,
+                "transit_node": 0,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [],
+                "inboundReferenceId": [
+                    "4425"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0827235,
+                    42.3651668
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "29",
+                "osm_node_id": "29",
+                "model_node_id": 29,
+                "transit_node": 0,
+                "drive_node": 1,
+                "walk_node": 1,
+                "bike_node": 1,
+                "outboundReferenceId": [
+                    "15409"
+                ],
+                "inboundReferenceId": [
+                    "5409"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.087704,
+                    42.363498
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "12231",
+                "osm_node_id": "12231",
+                "model_node_id": 12231,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [],
+                "inboundReferenceId": [
+                    "11005"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.085966,
+                    42.363251
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "1101",
+                "osm_node_id": "1101",
+                "model_node_id": 1101,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "11222",
+                    "11221",
+                    "11771"
+                ],
+                "inboundReferenceId": [
+                    "11221"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.087165,
+                    42.364
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "1102",
+                "osm_node_id": "1102",
+                "model_node_id": 1102,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "11171",
+                    "11001",
+                    "11004"
+                ],
+                "inboundReferenceId": [
+                    "22112"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08748800000001,
+                    42.364142
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "1103",
+                "osm_node_id": "1103",
+                "model_node_id": 1103,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "11301",
+                    "11002"
+                ],
+                "inboundReferenceId": [
+                    "11004"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.087329,
+                    42.363787
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "1104",
+                "osm_node_id": "1104",
+                "model_node_id": 1104,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "11221",
+                    "11003"
+                ],
+                "inboundReferenceId": [
+                    "71103",
+                    "11001"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.087665,
+                    42.363938
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "1105",
+                "osm_node_id": "1105",
+                "model_node_id": 1105,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "11702"
+                ],
+                "inboundReferenceId": [
+                    "31101",
+                    "11002",
+                    "11003"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08602900000001,
+                    42.366009000000005
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "1701",
+                "osm_node_id": "1701",
+                "model_node_id": 1701,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [],
+                "inboundReferenceId": [
+                    "11171"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.085826,
+                    42.363431
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2211",
+                "osm_node_id": "2211",
+                "model_node_id": 2211,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "22112"
+                ],
+                "inboundReferenceId": [
+                    "22111",
+                    "11221"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.084404,
+                    42.362856
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2201",
+                "osm_node_id": "2201",
+                "model_node_id": 2201,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "22111",
+                    "22221",
+                    "22224"
+                ],
+                "inboundReferenceId": []
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08458003,
+                    42.36260445
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2202",
+                "osm_node_id": "2202",
+                "model_node_id": 2202,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "22222"
+                ],
+                "inboundReferenceId": [
+                    "11222",
+                    "21221",
+                    "22221"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08926739,
+                    42.36487489
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "301",
+                "osm_node_id": "301",
+                "model_node_id": 301,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [],
+                "inboundReferenceId": [
+                    "11301"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.089331,
+                    42.364647999999995
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "302",
+                "osm_node_id": "302",
+                "model_node_id": 302,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "31101"
+                ],
+                "inboundReferenceId": []
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0876685,
+                    42.36342471
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "711",
+                "osm_node_id": "711",
+                "model_node_id": 711,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "71103",
+                    "11005"
+                ],
+                "inboundReferenceId": [
+                    "71102"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08801009999999,
+                    42.36264107
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "701",
+                "osm_node_id": "701",
+                "model_node_id": 701,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "71102",
+                    "70102",
+                    "70104",
+                    "72101"
+                ],
+                "inboundReferenceId": []
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08839499999999,
+                    42.362683000000004
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "702",
+                "osm_node_id": "702",
+                "model_node_id": 702,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "70203"
+                ],
+                "inboundReferenceId": [
+                    "11702",
+                    "70102"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.088335,
+                    42.362495
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "703",
+                "osm_node_id": "703",
+                "model_node_id": 703,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "70204"
+                ],
+                "inboundReferenceId": [
+                    "70203"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.088033,
+                    42.36246
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "704",
+                "osm_node_id": "704",
+                "model_node_id": 704,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "72102"
+                ],
+                "inboundReferenceId": [
+                    "70204",
+                    "70104"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.084369,
+                    42.362476
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2203",
+                "osm_node_id": "2203",
+                "model_node_id": 2203,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "22223",
+                    "22251"
+                ],
+                "inboundReferenceId": [
+                    "22222"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0840678,
+                    42.362731
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2204",
+                "osm_node_id": "2204",
+                "model_node_id": 2204,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "22271"
+                ],
+                "inboundReferenceId": [
+                    "22223",
+                    "22224"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.085115,
+                    42.362435
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2101",
+                "osm_node_id": "2101",
+                "model_node_id": 2101,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "21221"
+                ],
+                "inboundReferenceId": [
+                    "72103"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.085116,
+                    42.36226
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2102",
+                "osm_node_id": "2102",
+                "model_node_id": 2102,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "21252"
+                ],
+                "inboundReferenceId": [
+                    "72104"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.083925,
+                    42.362269
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2501",
+                "osm_node_id": "2501",
+                "model_node_id": 2501,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "25251"
+                ],
+                "inboundReferenceId": [
+                    "22251"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.083814,
+                    42.362204999999996
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2502",
+                "osm_node_id": "2502",
+                "model_node_id": 2502,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "25282"
+                ],
+                "inboundReferenceId": [
+                    "21252",
+                    "25251"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08301800000001,
+                    42.362254
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2701",
+                "osm_node_id": "2701",
+                "model_node_id": 2701,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [],
+                "inboundReferenceId": [
+                    "22271"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.08279399999999,
+                    42.361942
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "2802",
+                "osm_node_id": "2802",
+                "model_node_id": 2802,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [],
+                "inboundReferenceId": [
+                    "25282"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0861,
+                    42.362494
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "771",
+                "osm_node_id": "771",
+                "model_node_id": 771,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "72103",
+                    "77102"
+                ],
+                "inboundReferenceId": [
+                    "72101",
+                    "11771"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.086123,
+                    42.362327
+                ]
+            },
+            "properties": {
+                "shstReferenceId": "772",
+                "osm_node_id": "772",
+                "model_node_id": 772,
+                "transit_node": 0,
+                "drive_node": 0,
+                "walk_node": 1,
+                "bike_node": 0,
+                "outboundReferenceId": [
+                    "72104"
+                ],
+                "inboundReferenceId": [
+                    "72102",
+                    "77102"
+                ]
+            }
+        }
+    ]
+}

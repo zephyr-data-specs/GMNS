@@ -1,0 +1,1690 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0896646,
+                        42.3649006
+                    ],
+                    [
+                        -71.089583,
+                        42.3648581
+                    ],
+                    [
+                        -71.0894745,
+                        42.3648023
+                    ],
+                    [
+                        -71.0893532,
+                        42.3647385
+                    ],
+                    [
+                        -71.0892015,
+                        42.3646628
+                    ],
+                    [
+                        -71.0886105,
+                        42.3644342
+                    ],
+                    [
+                        -71.0884584,
+                        42.3643696
+                    ],
+                    [
+                        -71.087608,
+                        42.3640086
+                    ],
+                    [
+                        -71.0873963,
+                        42.3639282
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9001",
+                "fromIntersectionId": "3",
+                "toIntersectionId": "11",
+                "forwardReferenceId": "311"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0881584,
+                        42.3626232
+                    ],
+                    [
+                        -71.0881469,
+                        42.3626905
+                    ],
+                    [
+                        -71.088128,
+                        42.3627951
+                    ],
+                    [
+                        -71.0881079,
+                        42.3628996
+                    ],
+                    [
+                        -71.0880929,
+                        42.3629763
+                    ],
+                    [
+                        -71.0880755,
+                        42.363039
+                    ],
+                    [
+                        -71.0880463,
+                        42.3630974
+                    ],
+                    [
+                        -71.0880087,
+                        42.3631516
+                    ],
+                    [
+                        -71.0879597,
+                        42.3632123
+                    ],
+                    [
+                        -71.0877357,
+                        42.3635091
+                    ],
+                    [
+                        -71.0876898,
+                        42.3635606
+                    ],
+                    [
+                        -71.0874724,
+                        42.3638309
+                    ],
+                    [
+                        -71.0873963,
+                        42.3639282
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9002",
+                "fromIntersectionId": "7",
+                "toIntersectionId": "11",
+                "forwardReferenceId": "711",
+                "backReferenceId": "117"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0873963,
+                        42.3639282
+                    ],
+                    [
+                        -71.0873359,
+                        42.363905
+                    ],
+                    [
+                        -71.087253,
+                        42.3638732
+                    ],
+                    [
+                        -71.086308,
+                        42.3634642
+                    ],
+                    [
+                        -71.0859256,
+                        42.363305
+                    ],
+                    [
+                        -71.0855886,
+                        42.3631648
+                    ],
+                    [
+                        -71.0844086,
+                        42.3626504
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9003",
+                "fromIntersectionId": "11",
+                "toIntersectionId": "22",
+                "forwardReferenceId": "1122"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0873319,
+                        42.3640097
+                    ],
+                    [
+                        -71.0875298,
+                        42.3640974
+                    ],
+                    [
+                        -71.0880978,
+                        42.3643416
+                    ],
+                    [
+                        -71.0881729,
+                        42.3643722
+                    ],
+                    [
+                        -71.0882845,
+                        42.3644189
+                    ],
+                    [
+                        -71.0893354,
+                        42.364812
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9004",
+                "fromIntersectionId": "11",
+                "toIntersectionId": "3",
+                "forwardReferenceId": "113"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0843176,
+                        42.3627195
+                    ],
+                    [
+                        -71.0851184,
+                        42.3630762
+                    ],
+                    [
+                        -71.0851603,
+                        42.3630949
+                    ],
+                    [
+                        -71.0858614,
+                        42.3633871
+                    ],
+                    [
+                        -71.0861137,
+                        42.3634923
+                    ],
+                    [
+                        -71.0862468,
+                        42.3635475
+                    ],
+                    [
+                        -71.086527,
+                        42.3636639
+                    ],
+                    [
+                        -71.0865843,
+                        42.3636885
+                    ],
+                    [
+                        -71.0866469,
+                        42.3637153
+                    ],
+                    [
+                        -71.0873319,
+                        42.3640097
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9005",
+                "fromIntersectionId": "22",
+                "toIntersectionId": "11",
+                "forwardReferenceId": "2211"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0844086,
+                        42.3626504
+                    ],
+                    [
+                        -71.084253,
+                        42.3625512
+                    ],
+                    [
+                        -71.0841515,
+                        42.3624895
+                    ],
+                    [
+                        -71.0840416,
+                        42.3624178
+                    ],
+                    [
+                        -71.0839262,
+                        42.3623447
+                    ],
+                    [
+                        -71.0838224,
+                        42.3622846
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9006",
+                "fromIntersectionId": "22",
+                "toIntersectionId": "25",
+                "forwardReferenceId": "7797"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0830222,
+                        42.3621793
+                    ],
+                    [
+                        -71.0830611,
+                        42.3621819
+                    ],
+                    [
+                        -71.083093,
+                        42.3621841
+                    ],
+                    [
+                        -71.0831653,
+                        42.3621926
+                    ],
+                    [
+                        -71.083231,
+                        42.3622025
+                    ],
+                    [
+                        -71.083299,
+                        42.3622145
+                    ],
+                    [
+                        -71.0833665,
+                        42.3622278
+                    ],
+                    [
+                        -71.0834356,
+                        42.3622436
+                    ],
+                    [
+                        -71.0834956,
+                        42.3622602
+                    ],
+                    [
+                        -71.0835589,
+                        42.3622803
+                    ],
+                    [
+                        -71.0836681,
+                        42.362321
+                    ],
+                    [
+                        -71.0837455,
+                        42.3623568
+                    ],
+                    [
+                        -71.0838147,
+                        42.3623935
+                    ],
+                    [
+                        -71.0838909,
+                        42.3624386
+                    ],
+                    [
+                        -71.084191,
+                        42.3626403
+                    ],
+                    [
+                        -71.0843176,
+                        42.3627195
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9007",
+                "fromIntersectionId": "27",
+                "toIntersectionId": "22",
+                "forwardReferenceId": "7798"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0861564,
+                        42.3661139
+                    ],
+                    [
+                        -71.0863145,
+                        42.3653651
+                    ],
+                    [
+                        -71.0869504,
+                        42.3644949
+                    ],
+                    [
+                        -71.0872319,
+                        42.3640097
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9008",
+                "fromIntersectionId": "17",
+                "toIntersectionId": "11",
+                "forwardReferenceId": "1711",
+                "backReferenceId": "1117"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0873359,
+                        42.363905
+                    ],
+                    [
+                        -71.0879905,
+                        42.3630931
+                    ],
+                    [
+                        -71.0880814,
+                        42.3626176
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9009",
+                "fromIntersectionId": "11",
+                "toIntersectionId": "7",
+                "forwardReferenceId": "11701",
+                "backReferenceId": "71101"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0843176,
+                        42.3627195
+                    ],
+                    [
+                        -71.0838463,
+                        42.3632839
+                    ],
+                    [
+                        -71.0837886,
+                        42.3633639
+                    ],
+                    [
+                        -71.0837329,
+                        42.3634424
+                    ],
+                    [
+                        -71.0836711,
+                        42.3635345
+                    ],
+                    [
+                        -71.0836144,
+                        42.3636217
+                    ],
+                    [
+                        -71.083472,
+                        42.363851
+                    ],
+                    [
+                        -71.0834159,
+                        42.3639496
+                    ],
+                    [
+                        -71.0831239,
+                        42.3644637
+                    ],
+                    [
+                        -71.0827668,
+                        42.3650925
+                    ],
+                    [
+                        -71.0827235,
+                        42.3651668
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9010",
+                "fromIntersectionId": "22",
+                "toIntersectionId": "29",
+                "forwardReferenceId": "5409",
+                "backReferenceId": "15409"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0844086,
+                        42.3626504
+                    ],
+                    [
+                        -71.0846134,
+                        42.3624745
+                    ],
+                    [
+                        -71.0846856,
+                        42.3624208
+                    ],
+                    [
+                        -71.0847634,
+                        42.3623862
+                    ],
+                    [
+                        -71.0848122,
+                        42.3623744
+                    ],
+                    [
+                        -71.0848595,
+                        42.3623719
+                    ],
+                    [
+                        -71.085119,
+                        42.362348
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9011",
+                "fromIntersectionId": "22",
+                "toIntersectionId": "21",
+                "forwardReferenceId": "5677"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0838224,
+                        42.3622846
+                    ],
+                    [
+                        -71.0837303,
+                        42.3622442
+                    ],
+                    [
+                        -71.0836478,
+                        42.3622115
+                    ],
+                    [
+                        -71.0835587,
+                        42.3621821
+                    ],
+                    [
+                        -71.0834669,
+                        42.3621575
+                    ],
+                    [
+                        -71.0834003,
+                        42.3621414
+                    ],
+                    [
+                        -71.083178,
+                        42.3620937
+                    ],
+                    [
+                        -71.0830483,
+                        42.3620675
+                    ],
+                    [
+                        -71.082912,
+                        42.3620421
+                    ],
+                    [
+                        -71.0827978,
+                        42.3620211
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9012",
+                "fromIntersectionId": "25",
+                "toIntersectionId": "28",
+                "forwardReferenceId": "4425"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0881669,
+                        42.3625586
+                    ],
+                    [
+                        -71.0879984,
+                        42.3625454
+                    ],
+                    [
+                        -71.0871228,
+                        42.3624759
+                    ],
+                    [
+                        -71.0870814,
+                        42.3624726
+                    ],
+                    [
+                        -71.0862604,
+                        42.3624095
+                    ],
+                    [
+                        -71.0861542,
+                        42.3624019
+                    ],
+                    [
+                        -71.0860376,
+                        42.3623925
+                    ],
+                    [
+                        -71.085167,
+                        42.362326
+                    ],
+                    [
+                        -71.0850211,
+                        42.3623099
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9013",
+                "fromIntersectionId": "7",
+                "toIntersectionId": "21",
+                "forwardReferenceId": "4619",
+                "backReferenceId": "14619"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0850211,
+                        42.3623099
+                    ],
+                    [
+                        -71.0849092,
+                        42.3622976
+                    ],
+                    [
+                        -71.0847306,
+                        42.3622759
+                    ],
+                    [
+                        -71.084223,
+                        42.3622044
+                    ],
+                    [
+                        -71.0841325,
+                        42.3622015
+                    ],
+                    [
+                        -71.0840639,
+                        42.3622008
+                    ],
+                    [
+                        -71.0840032,
+                        42.3622068
+                    ],
+                    [
+                        -71.0839448,
+                        42.3622175
+                    ],
+                    [
+                        -71.0838974,
+                        42.3622341
+                    ],
+                    [
+                        -71.0838571,
+                        42.3622573
+                    ],
+                    [
+                        -71.0838224,
+                        42.3622846
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9014",
+                "fromIntersectionId": "21",
+                "toIntersectionId": "25",
+                "forwardReferenceId": "8461"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0881584,
+                        42.3626232
+                    ],
+                    [
+                        -71.0883758,
+                        42.3626364
+                    ],
+                    [
+                        -71.0888452,
+                        42.3626678
+                    ],
+                    [
+                        -71.0889017,
+                        42.3626725
+                    ],
+                    [
+                        -71.0889476,
+                        42.3626789
+                    ],
+                    [
+                        -71.0890098,
+                        42.3626908
+                    ],
+                    [
+                        -71.0890545,
+                        42.3626969
+                    ],
+                    [
+                        -71.0891149,
+                        42.3627005
+                    ],
+                    [
+                        -71.0892129,
+                        42.3627063
+                    ],
+                    [
+                        -71.0898,
+                        42.36275
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9015",
+                "fromIntersectionId": "7",
+                "toIntersectionId": "1",
+                "forwardReferenceId": "7761"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0850211,
+                        42.3623099
+                    ],
+                    [
+                        -71.0848315,
+                        42.3623286
+                    ],
+                    [
+                        -71.0847338,
+                        42.3623491
+                    ],
+                    [
+                        -71.0846428,
+                        42.3623908
+                    ],
+                    [
+                        -71.0844662,
+                        42.3625529
+                    ],
+                    [
+                        -71.0844072,
+                        42.3625996
+                    ],
+                    [
+                        -71.0844086,
+                        42.3626504
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9016",
+                "fromIntersectionId": "21",
+                "toIntersectionId": "22",
+                "forwardReferenceId": "6011"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0899422,
+                        42.3627194
+                    ],
+                    [
+                        -71.0896637,
+                        42.3626741
+                    ],
+                    [
+                        -71.0883553,
+                        42.3625756
+                    ],
+                    [
+                        -71.0881669,
+                        42.3625586
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9017",
+                "fromIntersectionId": "1",
+                "toIntersectionId": "7",
+                "forwardReferenceId": "7337"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0876411,
+                        42.3600151
+                    ],
+                    [
+                        -71.0881849,
+                        42.3609241
+                    ],
+                    [
+                        -71.0881972,
+                        42.3609441
+                    ],
+                    [
+                        -71.088271,
+                        42.3610656
+                    ],
+                    [
+                        -71.0882959,
+                        42.3611079
+                    ],
+                    [
+                        -71.0883206,
+                        42.3611753
+                    ],
+                    [
+                        -71.0883302,
+                        42.3612499
+                    ],
+                    [
+                        -71.0883306,
+                        42.3613297
+                    ],
+                    [
+                        -71.088182,
+                        42.3624442
+                    ],
+                    [
+                        -71.0881669,
+                        42.3625586
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9018",
+                "fromIntersectionId": "10",
+                "toIntersectionId": "7",
+                "forwardReferenceId": "9910"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.089331,
+                        42.364648
+                    ],
+                    [
+                        -71.087665,
+                        42.363938
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9019",
+                "fromIntersectionId": "302",
+                "toIntersectionId": "1105",
+                "forwardReferenceId": "31101"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.087488,
+                        42.364142
+                    ],
+                    [
+                        -71.089277,
+                        42.364874
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9020",
+                "fromIntersectionId": "1103",
+                "toIntersectionId": "301",
+                "forwardReferenceId": "11301"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.08801,
+                        42.36264
+                    ],
+                    [
+                        -71.0876685,
+                        42.363425
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9021",
+                "fromIntersectionId": "701",
+                "toIntersectionId": "711",
+                "forwardReferenceId": "71102"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0876685,
+                        42.363425
+                    ],
+                    [
+                        -71.087329,
+                        42.363787
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9022",
+                "fromIntersectionId": "711",
+                "toIntersectionId": "1104",
+                "forwardReferenceId": "71103"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.087665,
+                        42.363938
+                    ],
+                    [
+                        -71.088395,
+                        42.362683
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9023",
+                "fromIntersectionId": "1105",
+                "toIntersectionId": "702",
+                "forwardReferenceId": "11702"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.087329,
+                        42.363787
+                    ],
+                    [
+                        -71.085966,
+                        42.363251
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9024",
+                "fromIntersectionId": "1104",
+                "toIntersectionId": "1101",
+                "forwardReferenceId": "11221"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.085966,
+                        42.363251
+                    ],
+                    [
+                        -71.08458,
+                        42.362604
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9025",
+                "fromIntersectionId": "1101",
+                "toIntersectionId": "2202",
+                "forwardReferenceId": "11222"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.084404,
+                        42.362856
+                    ],
+                    [
+                        -71.085826,
+                        42.363431
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9026",
+                "fromIntersectionId": "2201",
+                "toIntersectionId": "2211",
+                "forwardReferenceId": "22111"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.085826,
+                        42.363431
+                    ],
+                    [
+                        -71.087165,
+                        42.364
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9027",
+                "fromIntersectionId": "2211",
+                "toIntersectionId": "1102",
+                "forwardReferenceId": "22112"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.087165,
+                        42.364
+                    ],
+                    [
+                        -71.0862145,
+                        42.3653651
+                    ],
+                    [
+                        -71.086029,
+                        42.366009
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9028",
+                "fromIntersectionId": "1102",
+                "toIntersectionId": "1701",
+                "forwardReferenceId": "11171"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.087165,
+                        42.364
+                    ],
+                    [
+                        -71.087329,
+                        42.363787
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9029",
+                "fromIntersectionId": "1102",
+                "toIntersectionId": "1104",
+                "forwardReferenceId": "11001"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.087488,
+                        42.364142
+                    ],
+                    [
+                        -71.087665,
+                        42.363938
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9030",
+                "fromIntersectionId": "1103",
+                "toIntersectionId": "1105",
+                "forwardReferenceId": "11002"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.087329,
+                        42.363787
+                    ],
+                    [
+                        -71.087665,
+                        42.363938
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9031",
+                "fromIntersectionId": "1104",
+                "toIntersectionId": "1105",
+                "forwardReferenceId": "11003"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.087165,
+                        42.364
+                    ],
+                    [
+                        -71.087488,
+                        42.364142
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9032",
+                "fromIntersectionId": "1102",
+                "toIntersectionId": "1103",
+                "forwardReferenceId": "11004"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.087744,
+                        42.363478
+                    ],
+                    [
+                        -71.087704,
+                        42.363498
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9033",
+                "fromIntersectionId": "711",
+                "toIntersectionId": "12231",
+                "forwardReferenceId": "11005"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.085966,
+                        42.363251
+                    ],
+                    [
+                        -71.085826,
+                        42.363431
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9034",
+                "fromIntersectionId": "1101",
+                "toIntersectionId": "2211",
+                "forwardReferenceId": "11221"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.08801,
+                        42.36264
+                    ],
+                    [
+                        -71.088395,
+                        42.362683
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9035",
+                "fromIntersectionId": "701",
+                "toIntersectionId": "702",
+                "forwardReferenceId": "70102"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.088395,
+                        42.362683
+                    ],
+                    [
+                        -71.088335,
+                        42.362495
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9036",
+                "fromIntersectionId": "702",
+                "toIntersectionId": "703",
+                "forwardReferenceId": "70203"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.088335,
+                        42.362495
+                    ],
+                    [
+                        -71.088033,
+                        42.36246
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9037",
+                "fromIntersectionId": "703",
+                "toIntersectionId": "704",
+                "forwardReferenceId": "70204"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0880101,
+                        42.36264107
+                    ],
+                    [
+                        -71.088033,
+                        42.36246
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9038",
+                "fromIntersectionId": "701",
+                "toIntersectionId": "704",
+                "forwardReferenceId": "70104"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0880101,
+                        42.36264107
+                    ],
+                    [
+                        -71.0861,
+                        42.362494
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9039",
+                "fromIntersectionId": "701",
+                "toIntersectionId": "771",
+                "forwardReferenceId": "72101"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0861,
+                        42.362494
+                    ],
+                    [
+                        -71.085115,
+                        42.362435
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9040",
+                "fromIntersectionId": "771",
+                "toIntersectionId": "2101",
+                "forwardReferenceId": "72103"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.088033,
+                        42.36246
+                    ],
+                    [
+                        -71.086123,
+                        42.362327
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9041",
+                "fromIntersectionId": "704",
+                "toIntersectionId": "772",
+                "forwardReferenceId": "72102"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.086123,
+                        42.362327
+                    ],
+                    [
+                        -71.085116,
+                        42.36226
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9042",
+                "fromIntersectionId": "772",
+                "toIntersectionId": "2102",
+                "forwardReferenceId": "72104"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.085116,
+                        42.36226
+                    ],
+                    [
+                        -71.084113,
+                        42.362127
+                    ],
+                    [
+                        -71.083814,
+                        42.362205
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9043",
+                "fromIntersectionId": "2102",
+                "toIntersectionId": "2502",
+                "forwardReferenceId": "21252"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.083814,
+                        42.362205
+                    ],
+                    [
+                        -71.083535,
+                        42.362085
+                    ],
+                    [
+                        -71.082794,
+                        42.361942
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9044",
+                "fromIntersectionId": "2502",
+                "toIntersectionId": "2802",
+                "forwardReferenceId": "25282"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.085115,
+                        42.362435
+                    ],
+                    [
+                        -71.084771,
+                        42.362435
+                    ],
+                    [
+                        -71.08458003,
+                        42.36260445
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9045",
+                "fromIntersectionId": "2101",
+                "toIntersectionId": "2202",
+                "forwardReferenceId": "21221"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.084404,
+                        42.362856
+                    ],
+                    [
+                        -71.08458003,
+                        42.36260445
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9046",
+                "fromIntersectionId": "2201",
+                "toIntersectionId": "2202",
+                "forwardReferenceId": "22221"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.08458003,
+                        42.36260445
+                    ],
+                    [
+                        -71.084369,
+                        42.362476
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9047",
+                "fromIntersectionId": "2202",
+                "toIntersectionId": "2203",
+                "forwardReferenceId": "22222"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.084369,
+                        42.362476
+                    ],
+                    [
+                        -71.0840678,
+                        42.362731
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9048",
+                "fromIntersectionId": "2203",
+                "toIntersectionId": "2204",
+                "forwardReferenceId": "22223"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.084404,
+                        42.362856
+                    ],
+                    [
+                        -71.0840678,
+                        42.362731
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9049",
+                "fromIntersectionId": "2201",
+                "toIntersectionId": "2204",
+                "forwardReferenceId": "22224"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.084369,
+                        42.362476
+                    ],
+                    [
+                        -71.083925,
+                        42.362269
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9050",
+                "fromIntersectionId": "2203",
+                "toIntersectionId": "2501",
+                "forwardReferenceId": "22251"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.083925,
+                        42.362269
+                    ],
+                    [
+                        -71.083814,
+                        42.362205
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9051",
+                "fromIntersectionId": "2501",
+                "toIntersectionId": "2502",
+                "forwardReferenceId": "25251"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0840678,
+                        42.362731
+                    ],
+                    [
+                        -71.083645,
+                        42.362377
+                    ],
+                    [
+                        -71.083018,
+                        42.362254
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9052",
+                "fromIntersectionId": "2204",
+                "toIntersectionId": "2701",
+                "forwardReferenceId": "22271"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.085966,
+                        42.363251
+                    ],
+                    [
+                        -71.085864,
+                        42.362851
+                    ],
+                    [
+                        -71.0861,
+                        42.362494
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9053",
+                "fromIntersectionId": "1101",
+                "toIntersectionId": "771",
+                "forwardReferenceId": "11771"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.0861,
+                        42.362494
+                    ],
+                    [
+                        -71.086123,
+                        42.362327
+                    ]
+                ]
+            },
+            "properties": {
+                "id": "9054",
+                "fromIntersectionId": "771",
+                "toIntersectionId": "772",
+                "forwardReferenceId": "77102"
+            }
+        }
+    ]
+}
