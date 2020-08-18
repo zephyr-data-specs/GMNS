@@ -1,2 +1,2 @@
-controller_id,timing_plan_id,time_day,cycle_length,coord_contr_id,coord_phase,offset
-11,2,11111111_0000_2359,90,,,
+controller_id,timing_plan_id,time_day,cycle_length,coord_contr_id,coord_phase,coord_ref_to,offset
+11,110,11111111_0000_2359,90,,,,
