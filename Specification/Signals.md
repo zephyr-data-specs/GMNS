@@ -7,10 +7,10 @@ Representation of traffic controls (e.g., stop signs, signals, etc.) includes se
 - For dynamic models, basic control information can be included in the movement file.  Controls include unknown, no control, yield, 4-way stop, 2-way stop, signal, signal_with_RTOR. Note that different movements and lanes at an intersection may have different controls (e.g., a Stop Except Right Turn sign)   
 
 Traffic signals call for several additional files:
-- `signal_controller` has one record for each signal controller.  Typically, each node that represents an intersection has one signal controller, but there are cases where one signal controller might be associated with several nodes (e.g.,  two sides of a divided highway at a crossroads).  A controller will be associated with at least one timing plan.
-- A controller is associated with several signal phase records, with one record for each phase.  The signal phase record indicates the ring, barrier, and position (RBP) for each phase of the signal
-- Each signal phase is associated with a controller and with one or more movements (for traffic movements) or links (for crosswalks) that may move on that phase.  Similarly, movements may move on more than one signal phase. These are indicated in the signal_phase_mvmt table. 
-- A signal phase is associated with at least one signal timing plan.  If timing plans vary by time of day or day or week, the signal phase will be associated with multiple timing plans.  
+- `signal_controller` has one record for each signal controller.  Typically, each node that represents an intersection has one signal controller, but there are cases where one signal controller might be associated with several nodes (e.g.,  two sides of a divided highway at a crossroads).  
+- A controller will be associated with at least one timing plan. When signals are coordinated, a signal timing plan may be associated with a second controller.
+- A signal phase record indicates the ring, barrier, and position (RBP) for each phase of the signal. A signal phase is associated with at least one signal timing plan.  If timing plans vary by time of day or day or week, the signal phase will be associated with multiple timing plans.  
+- Each signal phase is associated with a controller and with one or more movements (for traffic movements) or links (for crosswalks) that may move on that phase.  Similarly, movements may move on more than one signal phase. These are indicated in the `signal_phase_mvmt` table. 
 
 ## signal_controller
 
@@ -137,4 +137,4 @@ signal_timing_phase data dictionary
 | ped_clearance                                        | INTEGER           | Required  | If a pedestrian phase exists, the flashing don’t walk time.                                                                       |
 
 ## Relationships
-![Relationships with and among the Signal tables](https://github.com/zephyr-data-specs/GMNS/blob/updates/Images/SignalER2.png)
+![Relationships with and among the Signal tables](https://github.com/zephyr-data-specs/GMNS/blob/updates/Images/SignalER3.png)
