@@ -114,7 +114,7 @@ signal_timing_plan data dictionary
 | <span class="underline">cycle\_length</span>      | INTEGER          | Optional  | Cycle length in seconds                                                  |
 | <span class="underline">coord\_contr_id</span>        | Node\_ID         | Optional  | For coordinated signals, the “master” signal controller for coordination   |
 | <span class="underline">coord_phase</span> | INTEGER          | Optional  | For coordinated signals, the phase at which coordination starts (time 0) |
-| <span class="underline">coord_ref_to</span> | INTEGER         | Optional  | For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red |
+| <span class="underline">coord_ref_to</span> | TEXT         | Optional  | For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red |
 | offset                                            | INTEGER          | Optional  | Offset in seconds                                                        |
 
 ## signal_timing_phase
