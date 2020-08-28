@@ -112,7 +112,7 @@ signal_timing_plan data dictionary
 | <span class="underline">time_day</span>          | TimeDay\_Set     | Conditionally required  |  Define the availability/role of signal at different dates and times (either time_day or timeday_id is required)   |
 | <span class="underline">timeday\_id</span>        | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | <span class="underline">cycle\_length</span>      | INTEGER          | Optional  | Cycle length in seconds                                                  |
-| <span class="underline">coord\_contr_id</span>        | Node\_ID         | Optional  | For coordinated signals, the “master” signal controller for coordination   |
+| <span class="underline">coord\_contr_id</span>        | Controller\_ID         | Optional  | For coordinated signals, the “master” signal controller for coordination   |
 | <span class="underline">coord_phase</span> | INTEGER          | Optional  | For coordinated signals, the phase at which coordination starts (time 0) |
 | <span class="underline">coord_ref_to</span> | TEXT         | Optional  | For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red |
 | offset                                            | INTEGER          | Optional  | Offset in seconds                                                        |
