@@ -107,8 +107,8 @@ signal_timing_plan data dictionary
 
 | Field                                             | Type             | Required? | Comment                                                                  |
 | ------------------------------------------------- | ---------------- | --------- | ------------------------------------------------------------------------ |
-| <span class="underline">controller\_id</span>           | Controller\_ID         | Required  | Foreign key (signal_controller table)                                                |
 | <span class="underline">timing\_plan\_id</span>   | Timing\_Plan\_ID | Required  | Primary key                                                              |
+| <span class="underline">controller\_id</span>           | Controller\_ID         | Required  | Foreign key (signal_controller table)                                                |
 | <span class="underline">time_day</span>          | TimeDay\_Set     | Conditionally required  |  Define the availability/role of signal at different dates and times (either time_day or timeday_id is required)   |
 | <span class="underline">timeday\_id</span>        | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | <span class="underline">cycle\_length</span>      | INTEGER          | Optional  | Cycle length in seconds                                                  |
