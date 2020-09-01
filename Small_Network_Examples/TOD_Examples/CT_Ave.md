@@ -4,7 +4,7 @@ This example is a stretch of Connecticut Avenue in NW Washington, DC. It demonst
 
 Street view of Connecticut Ave with Lanes labelled with Lane_IDs:
 
-![Street view of CT Ave](https://github.com/zephyr-data-specs/GMNS/blob/updates/Images/CT_Ave_1.png)
+![Street view of CT Ave](https://github.com/zephyr-data-specs/GMNS/blob/master/Images/CT_Ave_1.png)
 
 The attributes of each link change depending on the time of day. During the AM Peak, the southbound (SB) link is the more heavily traveled link, and vice versa for the PM Peak.
 
@@ -32,7 +32,7 @@ During PM peak hours (16:00-18:30):
 
 How this portion of the street is represented by links and nodes is shown below:
 
-![Links and nodes of CT Ave](https://github.com/zephyr-data-specs/GMNS/blob/updates/Images/CT_Ave_2.png)
+![Links and nodes of CT Ave](https://github.com/zephyr-data-specs/GMNS/blob/master/Images/CT_Ave_2.png)
 
 
 # Specifications
