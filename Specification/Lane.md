@@ -43,13 +43,13 @@ be coded without use of a separate link, optional Barrier fields
 indicate whether a vehicle can move to the right, or to the left out of
 a lane. Values for the Barrier field include
 
-  - None (the default). Indicates that a vehicle can change lanes,
+  - none (the default). Indicates that a vehicle can change lanes,
     provided that the vehicle-type is permitted in the destination lane
 
-  - Regulatory. There is a regulatory prohibition (e.g., a double-white
+  - regulatory. There is a regulatory prohibition (e.g., a double-white
     solid line) against changing lanes, but no physical barrier
 
-  - Physical. A physical barrier (e.g., a curb, Jersey barrier) is in
+  - physical. A physical barrier (e.g., a curb, Jersey barrier) is in
     place.
 
 lane data dictionary
@@ -59,9 +59,9 @@ lane data dictionary
 | lane\_id     | Lane\_ID       | Required                    | Primary key                                                                                     |
 | link\_id     | Link\_ID |  Required | Foreign key, link\_id                                                                     |
 | lane\_num | INTEGER        | Required                    | e.g., -1, 1, 2 (use left-to-right numbering)                                                    |
-| allowed\_uses                               | Use\_Set       | Required                    | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.     |
-| r_barrier                              | Barrier\_ID    | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE) |
-| l_barrier                               | Barrier\_ID    | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the left (default is NONE)  |
+| allowed\_uses                               | Use\_Set       | Required                    | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.     |
+| r_barrier                              | text | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is none) |
+| l_barrier                               | text    | Optional                    | Whether a barrier exists to prevent vehicles from changing lanes to the left (default is none)  |
 | width                                       | DOUBLE         | Optional                    | Width of the lane (feet)                                                                               |
 
 Ad hoc fields may also be added to the lanes table.  

@@ -1,5 +1,4 @@
 # GMNS Validation Tool: Undirected Validation With NetworkX
-# Warning: this script has not been updated to reflect the latest version of GMNS.
 
 # Inputs: Nodes.csv and Links.csv from a GMNS formatted network
 # (required: the optional field Node_Type in the Nodes.csv)
@@ -15,10 +14,10 @@ import pandas as pd
 
 # importing the GNMS node and link files
 df_nodes = pd.read_csv(r'node.csv', index_col='node_id') # Replace with the path to your nodes file
-df_edges = pd.read_csv(r'road_link.csv', index_col='road_link_id') # Replace with the path to your links file
+df_edges = pd.read_csv(r'link.csv', index_col='link_id') # Replace with the path to your links file
 
 df_nodes['node_id'] = df_nodes.index
-df_edges['road_link_id'] = df_edges.index
+df_edges['link_id'] = df_edges.index
 
 # creating the graph
 #(note: multigraphs allow for multiple edges to be defined by the same pair of nodes, which we might need)
@@ -27,10 +26,10 @@ G = nx.from_pandas_edgelist(df_edges, 'from_node_id', 'to_node_id', True, nx.Mul
 
 # adding the node attributes
 for i in G.nodes():
-    G.node[i]['x_coord'] = df_nodes.x_coord[i]
-    G.node[i]['y_coord'] = df_nodes.y_coord[i]
-    G.node[i]['pos'] = (G.node[i]['x_coord'],G.node[i]['y_coord']) # for drawing
-    G.node[i]['node_type'] = df_nodes.node_type[i]
+    G.nodes[i]['x_coord'] = df_nodes.x_coord[i]
+    G.nodes[i]['y_coord'] = df_nodes.y_coord[i]
+    G.nodes[i]['pos'] = (G.nodes[i]['x_coord'],G.nodes[i]['y_coord']) # for drawing
+    G.nodes[i]['node_type'] = df_nodes.node_type[i]
     # add other attributes as needed
 
 # flagging where a node's number of neighbors 
@@ -38,24 +37,27 @@ for i in G.nodes():
 # user will have to interpret these results based on their network
 for i in sorted(G.nodes()): 
     # print("Node: ", i, " has total degree: ", G.degree(i))
-    if (len(G[i]) == 1 and G.node[i]['node_type'] != 'External'):
+    if (len(G[i]) == 1 and G.nodes[i]['node_type'] != 'External'):
         print("Check node: ", i, " for connectivity; it appears to be external but is not labeled that way.")
     if (len(G[i]) == 2):
         print("Check node: ", i, " to see if it is necessary")
-    if (len(G[i]) > 3 and G.node[i]['node_type'] in ['Merge','Diverge']): 
+    if (len(G[i]) > 3 and G.nodes[i]['node_type'] in ['Merge','Diverge']): 
         print("Check node: ", i, " for extra connections; it is a merge/diverge with more than three connecting links")
 
 # checking connectivity
 if nx.is_connected(G):
     print("The network is connected.")
 else:
-    # list of nodes in the largest component of the graph
-    largest_cc = max(nx.connected_components(G), key=len)
-    for a,b,key,link in G.edges(data='road_link_id', keys=True):
-        if a not in largest_cc:
-            # (only need to test one node since a in component & a-b an edge implies b in component)
-            print("The road link with ID ", link, " is not connected to the network.")
-            # These links will need to be cleaned up before using the network in a model.
+    # split into directed and undirected subgraphs
+    for val in [0,1]:
+        H = nx.MultiGraph((a,b, key, attr) for a,b,key,attr in G.edges(data=True, keys=True) if bool(attr['directed']) == bool(val))
+        # list of nodes in the largest component of the graph
+        largest_cc = max(nx.connected_components(H), key=len)
+        for a,b,key,link in H.edges(data='link_id', keys=True):
+            if a not in largest_cc:
+                # (only need to test one node since a in component & ab an edge implies b in component)
+                print("The link with ID ", link, " is not connected to the network.")
+                # These links will need to be cleaned up before using the network in a model.
 
 for v in nx.isolates(G):
     print("The node with ID " + str(v) + " is isolated (has no edges)")

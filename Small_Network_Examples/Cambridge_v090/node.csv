@@ -26,3 +26,15 @@ node_id,name,x_coord,y_coord,z_coord,node_type,ctrl_type,zone_id,parent_node_id
 711,711MB across from floating bus stop 12231,-71.0876685,42.36342471,,pedestrian,,,
 701,7NE,-71.0880101,42.36264107,,pedestrian,signal,,7
 702,7NW,-71.088395,42.362683,,pedestrian,signal,,7
+703,7SW,-71.088335,42.362495,,pedestrian,signal,,7
+704,7SE,-71.088033,42.36246,,pedestrian,signal,,7
+2203,22SE,-71.084369,42.362476,,pedestrian,signal,,22
+2204,22NE,-71.0840678,42.362731,,pedestrian,signal,,22
+2101,21N,-71.085115,42.362435,,pedestrian,,,
+2102,21S,-71.085116,42.36226,,pedestrian,,,
+2501,25W,-71.083925,42.362269,,pedestrian,,,
+2502,25E,-71.083814,42.362205,,pedestrian,,,
+2701,27N,-71.083018,42.362254,,pedestrian,,,
+2802,28S,-71.082794,42.361942,,pedestrian,,,
+771,KendallOB,-71.0861,42.362494,,pedestrian,,,
+772,KendallIB,-71.086123,42.362327,,pedestrian,,,

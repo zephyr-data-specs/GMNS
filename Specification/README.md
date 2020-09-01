@@ -26,8 +26,12 @@ The specification also provides for optional tables to define datatypes for use 
 - [link_lane_tod](TOD.md#link_lane_tod)  
 - [segment_lane_tod](TOD.md#segment_lane_tod)  
 - [movement](Movement-and-Movement_TOD.md#Movement)  
-- [movement_tod](Movement-and-Movement_TOD.md#Movement_TOD)  
+- [movement_tod](Movement-and-Movement_TOD.md#Movement_TOD) 
+- [signal_controller](Signals.md#signal_controller)
 - [signal_phase](Signals.md#Signal_Phase)  
-- [signal_phase_concurrency](Signals.md#Signal_Phase_Concurrency)  
+- [signal_phase_mvmt](Signals.md#signal_phase_mvmt)  
 - [signal_timing_plan](Signals.md#Signal_Timing_Plan)
 - [signal_timing_phase](Signals.md#Signal_Timing_Phase)  
+
+## Inheritance relationships
+![Inheritance relationships](../Images/inheritance.png)

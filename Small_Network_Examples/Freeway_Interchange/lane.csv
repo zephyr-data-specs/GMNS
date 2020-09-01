@@ -1,30 +1,25 @@
-lane_id,road_link_id,segment_id,lane_num,allowed_uses,r_barrier,l_barrier,width,notes
-527001,578527,,1,AUTO,,,,Ramp to rejoin I-95 SB
-571001,578571,,1,AUTO,,,,Lane for US3 (or rejoin I-95 SB)
-597001,578597,,1,AUTO,,,,"Ramp from N1344 to US3, I-95"
-597002,578597,103,2,AUTO,,,,"Second receiving ""lane"" on ramp from N1344 to I-95 SB"
-600000,578600,102,-1,AUTO,,,,"Added left turn lane, ramp from I-95 to N1344 (S)"
-600001,578600,,1,AUTO,,,,Ramp from I-95 to N1344
-600002,578600,102,2,AUTO,,,,"Added right turn lane, ramp from I-95 to N1344 (N)"
-607001,578607,,1,AUTO,,,,Lane leading to US3
-607002,578607,,2,AUTO,,,,Lane leading to N1344
-653001,578653,,1,AUTO,,,,Ramp to US3
-761000,578761,101,-1,AUTO,,,,SB Left turn lane
-761001,578761,,1,AUTO,,,,SB Left turn lane
-761002,578761,,2,ALL,,,,SB Thru lane
-761003,578761,,3,ALL,,,,SB Thru lane
-619001,5787619,,1,ALL,,,,NB Thru lane
-619002,5787619,,2,ALL,,,,NB Thru lane
-619003,5787619,,3,ALL,,,,NB Thru lane
-709001,5785709,,1,ALL,,,,SB Thru lane
-709002,5785709,,2,ALL,,,,SB Thru lane
-570001,578570,,1,ALL,,,,NB Thru lane
-570002,578570,,2,ALL,,,,NB Thru lane
-570003,578570,,3,ALL,,,,NB Thru lane
-570004,578570,104,4,AUTO,,,,NB Right turn lane
-556001,578556,,1,AUTO,,,,Lane to rejoin I-95 SB
-556002,578556,,2,AUTO,,,,Lane for US3
-608001,578608,,1,AUTO,,,,I95 SB
-608002,578608,,2,AUTO,,,,I95 SB
-608003,578608,,3,AUTO,,,,I95 SB
-608004,578608,,4,AUTO,,,,I95 SB
+lane_id,link_id,lane_num,allowed_uses,r_barrier,l_barrier,width,notes
+527001,578527,1,auto,,,,Ramp to rejoin I-95 SB
+571001,578571,1,auto,,,,Lane for US3 (or rejoin I-95 SB)
+597001,578597,1,auto,,,,"Ramp from N1344 to US3, I-95"
+600001,578600,1,auto,,,,Ramp from I-95 to N1344
+607001,578607,1,auto,,,,Lane leading to US3
+607002,578607,2,auto,,,,Lane leading to N1344
+653001,578653,1,auto,,,,Ramp to US3
+761001,578761,1,auto,,,,SB Left turn lane
+761002,578761,2,all,,,,SB Thru lane
+761003,578761,3,all,,,,SB Thru lane
+619001,5787619,1,all,,,,NB Thru lane
+619002,5787619,2,all,,,,NB Thru lane
+619003,5787619,3,all,,,,NB Thru lane
+709001,5785709,1,all,,,,SB Thru lane
+709002,5785709,2,all,,,,SB Thru lane
+570001,578570,1,all,,,,NB Thru lane
+570002,578570,2,all,,,,NB Thru lane
+570003,578570,3,all,,,,NB Thru lane
+556001,578556,1,auto,,,,Lane to rejoin I-95 SB
+556002,578556,2,auto,,,,Lane for US3
+608001,578608,1,auto,,,,I95 SB
+608002,578608,2,auto,,,,I95 SB
+608003,578608,3,auto,,,,I95 SB
+608004,578608,4,auto,,,,I95 SB

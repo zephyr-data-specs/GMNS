@@ -1,0 +1,6 @@
+segment_lane_id,segment_id,lane_num,parent_lane_id,allowed_uses,r_barrier,l_barrier,width,notes
+597002,103,2,,auto,,,,"Second receiving ""lane"" on ramp from N1344 to I-95 SB"
+600000,102,-1,,auto,,,,"Added left turn lane, ramp from I-95 to N1344 (S)"
+600002,102,2,,auto,,,,"Added right turn lane, ramp from I-95 to N1344 (N)"
+761000,101,-1,,auto,,,,SB Left turn lane
+570004,104,4,,auto,,,,NB Right turn lane

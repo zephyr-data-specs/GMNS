@@ -22,7 +22,7 @@ link data dictionary
 | to\_node_id                                | Node\_ID            | Required  | Foreign key (Nodes table)                                                                                                                                                     |
 | directed | boolean | Required | Whether the link is directed (travel only occurs from the from_node to the to_node) or undirected. |
 | geometry_id | Geometry_id | Optional  | Foreign key (Geometry table). Either the geometry_id OR the geometry is used  |
-| geometry                     | WKT    | Optional  | Link shapepoints (well known text)                                                                                                                                            |
+| geometry                     | Geometry    | Optional  | Link geometry, specific format could be WKT, GeoJSON, PostGIS geometry datatype                              |
 |parent_link_id | link_id | Optional | The parent of this link. For example, for a sidewalk, this is the adjacent road.
 | dir\_flag                        | enum               | Optional  | 1 = shapepoints go from from_node to to_node;  -1 shapepoints go in the reverse direction; 0 = link is undirected or no geometry information is provided.                                               |
 | length  |  DOUBLE | Optional  | Length of the link  |
@@ -31,13 +31,16 @@ link data dictionary
 | capacity                                | INTEGER               | Optional  | Capacity (veh / hr / lane)                                                                                                                                                           |
 | free_speed                               | INTEGER               | Optional  | Free flow speed                                                                                                                                                               |
 | lanes                           | INTEGER               | Optional  | Number of lanes in the direction of travel                                                                                                                                       |
-| bike_facility                            | TEXT                  | Optional  | Type of bicycle accommodation: Unknown, None, WCL, Bikelane, Cycletrack                                                                                                       |
-| ped_facility                             | TEXT                  | Optional  | Type of pedestrian accommodation: Unknown, None, Shoulder, Sidewalk                                                                                                           |
-| parking                                 | TEXT                  | Optional  | Type of parking: Unknown, None, Parallel, Angle, Other                                                                                                                        |
-| allowed\_uses                           | Use\_Set              | Optional  | Set of allowed uses: SHOULDER, PARKING, WALK, ALL, BIKE, AUTO, HOV2, HOV3, TRUCK, BUS, etc.                                                                                   |
+| bike_facility                            | TEXT                  | Optional  | Type of bicycle accommodation: unknown, none, wcl, bikelane, cycletrack                                                                                                       |
+| ped_facility                             | TEXT                  | Optional  | Type of pedestrian accommodation: unknown, none, shoulder, sidewalk                                                                                                           |
+| parking                                 | TEXT                  | Optional  | Type of parking: unknown, none, parallel, angle, other                                                                                                                        |
+| allowed\_uses                           | Use\_Set              | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.                                                                                   |
+| toll          | INTEGER       | Optional  | cents                                     |
 | jurisdiction  | TEXT  | Optional  | Owner/operator of the link  |
-| row_width | DOUBLE  | Optional  |  Width of the entire right-of-way (both directions).  | 
+| row_width | DOUBLE  | Optional  |  Width (in feet) of the entire right-of-way (both directions).  | 
 
+
+Link_ID is simply a unique primary key.  It might be an integer, sharedstreets reference id, or even a text string. 
 
 Ad hoc fields may also be added. Examples might include jam density, wave speed, traffic message channel (TMC) identifier, traffic count sensor identifier and location, average daily traffic, etc. 
 

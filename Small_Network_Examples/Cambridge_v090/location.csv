@@ -1,0 +1,8 @@
+loc_id,link_id,ref_node_id,lr,x_coord,y_coord,z_coord,loc_type,zone_id,gtfs_stop_id,notes
+3,2211,22,500,-71.0861,42.3633,,parking_entrance,,,parking garage entrance (associated with Segment 221102 & segment_lane 2211021)
+12231,711,11,,-71.087704,42.363498,,transit_stop,,12231,Ames St @ Broadway
+2228,311,3,,-71.089007,42.364487,,transit_stop,,2228,Broadway @ Galileo Way
+34579,117,7,,-71.088174,42.363061,,transit_stop,,34579,Ames St @ Main St
+2231,,,,-71.085841,42.362498,,transit_stop,,2231,Main St @ Kendall Station - Red Line
+70071,,,,-71.085605,42.362355,,transit_stop,,70071,Kendall/MIT
+70072,,,,-71.085591,42.362434,,transit_stop,,70072,Kendall/MIT

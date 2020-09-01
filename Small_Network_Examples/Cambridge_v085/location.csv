@@ -1,5 +1,0 @@
-loc_id,link_id,ref_node_id,lr,x_coord,y_coord,z_coord,loc_type,zone_id,gtfs_stop_id,notes
-3,2211,22,500,-71.0861,42.3633,,Driveway,,,(associated with Segment 221102 & segment_lane 2211021)
-12231,711,11,,-71.087704,42.363498,,bus_stop,,12231,Ames St @ Broadway
-2228,311,3,,-71.089007,42.364487,,bus_stop,,2228,Broadway @ Galileo Way
-34579,117,7,,-71.088174,42.363061,,bus_stop,,34579,Ames St @ Main St
