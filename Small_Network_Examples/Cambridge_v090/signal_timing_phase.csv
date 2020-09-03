@@ -1,4 +1,4 @@
-timing_phase_id,signal_phase_id,timing_plan_id,phase_num,min_green,max_green,extension,clearance,walk_time,ped_clearance
+timing_phase_id,signal_phase_id,timing_plan_id,signal_phase_num,min_green,max_green,extension,clearance,walk_time,ped_clearance
 5,111,110,1,25,25,,5,5,20
 6,112,110,2,44,44,,5,24,20
 9,115,110,5,,,,,5,20
