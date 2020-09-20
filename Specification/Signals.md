@@ -14,11 +14,28 @@ Traffic signals call for several additional files:
 
 ## signal_controller
 
-The signal controller is associated with an intersection or a cluster of intersections. 
+The signal controller is associated with an intersection or a cluster of intersections. Optional fields may be used to indicate controller type and capability (e.g., connection to traffic management center)
 
 | Field                                            | Type     | Required? | Comment                   |
 | ------------------------------------------------ | -------- | --------- | ------------------------- |
 | <span class="underline">controller\_id</span>          | Controller\_ID | Required  | Primary key |
+
+## signal_detector
+
+A signal detector is associated with a phase and a group of lanes. 
+
+| Field                                            | Type     | Required? | Comment                   |
+| ------------------------------------------------ | -------- | --------- | ------------------------- |
+| <span class="underline">detector\_id</span>          | Detector\_ID | Required  | Primary key |
+| <span class="underline">signal\_phase\_id</span> | Signal\_Phase\_ID | Required | Foreign key |
+| <span class="underline">link\_id</span>          | Link\_ID | Required  | Link covered by the detector |
+| <span class="underline">start\_lane</span>          | INTEGER | Required  | Left-most lane covered by the detector |
+| <span class="underline">end\_lane</span>          | INTEGER | Optional  | Right-most lane (blank if only one lane) |
+| <span class="underline">ref\_node\_id</span>         | Node\_ID | Required  | Detector is on the approach to this node |
+| <span class="underline">det_zone_lr</span>     | INTEGER | Required  | Distance from from reference node to detector |
+| <span class="underline">det_zone_front</span>     | INTEGER | Optional  | Linear reference of front of detection zone |
+| <span class="underline">det_zone_back</span>     | INTEGER | Optional  |Linear reference of back of detection zone |
+| <span class="underline">det_type</span>     | Text | Optional  | Type of detector |
 
 ## signal_phase
 
