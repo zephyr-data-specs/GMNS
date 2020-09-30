@@ -32,7 +32,7 @@ A signal detector is associated with a phase and a group of lanes.
 | <span class="underline">start\_lane</span>          | INTEGER | Required  | Left-most lane covered by the detector |
 | <span class="underline">end\_lane</span>          | INTEGER | Optional  | Right-most lane (blank if only one lane) |
 | <span class="underline">ref\_node\_id</span>         | Node\_ID | Required  | Detector is on the approach to this node |
-| <span class="underline">det_zone_lr</span>     | INTEGER | Required  | Distance from from reference node to detector |
+| <span class="underline">det_zone_lr</span>     | INTEGER | Required  | Distance from from the stop bar to detector |
 | <span class="underline">det_zone_front</span>     | INTEGER | Optional  | Linear reference of front of detection zone |
 | <span class="underline">det_zone_back</span>     | INTEGER | Optional  |Linear reference of back of detection zone |
 | <span class="underline">det_type</span>     | Text | Optional  | Type of detector |
@@ -112,8 +112,8 @@ signal_phase_mvmt data dictionary
 | <span class="underline">signal\_phase\_num</span>   | INTEGER         | Optional               | Redundant with field in the signal\_phase table.    ; each phase has one or more Movements associated with it  
 | <span class="underline">mvmt\_id</span>  | Movement\_ID  | Conditionally Required | Foreign key. Either Movement\_ID (for phases used by vehicles), or Link\_id (for phases used by pedestrians) is required |
 | <span class="underline">link\_id</span> | Link\_ID | Conditionally Required | Foreign key                                                                                                                       |
-| protection                                       | TEXT              | Optional  | Indicates whether the phase is Protected or  Permissive.                           |
-| notes                                          | Text            | Optional               |                                                                                                                                   |
+| protection                                       | TEXT              | Optional  | Indicates whether the phase is Protected or Permitted.                           |
+
 
 
 ## signal_timing_plan
