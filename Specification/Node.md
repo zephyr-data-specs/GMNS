@@ -11,7 +11,7 @@ x_coord | DOUBLE | Required | Coordinate system specified in config file (longit
 y_coord | DOUBLE | Required | Coordinate system specified in config file (longitude, UTM-easting etc.)
 z_coord | DOUBLE | Optional | Altitude
 node_type | TEXT | Optional | What it represents (intersection, transit station, park & ride)
-ctrl_type | ControlType_Set | Optional | Intersection control type, from ControlType_Set: No Control, Stop, Yield, Signal, etc.
+ctrl_type | ControlType_Set | Optional | Intersection control type, from ControlType_Set: no_control, yield, stop_2_way, stop_4_way, signal
 zone_id | Zone_ID | Optional | Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block
 parent_node_id | Node_ID | Optional | The parent of this node; for example, a pedestrian node at one corner of an intersection's parent is the intersection itself.
 
