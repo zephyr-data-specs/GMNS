@@ -21,7 +21,7 @@ movement data dictionary
 | type                                            | TEXT             | Required  | left, right, uturn, thru, merge, etc.                        |
 | penalty                                         | INTEGER          | Optional  | Turn penalty (seconds)                                       |
 | capacity                                        | INTEGER          | Optional  |                                                              |
-| ctrl_type                                         | ControlType\_Set | Required  | From ControlType\_Set: no control, stop, yield, signal, etc. |
+| ctrl_type                                         | ControlType\_Set | Required  | From ControlType\_Set: no_control, yield, stop, stop_2_way, stop_4_way, signal_with_RTOR, signal. stop_2_way means that the movement has stop sign control, with at least one other conflicting movment uncontrolled.  stop_4_way means that all other conflicting movements also have stop sign control |
 | notes                                           | TEXT             | Optional  |                                                              |
 
 A question is whether traffic controls should be included in the
