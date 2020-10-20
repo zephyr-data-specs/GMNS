@@ -49,6 +49,6 @@ movement_tod data dictionary
 | type                                            | TEXT             | Required  | left, right, uturn, thru, merge, etc.                        |
 | penalty                                         | INTEGER          | Optional  | Turn penalty (seconds)                                       |
 | capacity                                        | INTEGER          | Optional  |                                                              |
-| ctrl_type                                         | ControlType\_Set | Required  | From ControlType\_Set: no control, stop, yield, signal, etc. |
+| ctrl_type                                         | ControlType\_Set | Required  | From ControlType\_Set: no_control, yield, stop, stop_2_way, stop_4_way, signal_with_RTOR, signal |
 | notes                                           | TEXT             | Optional  |                                                              |
                                                              |
