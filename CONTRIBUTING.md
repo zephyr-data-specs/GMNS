@@ -3,10 +3,12 @@ Contributions to GMNS are governed by the [GMNS Governance Document](https://doc
 
 ## Opening an Issue
 If you have a question, comment, or suggestion about GMNS, you can open an issue. 
+
 (More descriptive text about format/template for issues here.)
 
 ## Creating a Pull Request
-If you have suggested edits to the specification, or would like to contribute validation or conversion code, you can submit your proposed changes through a Pull Request.
+If you have suggested edits to the specification, or would like to contribute validation or conversion code, you can submit your proposed changes through a Pull Request. To do this, you can fork this repository, make your proposed changes on your local copy, and then submit a pull request [here](https://github.com/zephyr-data-specs/GMNS/compare).
+
 (More descriptive text about format/template for PRs here.)
 
 ## Review Process
