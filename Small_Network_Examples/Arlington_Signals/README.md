@@ -13,14 +13,17 @@ Note that the street at Node 7 (Swan Place) is a local street that would probabl
 
 ![Overview of the network.](images/full_network.png)
 ![Close-up of the two signalized intersections on the network.](images/nodes_6_7.png)
+
 Basemaps: OpenStreetMap contributors, CC-BY-SA.
 
 The next figure shows segments and locations.  The segments represent pocket lanes, and are numbered in square boxes, with lines extending towards the other end of the segment. The locations represent driveways or bus stops, and are numbered in diamonds.  Locations 2, 3 and 8 are driveways; locations 11 and 12 are bus stops.  
 ![Locations on the network.](images/locations.png)
+
 Basemap: OpenStreetMap contributors, CC-BY-SA.
 
 The next figure shows the node (numbers in circles), link and lane numbering at the main intersection at node 6. 
 ![Link and lane numbering at node 6.](images/node_6.png)
+
 Basemap: Google Maps.
 
 The figure below shows signal phasing and movements at node 6. 
