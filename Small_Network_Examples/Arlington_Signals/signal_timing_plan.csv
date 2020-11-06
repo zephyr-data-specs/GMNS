@@ -1,0 +1,9 @@
+timing_plan_id,controller_id,time_day,time_day_id,cycle_length,coord_contr_id,coord_phase,coord_ref_to,offset,opt_comment
+0,6,,,,,,,,Actuated at off-peak times
+1,6,01111100_06:00_09:00,,120,6,2,begin_of_green,0,M-F 6-9
+2,6,01111100_15:00_19:00,,120,6,2,begin_of_green,0,M-F 15-19
+3,6,000000100_11:00_18:00,,110,6,2,begin_of_green,0,Sat 11-18
+0,7,,,,,,,,Actuated at off-peak times
+1,7,01111100_06:00_09:00,,120,6,2,begin_of_green,104,M-F 6-9
+2,7,01111100_15:00_19:00,,120,6,2,begin_of_green,97,M-F 15-19
+3,7,000000100_11:00_18:00,,110,6,2,begin_of_green,89,Sat 11-18
