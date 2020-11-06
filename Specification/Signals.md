@@ -11,6 +11,7 @@ Traffic signals call for several additional files:
 - A controller will be associated with at least one timing plan. When signals are coordinated, a signal timing plan may be associated with a second controller.
 - A signal phase record indicates the ring, barrier, and position (RBP) for each phase of the signal. A signal phase is associated with at least one signal timing plan.  If timing plans vary by time of day or day or week, the signal phase will be associated with multiple timing plans.  
 - Each signal phase is associated with a controller and with one or more movements (for traffic movements) or links (for crosswalks) that may move on that phase.  Similarly, movements may move on more than one signal phase. These are indicated in the `signal_phase_mvmt` table. 
+- 'signal_detector' is an optional file for detectors (used for actuated signals)
 
 ## signal_controller
 
@@ -22,11 +23,12 @@ The signal controller is associated with an intersection or a cluster of interse
 
 ## signal_detector
 
-A signal detector is associated with a phase and a group of lanes. 
+A signal detector is associated with a controller, a phase and a group of lanes. 
 
 | Field                                            | Type     | Required? | Comment                   |
 | ------------------------------------------------ | -------- | --------- | ------------------------- |
 | <span class="underline">detector\_id</span>          | Detector\_ID | Required  | Primary key |
+| <span class="underline">controller\_id</span>          | Controller\_ID | Required  | Foreign key |
 | <span class="underline">signal\_phase\_id</span> | Signal\_Phase\_ID | Required | Foreign key |
 | <span class="underline">link\_id</span>          | Link\_ID | Required  | Link covered by the detector |
 | <span class="underline">start\_lane</span>          | INTEGER | Required  | Left-most lane covered by the detector |
@@ -37,7 +39,45 @@ A signal detector is associated with a phase and a group of lanes.
 | <span class="underline">det_zone_back</span>     | INTEGER | Optional  |Linear reference of back of detection zone |
 | <span class="underline">det_type</span>     | Text | Optional  | Type of detector |
 
-## signal_phase
+
+## signal_phase_mvmt
+
+The `signal_phase_mvmt` table associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A
+signal phase may be associated with several Movements. A Movement may also run on more than one phase.
+
+signal_phase_mvmt data dictionary
+
+| Field                                          | Type            | Required?              | Comment                                                                                                                           |
+| ---------------------------------------------- | --------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| signal_phase_mvmt_id | signal_phase_mvmt_id | Required | Primary key |
+| <span class="underline">signal\_phase\_id</span>  | Signal\_Phase\_ID  |  Required | Foreign key  |
+| <span class="underline">controller\_id</span>        | Controller\_ID        | Optional               | Redundant with field in the signal\_phase table.           |
+| <span class="underline">signal\_phase\_num</span>   | INTEGER         | Optional               | Redundant with field in the signal\_phase table.    ; each phase has one or more Movements associated with it  
+| <span class="underline">mvmt\_id</span>  | Movement\_ID  | Conditionally Required | Foreign key. Either Movement\_ID (for phases used by vehicles), or Link\_id (for phases used by pedestrians) is required |
+| <span class="underline">link\_id</span> | Link\_ID | Conditionally Required | Foreign key                                                                                                                       |
+| protection                                       | TEXT              | Optional  | Indicates whether the phase is Protected or Permitted.                           |
+
+
+
+## signal_timing_plan
+
+For signalized nodes, establishes timing plans and coordination.
+
+signal_timing_plan data dictionary
+
+| Field                                             | Type             | Required? | Comment                                                                  |
+| ------------------------------------------------- | ---------------- | --------- | ------------------------------------------------------------------------ |
+| <span class="underline">timing\_plan\_id</span>   | Timing\_Plan\_ID | Required  | Primary key                                                              |
+| <span class="underline">controller\_id</span>           | Controller\_ID         | Required  | Foreign key (signal_controller table)                                                |
+| <span class="underline">time_day</span>          | TimeDay\_Set     | Conditionally required  |  Define the availability/role of signal at different dates and times (either time_day or timeday_id is required)   |
+| <span class="underline">timeday\_id</span>        | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
+| <span class="underline">cycle\_length</span>      | INTEGER          | Optional  | Cycle length in seconds                                                  |
+| <span class="underline">coord\_contr_id</span>        | Controller\_ID         | Optional  | For coordinated signals, the “master” signal controller for coordination   |
+| <span class="underline">coord_phase</span> | INTEGER          | Optional  | For coordinated signals, the phase at which coordination starts (time 0) |
+| <span class="underline">coord_ref_to</span> | TEXT         | Optional  | For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red |
+| offset                                            | INTEGER          | Optional  | Offset in seconds                                                        |
+
+## signal_timing_phase
 
 The following conventions are typically used for phase numbers (see figure):
 
@@ -85,58 +125,7 @@ For example, in the diagram above, the phases are associated with rings and barr
 <tr> <th>Ring 2</th> <td>5</td> <td>6</td> <td>7</td> <td>8</td> </tr>
 </table>
 
-signal_phase data dictionary
-
-| Field                                            | Type     | Required? | Comment                   |
-| ------------------------------------------------ | -------- | --------- | ------------------------- |
-| <span class="underline">signal\_phase\_id</span> | Signal\_Phase\_ID | Required | Primary key |
-| <span class="underline">timing\_plan\_id</span>          | Controller\_ID | Required  | Foreign key (Signal_timing_plan table) |
-| <span class="underline">signal\_phase\_num</span>     | INTEGER  | Required  | controller_id and signal_phase_num are unique              |
-| <span class="underline">ring</span> | INTEGER  | Required  |                           |
-| <span class="underline">barrier</span> | INTEGER  | Required  |                           |
-| <span class="underline">position</span> | INTEGER  | Required  |                           |
-
-
-## signal_phase_mvmt
-
-The `signal_phase_mvmt` table associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A
-signal phase may be associated with several Movements. A Movement may also run on more than one phase.
-
-signal_phase_mvmt data dictionary
-
-| Field                                          | Type            | Required?              | Comment                                                                                                                           |
-| ---------------------------------------------- | --------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| signal_phase_mvmt_id | signal_phase_mvmt_id | Required | Primary key |
-| <span class="underline">signal\_phase\_id</span>  | Signal\_Phase\_ID  |  Required | Foreign key  |
-| <span class="underline">controller\_id</span>        | Controller\_ID        | Optional               | Redundant with field in the signal\_phase table.           |
-| <span class="underline">signal\_phase\_num</span>   | INTEGER         | Optional               | Redundant with field in the signal\_phase table.    ; each phase has one or more Movements associated with it  
-| <span class="underline">mvmt\_id</span>  | Movement\_ID  | Conditionally Required | Foreign key. Either Movement\_ID (for phases used by vehicles), or Link\_id (for phases used by pedestrians) is required |
-| <span class="underline">link\_id</span> | Link\_ID | Conditionally Required | Foreign key                                                                                                                       |
-| protection                                       | TEXT              | Optional  | Indicates whether the phase is Protected or Permitted.                           |
-
-
-
-## signal_timing_plan
-
-For signalized nodes, establishes timing plans and coordination.
-
-signal_timing_plan data dictionary
-
-| Field                                             | Type             | Required? | Comment                                                                  |
-| ------------------------------------------------- | ---------------- | --------- | ------------------------------------------------------------------------ |
-| <span class="underline">timing\_plan\_id</span>   | Timing\_Plan\_ID | Required  | Primary key                                                              |
-| <span class="underline">controller\_id</span>           | Controller\_ID         | Required  | Foreign key (signal_controller table)                                                |
-| <span class="underline">time_day</span>          | TimeDay\_Set     | Conditionally required  |  Define the availability/role of signal at different dates and times (either time_day or timeday_id is required)   |
-| <span class="underline">timeday\_id</span>        | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
-| <span class="underline">cycle\_length</span>      | INTEGER          | Optional  | Cycle length in seconds                                                  |
-| <span class="underline">coord\_contr_id</span>        | Controller\_ID         | Optional  | For coordinated signals, the “master” signal controller for coordination   |
-| <span class="underline">coord_phase</span> | INTEGER          | Optional  | For coordinated signals, the phase at which coordination starts (time 0) |
-| <span class="underline">coord_ref_to</span> | TEXT         | Optional  | For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red |
-| offset                                            | INTEGER          | Optional  | Offset in seconds                                                        |
-
-## signal_timing_phase
-
-For signalized nodes, provides signal timing.
+This table also provides signal timings, which may be different for each timing plan.  
 
 signal_timing_phase data dictionary
 
@@ -150,8 +139,11 @@ signal_timing_phase data dictionary
 | <span class="underline">max\_green</span>        | INTEGER           | Optional  | The maximum green time in seconds for an actuated signal; the default is minimum green plus one extension |
 | extension                                        | INTEGER           | Optional  | The number of seconds the green time is extended each time vehicles are detected                          |
 | clearance                                        | INTEGER           | Required  | Yellow interval plus all red interval                                                                     |
-| walk_time                                        | INTEGER           | Required  | If a pedestrian phase exists, the walk time in seconds                                                                     |
-| ped_clearance                                        | INTEGER           | Required  | If a pedestrian phase exists, the flashing don’t walk time.                                                                       |
+| walk_time                                        | INTEGER           | Optional  | If a pedestrian phase exists, the walk time in seconds                                                                     |
+| ped_clearance                                        | INTEGER           | Optional  | If a pedestrian phase exists, the flashing don’t walk time.                         |
+| <span class="underline">ring</span> | INTEGER  | Required  |                           |
+| <span class="underline">barrier</span> | INTEGER  | Required  |                           |
+| <span class="underline">position</span> | INTEGER  | Required  |                           |
 
 ## Relationships
 ![Relationships with and among the Signal tables](https://github.com/zephyr-data-specs/GMNS/blob/master/Images/SignalER3.png)
