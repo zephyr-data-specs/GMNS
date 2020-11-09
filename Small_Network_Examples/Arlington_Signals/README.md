@@ -7,7 +7,7 @@ This example shows the GMNS v0.90 specification implemented at two signalized in
 
 Signal phases and timings were taken from the engineering plans for the [Arlington Center Safe Travel Project](https://www.arlingtonma.gov/departments/planning-community-development/transportation-planning).  Note that they do not reflect the current phasings and timings; they are only used to illustrate how the signal files are used.
 
-Nodes and links are shown below, both as an overview, and as a close-up of the two signalized intersections at nodes 6 and 7.   The blue links represent the shared use path, red links accommodate motor vehicles and bicycles, the green links are sidewalks and crosswalks.  Coordinate system is EPSG:32619 - WGS 84 / UTM zone 19N. 
+Nodes and links are shown below, both as an overview, and as a close-up of the two signalized intersections at nodes 6 and 7.   The blue links represent the shared use path, red links accommodate motor vehicles and bicycles, the green links are sidewalks and crosswalks.  Coordinate system is EPSG:32619 - WGS 84 / UTM zone 19N. User-defined fields  are prefixed with `opt_`, e.g. `opt_comment`.
 
 Note that the street at Node 7 (Swan Place) is a local street that would probably not be included in a regional planning model.  While this example includes bicycle/pedestrian traffic on Swan Place (it provides the connection to the Minuteman Bikeway), it does not include motor vehicle traffic on Swan Place.  
 
