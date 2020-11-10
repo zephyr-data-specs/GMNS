@@ -29,7 +29,7 @@ A signal detector is associated with a controller, a phase and a group of lanes.
 | ------------------------------------------------ | -------- | --------- | ------------------------- |
 | <span class="underline">detector\_id</span>          | Detector\_ID | Required  | Primary key |
 | <span class="underline">controller\_id</span>          | Controller\_ID | Required  | Foreign key |
-| <span class="underline">signal\_phase\_id</span> | Signal\_Phase\_ID | Required | Foreign key |
+| <span class="underline">signal\_phase\_num</span> | INTEGER | Required | Number of the associated phase |
 | <span class="underline">link\_id</span>          | Link\_ID | Required  | Link covered by the detector |
 | <span class="underline">start\_lane</span>          | INTEGER | Required  | Left-most lane covered by the detector |
 | <span class="underline">end\_lane</span>          | INTEGER | Optional  | Right-most lane (blank if only one lane) |
@@ -50,9 +50,8 @@ signal_phase_mvmt data dictionary
 | Field                                          | Type            | Required?              | Comment                                                                                                                           |
 | ---------------------------------------------- | --------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | signal_phase_mvmt_id | signal_phase_mvmt_id | Required | Primary key |
-| <span class="underline">signal\_phase\_id</span>  | Signal\_Phase\_ID  |  Required | Foreign key  |
-| <span class="underline">controller\_id</span>        | Controller\_ID        | Optional               | Redundant with field in the signal\_phase table.           |
-| <span class="underline">signal\_phase\_num</span>   | INTEGER         | Optional               | Redundant with field in the signal\_phase table.    ; each phase has one or more Movements associated with it  
+| <span class="underline">controller\_id</span>        | Controller\_ID        | Optional               | Redundant with field in the signal\_timing\_phase table.           |
+| <span class="underline">signal\_phase\_num</span>   | INTEGER         | Required               |  each phase has one or more Movements associated with it  
 | <span class="underline">mvmt\_id</span>  | Movement\_ID  | Conditionally Required | Foreign key. Either Movement\_ID (for phases used by vehicles), or Link\_id (for phases used by pedestrians) is required |
 | <span class="underline">link\_id</span> | Link\_ID | Conditionally Required | Foreign key                                                                                                                       |
 | protection                                       | TEXT              | Optional  | Indicates whether the phase is Protected or Permitted.                           |
@@ -132,7 +131,6 @@ signal_timing_phase data dictionary
 | Field                                            | Type              | Required? | Comment                                                                                                   |
 | ------------------------------------------------ | ----------------- | --------- | --------------------------------------------------------------------------------------------------------- |
 | <span class="underline">timing\_phase\_id</span> | Timing\_Phase\_ID | Required  | Primary key                                                                                               |
-| <span class="underline">signal\_phase\_id</span>          | Signal\_Phase\_ID          | Required  | The associated signal phase.  Foreign key                                      |
 | <span class="underline">timing\_plan\_id</span>  | Timing\_Plan\_ID  | Optional  | Foreign key. If it is not provided, the timing applies all day                  |
 | <span class="underline">signal\_phase\_num</span>     | INTEGER           | Optional  | Redundant with the record in the signal_phase table                               |
 | <span class="underline">min\_green</span>        | INTEGER           | Required  | The minimum green time in seconds for an actuated signal. Green time in seconds for a fixed time signal   |
