@@ -21,6 +21,23 @@ The signal controller is associated with an intersection or a cluster of interse
 | ------------------------------------------------ | -------- | --------- | ------------------------- |
 | <span class="underline">controller\_id</span>          | Controller\_ID | Required  | Primary key |
 
+## signal_coordination
+
+Establishes coordination for several signal controllers, associated with a timing_plan
+
+signal_coordination data dictionary
+
+| Field                                             | Type             | Required? | Comment                                                                  |
+| ------------------------------------------------- | ---------------- | --------- | ------------------------------------------------------------------------ |
+| <span class="underline">coordination\_id</span>   | Coordination\_ID | Required  | Primary key                                                              |
+| <span class="underline">timing\_plan\_id</span>   | Timing\_Plan\_ID | Required  | Foreign key                                                              |
+| <span class="underline">controller\_id</span>           | Controller\_ID         | Required  | Foreign key (signal_controller table)                        |
+| <span class="underline">coord\_contr_id</span>        | Controller\_ID         | Optional  | For coordinated signals, the “master” signal controller for coordination   |
+| <span class="underline">coord_phase</span> | INTEGER          | Optional  | For coordinated signals, the phase at which coordination starts (time 0) |
+| <span class="underline">coord_ref_to</span> | TEXT         | Optional  | For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red |
+| offset                                            | INTEGER          | Optional  | Offset in seconds                                                        |
+
+
 ## signal_detector
 
 A signal detector is associated with a controller, a phase and a group of lanes. 
@@ -60,21 +77,17 @@ signal_phase_mvmt data dictionary
 
 ## signal_timing_plan
 
-For signalized nodes, establishes timing plans and coordination.
+For signalized nodes, establishes timing plans.
 
 signal_timing_plan data dictionary
 
 | Field                                             | Type             | Required? | Comment                                                                  |
 | ------------------------------------------------- | ---------------- | --------- | ------------------------------------------------------------------------ |
 | <span class="underline">timing\_plan\_id</span>   | Timing\_Plan\_ID | Required  | Primary key                                                              |
-| <span class="underline">controller\_id</span>           | Controller\_ID         | Required  | Foreign key (signal_controller table)                                                |
+| <span class="underline">controller\_id</span>           | Controller\_ID         | Required  | Foreign key (master controller for this timing plan)           |
 | <span class="underline">time_day</span>          | TimeDay\_Set     | Conditionally required  |  Define the availability/role of signal at different dates and times (either time_day or timeday_id is required)   |
 | <span class="underline">timeday\_id</span>        | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | <span class="underline">cycle\_length</span>      | INTEGER          | Optional  | Cycle length in seconds                                                  |
-| <span class="underline">coord\_contr_id</span>        | Controller\_ID         | Optional  | For coordinated signals, the “master” signal controller for coordination   |
-| <span class="underline">coord_phase</span> | INTEGER          | Optional  | For coordinated signals, the phase at which coordination starts (time 0) |
-| <span class="underline">coord_ref_to</span> | TEXT         | Optional  | For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red |
-| offset                                            | INTEGER          | Optional  | Offset in seconds                                                        |
 
 ## signal_timing_phase
 
