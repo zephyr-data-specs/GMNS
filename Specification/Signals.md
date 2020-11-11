@@ -146,10 +146,10 @@ signal_timing_phase data dictionary
 | <span class="underline">timing\_phase\_id</span> | Timing\_Phase\_ID | Required  | Primary key                                                                                               |
 | <span class="underline">timing\_plan\_id</span>  | Timing\_Plan\_ID  | Required  | Foreign key. Connects to a timing_plan, associated with a controller                 |
 | <span class="underline">signal\_phase\_num</span>     | INTEGER           | Required | signal phase number                               |
-| <span class="underline">min\_green</span>        | INTEGER           | Required  | The minimum green time in seconds for an actuated signal. Green time in seconds for a fixed time signal   |
+| <span class="underline">min\_green</span>        | INTEGER           | Optional  | The minimum green time in seconds for an actuated signal. Green time in seconds for a fixed time signal   |
 | <span class="underline">max\_green</span>        | INTEGER           | Optional  | The maximum green time in seconds for an actuated signal; the default is minimum green plus one extension |
 | extension                                        | INTEGER           | Optional  | The number of seconds the green time is extended each time vehicles are detected                          |
-| clearance                                        | INTEGER           | Required  | Yellow interval plus all red interval                                                                     |
+| clearance                                        | INTEGER           | Optional  | Yellow interval plus all red interval                                                                     |
 | walk_time                                        | INTEGER           | Optional  | If a pedestrian phase exists, the walk time in seconds                                                                     |
 | ped_clearance                                        | INTEGER           | Optional  | If a pedestrian phase exists, the flashing don’t walk time.                         |
 | <span class="underline">ring</span> | INTEGER  | Required  |                           |
