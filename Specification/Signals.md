@@ -157,4 +157,4 @@ signal_timing_phase data dictionary
 | <span class="underline">position</span> | INTEGER  | Required  |                           |
 
 ## Relationships
-![Relationships with and among the Signal tables](https://github.com/zephyr-data-specs/GMNS/blob/updates/Images/SignalER4.png)
+![Relationships with and among the Signal tables](https://github.com/zephyr-data-specs/GMNS/blob/updates/Images/SignalER5.png)
