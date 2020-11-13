@@ -8,10 +8,10 @@ Representation of traffic controls (e.g., stop signs, signals, etc.) includes se
 
 Traffic signals call for several additional files:
 - `signal_controller` has one record for each signal controller.  Typically, each node that represents an intersection has one signal controller, but there are cases where one signal controller might be associated with several nodes (e.g.,  two sides of a divided highway at a crossroads).  
-- A controller will be associated with at least one timing plan. When signals are coordinated, a signal timing plan may be associated with a second controller.
-- A signal phase record indicates the ring, barrier, and position (RBP) for each phase of the signal. A signal phase is associated with at least one signal timing plan.  If timing plans vary by time of day or day or week, the signal phase will be associated with multiple timing plans.  
+- A controller will be associated with at least one timing plan. When signals are coordinated, a signal timing plan may be associated with a second controller through the `signal_coordination` file.
+- A signal timing phase record indicates the ring, barrier, and position (RBP) for each phase of the signal. A signal phase is associated with at least one signal timing plan.  If timing plans vary by time of day or day or week, the signal phase will be associated with multiple timing plans.  
 - Each signal phase is associated with a controller and with one or more movements (for traffic movements) or links (for crosswalks) that may move on that phase.  Similarly, movements may move on more than one signal phase. These are indicated in the `signal_phase_mvmt` table. 
-- 'signal_detector' is an optional file for detectors (used for actuated signals)
+- `signal_detector` is an optional file for detectors (used for actuated signals)
 
 ## signal_controller
 
