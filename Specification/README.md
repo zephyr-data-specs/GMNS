@@ -1,37 +1,31 @@
 # General Modeling Network Specification
 
-## Configuration
-The following units are recommended:
-- Short lengths (linear references, lane widths, etc.): feet
-- Long lengths (link lengths): miles
-- Speed: miles per hour
-
-The specification also provides for optional tables to define datatypes for use and time sets:
-- [use_definition and use_group](Use_Definition-and-Use_Group.md)  
-- [time_set_definitions](TOD.md#time_set_definitions)
+This folder contains a machine-readable version of GMNS, in a `.json` format compatible with the [frictionless data](https://specs.frictionlessdata.io/table-schema/) table schema standards. For more detailed information about each table, go to the [Markdown version](../Specification_md/README.md).
 
 ## Specification Tables
+[Specification Overview](gmns.spec.json)
 ### Basic Data Elements
-- [node](Node.md)  
-- [link](Link.md)
-- [geometry](Geometry.md)       
-- [zone](Zone.md)
+- [node](node.schema.json)  
+- [link](link.schema.json)
+- [geometry](geometry.schema.json)       
+- [zone](zone.schema.json)
 ### Advanced Data Elements
-- [segment](Segment.md)  
-- [location](Location.md)  
-- [lane](Lane.md)  
-- [segment_lane](Segment_lane.md)
-- [link_tod](TOD.md#Link_TOD)  
-- [segment_tod](TOD.md#segment_tod)  
-- [link_lane_tod](TOD.md#link_lane_tod)  
-- [segment_lane_tod](TOD.md#segment_lane_tod)  
-- [movement](Movement-and-Movement_TOD.md#Movement)  
-- [movement_tod](Movement-and-Movement_TOD.md#Movement_TOD) 
-- [signal_controller](Signals.md#signal_controller)
-- [signal_phase](Signals.md#Signal_Phase)  
-- [signal_phase_mvmt](Signals.md#signal_phase_mvmt)  
-- [signal_timing_plan](Signals.md#Signal_Timing_Plan)
-- [signal_timing_phase](Signals.md#Signal_Timing_Phase)  
+- [segment](segment.schema.json)  
+- [location](location.schema.json)  
+- [lane](lane.schema.json)  
+- [segment_lane](segment_lane.schema.json)
+- [link_tod](link_tod.schema.json)  
+- [segment_tod](segment_tod.schema.json)  
+- [lane_tod](lane_tod.schema.json)  
+- [segment_lane_tod](segment_lane_tod.schema.json)  
+- [movement](movement.schema.json)  
+- [movement_tod](movement_tod.schema.json) 
+- [signal_controller](signal_controller.schema.json)
+- [signal_coordination](signal_coordination.schema.json)
+- [signal_detector](signal_detector.schema.json)  
+- [signal_phase_mvmt](signal_phase_mvmt.schema.json)  
+- [signal_timing_plan](signal_timing_plan.schema.json)
+- [signal_timing_phase](signal_timing_phase.schema.json)  
 
 ## Inheritance relationships
 ![Inheritance relationships](../Images/inheritance.png)
