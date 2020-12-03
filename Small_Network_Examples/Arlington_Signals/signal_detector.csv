@@ -1,4 +1,4 @@
-detector_id,controller_id,signal_phase_id,link_id,start_lane,end_lane,ref_node_id,det_zone_lr,det_zone_front,det_zone_back,det_type
+detector_id,controller_id,signal_phase_num,link_id,start_lane,end_lane,ref_node_id,det_zone_lr,det_zone_front,det_zone_back,det_type
 1,6,3,52,3,,6,-20,0,-40,presence
 2,6,2,52,1,2,6,-20,0,-40,presence
 3,6,5,52,-1,,6,-20,0,-40,presence
