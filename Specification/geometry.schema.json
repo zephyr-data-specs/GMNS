@@ -1,0 +1,19 @@
+{
+    "primaryKey": "geometry_id",
+    "missingValues": ["NaN"],
+    "fields": [
+        {
+            "name": "geometry_id",
+            "type": "any",
+            "description": "Primary key – could be SharedStreets Geometry ID",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "geometry",
+            "type": "any",
+            "description": "Optional. Link geometry, specific format could be WKT, GeoJSON, etc."
+        }
+    ]
+}

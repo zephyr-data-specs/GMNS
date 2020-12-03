@@ -1,0 +1,99 @@
+{
+    "primaryKey": "mvmt_tod_id",
+    "missingValues": ["NaN"],
+    "fields": [
+      {
+          "name": "mvmt_tod_id",
+          "type": "any",
+          "description": "Primary key.",
+          "constraints": {
+            "required": true
+            }
+      },
+      {
+            "name": "mvmt_id",
+            "type": "any",
+            "foreign_key": "movement.mvmt_id",
+            "description": "The referenced movement.",
+            "constraints": {
+              "required": true
+              }
+      },
+      {
+            "name": "time_day",
+            "type": "string",
+            "description": "Time of day in XXXXXXXX_HHMM_HHMM format, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times."
+      },
+      {
+            "name": "timeday_id",
+            "type": "string",
+            "foreign_key": "timeday.timeday_id",
+            "description": "Time of day set. Used if times-of-day are defined on the time_set_definitions table"
+      },
+        {
+            "name": "ib_link_id",
+            "type": "any",
+            "foreign_key": "link.link_id",
+            "description": "Inbound link id.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "start_ib_lane",
+            "type": "integer",
+            "description": "Innermost lane number the movement applies to at the inbound end."
+        },
+        {
+            "name": "end_ib_lane",
+            "type": "integer",
+            "description": "Outermost lane number the movement applies to at the inbound end. Blank indicates a movement with a single inbound lane."
+        },
+        {
+            "name": "ob_link_id",
+            "type": "any",
+            "foreign_key": "link.link_id",
+            "description": "Outbound link id.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "start_ob_lane",
+            "type": "integer",
+            "description": "Innermost lane number the movement applies to at the outbound end."
+        },
+        {
+            "name": "end_ob_lane",
+            "type": "integer",
+            "description": "Outermost lane number the movement applies to at the outbound end. Blank indicates a movement with a single outbound lane."
+        },
+        {
+            "name": "type",
+            "type": "string",
+            "description": "Optional. Describes the type of movement (left, right, thru, etc.).",
+            "constraints": {
+              "required": true,
+              "enum": ["left", "right", "uturn", "thru", "merge"]
+              }
+        },
+        {
+            "name": "penalty",
+            "type": "any",
+            "description": "Turn penalty (seconds)"
+        },
+        {
+            "name": "capacity",
+            "type": "any",
+            "description": "Capacity in vehicles per hour."
+        },
+        {
+            "name": "ctrl_type",
+            "type": "any",
+            "description": "Optional. .",
+            "constraints": {
+              "enum": ["none", "yield", "stop", "4_stop", "signal"]
+              }
+        }
+    ]
+}

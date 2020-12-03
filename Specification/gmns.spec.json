@@ -1,0 +1,148 @@
+{
+  "profile": "gmns-data-package",
+  "profile_version":0.0,
+  "name": "my-dataset",
+  "resources": [
+   {
+     "name":"link",
+     "description":"A link is an edge in a network, defined by the nodes it travels from and to. It may have associated geometry information. Links have three types of attributes:\n  - Those that define the physical location of the link (e.g., `shape` `information`, `length`, `width`)\n  - Those that define the link’s directionality: `from_node`, `to_node`\n  - Those that define properties in the direction of travel: capacity,free flow speed, number of lanes, permitted uses, grade, facility type",
+     "path": "link.csv",
+     "schema": "link.schema.json",
+     "required": true
+   },
+   {
+     "name":"node",
+     "description":"A list of vertices that locate points on a map. Typically, they will represent intersections, but may also represent other points, such as a transition between divided and undivided highway. Nodes are the endpoints of a link (as opposed to the other type of vertex, location, which is used to represent points along a link)",
+     "path": "node.csv",
+     "schema": "node.schema.json",
+     "required": true
+   },
+   {
+     "name":"geometry",
+     "description":"The geometry is an optional file that contains geometry information (shapepoints) for a line object. It is similar to Geometries in the SharedStreets reference system. The specification also allows for geometry information to be stored directly on the link table.",
+     "path": "geometry.csv",
+     "schema": "geometry.schema.json"
+   },
+   {
+     "name":"lane",
+     "description":"The lane file allocates portions of the physical right-of-way that might be used for travel. It might be a travel lane, bike lane, or a parking lane. Lanes only are included in directed links; undirected links are assumed to have no lane controls or directionality. If a lane is added, dropped, or changes properties along the link, those changes are recorded on the `segment_link` table. Lanes are numbered sequentially, starting at either the centerline (two-way street) or the left shoulder (one-way street or divided highway with two centerlines).",
+     "path": "lane.csv",
+     "schema": "lane.schema.json"
+   },
+   {
+     "name":"link_tod",
+     "description":"Handles day-of-week and time-of-day restrictions on links",
+     "path": "link_tod.csv",
+     "schema": "link_tod.schema.json"
+   },
+   {
+     "name":"location",
+     "description":"A location is a vertex that is associated with a specific location along a link. Locations may be used to represent places where activities occur (e.g., driveways and bus stops). Its attributes are nearly the same as those for a node, except that the location includes an associated link and node, with location specified as distance along the link from the node.",
+     "path": "location.csv",
+     "schema": "location.schema.json",
+     "required": true
+   },
+   {
+     "name":"movement",
+     "description":"Describes how inbound and outbound links connect at an intersection.",
+     "path": "movement.csv",
+     "schema": "movement.schema.json"
+   },
+   {
+     "name":"movement_tod",
+     "description":"Handles day-of-week and time-of-day restrictions on movements.",
+     "path": "movement_tod.csv",
+     "schema": "movement_tod.schema.json"
+   },
+   {
+     "name":"use_definition",
+     "description":"The Use_Definition file defines the characteristics of each vehicle type or non-travel purpose (e.g., a shoulder or parking lane). A two-way left turn lane (TWLTL) is also a use.",
+     "path": "use_definition.csv",
+     "schema": "use_definition.schema.json"
+   },
+   {
+     "name":"use_group",
+     "description":"Defines groupings of uses, to reduce the size of the Allowed_Uses lists in the other tables.",
+     "path": "use_group.csv",
+     "schema": "use_group.schema.json"
+   },
+   {
+     "name":"time_set_definitions",
+     "description":"The time_set_definitions file is an optional representation of time-of-day and day-of-week sets to enable time restrictions through `_tod` files.",
+     "path": "time_set_definitions.csv",
+     "schema": "time_set_definitions.schema.json"
+   },
+   {
+     "name":"segment",
+     "description":"A portion of a link defined by `link_id`,`ref_node_id`, `start_lr`, and `end_lr`. Values in the segment will override they value specified in the link table. When one segment is fully contained within another, its value prevails.",
+     "path": "segment.csv",
+     "schema": "segment.schema.json"
+   },
+   {
+     "name":"segment_lane",
+     "description":"Defines added and dropped lanes, and changes to lane parameters. If a lane is added, it has no parent. If it is changed or dropped, the parent_lane_id field keys to the associated lane on the lane table.",
+     "path": "segment_lane.csv",
+     "schema": "segment_lane.schema.json"
+   },
+   {
+     "name":"signal_controller",
+     "description":"The signal controller is associated with an intersection or a cluster of intersections.",
+     "path": "signal_controller.csv",
+     "schema": "signal_controller.schema.json"
+   },
+   {
+     "name":"signal_coordination",
+     "description":"Establishes coordination for several signal controllers, associated with a timing_plan.",
+     "path": "signal_coordination.csv",
+     "schema": "signal_coordination.schema.json"
+   },
+   {
+     "name":"signal_phase_mvmt",
+     "description":"Associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A signal phase may be associated with several movements. A Movement may also run on more than one phase.",
+     "path": "signal_phase_mvmt.csv",
+     "schema": "signal_phase_mvmt.schema.json"
+   },
+   {
+     "name":"signal_timing_plan",
+     "description":"For signalized nodes, establishes timing plans.",
+     "path": "signal_timing_plan.csv",
+     "schema": "signal_timing_plan.schema.json"
+   },
+   {
+     "name":"signal_timing_phase",
+     "description":"For signalized nodes, provides signal timing and establishes phases that may run concurrently.",
+     "path": "signal_timing_phase.csv",
+     "schema": "signal_timing_phase.schema.json"
+   },
+   {
+     "name":"signal_detector",
+     "description":"A signal detector is associated with a controller, a phase and a group of lanes.",
+     "path": "signal_detector.csv",
+     "schema": "signal_detector.schema.json"
+   },
+   {
+     "name":"segment_tod",
+     "description":"An optional file that handles day-of-week and time-of-day restrictions on segments. It is used for part-time changes in segment capacity and number of lanes.",
+     "path": "segment_tod.csv",
+     "schema": "segment_tod.schema.json"
+   },
+   {
+     "name":"lane_tod",
+     "description":"An optional file that handles day-of-week and time-of-day restrictions on lanes that traverse entire links.",
+     "path": "lane_tod.csv",
+     "schema": "lane_tod.schema.json"
+   },
+   {
+     "name":"segment_lane_tod",
+     "description":"An optional file that handles day-of-week and time-of-day restrictions on lanes within segments of links.",
+     "path": "segment_lane_tod.csv",
+     "schema": "segment_lane_tod.schema.json"
+   },
+   {
+     "name":"zone",
+     "description":"Locates zones (travel analysis zones, parcels) on a map. Zones are represented as polygons in geographic information systems.",
+     "path": "zone.csv",
+     "schema": "zone.schema.json"
+   }
+ ]
+}

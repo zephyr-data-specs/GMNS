@@ -1,0 +1,94 @@
+{
+    "primaryKey": "timeday_id",
+    "missingValues": ["NaN",""],
+    "fields": [
+        {
+            "name": "timeday_id",
+            "type": "any",
+            "description": "Primary key.Primary key, similar to `service_id` in GTFS. Unique name of the time of day. Preferable legible rather than a number.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "monday",
+            "type": "boolean",
+            "description": "Required. Whether Mondays are included.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "tuesday",
+            "type": "boolean",
+            "description": "Required. Whether Tuesdays are included.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "wednesday",
+            "type": "boolean",
+            "description": "Required. Whether Wednesdays are included.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "thursday",
+            "type": "boolean",
+            "description": "Required. Whether Thursdays are included.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "Friday",
+            "type": "boolean",
+            "description": "Required. Whether Fridays are included.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "saturday",
+            "type": "boolean",
+            "description": "Required. Whether Saturdays are included.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "sunday",
+            "type": "boolean",
+            "description": "Required. Whether Sundays are included.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "holiday",
+            "type": "boolean",
+            "description": "Required. Whether holidays are included.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "start_time",
+            "type": "time",
+            "description": "Required. Start time in HH:MM format.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "end_time",
+            "type": "time",
+            "description": "Required. End  time in HH:MM format.",
+            "constraints": {
+              "required": true
+              }
+        }
+    ]
+}

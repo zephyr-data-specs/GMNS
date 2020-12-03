@@ -1,0 +1,42 @@
+{
+    "primaryKey": "use",
+    "missingValues": ["NaN"],
+    "fields": [
+        {
+            "name": "use",
+            "type": "string",
+            "description": "Primary key",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "persons_per_vehicle",
+            "type": "number",
+            "description": "Required.",
+            "constraints": {
+              "required": true,
+              "minimum": 0
+              }
+        },
+        {
+            "name": "pce",
+            "type": "number",
+            "description": "Required. Passenger car equivelent.",
+            "constraints": {
+              "required": true,
+              "minimum":0
+              }
+        },
+        {
+            "name": "special_conditions",
+            "type": "string",
+            "description": "Optional."
+        },
+        {
+            "name": "description",
+            "type": "string",
+            "description": "Optional "
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "primaryKey": "lane_id",
+    "missingValues": ["NaN"],
+    "fields": [
+        {
+            "name": "lane_id",
+            "type": "any",
+            "description": "Primary key",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "link_id",
+            "type": "any",
+            "foreign_key": "link.link_id",
+            "description": "Required. Foreign key to link table.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "lane_num",
+            "type": "integer",
+            "description": "Required. e.g., -1, 1, 2 (use left-to-right numbering).",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "allowed_uses",
+            "type": "string",
+            "foreign_key": "use_group.use_id",
+            "description": "Required. Set of allowed uses from Use_set: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "r_barrier",
+            "type": "any",
+            "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is none).\n- '' (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane\n- `regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier\n- `physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
+            "constraints": {
+              "enum": ["","regulatory", "physical"]
+              }
+        },
+        {
+            "name": "l_barrier",
+            "type": "any",
+            "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is none).\n- '' (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane\n- `regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier\n- `physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
+            "constraints": {
+              "enum": ["","regulatory", "physical"]
+              }
+        },
+        {
+            "name": "width",
+            "type": "number",
+            "description": "Optional. Width of the lane, feet.",
+            "constraints": {
+              "minimum": 0
+              }
+        }
+    ]
+}

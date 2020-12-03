@@ -1,0 +1,14 @@
+{
+    "primaryKey": "controller_id",
+    "missingValues": ["NaN",""],
+    "fields": [
+        {
+            "name": "controller_id",
+            "type": "any",
+            "description": "Primary key.",
+            "constraints": {
+              "required": true
+              }
+        }
+    ]
+}

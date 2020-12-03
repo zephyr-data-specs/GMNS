@@ -1,0 +1,27 @@
+{
+    "primaryKey": "use_group",
+    "missingValues": ["NaN"],
+    "fields": [
+        {
+            "name": "use_group",
+            "type": "string",
+            "description": "Primary key.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "uses",
+            "type": "string",
+            "description": "Comma-separated list of uses.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "description",
+            "type": "string",
+            "description": "Optional."
+        }
+    ]
+}

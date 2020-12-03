@@ -1,0 +1,71 @@
+{
+    "primaryKey": "loc_id",
+    "missingValues": ["NaN"],
+    "fields": [
+        {
+            "name": "loc_id",
+            "type": "any",
+            "description": "Primary key. Location ID.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "link_id",
+            "type": "any",
+            "foreign_key": "link.link_id",
+            "description": "Required. Road Link ID. Foreign Key from Road_Link.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "ref_node_id",
+            "type": "any",
+            "foreign_key": "node.node_id",
+            "description": "Required. The From node of the link. Foreign Key from Node.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "lr",
+            "type": "number",
+            "description": "Required. Linear Reference of the location, measured as distance along the link from the reference node.  If link_geometry exists, it is used. Otherwise, link geometry is assumed to be a crow-fly distance from A node to B node.",
+            "constraints": {
+              "required": true,
+              "minimum": 0
+              }
+        },
+        {
+            "name": "x_coord",
+            "type": "number",
+            "description": "Optional. Either provided, or derived from Link, Ref_Node and LR."
+        },
+        {
+            "name": "y_coord",
+            "type": "number",
+            "description": "Optional. Either provided, or derived from Link, Ref_Node and LR."
+        },
+        {
+            "name": "z_coord",
+            "type": "number",
+            "description": "Optional. Altitude."
+        },
+        {
+            "name": "loc_type",
+            "type": "string",
+            "description": "Optional. What it represents (driveway, bus stop, etc.) OpenStreetMap map feature names are recommended."
+        },
+        {
+            "name": "zone_id",
+            "type": "any",
+            "description": "Optional. Foreign Key, Associated zone"
+        },
+        {
+            "name": "gtfs_stop_id",
+            "type": "string",
+            "description": "Optional. Foreign Key to GTFS data. For bus stops and transit station entrances, provides a link to the General Transit Feed Specification."
+        }
+    ]
+}

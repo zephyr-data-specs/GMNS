@@ -1,0 +1,74 @@
+{
+    "primaryKey": "segment_lane_tod_id",
+    "missingValues": ["NaN",""],
+    "fields": [
+      {
+          "name": "segment_lane_tod_id",
+          "type": "any",
+          "description": "Primary key.",
+          "constraints": {
+            "required": true
+            }
+      },
+	  {
+		  "name": "segment_lane_id",
+		  "type": "any",
+		  "foreign_key": "segment_lane.segment_lane_id",
+		  "description": "Required. Foreign key, segment_lane table",
+		  "constraints": {
+			"required": true
+		    }
+	  },
+        {
+            "name": "timeday_id",
+            "type": "any",
+            "foreign_key": "time_set_definitions.timeday_id",
+            "description": "Conditionally required (either timeday_id or time_day). Foreign key to time_set_definitions."
+        },
+        {
+            "name": "time_day",
+            "type": "any",
+            "description": "Conditionally required (either timeday_id or time_day). XXXXXXXX_HHMM_HHMM, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times."
+        },
+		{
+          "name": "lane_num",
+          "type": "integer",
+          "description": "Required. Lane number identified as offset to the right from the centerline. i.e. -1, 1, 2 (use left-to-rightnumbering).",
+          "constraints": {
+            "required": true,
+            "minimum": -10,
+            "maximum": 10
+            }
+      },
+      {
+          "name": "allowed_uses",
+          "type": "string",
+          "foreign_key": "use_group.use_group",
+          "description": "Optional. Set of allowed uses; comma-separated. Foreign key to use_definition or use sets."
+      },
+      {
+          "name": "r_barrier",
+          "type": "any",
+          "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is None).\n- '' (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane\n- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier\n- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
+          "constraints": {
+            "enum": ["","regulatory", "physical"]
+            }
+      },
+      {
+          "name": "l_barrier",
+          "type": "any",
+          "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is None).\n- '' (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane\n- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier\n- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
+          "constraints": {
+            "enum": ["","regulatory", "physical"]
+            }
+      },
+      {
+          "name": "width",
+          "type": "number",
+          "description": "Optional. Width of the lane, feet.",
+          "constraints": {
+            "minimum": 0
+            }
+      }
+    ]
+}

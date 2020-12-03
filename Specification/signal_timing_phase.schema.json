@@ -1,0 +1,109 @@
+{
+    "primaryKey": "timing_phase_id",
+    "missingValues": ["NaN",""],
+    "fields": [
+        {
+            "name": "timing_phase_id",
+            "type": "any",
+            "description": "Primary key.",
+            "constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "timing_plan_id",
+            "type": "any",
+            "foreign_key": "signal_timing_plan.timing_plan_id",
+            "description": "Foreign key; connects to a timing_plan associated with a controller."
+        },
+        {
+            "name": "signal_phase_num",
+            "type": "integer",
+            "description": "Signal phase number.",
+            "constraints": {
+              "minimum": 0,
+			  "required": true
+              }
+        },
+        {
+            "name": "min_green",
+            "type": "integer",
+            "description": "The minimum green time in seconds for an actuated signal. Green time in seconds for a fixed time signal.",
+            "constraints": {
+              "minimum": 0
+              }
+        },
+        {
+            "name": "max_green",
+            "type": "integer",
+            "description": "Optional.The maximum green time in seconds for an actuated signal; the default is minimum green plus one extension",
+            "constraints": {
+              "minimum": 0
+              }
+        },
+        {
+            "name": "extension",
+            "type": "integer",
+            "description": "Optional. The number of seconds the green time is extended each time vehicles are detected.",
+              "constraints": {
+                "minimum": 0,
+                "maximum": 120
+                }
+        },
+        {
+            "name": "clearance",
+            "type": "integer",
+            "description": "Yellow interval plus all red interval",
+              "constraints": {
+                "minimum": 0,
+                "maximum": 120
+                }
+        },
+        {
+            "name": "walk_time",
+            "type": "integer",
+            "description": "If a pedestrian phase exists, the walk time in seconds",
+              "constraints": {
+                "minimum": 0,
+                "maximum": 120
+                }
+        },
+        {
+            "name": "ped_clearance",
+            "type": "integer",
+            "description": "If a pedestrian phase exists, the flashing don’t walk time.",
+              "constraints": {
+                "minimum": 0,
+                "maximum": 120
+                }
+        },
+		        {
+            "name": "ring",
+            "type": "integer",
+            "description": "Required. Set of phases that conflict with each other. ",
+            "constraints": {
+              "required": true,
+              "minimum": 0,
+              "maximum": 12
+              }
+        },
+        {
+            "name": "barrier",
+            "type": "integer",
+            "description": "Required. Set of phases that can operate other.",
+            "constraints": {
+              "required": true,
+              "minimum": 0,
+              "maximum": 12
+              }
+        },
+		{
+            "name": "position",
+            "type": "integer",
+            "description": "Required. Position.",            
+			"constraints": {
+              "required": true
+            }
+        }
+    ]
+}

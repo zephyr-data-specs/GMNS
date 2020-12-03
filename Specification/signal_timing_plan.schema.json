@@ -1,0 +1,43 @@
+{
+    "primaryKey": "timing_plan_id",
+    "missingValues": ["NaN",""],
+    "fields": [
+        {
+            "name": "timing_plan_id",
+            "type": "any",
+            "description": "Primary key.",
+            "constraints": {
+              "required": true
+              }
+        },
+		{
+            "name": "controller_id",
+            "type": "any",
+            "foreign_key": "signal_controller.controller_id",
+            "description": "Required. Foreign key (signal_controller table).",            
+			"constraints": {
+              "required": true
+              }
+        },
+        {
+            "name": "timeday_id",
+            "type": "any",
+            "foreign_key": "time_set_definitions.timeday_id",
+            "description": "Conditionally required (either timeday_id or time_day). Foreign key to time_set_definitions."
+        },
+        {
+            "name": "time_day",
+            "type": "any",
+            "description": "Conditionally required (either timeday_id or time_day). XXXXXXXX_HHMM_HHMM, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times."
+        },
+        {
+            "name": "cycle_length",
+            "type": "integer",
+            "description": "Cycle length in seconds.",
+            "constraints": {
+              "minimum": 0,
+              "maximum": 600
+              }
+        }
+    ]
+}
