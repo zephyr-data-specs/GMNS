@@ -26,6 +26,9 @@ This folder contains a machine-readable version of GMNS, in a `.json` format com
 - [signal_phase_mvmt](signal_phase_mvmt.schema.json)  
 - [signal_timing_plan](signal_timing_plan.schema.json)
 - [signal_timing_phase](signal_timing_phase.schema.json)  
+- [time_set_definitions](time_set_definitions.schema.json)
+- [use_definition](use_definition.schema.json)
+- [use_group](use_group.schema.json)
 
 ## Inheritance relationships
 ![Inheritance relationships](../Images/inheritance.png)
