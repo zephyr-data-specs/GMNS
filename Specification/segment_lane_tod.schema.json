@@ -10,15 +10,15 @@
             "required": true
             }
       },
-	  {
-		  "name": "segment_lane_id",
-		  "type": "any",
-		  "foreign_key": "segment_lane.segment_lane_id",
-		  "description": "Required. Foreign key, segment_lane table",
-		  "constraints": {
+	{
+		"name": "segment_lane_id",
+		"type": "any",
+		"foreign_key": "segment_lane.segment_lane_id",
+		"description": "Required. Foreign key, segment_lane table",
+		"constraints": {
 			"required": true
-		    }
-	  },
+		  }
+	 },
         {
             "name": "timeday_id",
             "type": "any",
