@@ -128,12 +128,12 @@
 		{
             "name": "toll",
 			"type": "integer",
-			"description": "Optional.  Toll on the link, in cents."
+			"description": "Optional.  Toll on the segment, in cents."
         },
 		{
             "name": "jurisdiction",
             "type": "string",
-            "description": "Optional. Optional.  Owner/operator of the link." 
+            "description": "Optional. Optional.  Owner/operator of the segment." 
         },
 		{
             "name": "row_width",
