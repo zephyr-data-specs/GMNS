@@ -43,8 +43,7 @@
       {
           "name": "allowed_uses",
           "type": "string",
-          "foreign_key": "use_group.use_group",
-          "description": "Optional. Set of allowed uses; comma-separated. Foreign key to use_definition or use sets."
+          "description": "Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated."
       },
       {
           "name": "r_barrier",

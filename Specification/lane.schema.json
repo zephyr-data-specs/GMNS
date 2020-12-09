@@ -30,11 +30,7 @@
         {
             "name": "allowed_uses",
             "type": "string",
-            "foreign_key": "use_group.use_id",
-            "description": "Required. Set of allowed uses from Use_set: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.",
-            "constraints": {
-              "required": true
-              }
+            "description": "Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated."
         },
         {
             "name": "r_barrier",

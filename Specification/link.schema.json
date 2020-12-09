@@ -141,7 +141,10 @@
     {
       "name": "allowed_uses",
       "type": "string",
-      "description": "Optional. Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc. e.g. [auto,bike]"
+      "description": "Required. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated.",
+	  "constraints": {
+		"required": true
+      }
     },
 	{
       "name": "toll",

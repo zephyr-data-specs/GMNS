@@ -84,8 +84,8 @@
             },
 			{
             "name": "allowed_uses",
-            "type": "Any",
-            "description": "Use_Set. Optional."
+            "type": "string",
+            "description": "Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated."
         },
         {
             "name": "toll",
