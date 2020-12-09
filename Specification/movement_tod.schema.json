@@ -101,10 +101,12 @@
             "description": "Optional. .",
             "constraints": {
                 "enum": [
-                    "none",
+                    "no_control",
                     "yield",
                     "stop",
-                    "4_stop",
+                    "stop_2_way",
+                    "stop_4_way",
+                    "signal_with_RTOR",
                     "signal"
                 ]
             }
