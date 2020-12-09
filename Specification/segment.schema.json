@@ -71,8 +71,13 @@
             "name": "free_speed",
             "type": "integer",
             "description": "Optional. Free flow speed (mph)",
-            "constraints": {
-              "minimum": 0
+              "constraints": {
+                "minimum": 0,
+                "maximum": 100
+              },
+              "warnings": {
+			  	"minimum": 1,
+                "maximum": 75
               }
         },
 		{

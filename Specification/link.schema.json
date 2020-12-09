@@ -103,6 +103,7 @@
         "maximum": 100
       },
       "warnings": {
+		"minimum": 1,
         "maximum": 75
       }
     },
