@@ -109,7 +109,7 @@
     {
       "name": "lanes",
       "type": "integer",
-      "description": "Optional. Number of permanent lanes (not including turn p\npockets) in the direction of travel open to motor vehicles.\nIt does not include bike lanes, shoulders or parking lanes.",
+      "description": "Optional. Number of permanent lanes (not including turn pockets) in the direction of travel open to motor vehicles. It does not include bike lanes, shoulders or parking lanes.",
       "constraints": {
         "minimum": 0
       }
