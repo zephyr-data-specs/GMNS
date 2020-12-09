@@ -24,7 +24,9 @@
             "type": "integer",
             "description": "Required. e.g., -1, 1, 2 (use left-to-right numbering).",
             "constraints": {
-              "required": true
+              "required": true,
+			  "minimum": -10,
+              "maximum": 10
               }
         },
         {
