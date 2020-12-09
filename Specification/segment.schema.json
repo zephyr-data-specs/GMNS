@@ -1,14 +1,17 @@
 {
     "primaryKey": "segment_id",
-    "missingValues": ["NaN",""],
+    "missingValues": [
+        "NaN",
+        ""
+    ],
     "fields": [
         {
             "name": "segment_id",
             "type": "any",
             "description": "Primary key.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "link_id",
@@ -16,8 +19,8 @@
             "foreign_key": "link.link_id",
             "description": "Required. Foreign key to road_links. The link that the segment is located on.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "ref_node_id",
@@ -25,67 +28,67 @@
             "foreign_key": "node.node_id",
             "description": "Required. Foreign key to node where distance is 0.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "start_lr",
             "type": "number",
             "description": "Required. Distance from `ref_node_id`.",
             "constraints": {
-              "required": true,
-              "minimum": 0
-              }
+                "required": true,
+                "minimum": 0
+            }
         },
         {
             "name": "end_lr",
             "type": "number",
             "description": "Required. Distance from `ref_node_id`.",
             "constraints": {
-              "required": true,
-              "minimum": 0
-              }
+                "required": true,
+                "minimum": 0
+            }
         },
-		{
-			"name": "grade",
-			"type": "number",
-			"description": "% grade, negative is downhill",
-			"constraints": {
-			  "maximum": 100,
-			  "minimum": -100
-			},
-			"warnings": {
-			  "maximum": 25,
-			  "minimum": -25
-			}
-		},
+        {
+            "name": "grade",
+            "type": "number",
+            "description": "% grade, negative is downhill",
+            "constraints": {
+                "maximum": 100,
+                "minimum": -100
+            },
+            "warnings": {
+                "maximum": 25,
+                "minimum": -25
+            }
+        },
         {
             "name": "capacity",
             "type": "integer",
             "description": "Optional. Capacity (veh/hr/ln)",
             "constraints": {
-              "minimum": 0
-              }
+                "minimum": 0
+            }
         },
         {
             "name": "free_speed",
             "type": "integer",
             "description": "Optional. Free flow speed (mph)",
-              "constraints": {
+            "constraints": {
                 "minimum": 0,
                 "maximum": 100
-              },
-              "warnings": {
-			  	"minimum": 1,
+            },
+            "warnings": {
+                "minimum": 1,
                 "maximum": 75
-              }
+            }
         },
-		{
+        {
             "name": "lanes",
             "type": "integer",
             "description": "Optional. Number of lanes in the direction of travel (must be consistent with link lanes + lanes added)."
         },
-		{
+        {
             "name": "l_lanes_added",
             "type": "integer",
             "description": "Optional. # of lanes added on the left of the road link (negative indicates a lane drop)."
@@ -105,7 +108,15 @@
             "type": "string",
             "description": "Optional. Type of bicycle accommodation: unknown, none,wcl, bikelane,cycletrack,wide_shoulder, offstreet_path.",
             "constraints": {
-              "enum": ["unknown","none","wcl","bikelane","cycletrack","wide_shoulder","offstreet_path"]
+                "enum": [
+                    "unknown",
+                    "none",
+                    "wcl",
+                    "bikelane",
+                    "cycletrack",
+                    "wide_shoulder",
+                    "offstreet_path"
+                ]
             }
         },
         {
@@ -113,7 +124,13 @@
             "type": "string",
             "description": "Optional. Type of pedestrian accommodation:unknown,none,shoulder,sidewalk,offstreet_path.",
             "constraints": {
-              "enum": ["unknown","none","shoulder","sidewalk","offstreet_path"]
+                "enum": [
+                    "unknown",
+                    "none",
+                    "shoulder",
+                    "sidewalk",
+                    "offstreet_path"
+                ]
             }
         },
         {
@@ -121,7 +138,13 @@
             "type": "string",
             "description": "Optional. Type of parking: unknown,none,shoulder,sidewalk,offstreet_path.",
             "constraints": {
-              "enum": ["unknown","none","shoulder","sidewalk","offstreet_path"]
+                "enum": [
+                    "unknown",
+                    "none",
+                    "shoulder",
+                    "sidewalk",
+                    "offstreet_path"
+                ]
             }
         },
         {
@@ -129,26 +152,28 @@
             "type": "string",
             "description": "Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated."
         },
-		{
+        {
             "name": "toll",
-			"type": "integer",
-			"description": "Optional.  Toll on the segment, in cents."
+            "type": "integer",
+            "description": "Optional.  Toll on the segment, in cents."
         },
-		{
+        {
             "name": "jurisdiction",
             "type": "string",
-            "description": "Optional. Optional.  Owner/operator of the segment." 
+            "description": "Optional. Optional.  Owner/operator of the segment."
         },
-		{
+        {
             "name": "row_width",
             "type": "number",
-			"description": "Optional. Width (feet) of the entire right-of-way (both directions).",
-			"constraints": {
-			  "minimum": 0
-			},
-			"warnings": {
-			  "minimum": 10
-			}
-	  }		
-    ]
+            "description": "Optional. Width (feet) of the entire right-of-way (both directions).",
+            "constraints": {
+                "minimum": 0
+            },
+            "warnings": {
+                "minimum": 10
+            }
+        }
+    ],
+    "name": "segment.schema.json",
+    "description": "A portion of a link defined by `link_id`,`ref_node_id`, `start_lr`, and `end_lr`. Values in the segment will override they value specified in the link table. When one segment is fully contained within another, its value prevails."
 }

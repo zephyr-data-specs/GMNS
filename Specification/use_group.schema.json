@@ -1,27 +1,31 @@
 {
     "primaryKey": "use_group",
-    "missingValues": ["NaN"],
+    "missingValues": [
+        "NaN"
+    ],
     "fields": [
         {
             "name": "use_group",
             "type": "string",
             "description": "Primary key.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "uses",
             "type": "string",
             "description": "Comma-separated list of uses.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "description",
             "type": "string",
             "description": "Optional."
         }
-    ]
+    ],
+    "name": "use_group.schema.json",
+    "description": "Defines groupings of uses, to reduce the size of the Allowed_Uses lists in the other tables."
 }

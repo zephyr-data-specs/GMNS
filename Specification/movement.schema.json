@@ -1,14 +1,16 @@
 {
     "primaryKey": "mvmt_id",
-    "missingValues": ["NaN"],
+    "missingValues": [
+        "NaN"
+    ],
     "fields": [
         {
             "name": "mvmt_id",
             "type": "any",
             "description": "Primary key.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "node_id",
@@ -16,8 +18,8 @@
             "foreign_key": "node.node_id",
             "description": "The node representing the junction.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "name",
@@ -30,8 +32,8 @@
             "foreign_key": "link.link_id",
             "description": "Inbound link id.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "start_ib_lane",
@@ -49,8 +51,8 @@
             "foreign_key": "link.link_id",
             "description": "Outbound link id.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "start_ob_lane",
@@ -67,9 +69,15 @@
             "type": "string",
             "description": "Optional. Describes the type of movement (left, right, thru, etc.).",
             "constraints": {
-              "required": true,
-              "enum": ["left", "right", "uturn", "thru", "merge"]
-              }
+                "required": true,
+                "enum": [
+                    "left",
+                    "right",
+                    "uturn",
+                    "thru",
+                    "merge"
+                ]
+            }
         },
         {
             "name": "penalty",
@@ -86,8 +94,16 @@
             "type": "any",
             "description": "Optional. .",
             "constraints": {
-              "enum": ["none", "yield", "stop", "4_stop", "signal"]
-              }
+                "enum": [
+                    "none",
+                    "yield",
+                    "stop",
+                    "4_stop",
+                    "signal"
+                ]
+            }
         }
-    ]
+    ],
+    "name": "movement.schema.json",
+    "description": "Describes how inbound and outbound links connect at an intersection."
 }

@@ -1,23 +1,26 @@
 {
     "primaryKey": "timing_plan_id",
-    "missingValues": ["NaN",""],
+    "missingValues": [
+        "NaN",
+        ""
+    ],
     "fields": [
         {
             "name": "timing_plan_id",
             "type": "any",
             "description": "Primary key.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
-		{
+        {
             "name": "controller_id",
             "type": "any",
             "foreign_key": "signal_controller.controller_id",
-            "description": "Required. Foreign key (signal_controller table).",            
-			"constraints": {
-              "required": true
-              }
+            "description": "Required. Foreign key (signal_controller table).",
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "timeday_id",
@@ -35,9 +38,11 @@
             "type": "integer",
             "description": "Cycle length in seconds.",
             "constraints": {
-              "minimum": 0,
-              "maximum": 600
-              }
+                "minimum": 0,
+                "maximum": 600
+            }
         }
-    ]
+    ],
+    "name": "signal_timing_plan.schema.json",
+    "description": "For signalized nodes, establishes timing plans."
 }

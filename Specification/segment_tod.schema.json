@@ -1,23 +1,26 @@
 {
     "primaryKey": "segment_tod_id",
-    "missingValues": ["NaN",""],
+    "missingValues": [
+        "NaN",
+        ""
+    ],
     "fields": [
-      {
-          "name": "segment_tod_id",
-          "type": "any",
-          "description": "Primary key.",
-          "constraints": {
-            "required": true
+        {
+            "name": "segment_tod_id",
+            "type": "any",
+            "description": "Primary key.",
+            "constraints": {
+                "required": true
             }
-      },
-      {
+        },
+        {
             "name": "segment_id",
             "type": "any",
             "foreign_key": "segment.segment_id",
             "description": "Foreign key to segment table.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "timeday_id",
@@ -35,23 +38,23 @@
             "type": "integer",
             "description": "Optional. Capacity (veh/hr/ln)",
             "constraints": {
-              "minimum": 0
-              }
+                "minimum": 0
+            }
         },
         {
             "name": "free_speed",
             "type": "integer",
             "description": "Optional. Free flow speed (mph)",
-              "constraints": {
+            "constraints": {
                 "minimum": 0,
                 "maximum": 100
-              },
-              "warnings": {
-			  	"minimum": 1,
+            },
+            "warnings": {
+                "minimum": 1,
                 "maximum": 75
-              }
+            }
         },
-		{
+        {
             "name": "lanes",
             "type": "integer",
             "description": "Optional. Number of lanes in the direction of travel (must be consistent with link lanes + lanes added)."
@@ -71,7 +74,15 @@
             "type": "string",
             "description": "Optional. Type of bicycle accommodation: unknown, none,wcl, bikelane,cycletrack,wide_shoulder, offstreet_path.",
             "constraints": {
-              "enum": ["unknown","none","wcl","bikelane","cycletrack","wide_shoulder","offstreet_path"]
+                "enum": [
+                    "unknown",
+                    "none",
+                    "wcl",
+                    "bikelane",
+                    "cycletrack",
+                    "wide_shoulder",
+                    "offstreet_path"
+                ]
             }
         },
         {
@@ -79,7 +90,13 @@
             "type": "string",
             "description": "Optional. Type of pedestrian accommodation: unknown,none,shoulder,sidewalk,offstreet_path.",
             "constraints": {
-              "enum": ["unknown","none","shoulder","sidewalk","offstreet_path"]
+                "enum": [
+                    "unknown",
+                    "none",
+                    "shoulder",
+                    "sidewalk",
+                    "offstreet_path"
+                ]
             }
         },
         {
@@ -87,7 +104,13 @@
             "type": "string",
             "description": "Optional. Type of parking: unknown,none,shoulder,sidewalk,offstreet_path.",
             "constraints": {
-              "enum": ["unknown","none","shoulder","sidewalk","offstreet_path"]
+                "enum": [
+                    "unknown",
+                    "none",
+                    "shoulder",
+                    "sidewalk",
+                    "offstreet_path"
+                ]
             }
         },
         {
@@ -100,5 +123,7 @@
             "type": "string",
             "description": "Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated."
         }
-    ]
+    ],
+    "name": "segment_tod.schema.json",
+    "description": "An optional file that handles day-of-week and time-of-day restrictions on segments. It is used for part-time changes in segment capacity and number of lanes."
 }

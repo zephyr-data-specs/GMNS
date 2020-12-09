@@ -1,178 +1,206 @@
 {
-  "primaryKey": "link_id",
-  "missingValues": ["NaN"],
-  "fields": [{
-      "name": "link_id",
-      "type": "any",
-      "description": "Primary key – could be SharedStreets Reference ID",
-      "constraints": {
-        "required": true
-      }
-    },
-    {
-      "name": "parent_link_id",
-      "type": "any",
-      "foreign_key": ".link_id",
-      "description": "Optional. The parent of this link. For example,for a sidewalk, this is the adjacent road."
-    },
-    {
-      "name": "name",
-      "type": "string",
-      "description": "Optional. Street or Path Name"
-    },
-    {
-      "name": "from_node_id",
-      "type": "any",
-      "foreign_key": "node.node_id",
-      "constraints": {
-        "required": true
-      }
-    },
-    {
-      "name": "to_node_id",
-      "type": "any",
-      "foreign_key": "node.node_id",
-      "constraints": {
-        "required": true
-      }
-    },
-    {
-      "name": "directed",
-      "type": "boolean",
-      "description": "Required. Whether the link is directed (travel only occurs from the from_node to the to_node) or undirected."
-    },
-    {
-      "name": "geometry_id",
-      "type": "any",
-      "foreign_key": "geometry.geometry_id",
-      "description": "Optional. Foreign key (Link_Geometry table)."
-    },
-    {
-      "name": "geometry",
-      "type": "any",
-      "description": "Optional. Link geometry, specific format could be WKT, GeoJSON, etc."
-    },
-    {
-      "name": "dir_flag",
-      "type": "integer",
-      "description": "Optional. \n1  shapepoints go from from_node to to_node;\n-1 shapepoints go in the reverse direction;\n0  link is undirected or no geometry information is provided.",
-      "constraints": {
-        "enum": [-1, 0, 1]
-      }
-    },
-    {
-      "name": "length",
-      "type": "number",
-      "description": "Optional. Length of the link in miles",
-      "constraints": {
-        "minimum": 0
-      }
-    },
-    {
-      "name": "grade",
-      "type": "number",
-      "description": "% grade, negative is downhill",
-      "constraints": {
-        "maximum": 100,
-        "minimum": -100
-      },
-      "warnings": {
-        "maximum": 25,
-        "minimum": -25
-      }
-    },
-    {
-      "name": "facility_type",
-      "type": "string",
-      "description": "Facility type (e.g., freeway, arterial, etc.)"
-    },
-    {
-      "name": "capacity",
-      "type": "integer",
-      "description": "Optional. Capacity (veh / hr / lane)",
-      "constraints": {
-        "minimum": 0
-      }
-    },
-    {
-      "name": "free_speed",
-      "type": "integer",
-      "description": "Optional. Free flow speed mph",
-      "constraints": {
-        "minimum": 0,
-        "maximum": 100
-      },
-      "warnings": {
-		"minimum": 1,
-        "maximum": 75
-      }
-    },
-    {
-      "name": "lanes",
-      "type": "integer",
-      "description": "Optional. Number of permanent lanes (not including turn pockets) in the direction of travel open to motor vehicles. It does not include bike lanes, shoulders or parking lanes.",
-      "constraints": {
-        "minimum": 0
-      }
-    },
-    {
-      "name": "bike_facility",
-      "type": "string",
-      "description": "Optional. Type of bicycle accommodation: unknown, none, wcl, sharrow, bikelane, cycletrack, offstreet path",
-      "constraints": {
-        "enum": ["unknown", "none", "wcl", "sharrow", "bikelane", "cycletrack", "offstreet path"]
-      }
-    },
-    {
-      "name": "ped_facility",
-      "type": "string",
-      "description": "Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path",
-      "constraints": {
-        "enum": ["unknown", "none", "shoulder", "sidewalk", "offstreet path"]
-      }
-    },
-    {
-      "name": "parking",
-      "type": "string",
-      "description": "Optional. Type of parking: unknown, none, parallel, angle, other",
-      "constraints": {
-        "enum": ["unknown", "none", "parallel", "angle", "other"]
-      }
-    },
-    {
-      "name": "allowed_uses",
-      "type": "string",
-      "description": "Required. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated.",
-	  "constraints": {
-		"required": true
-      }
-    },
-	{
-      "name": "toll",
-      "type": "integer",
-      "description": "Optional.  Toll on the link, in cents.",
-	  "warning":{
-       "minimum":0,
-       "maximum":10000
-       }
-    },
-    {
-      "name": "jurisdiction",
-      "type": "string",
-      "description": "Optional.  Owner/operator of the link."
-    },
-    {
-      "name": "row_width",
-      "type": "number",
-      "description": "Optional. Width (feet) of the entire right-of-way (both directions).",
-      "constraints": {
-        "minimum": 0
-      },
-      "warnings": {
-        "minimum": 10
-      }
-    }
-  ],
-  "primaryKey": "link_id",
-  "missingValues": ["NaN",""]
+    "primaryKey": "link_id",
+    "missingValues": [
+        "NaN",
+        ""
+    ],
+    "fields": [
+        {
+            "name": "link_id",
+            "type": "any",
+            "description": "Primary key - could be SharedStreets Reference ID",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "parent_link_id",
+            "type": "any",
+            "foreign_key": ".link_id",
+            "description": "Optional. The parent of this link. For example,for a sidewalk, this is the adjacent road."
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "description": "Optional. Street or Path Name"
+        },
+        {
+            "name": "from_node_id",
+            "type": "any",
+            "foreign_key": "node.node_id",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "to_node_id",
+            "type": "any",
+            "foreign_key": "node.node_id",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "directed",
+            "type": "boolean",
+            "description": "Required. Whether the link is directed (travel only occurs from the from_node to the to_node) or undirected."
+        },
+        {
+            "name": "geometry_id",
+            "type": "any",
+            "foreign_key": "geometry.geometry_id",
+            "description": "Optional. Foreign key (Link_Geometry table)."
+        },
+        {
+            "name": "geometry",
+            "type": "any",
+            "description": "Optional. Link geometry, specific format could be WKT, GeoJSON, etc."
+        },
+        {
+            "name": "dir_flag",
+            "type": "integer",
+            "description": "Optional. \n1  shapepoints go from from_node to to_node;\n-1 shapepoints go in the reverse direction;\n0  link is undirected or no geometry information is provided.",
+            "constraints": {
+                "enum": [
+                    -1,
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "length",
+            "type": "number",
+            "description": "Optional. Length of the link in miles",
+            "constraints": {
+                "minimum": 0
+            }
+        },
+        {
+            "name": "grade",
+            "type": "number",
+            "description": "% grade, negative is downhill",
+            "constraints": {
+                "maximum": 100,
+                "minimum": -100
+            },
+            "warnings": {
+                "maximum": 25,
+                "minimum": -25
+            }
+        },
+        {
+            "name": "facility_type",
+            "type": "string",
+            "description": "Facility type (e.g., freeway, arterial, etc.)"
+        },
+        {
+            "name": "capacity",
+            "type": "integer",
+            "description": "Optional. Capacity (veh / hr / lane)",
+            "constraints": {
+                "minimum": 0
+            }
+        },
+        {
+            "name": "free_speed",
+            "type": "integer",
+            "description": "Optional. Free flow speed mph",
+            "constraints": {
+                "minimum": 0,
+                "maximum": 100
+            },
+            "warnings": {
+                "minimum": 1,
+                "maximum": 75
+            }
+        },
+        {
+            "name": "lanes",
+            "type": "integer",
+            "description": "Optional. Number of permanent lanes (not including turn pockets) in the direction of travel open to motor vehicles. It does not include bike lanes, shoulders or parking lanes.",
+            "constraints": {
+                "minimum": 0
+            }
+        },
+        {
+            "name": "bike_facility",
+            "type": "string",
+            "description": "Optional. Type of bicycle accommodation: unknown, none, wcl, sharrow, bikelane, cycletrack, offstreet path",
+            "constraints": {
+                "enum": [
+                    "unknown",
+                    "none",
+                    "wcl",
+                    "sharrow",
+                    "bikelane",
+                    "cycletrack",
+                    "offstreet path"
+                ]
+            }
+        },
+        {
+            "name": "ped_facility",
+            "type": "string",
+            "description": "Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path",
+            "constraints": {
+                "enum": [
+                    "unknown",
+                    "none",
+                    "shoulder",
+                    "sidewalk",
+                    "offstreet path"
+                ]
+            }
+        },
+        {
+            "name": "parking",
+            "type": "string",
+            "description": "Optional. Type of parking: unknown, none, parallel, angle, other",
+            "constraints": {
+                "enum": [
+                    "unknown",
+                    "none",
+                    "parallel",
+                    "angle",
+                    "other"
+                ]
+            }
+        },
+        {
+            "name": "allowed_uses",
+            "type": "string",
+            "description": "Required. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "toll",
+            "type": "integer",
+            "description": "Optional.  Toll on the link, in cents.",
+            "warning": {
+                "minimum": 0,
+                "maximum": 10000
+            }
+        },
+        {
+            "name": "jurisdiction",
+            "type": "string",
+            "description": "Optional.  Owner/operator of the link."
+        },
+        {
+            "name": "row_width",
+            "type": "number",
+            "description": "Optional. Width (feet) of the entire right-of-way (both directions).",
+            "constraints": {
+                "minimum": 0
+            },
+            "warnings": {
+                "minimum": 10
+            }
+        }
+    ],
+    "name": "link.schema.json",
+    "description": "A link is an edge in a network, defined by the nodes it travels from and to. It may have associated geometry information. Links have three types of attributes:\n  - Those that define the physical location of the link (e.g., `shape` `information`, `length`, `width`)\n  - Those that define the link's directionality: `from_node`, `to_node`\n  - Those that define properties in the direction of travel: capacity,free flow speed, number of lanes, permitted uses, grade, facility type"
 }

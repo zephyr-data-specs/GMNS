@@ -1,14 +1,17 @@
 {
     "primaryKey": "segment_lane_id",
-    "missingValues": ["NaN",""],
+    "missingValues": [
+        "NaN",
+        ""
+    ],
     "fields": [
         {
             "name": "segment_lane_id",
             "type": "any",
             "description": "Primary key.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "segment_id",
@@ -16,18 +19,18 @@
             "foreign_key": "segment.segment_id",
             "description": "Required. Foreign key to the associated segment.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "lane_num",
             "type": "integer",
             "description": "Required. -1, 1, 2 (use left-to-right numbering). 0 signifies a lane that is dropped on the segment.",
             "constraints": {
-              "required": true,
-              "minimum":-10,
-              "maximum":10
-              }
+                "required": true,
+                "minimum": -10,
+                "maximum": 10
+            }
         },
         {
             "name": "parent_lane_id",
@@ -44,24 +47,34 @@
             "type": "any",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is none)",
             "constraints": {
-              "enum": ["","regulatory", "physical"]
-              }
+                "enum": [
+                    "",
+                    "regulatory",
+                    "physical"
+                ]
+            }
         },
         {
             "name": "l_barrier",
             "type": "any",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left (default is none)",
             "constraints": {
-              "enum": ["","regulatory", "physical"]
-              }
+                "enum": [
+                    "",
+                    "regulatory",
+                    "physical"
+                ]
+            }
         },
         {
             "name": "width",
             "type": "number",
             "description": "Optional. Width of the lane (feet)",
             "constraints": {
-              "minimum": 0
-              }
+                "minimum": 0
+            }
         }
-    ]
+    ],
+    "name": "segment_lane.schema.json",
+    "description": "Defines added and dropped lanes, and changes to lane parameters. If a lane is added, it has no parent. If it is changed or dropped, the parent_lane_id field keys to the associated lane on the lane table."
 }

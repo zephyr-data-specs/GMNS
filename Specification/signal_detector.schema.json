@@ -1,85 +1,90 @@
 {
     "primaryKey": "detector_id",
-    "missingValues": ["NaN",""],
+    "missingValues": [
+        "NaN",
+        ""
+    ],
     "fields": [
         {
             "name": "detector_id",
             "type": "any",
             "description": "Primary key.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
-		{
+        {
             "name": "controller_id",
             "type": "any",
             "foreign_key": "signal_controller.controller_id",
             "description": "Required. Foreign key to signal_controller table.",
-			"constraints": {
-              "required": true
-              }
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "signal_phase_num",
             "type": "integer",
             "description": "Required. Number of the associated phase.",
-			"constraints": {
-              "required": true
-              }
+            "constraints": {
+                "required": true
+            }
         },
-				{
+        {
             "name": "link_id",
             "type": "any",
             "foreign_key": "link.link_id",
             "description": "Foreign key. The link covered by the detector.",
-			"constraints": {
-              "required": true
-              }
+            "constraints": {
+                "required": true
+            }
         },
-		{
+        {
             "name": "start_lane",
             "type": "integer",
             "description": "Left-most lane covered by the detector.",
-			"constraints": {
-              "required": true
-              }
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "end_lane",
             "type": "integer",
             "description": "Right-most lane covered by the detector (blank if only one lane)."
         },
-		{
+        {
             "name": "ref_node_id",
             "type": "any",
             "foreign_key": "node.node_id",
             "description": "The detector is on the approach to this node.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
-		{
+        {
             "name": "det_zone_lr",
             "type": "number",
             "description": "Required. Distance from from the stop bar to detector.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "det_zone_front",
             "type": "number",
             "description": "Optional. Linear reference of front of detection zone."
         },
-		{
+        {
             "name": "det_zone_back",
             "type": "number",
             "description": "Optional. Linear reference of back of detection zone."
         },
-		{
+        {
             "name": "det_type",
             "type": "string",
             "description": "Optional. Type of detector."
-        }		
-    ]
+        }
+    ],
+    "name": "signal_detector.schema.json",
+    "description": "A signal detector is associated with a controller, a phase and a group of lanes."
 }

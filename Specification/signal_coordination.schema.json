@@ -1,14 +1,17 @@
 {
     "primaryKey": "coordination_id",
-    "missingValues": ["NaN",""],
+    "missingValues": [
+        "NaN",
+        ""
+    ],
     "fields": [
         {
             "name": "coordination_id",
             "type": "any",
             "description": "Primary key.",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "timing_plan_id",
@@ -16,17 +19,17 @@
             "foreign_key": "signal_timing_plan.timing_plan_id",
             "description": "Required. Foreign key (Signal_timing_plan table).",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "controller_id",
             "type": "any",
-			"foreign_key": "signal_controller.controller_id",
+            "foreign_key": "signal_controller.controller_id",
             "description": "Required. Foreign key (signal_controller table).",
             "constraints": {
-              "required": true
-              }
+                "required": true
+            }
         },
         {
             "name": "coord_contr_id",
@@ -38,26 +41,32 @@
             "name": "coord_phase",
             "type": "integer",
             "description": "Optional. For coordinated signals, the phase at which coordination starts (time 0).",
-              "constraints": {
+            "constraints": {
                 "minimum": 0,
                 "maximum": 32
-                }
+            }
         },
-		{
+        {
             "name": "coord_ref_to",
             "type": "string",
             "description": "Optional. For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red.",
             "constraints": {
-                "enum":["begin_of_green", "begin_of_yellow", "begin_of_red"]
-                }
+                "enum": [
+                    "begin_of_green",
+                    "begin_of_yellow",
+                    "begin_of_red"
+                ]
+            }
         },
         {
             "name": "offset",
             "type": "integer",
             "description": "Optional. Offset in seconds.",
-              "constraints": {
+            "constraints": {
                 "minimum": 0
-                }
+            }
         }
-    ]
+    ],
+    "name": "signal_coordination.schema.json",
+    "description": "Establishes coordination for several signal controllers, associated with a timing_plan."
 }
