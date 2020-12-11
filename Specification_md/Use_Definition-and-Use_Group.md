@@ -1,7 +1,7 @@
 Two classes define the characteristics of each use, and of the items in a use set.  
 
-## Use_Definition
-The __Use_Definition__ file defines the characteristics of each vehicle type or non-travel purpose (e.g., a shoulder or parking lane). A two-way left
+## use_definition
+The __use_definition__ file defines the characteristics of each vehicle type or non-travel purpose (e.g., a shoulder or parking lane). A two-way left
 turn lane (TWLTL) is also a use.
 
 Field | Type | Required? | Comment
@@ -12,8 +12,8 @@ pce | DOUBLE | Required | Passenger car equivalents, used for capacity calculati
 special_conditions | TEXT | Optional | In some situations, the characteristics of a mode may change depending on the type of link where the mode is operating.  For example, a truck may have a higher PCE on a hill.  Treatment of these special conditions may be needed in a future version of GMNS
 description | TEXT | Optional | A longer description of the mode
 
-## Use_Group
-The optional __Use_Group__ file defines groupings of uses, to reduce the size of the Allowed_Uses lists in the other tables.  
+## use_group
+The optional __use_group__ file defines groupings of uses, to reduce the size of the Allowed_Uses lists in the other tables.  
 
 Field | Type | Required? | Comment
 ---|---|---|---
