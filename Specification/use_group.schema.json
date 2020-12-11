@@ -27,5 +27,5 @@
         }
     ],
     "name": "use_group.schema.json",
-    "description": "Defines groupings of uses, to reduce the size of the Allowed_Uses lists in the other tables."
+    "description": "Defines groupings of uses, to reduce the size of the allowed_uses lists in the other tables."
 }

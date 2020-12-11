@@ -8,3 +8,5 @@ Examples of small networks implemented include:
 - [Lima, OH](Lima/GMNS), an example of a small city.
 - [Connecticut Ave, Washington DC](TOD_Examples/CT_Ave.md), an example of time of day changes.
 - [I-93, north of Boston](TOD_Examples/I-93.md), another example of time of day changes.
+
+The examples that use the optional `allowed_uses` field all use the same `use_definition` and `use_group` files, which can be found in this parent folder.

@@ -1,0 +1,10 @@
+Use,persons_per_vehicle,pce,special_conditions,description
+walk,1,0,,pedestrians
+bike,1,0.5,,bicycles
+bus,10,2,,buses
+truck,1,2,,trucks
+sov,1,1,,car with one occupant
+hov2,2,1,,car with 2 occupants
+hov3+,3.3,1,,car with 3 or more occupants
+shoulder,0,0,,road shoulder
+parking,0,0,,on street parking

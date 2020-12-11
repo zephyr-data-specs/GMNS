@@ -62,7 +62,7 @@
    },
    {
      "name":"use_group",
-     "description":"Defines groupings of uses, to reduce the size of the Allowed_Uses lists in the other tables.",
+     "description":"Defines groupings of uses, to reduce the size of the allowed_uses lists in the other tables.",
      "path": "use_group.csv",
      "schema": "use_group.schema.json"
    },

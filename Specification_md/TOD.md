@@ -43,7 +43,7 @@ link_tod data dictionary
 | bike\_facility	| TEXT			| Optional	| Type of bicycle accommodation: unknown, none, wcl, bikelane, cycletrack   |
 | ped\_facility	| TEXT			| Optional	| Type of pedestrian accommodation: unknown, none, shoulder, sidewalk   |
 | parking	| TEXT			| Optional	|	Type of parking: unknown, none, parallel, angle, other    |
-| allowed\_uses | Use\_Set      | Required  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
+| allowed\_uses | Use\_Set      | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
 | toll          | INTEGER       | Optional  | cents                                     |
 
 # segment_tod
@@ -67,7 +67,7 @@ segment_tod data dictionary
 | bike\_facility	| TEXT			| Optional	| Type of bicycle accommodation: unknown, none, wcl, bikelane, cycletrack   |
 | ped\_facility	| TEXT			| Optional	| Type of pedestrian accommodation: unknown, none, shoulder, sidewalk   |
 | parking	| TEXT			| Optional	|	Type of parking: unknown, none, parallel, angle, other    |
-| allowed\_uses | Use\_Set      | Required  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
+| allowed\_uses | Use\_Set      | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
 | toll          | INTEGER       | Optional  | cents                                     |
 
 # lane_tod
@@ -79,7 +79,7 @@ segment_tod data dictionary
 | time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required)   |
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  | e.g., -1, 1, 2 (use left-to-right numbering)   |
-| allowed\_uses  | Use\_Set     | Required  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
+| allowed\_uses  | Use\_Set     | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
 | r_barrier      | Barrier_ID   | Optional  | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
 | l_barrier      | Barrier_ID   | Optional   | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
 | width          | DOUBLE       | Optional   | Width of the lane (feet)   |
@@ -93,7 +93,7 @@ segment_tod data dictionary
 | time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required)   |
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  | e.g., -1, 1, 2 (use left-to-right numbering)   |
-| allowed\_uses  | Use\_Set     | Required  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
+| allowed\_uses  | Use\_Set     | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
 | r_barrier      | Barrier_ID   | Optional  | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
 | l_barrier      | Barrier_ID   | Optional   | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
 | width          | DOUBLE       | Optional   | Width of the lane (feet)   |
