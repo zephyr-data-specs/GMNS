@@ -1,0 +1,129 @@
+{
+    "primaryKey": "segment_tod_id",
+    "missingValues": [
+        "NaN",
+        ""
+    ],
+    "fields": [
+        {
+            "name": "segment_tod_id",
+            "type": "any",
+            "description": "Primary key.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "segment_id",
+            "type": "any",
+            "foreign_key": "segment.segment_id",
+            "description": "Foreign key to segment table.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "timeday_id",
+            "type": "any",
+            "foreign_key": "time_set_definitions.timeday_id",
+            "description": "Conditionally required (either timeday_id or time_day). Foreign key to time_set_definitions."
+        },
+        {
+            "name": "time_day",
+            "type": "any",
+            "description": "Conditionally required (either timeday_id or time_day). XXXXXXXX_HHMM_HHMM, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times."
+        },
+        {
+            "name": "capacity",
+            "type": "integer",
+            "description": "Optional. Capacity (veh/hr/ln)",
+            "constraints": {
+                "minimum": 0
+            }
+        },
+        {
+            "name": "free_speed",
+            "type": "integer",
+            "description": "Optional. Free flow speed (mph)",
+            "constraints": {
+                "minimum": 0,
+                "maximum": 100
+            },
+            "warnings": {
+                "minimum": 1,
+                "maximum": 75
+            }
+        },
+        {
+            "name": "lanes",
+            "type": "integer",
+            "description": "Optional. Number of lanes in the direction of travel (must be consistent with link lanes + lanes added)."
+        },
+        {
+            "name": "l_lanes_added",
+            "type": "integer",
+            "description": "Optional. # of lanes added on the left of the road link (negative indicates a lane drop)."
+        },
+        {
+            "name": "r_lanes_added",
+            "type": "integer",
+            "description": "Optional. # of lanes added on the right of the road link (negative indicates a lane drop)."
+        },
+        {
+            "name": "bike_facility",
+            "type": "string",
+            "description": "Optional. Type of bicycle accommodation: unknown, none,wcl, bikelane,cycletrack,wide_shoulder, offstreet_path.",
+            "constraints": {
+                "enum": [
+                    "unknown",
+                    "none",
+                    "wcl",
+                    "bikelane",
+                    "cycletrack",
+                    "wide_shoulder",
+                    "offstreet_path"
+                ]
+            }
+        },
+        {
+            "name": "ped_facility",
+            "type": "string",
+            "description": "Optional. Type of pedestrian accommodation: unknown,none,shoulder,sidewalk,offstreet_path.",
+            "constraints": {
+                "enum": [
+                    "unknown",
+                    "none",
+                    "shoulder",
+                    "sidewalk",
+                    "offstreet_path"
+                ]
+            }
+        },
+        {
+            "name": "parking",
+            "type": "string",
+            "description": "Optional. Type of parking: unknown,none,shoulder,sidewalk,offstreet_path.",
+            "constraints": {
+                "enum": [
+                    "unknown",
+                    "none",
+                    "shoulder",
+                    "sidewalk",
+                    "offstreet_path"
+                ]
+            }
+        },
+        {
+            "name": "toll",
+            "type": "integer",
+            "description": "Optional. Toll in cents"
+        },
+        {
+            "name": "allowed_uses",
+            "type": "string",
+            "description": "Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated."
+        }
+    ],
+    "name": "segment_tod.schema.json",
+    "description": "An optional file that handles day-of-week and time-of-day restrictions on segments. It is used for part-time changes in segment capacity and number of lanes."
+}

@@ -1,0 +1,6 @@
+timing_plan_id,	controller_id,	time_day,	time_day_id,	cycle_length,	opt_comment
+0,	6,	,	,	,	Actuated at off-peak times
+1,  6,	01111100_06:00_09:00,	,	120,	M-F 6-9
+2,	6,	01111100_15:00_19:00,	,	120,	M-F 15-19
+3,	6,	000000100_11:00_18:00,	,	110,	Sat 11-18
+

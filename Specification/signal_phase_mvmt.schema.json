@@ -1,0 +1,62 @@
+{
+    "primaryKey": "signal_phase_mvmt_id",
+    "missingValues": [
+        "NaN",
+        ""
+    ],
+    "fields": [
+        {
+            "name": "signal_phase_mvmt_id",
+            "type": "any",
+            "description": "Primary key.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "controller_id",
+            "type": "any",
+            "foreign_key": "signal_controller.controller_id",
+            "description": "Associated controller.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "signal_phase_num",
+            "type": "integer",
+            "description": "Each phase has one or more Movements associated with it.",
+            "constraints": {
+                "minimum": 0,
+                "maximum": 32,
+                "required": true
+            }
+        },
+        {
+            "name": "mvmt_id",
+            "type": "any",
+            "foreign_key": "movement.mvmt_id",
+            "description": "Foreign key. Either Movement_ID (for phases used by vehicles), or Link_id (for phases used by pedestrians) is required."
+        },
+        {
+            "name": "link_id",
+            "type": "any",
+            "foreign_key": "link.link_id",
+            "description": "Foreign key. Either Movement_ID (for phases used by vehicles), or Link_id (for phases used by pedestrians) is required."
+        },
+        {
+            "name": "protection",
+            "type": "any",
+            "description": "Optional. Indicates whether the phase is protected, permitted, or right turn on red.",
+            "constraints": {
+                "enum": [
+                    "protected",
+                    "permitted",
+                    "rtor"
+                ]
+            }
+        }
+    ],
+    "name": "signal_phase_mvmt.schema.json",
+    "description": "Associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A signal phase may be associated with several movements. A Movement may also run on more than one phase."
+}

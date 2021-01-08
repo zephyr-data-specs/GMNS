@@ -1,6 +1,0 @@
-signal_phase_id,timing_plan_id,signal_phase_num,ring,barrier,position
-111,110,1,1,1,2
-112,110,2,1,1,1
-113,110,6,2,1,1
-114,110,5,2,1,2
-115,110,8,2,2,1

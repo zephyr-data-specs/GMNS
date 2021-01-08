@@ -1,0 +1,46 @@
+{
+    "primaryKey": "use",
+    "missingValues": [
+        "NaN"
+    ],
+    "fields": [
+        {
+            "name": "use",
+            "type": "string",
+            "description": "Primary key",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "persons_per_vehicle",
+            "type": "number",
+            "description": "Required.",
+            "constraints": {
+                "required": true,
+                "minimum": 0
+            }
+        },
+        {
+            "name": "pce",
+            "type": "number",
+            "description": "Required. Passenger car equivelent.",
+            "constraints": {
+                "required": true,
+                "minimum": 0
+            }
+        },
+        {
+            "name": "special_conditions",
+            "type": "string",
+            "description": "Optional."
+        },
+        {
+            "name": "description",
+            "type": "string",
+            "description": "Optional "
+        }
+    ],
+    "name": "use_definition.schema.json",
+    "description": "The Use_Definition file defines the characteristics of each vehicle type or non-travel purpose (e.g., a shoulder or parking lane). A two-way left turn lane (TWLTL) is also a use."
+}
