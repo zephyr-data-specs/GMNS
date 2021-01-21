@@ -62,7 +62,7 @@ GMNS is made to be flexible, multimodal, and multiresolution. Many of the fields
 ### How do I represent geometry shapepoints?
 There are two ways in GMNS to represent geometry shapepoints for links. Shapepoints can be recorded as well-known text (WKT) in the `geometry` field of the [link table](Specification_md/Link.md) or shapepoints can be placed in the separate [geometry table](Specification_md/Geometry.md) and keyed to the link table through the `geometry_id` field.
 ### How do I represent sidewalks?
-In the [link table](Specification_md/Link.md) there is a field to indicate a pedestrian facility (`ped_facility`). You can also represent the pedestrian network (sidewalks, crosswalks and other paths) as its own network with its own links.  See the [Cambridge example](Small_Network_Examples/Cambridge_v085).  
+In the [link table](Specification_md/Link.md) there is a field to indicate a pedestrian facility (`ped_facility`). You can also represent the pedestrian network (sidewalks, crosswalks and other paths) as its own network with its own links.  See the [Cambridge example](Small_Network_Examples/Cambridge_v090).  
 ### How do I represent bicycle facilities?
 In the [link table](Specification_md/Link.md) there is a field to indicate a bicycle facility (`bike_facility`). To represent a bicycle network in more detail, additional options include representing on-road bike lanes as explicit lanes in the [lane table](Specification_md/Lane.md) or representing other bicycle facilities (e.g., shared use paths, separated bike lanes) as their own links.    
 ### How do I represent street furniture and curbside regulations?
