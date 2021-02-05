@@ -24,7 +24,7 @@
         {
             "name": "pce",
             "type": "number",
-            "description": "Required. Passenger car equivelent.",
+            "description": "Required. Passenger car equivalent.",
             "constraints": {
                 "required": true,
                 "minimum": 0

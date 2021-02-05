@@ -48,7 +48,7 @@
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is none)",
             "constraints": {
                 "enum": [
-                    "",
+                    "none",
                     "regulatory",
                     "physical"
                 ]
@@ -60,7 +60,7 @@
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left (default is none)",
             "constraints": {
                 "enum": [
-                    "",
+                    "none",
                     "regulatory",
                     "physical"
                 ]

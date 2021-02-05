@@ -59,7 +59,7 @@
         {
             "name": "dir_flag",
             "type": "integer",
-            "description": "Optional. \n1  shapepoints go from from_node to to_node;\n-1 shapepoints go in the reverse direction;\n0  link is undirected or no geometry information is provided.",
+            "description": "Optional. <br>1  shapepoints go from from_node to to_node;<br>-1 shapepoints go in the reverse direction;<br>0  link is undirected or no geometry information is provided.",
             "constraints": {
                 "enum": [
                     -1,
@@ -199,5 +199,5 @@
         }
     ],
     "name": "link.schema.json",
-    "description": "A link is an edge in a network, defined by the nodes it travels from and to. It may have associated geometry information. Links have three types of attributes:\n  - Those that define the physical location of the link (e.g., `shape` `information`, `length`, `width`)\n  - Those that define the directionality of the link: `from_node`, `to_node`\n  - Those that define properties in the direction of travel: capacity,free flow speed, number of lanes, permitted uses, grade, facility type"
+    "description": "A link is an edge in a network, defined by the nodes it travels from and to. It may have associated geometry information. Links have three types of attributes:<br>  - Those that define the physical location of the link (e.g., `shape` `information`, `length`, `width`)<br>  - Those that define the directionality of the link: `from_node`, `to_node`<br>  - Those that define properties in the direction of travel: capacity,free flow speed, number of lanes, permitted uses, grade, facility type"
 }

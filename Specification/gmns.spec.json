@@ -5,7 +5,7 @@
   "resources": [
    {
      "name":"link",
-     "description":"A link is an edge in a network, defined by the nodes it travels from and to. It may have associated geometry information. Links have three types of attributes:\n  - Those that define the physical location of the link (e.g., `shape` `information`, `length`, `width`)\n  - Those that define the link’s directionality: `from_node`, `to_node`\n  - Those that define properties in the direction of travel: capacity,free flow speed, number of lanes, permitted uses, grade, facility type",
+     "description":"A link is an edge in a network, defined by the nodes it travels from and to. It may have associated geometry information. Links have three types of attributes:<br>  - Those that define the physical location of the link (e.g., `shape` `information`, `length`, `width`)<br>  - Those that define the link's directionality: `from_node`, `to_node`<br>  - Those that define properties in the direction of travel: capacity, free flow speed, number of lanes, permitted uses, grade, facility type",
      "path": "link.csv",
      "schema": "link.schema.json",
      "required": true
