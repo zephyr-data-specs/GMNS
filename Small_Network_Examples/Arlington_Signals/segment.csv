@@ -1,4 +1,4 @@
-segment,link_id,ref_node_id,start_lr,end_lr,grade,capacity,free_speed,lanes,l_lanes_added,r_lanes_added,bike_facility,ped_facility,parking,allowed_uses,toll,jurisdiction,row_width,opt_comment
+segment_id,link_id,ref_node_id,start_lr,end_lr,grade,capacity,free_speed,lanes,l_lanes_added,r_lanes_added,bike_facility,ped_facility,parking,allowed_uses,toll,jurisdiction,row_width,opt_comment
 1,21,2,250,650,,,,3,1,0,,,,,,,,LT Pocket Mystic SB
 5,31,3,100,300,,,,3,1,0,,,,,,,,LT Pocket Mass WB
 6,31,3,140,300,,,,4,0,1,,,,,,,,RT Pocket Mass WB
