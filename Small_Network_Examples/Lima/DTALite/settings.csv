@@ -1,0 +1,17 @@
+[assignment],,assignment_mode,number_of_iterations,column_updating_iterations,signal_updating_iterations,signal_updating_output,remarks
+,,ue,40,40,-1,0,"assignment_mode can be ue, dta or odme"
+,,,,,,,
+[agent_type],agent_type,name,,VOT,flow_type,PCE,
+,p,passenger,,10,0,1,
+,,,,,,,
+[link_type],link_type,link_type_name,,agent_type_blocklist,type_code,traffic_flow_code,
+,1,Highway/Expressway,,,f,0,
+,2,Major arterial,,,a,0,
+,,,,,,,
+[demand_period],demand_period_id,demand_period,,time_period,,,
+,1,AM,,0700_0800,,,
+,,,,,,,
+[demand_file_list],file_sequence_no,file_name,,format_type,demand_period,agent_type,
+,1,demand.csv,,column,AM,p,
+,,,,,,,
+[capacity_scenario],,from_node_id,to_node_id,time_window,time_interval,travel_time_delta,capacity
