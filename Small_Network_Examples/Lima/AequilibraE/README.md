@@ -1,7 +1,7 @@
 # Running AequilibraE routing
 
 ## Requirements
-⚠️This example uses AEquilibraE version 0.6.5, which is _not_ the latest version. 
+⚠️This example uses AEquilibraE version 0.6.5, which is _not_ the latest version. AequilibraE dependencies include Python 3.5, 3.6 or 3.7 (3.7 is recommended), and openmatrix.  For further information, please see https://www.aequilibrae.com
 
 ## Inputs
 1. Nodes as a .csv flat file in GMNS format
