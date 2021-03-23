@@ -1,7 +1,7 @@
 # Running AequilibraE routing
 
 ## Requirements
-⚠️This example uses AEquilibraE version 0.6, which is _not_ the latest version. 
+⚠️This example uses AEquilibraE version 0.6.5, which is _not_ the latest version. 
 
 ## Inputs
 1. Nodes as a .csv flat file in GMNS format
