@@ -1,7 +1,7 @@
 # Lima network
 This folder contains examples of how to run a GMNS network using open-source tools:
 * [AEquilibraE](https://github.com/AequilibraE/aequilibrae)
-* [DTAlite](https://github.com/asu-trans-ai-lab/PythonDTALite)
+* [DTAlite](https://github.com/asu-trans-ai-lab/DTALite)
 
 The source data is contained in [source_network](https://github.com/zephyr-data-specs/GMNS/tree/Lima/Small_Network_Examples/Lima/source_network) and the converted network in the [GMNS](https://github.com/zephyr-data-specs/GMNS/tree/Lima/Small_Network_Examples/Lima/GMNS) folder.
 See the READMEs in the sub-folders for more details about implementation with the various packages. Other files in this top-level folder include:
