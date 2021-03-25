@@ -14,5 +14,3 @@ The input data was initially created by running `insertDTALiteLinks.sql` on the 
 3. Run `dtalite.exe`.
 
 Sample output files (`agent.csv` and `link_performance.csv`) also appear in this folder. 
-
-The `insertDTALiteLinks.sql` script creates links in DTALite format from the Lima.sqlite database in the Lima folder.
