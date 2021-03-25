@@ -5,8 +5,8 @@
 
 Recommended steps:
 1. Make sure you have a supported version of python 
-2. pip install aequilibrae==0.6.5
-3. pip install openmatrix
+2. `pip install aequilibrae==0.6.5`
+3. `pip install openmatrix`
 
 ## Inputs
 1. Nodes as a .csv flat file in GMNS format
