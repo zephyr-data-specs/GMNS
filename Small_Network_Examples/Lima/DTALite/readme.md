@@ -1,9 +1,13 @@
 # Lima network routed in DTALite
 
 ## Inputs
-The input data was initially created by running `insertDTALiteLinks.sql` on the sqlite database in the parent folder. Afterwards, the following changes were made to `link.csv` and `node.csv`:
+The input data was initially created by running `insertDTALiteLinks.sql` on the sqlite database in the parent folder. This query:
+- Sets capacity in veh/hr  (GMNS links use veh/hr/lane)
+- Inserts values for the VDF parameters
 
-- Changed x/y coordinates from projected to degrees (WGS84)
+Afterwards, the following changes were made to `link.csv` and `node.csv`:
+
+- Changed x/y coordinates from projected (feet) to degrees (WGS84)
 - Distance in miles, not feet
 - Removed VDF_fftt column in links
 - In nodes, made zone match node number for centroids
