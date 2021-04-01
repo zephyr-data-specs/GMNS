@@ -10,6 +10,8 @@ Tools from Arizona State University Transportation AI Lab, including conversion,
 
 https://github.com/asu-trans-ai-lab/Integrated_modeling_GMNS 
 
+Shortest path tool:  https://pypi.org/project/path4gmns/
+
 ## [DynusT](DynusT/DynusT_to_GMNS.R)    
 ### Requirements and Inputs  
 - [R](https://www.r-project.org) and a few packages: `dplyr`, `readr`, and `data.table`, all available using the `install.packages()` function.
