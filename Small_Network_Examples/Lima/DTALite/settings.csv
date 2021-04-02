@@ -7,6 +7,7 @@
 [link_type],link_type,link_type_name,,agent_type_blocklist,type_code,traffic_flow_code,
 ,1,Highway/Expressway,,,f,0,
 ,2,Major arterial,,,a,0,
+,99,Centroid connector,,,c,0,
 ,,,,,,,
 [demand_period],demand_period_id,demand_period,,time_period,,,
 ,1,AM,,0700_0800,,,
