@@ -9,7 +9,7 @@ Afterwards, the following changes were made to `link.csv` and `node.csv`:
 
 - Changed x/y coordinates from projected (feet) to degrees (WGS84)
 - Distance in miles, not feet
-- Removed VDF_fftt column in links
+- Removed `VDF_fftt` column in links
 - In nodes, made zone match node number for centroids
 - In links, changed `link_type` to 99 for centroid connectors.
 
