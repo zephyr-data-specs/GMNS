@@ -11,6 +11,7 @@ Afterwards, the following changes were made to `link.csv` and `node.csv`:
 - Distance in miles, not feet
 - Removed VDF_fftt column in links
 - In nodes, made zone match node number for centroids
+- In links, changed `link_type` to 99 for centroid connectors.
 
 ## Steps
 1. Clone DTALite from its [GitHub repo](https://github.com/asu-trans-ai-lab/DTALite).
