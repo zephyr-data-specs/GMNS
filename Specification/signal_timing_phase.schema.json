@@ -22,7 +22,7 @@
         {
             "name": "signal_phase_num",
             "type": "integer",
-            "description": "Signal phase number.",
+            "description": "Signal phase number. Typically the NEMA phase number.",
             "constraints": {
                 "minimum": 0,
                 "required": true
