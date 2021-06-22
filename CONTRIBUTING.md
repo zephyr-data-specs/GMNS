@@ -16,7 +16,5 @@ Once work on a pull request is complete, the GMNS Project Management Committee w
 
 ## Known Packages Using GMNS
 - [GMNSpy](https://github.com/e-lo/gmnspy) by Elizabeth Sall (@e-lo)
-- Several tools by Simon Zhou (@xzhou99) and his lab (@asu-trans-ai-lab), including:
-	- [Ocean](https://github.com/asu-trans-ai-lab/Ocean)
-	- [NeXTA-GMNS](https://github.com/asu-trans-ai-lab/NeXTA-GMNS)
-	- [OSM2GMNS](https://github.com/asu-trans-ai-lab/OSM2GMNS)
+- Several tools by Simon Zhou (@xzhou99) and his lab (@asu-trans-ai-lab), a summary of which can be found at [Integrated_modeling_GMNS](https://github.com/asu-trans-ai-lab/Integrated_modeling_GMNS)
+- [ABStreet](https://github.com/a-b-street/abstreet) by Dustin Carlino (@dabreegster)
