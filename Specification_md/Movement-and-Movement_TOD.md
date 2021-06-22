@@ -54,4 +54,3 @@ movement_tod data dictionary
 | ctrl_type     | ControlType\_Set | Required  | From ControlType\_Set: no_control, yield, stop, stop_2_way, stop_4_way, signal_with_RTOR, signal |
 | mvmt_code | TEXT             | Optional   | Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)  | 
 | allowed_uses  | TEXT             | Optional   | Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated  |                                                             |
-                                                             |
