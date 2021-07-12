@@ -6,6 +6,12 @@ Basic conversion tools are available to get GMNS-formatted tables from the follo
 And to convert a GMNS network to:
 - [Network Wrangler 2.0 Standard](https://github.com/wsp-sag/network_wrangler)
 
+Tools from Arizona State University Transportation AI Lab, including conversion, visualization and routing (DTALite):
+
+https://github.com/asu-trans-ai-lab/Integrated_modeling_GMNS 
+
+Shortest path tool:  https://pypi.org/project/path4gmns/
+
 ## [DynusT](DynusT/DynusT_to_GMNS.R)    
 ### Requirements and Inputs  
 - [R](https://www.r-project.org) and a few packages: `dplyr`, `readr`, and `data.table`, all available using the `install.packages()` function.
