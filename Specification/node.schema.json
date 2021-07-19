@@ -36,10 +36,7 @@
         {
             "name": "z_coord",
             "type": "number",
-            "description": "Optional. Altitude.",
-            "constraints": {
-                "required": true
-            }
+            "description": "Optional. Altitude."
         },
         {
             "name": "node_type",
