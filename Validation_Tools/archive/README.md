@@ -1,5 +1,5 @@
 # Validation Tools
-The current set of validation tools are contained in three separate Python scripts.
+:warning: These validation tools are outdated. Please use the jupyter notebooks in the folder above. 
 
 ## Requirements:
 - [Python](https://www.python.org/downloads/)
@@ -8,7 +8,7 @@ The current set of validation tools are contained in three separate Python scrip
 	- All required fields (and, for some validation tests, certain optional fields; see details below) must contain data.
 	- The user will need to modify each script to include the path and filenames to these tables instead of the example tables.
 
-## [directed_validation.py](NetworkX/directed_validation.py)  
+## [directed_validation.py](directed_validation.py)  
 Inputs: node.csv and link.csv from a GMNS formatted network. 
 Required optional fields: 
 None currently, may eventually require node_type from nodes.csv
@@ -19,7 +19,7 @@ Caveats: This method only considers routings in the network by motor vehicles (i
 
 Additionally, this script is only appropriate for very small networks because it iterates through every ordered pair of vertices, which becomes time-consuming for larger networks, and the output requires user interpretation.
 
-## [undirected_validation.py](NetworkX/undirected_validation.py)  
+## [undirected_validation.py](undirected_validation.py)  
 Inputs: node.csv and link.csv from a GMNS formatted network. 
 Required optional fields:
 - node.csv: node_type
@@ -30,7 +30,7 @@ Output, information and warnings printed to the screen:
 - A list of isolated nodes (that is, nodes not connected to any link), and
 - A stick network is drawn on the screen 
 
-## [more_validation.py](NetworkX/more_validation.py)  
+## [more_validation.py](more_validation.py)  
 Inputs: node.csv, geometry.csv, link.csv, lane.csv, movement.csv, segment.csv from a GMNS formatted network. 
 Required optional fields:
 - link.csv: lanes, length
