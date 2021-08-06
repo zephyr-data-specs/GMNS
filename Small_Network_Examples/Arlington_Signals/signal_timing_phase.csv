@@ -7,9 +7,9 @@ timing_phase_id,timing_plan_id,signal_phase_num,min_green,max_green,extension,cl
 7,0,7,6,31,3,7,,,2,2,1,Mystic SB left
 4,0,4,8,40,3,7,7,25,1,2,2,Mystic SB thru
 8,0,8,8,35,3,7,7,23,2,2,2,Pleasant NB thru
-12,0,2,70,70,,7,,,1,1,1,Mass @ Swan EB
-16,0,6,70,70,,,,,2,1,1,Mass @ Swan WB
-19,0,9,24,24,,7,10,19,1,2,1,Swan to Mass
+9,0,2,70,70,,7,,,1,1,1,Mass @ Swan EB
+10,0,6,70,70,,,,,2,1,1,Mass @ Swan WB
+11,0,9,24,24,,7,10,19,1,2,1,Swan to Mass
 14,1,1,16,16,3,7,,,1,1,1,Mass EB thru
 12,1,2,30,30,3,7,7,20,2,1,1,Mass EB left
 16,1,3,6,6,3,7,,,1,1,2,Mass WB left
