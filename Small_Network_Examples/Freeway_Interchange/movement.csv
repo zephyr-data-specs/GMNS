@@ -10,9 +10,9 @@ mvmt_id,node_id,name,ib_link_id,start_ib_lane,end_ib_lane,ob_link_id,start_ob_la
 9,13,,578600,-1,,5785709,1,,left,,,signal,"From ramp, left turn"
 10,13,,578600,1,,5785709,2,,left,,,signal,"From ramp, left turn"
 11,13,,578600,2,,5787619,3,,right,,,yield,"From ramp, right turn"
-12,5,,578556,1,,578527,1,,diverge,,,free,To I95 SB
-13,5,,578556,2,,578653,1,,diverge,,,free,To US3
-14,10,,578571,1,,578556,1,,thru,,,free,
+12,5,,578556,1,,578527,1,,diverge,,,no_control,To I95 SB
+13,5,,578556,2,,578653,1,,diverge,,,no_control,To US3
+14,10,,578571,1,,578556,1,,thru,,,no_control,
 15,10,,578597,1,,578556,2,,merge,,,yield,Ramp from N1344
-16,11,,578607,1,,578571,1,,diverge,,,free,Continue to US3
-17,11,,578607,2,,578600,1,,diverge,,,free,Off ramp
+16,11,,578607,1,,578571,1,,diverge,,,no_control,Continue to US3
+17,11,,578607,2,,578600,1,,diverge,,,no_control,Off ramp
