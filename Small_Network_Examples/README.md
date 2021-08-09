@@ -11,4 +11,4 @@ Examples of small networks implemented include:
 
 The examples that use the optional `allowed_uses` field all use the same `use_definition` and `use_group` files, which can be found in this parent folder.
 
-The examples were created in 2019-2020, prior to the Coronavirus pandemic, and are meant solely to illustrate GMNS concepts. They may not reflect current conditions. 
+The examples were created using publicly available information in 2019-2020, prior to the Coronavirus pandemic, and are meant solely to illustrate GMNS concepts. They may not reflect current conditions. 
