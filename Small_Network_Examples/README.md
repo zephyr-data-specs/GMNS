@@ -10,3 +10,5 @@ Examples of small networks implemented include:
 - [I-93, north of Boston](TOD_Examples/I-93.md), another example of time of day changes.
 
 The examples that use the optional `allowed_uses` field all use the same `use_definition` and `use_group` files, which can be found in this parent folder.
+
+The examples were created in 2019-2020, prior to the Coronavirus pandemic, and are meant solely to illustrate GMNS concepts. They may not reflect current conditions. 
