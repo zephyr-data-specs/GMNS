@@ -26,10 +26,6 @@ movement data dictionary
 | allowed_uses  | TEXT             | Optional   | Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated  |    
 | geometry      | TEXT             | Optional   | Movement geometry, specific format could be WKT, GeoJSON, etc.  |                                                              |
 
-A question is whether traffic controls should be included in the
-Movement file. Controls might include a type of control (e.g., yield,
-stop, signal), and an indication of which Movements yield to other
-Movements.
 
 # movement_tod
 
