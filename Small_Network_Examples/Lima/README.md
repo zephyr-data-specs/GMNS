@@ -1,4 +1,6 @@
 # Lima network
+:warning: Some of the detailed network files (`lane`,`movement`,`segment`) are in the process of being updated. However, the `link` and `node` files should suffice to run the examples in this folder.
+
 This folder contains examples of how to run a GMNS network using open-source tools:
 * [AEquilibraE](https://github.com/AequilibraE/aequilibrae)
 * [DTAlite](https://github.com/asu-trans-ai-lab/DTALite)
