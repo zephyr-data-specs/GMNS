@@ -75,7 +75,8 @@
                     "right",
                     "uturn",
                     "thru",
-                    "merge"
+                    "merge",
+                    "diverge"
                 ]
             }
         },
