@@ -105,7 +105,7 @@
                     "signal"
                 ]
             }
-        }
+        },
         {
             "name": "mvmt_code",
             "type": "any",
