@@ -254,7 +254,7 @@ MOVEMENT <- data.frame()
 
 movement <- movement %>% mutate(ib_link_id = paste(From_Node, To_Node)) %>% mutate(U_Turn = if_else(U_Turn == 1, From_Node, U_Turn))
 # U-turns can appear in both the O2_Node and the U_Turn field, we want to process the known U-Turns first
-loopFrame <- data.frame(c(names(movement)[3:6], names(movement)[8], names(movement)[7]),c("Left","Thru","Right","Other1","U-Turn","Other2"))
+loopFrame <- data.frame(c(names(movement)[3:6], names(movement)[8], names(movement)[7]),c("Left","Thru","Right","Other1","UTurn","Other2"))
 names(loopFrame) <- c("Col","Dir")
 
 for (index in 1:nrow(loopFrame)) {
@@ -303,10 +303,10 @@ MOVEMENT_joined <- MOVEMENT %>% left_join(dplyr::select(minmax_lanes, link_id, m
 #                                                   ob_lane = ifelse(type == "Thru", mapply(seq,rep(1,nrow(MOVEMENT_joined)),lanes), ob_lane)) %>% dplyr::select(MOVEMENT_name)
 # # %>% mutate(Ib_Lane = as.character(Ib_Lane),Ob_Lane = as.character(Ob_Lane)) 
 
-MOVEMENT <- MOVEMENT_joined %>% mutate(start_ib_lane = ifelse(type == "U-Turn" | type == "Left", minLane_IB, start_ib_lane),
-                                       end_ib_lane =   ifelse(type == "U-Turn" | type == "Left", ifelse(minLane_IB<0, -1, minLane_IB), end_ib_lane),
-                                       start_ob_lane = ifelse(type == "U-Turn" | type == "Left", minLane_OB, start_ob_lane),
-                                       end_ob_lane =   ifelse(type == "U-Turn" | type == "Left", minLane_OB, end_ob_lane),
+MOVEMENT <- MOVEMENT_joined %>% mutate(start_ib_lane = ifelse(type == "UTurn" | type == "Left", minLane_IB, start_ib_lane),
+                                       end_ib_lane =   ifelse(type == "UTurn" | type == "Left", ifelse(minLane_IB<0, -1, minLane_IB), end_ib_lane),
+                                       start_ob_lane = ifelse(type == "UTurn" | type == "Left", minLane_OB, start_ob_lane),
+                                       end_ob_lane =   ifelse(type == "UTurn" | type == "Left", minLane_OB, end_ob_lane),
                                        start_ib_lane = ifelse(type == "Right",ifelse(maxLane_IB > lanes, lanes+1,lanes), start_ib_lane),
                                        end_ib_lane =   ifelse(type == "Right", maxLane_IB, end_ib_lane),
                                        start_ob_lane = ifelse(type == "Right", maxLane_OB, start_ob_lane),
