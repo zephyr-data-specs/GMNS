@@ -75,7 +75,7 @@
         {
             "name": "width",
             "type": "number",
-            "description": "Optional. Width of the lane, feet.",
+            "description": "Optional. Width of the lane, short length units.",
             "constraints": {
                 "minimum": 0
             }

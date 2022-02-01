@@ -71,7 +71,7 @@
         {
             "name": "length",
             "type": "number",
-            "description": "Optional. Length of the link in miles",
+            "description": "Optional. Length of the link in long length units",
             "constraints": {
                 "minimum": 0
             }
@@ -105,7 +105,7 @@
         {
             "name": "free_speed",
             "type": "integer",
-            "description": "Optional. Free flow speed mph",
+            "description": "Optional. Free flow speed",
             "constraints": {
                 "minimum": 0,
                 "maximum": 100
@@ -189,7 +189,7 @@
         {
             "name": "row_width",
             "type": "number",
-            "description": "Optional. Width (feet) of the entire right-of-way (both directions).",
+            "description": "Optional. Width (short length units) of the entire right-of-way (both directions).",
             "constraints": {
                 "minimum": 0
             },

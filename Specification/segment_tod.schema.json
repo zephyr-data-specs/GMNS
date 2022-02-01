@@ -44,7 +44,7 @@
         {
             "name": "free_speed",
             "type": "integer",
-            "description": "Optional. Free flow speed (mph)",
+            "description": "Optional. Free flow speed ",
             "constraints": {
                 "minimum": 0,
                 "maximum": 100

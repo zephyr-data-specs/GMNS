@@ -37,7 +37,7 @@ link data dictionary
 | allowed\_uses                           | Use\_Set              | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.                                                                                   |
 | toll          | INTEGER       | Optional  | cents                                     |
 | jurisdiction  | TEXT  | Optional  | Owner/operator of the link  |
-| row_width | DOUBLE  | Optional  |  Width (in feet) of the entire right-of-way (both directions).  | 
+| row_width | DOUBLE  | Optional  |  Width (in short length units) of the entire right-of-way (both directions).  | 
 
 
 Link_ID is simply a unique primary key.  It might be an integer, sharedstreets reference id, or even a text string. 

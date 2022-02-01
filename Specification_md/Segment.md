@@ -56,6 +56,6 @@ segment data dictionary
 | allowed\_uses                           | Use\_Set             | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.                                                                                    |
 | toll          | INTEGER       | Optional  | cents                                     |
 | jurisdiction  | TEXT  | Optional  | Owner/operator of the segment  |
-| row_width | DOUBLE  | Optional  |  Width (in feet) of the entire right-of-way (both directions).  | 
+| row_width | DOUBLE  | Optional  |  Width (in short length units) of the entire right-of-way (both directions).  | 
 
 Ad hoc fields may also be added. Examples of other fields might include jam density, wave speed, traffic message channel (TMC) identifier, traffic count sensor identifier and location, average daily traffic, etc.

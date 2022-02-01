@@ -82,7 +82,7 @@ segment_tod data dictionary
 | allowed\_uses  | Use\_Set     | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
 | r_barrier      | Barrier_ID   | Optional  | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
 | l_barrier      | Barrier_ID   | Optional   | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
-| width          | DOUBLE       | Optional   | Width of the lane (feet)   |
+| width          | DOUBLE       | Optional   | Width of the lane (short length units)   |
 
 # segment_lane_tod
 
@@ -96,6 +96,6 @@ segment_tod data dictionary
 | allowed\_uses  | Use\_Set     | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
 | r_barrier      | Barrier_ID   | Optional  | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
 | l_barrier      | Barrier_ID   | Optional   | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
-| width          | DOUBLE       | Optional   | Width of the lane (feet)   |
+| width          | DOUBLE       | Optional   | Width of the lane (short length units)   |
 
 Ad hoc fields, such as notes, may also be added to any of these tables.
