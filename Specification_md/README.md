@@ -2,9 +2,9 @@
 
 ## Configuration
 The following units are recommended:
-- Short lengths (linear references, lane widths, etc.): feet
-- Long lengths (link lengths): miles
-- Speed: miles per hour
+- Short lengths (linear references, lane widths, etc.): feet or meters
+- Long lengths (link lengths): miles or km
+- Speed: miles per hour or km / hr
 
 The specification also provides for optional tables to define datatypes for use and time sets:
 - [use_definition and use_group](Use_Definition-and-Use_Group.md)  
