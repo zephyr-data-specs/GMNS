@@ -143,5 +143,11 @@
      "path": "zone.csv",
      "schema": "zone.schema.json"
    }
- ]
+ ],
+  "units": {
+    "short_length":"foot",
+    "long_length":"mile",
+    "speed":"mph"
+  },
+  "crs":"epsg:4326"
 }
