@@ -2,7 +2,7 @@
 
 Volpe/FHWA partnership with [Zephyr Foundation](https://zephyrtransport.org).
 
-The General Modeling Network Specification (GMNS) defines a common human and machine readable format for sharing routable road network files.  It is designed to be used in multi-modal static and dynamic transportation planning and operations models.  
+The General Modeling Network Specification (GMNS) defines a common machine (and human) readable format for sharing routable road network files.  It is designed to be used in multi-modal static and dynamic transportation planning and operations models.  
 
 How do I use GMNS?
 1.  Read the [__specification reference__](Specification) to learn about the GMNS format. 
