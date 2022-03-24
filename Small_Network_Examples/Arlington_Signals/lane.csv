@@ -7,7 +7,7 @@ lane_id,link_id,lane_num,allowed_uses,r_barrier,l_barrier,width
 212,21,2,ALL,,,11
 331,32,1,ALL,,,11
 332,32,2,ALL,,,11
-333,32,3,BIKE,curb,,5
+333,32,3,BIKE,physical,,5
 311,31,1,ALL,,,11
 312,31,2,ALL,,,11
 315,31,3,BIKE,,,5

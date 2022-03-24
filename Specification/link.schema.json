@@ -135,7 +135,7 @@
                     "sharrow",
                     "bikelane",
                     "cycletrack",
-                    "offstreet path"
+                    "offstreet_path"
                 ]
             }
         },
@@ -149,7 +149,7 @@
                     "none",
                     "shoulder",
                     "sidewalk",
-                    "offstreet path"
+                    "offstreet_path"
                 ]
             }
         },
