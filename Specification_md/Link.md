@@ -35,7 +35,7 @@ link data dictionary
 | ped_facility                             | TEXT                  | Optional  | Type of pedestrian accommodation: unknown, none, shoulder, sidewalk                                                                                                           |
 | parking                                 | TEXT                  | Optional  | Type of parking: unknown, none, parallel, angle, other                                                                                                                        |
 | allowed\_uses                           | Use\_Set              | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.                                                                                   |
-| toll          | NUMERIC       | Optional  | cents                                     |
+| toll          | NUMERIC       | Optional  | toll in currency units                                     |
 | jurisdiction  | TEXT  | Optional  | Owner/operator of the link  |
 | row_width | DOUBLE  | Optional  |  Width (in short length units) of the entire right-of-way (both directions).  | 
 
