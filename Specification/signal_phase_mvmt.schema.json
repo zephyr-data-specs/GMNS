@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "signal_phase_mvmt_id",
-            "type": "any",
+            "type": "string",
             "description": "Primary key.",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "controller_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "signal_controller.controller_id",
             "description": "Associated controller.",
             "constraints": {
@@ -34,19 +34,19 @@
         },
         {
             "name": "mvmt_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "movement.mvmt_id",
             "description": "Foreign key. Either Movement_ID (for phases used by vehicles), or Link_id (for phases used by pedestrians) is required."
         },
         {
             "name": "link_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "link.link_id",
             "description": "Foreign key. Either Movement_ID (for phases used by vehicles), or Link_id (for phases used by pedestrians) is required."
         },
         {
             "name": "protection",
-            "type": "any",
+            "type": "string",
             "description": "Optional. Indicates whether the phase is protected, permitted, or right turn on red.",
             "constraints": {
                 "enum": [
