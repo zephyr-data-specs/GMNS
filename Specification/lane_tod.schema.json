@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "lane_tod_id",
-            "type": "any",
+            "type": "string",
             "description": "Primary key.",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "lane_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "lane.lane_id",
             "description": "Required. Foreign key to `lane`",
             "constraints": {
@@ -24,13 +24,13 @@
         },
         {
             "name": "timeday_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "time_set_definitions.timeday_id",
             "description": "Conditionally required (either timeday_id or time_day). Foreign key to time_set_definitions."
         },
         {
             "name": "time_day",
-            "type": "any",
+            "type": "string",
             "description": "Conditionally required (either timeday_id or time_day). XXXXXXXX_HHMM_HHMM, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times."
         },
         {
@@ -50,7 +50,7 @@
         },
         {
             "name": "r_barrier",
-            "type": "any",
+            "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
             "constraints": {
                 "enum": [
@@ -62,7 +62,7 @@
         },
         {
             "name": "l_barrier",
-            "type": "any",
+            "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default).  Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
             "constraints": {
                 "enum": [
@@ -75,7 +75,7 @@
         {
             "name": "width",
             "type": "number",
-            "description": "Optional. Width of the lane, short length units.",
+            "description": "Optional. Width of the lane, short_length units.",
             "constraints": {
                 "minimum": 0
             }
