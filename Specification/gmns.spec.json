@@ -147,7 +147,8 @@
   "units": {
     "short_length":"foot",
     "long_length":"mile",
-    "speed":"mph"
+    "speed":"mph",
+    "currency":"cents"
   },
   "crs":"epsg:4326"
 }
