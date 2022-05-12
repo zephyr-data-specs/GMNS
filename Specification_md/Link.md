@@ -22,20 +22,20 @@ link data dictionary
 | to\_node_id                                | Node\_ID            | Required  | Foreign key (Nodes table)                                                                                                                                                     |
 | directed | boolean | Required | Whether the link is directed (travel only occurs from the from_node to the to_node) or undirected. |
 | geometry_id | Geometry_id | Optional  | Foreign key (Geometry table). Either the geometry_id OR the geometry is used  |
-| geometry                     | Geometry    | Optional  | Link geometry, specific format could be WKT, GeoJSON, PostGIS geometry datatype                              |
+| geometry                     | Geometry    | Optional  | Link geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used                              |
 |parent_link_id | link_id | Optional | The parent of this link. For example, for a sidewalk, this is the adjacent road.
 | dir\_flag                        | enum               | Optional  | 1 = shapepoints go from from_node to to_node;  -1 shapepoints go in the reverse direction; 0 = link is undirected or no geometry information is provided.                                               |
-| length  |  DOUBLE | Optional  | Length of the link  |
-| grade | DOUBLE  | Optional  |  Percent grade of the link (<0 is down) |
+| length  |  NUMERIC | Optional  | Length of the link in long_length units  |
+| grade | NUMERIC  | Optional  |  Percent grade of the link (<0 is down) |
 | facility_type | TEXT | Optional | Facility type (e.g., freeway, arterial, etc.) |
-| capacity                                | INTEGER               | Optional  | Capacity (veh / hr / lane)                                                                                                                                                           |
-| free_speed                               | INTEGER               | Optional  | Free flow speed                                                                                                                                                               |
+| capacity                                | NUMERIC               | Optional  | Capacity (veh / hr / lane)                                                                                                                                                           |
+| free_speed                               | NUMERIC               | Optional  | Free flow speed in long_length_units per hour                                                                                                                                                               |
 | lanes                           | INTEGER               | Optional  | Number of lanes in the direction of travel                                                                                                                                       |
 | bike_facility                            | TEXT                  | Optional  | Type of bicycle accommodation: unknown, none, wcl, bikelane, cycletrack                                                                                                       |
 | ped_facility                             | TEXT                  | Optional  | Type of pedestrian accommodation: unknown, none, shoulder, sidewalk                                                                                                           |
 | parking                                 | TEXT                  | Optional  | Type of parking: unknown, none, parallel, angle, other                                                                                                                        |
 | allowed\_uses                           | Use\_Set              | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.                                                                                   |
-| toll          | INTEGER       | Optional  | cents                                     |
+| toll          | NUMERIC       | Optional  | cents                                     |
 | jurisdiction  | TEXT  | Optional  | Owner/operator of the link  |
 | row_width | DOUBLE  | Optional  |  Width (in short length units) of the entire right-of-way (both directions).  | 
 
