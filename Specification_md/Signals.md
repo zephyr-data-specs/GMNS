@@ -51,9 +51,9 @@ A signal detector is associated with a controller, a phase and a group of lanes.
 | <span class="underline">start\_lane</span>          | INTEGER | Required  | Left-most lane covered by the detector |
 | <span class="underline">end\_lane</span>          | INTEGER | Optional  | Right-most lane (blank if only one lane) |
 | <span class="underline">ref\_node\_id</span>         | Node\_ID | Required  | Detector is on the approach to this node |
-| <span class="underline">det_zone_lr</span>     | INTEGER | Required  | Distance from from the stop bar to detector |
-| <span class="underline">det_zone_front</span>     | INTEGER | Optional  | Linear reference of front of detection zone |
-| <span class="underline">det_zone_back</span>     | INTEGER | Optional  |Linear reference of back of detection zone |
+| <span class="underline">det_zone_lr</span>     | NUMERIC | Required  | Distance from from the stop bar to detector in short_distance units |
+| <span class="underline">det_zone_front</span>     | NUMERIC | Optional  | Linear reference of front of detection zone in short_distance units|
+| <span class="underline">det_zone_back</span>     | NUMERIC | Optional  |Linear reference of back of detection zone in short_distance units |
 | <span class="underline">det_type</span>     | Text | Optional  | Type of detector |
 
 
