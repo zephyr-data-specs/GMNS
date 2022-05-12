@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "segment_lane_id",
-            "type": "any",
+            "type": "string",
             "description": "Primary key.",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "segment_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "segment.segment_id",
             "description": "Required. Foreign key to the associated segment.",
             "constraints": {
@@ -34,7 +34,7 @@
         },
         {
             "name": "parent_lane_id",
-            "type": "any",
+            "type": "string",
             "description": "Optional. If a lane drops or changes characteristics on the segment, the lane_id for that lane."
         },
         {
@@ -44,7 +44,7 @@
         },
         {
             "name": "r_barrier",
-            "type": "any",
+            "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is none)",
             "constraints": {
                 "enum": [
@@ -56,7 +56,7 @@
         },
         {
             "name": "l_barrier",
-            "type": "any",
+            "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left (default is none)",
             "constraints": {
                 "enum": [
@@ -69,7 +69,7 @@
         {
             "name": "width",
             "type": "number",
-            "description": "Optional. Width of the lane (short length units)",
+            "description": "Optional. Width of the lane (short_length units)",
             "constraints": {
                 "minimum": 0
             }
