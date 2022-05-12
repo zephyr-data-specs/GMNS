@@ -6,7 +6,7 @@
     "fields": [
         {
             "name": "geometry_id",
-            "type": "any",
+            "type": "string",
             "description": "Primary key - could be SharedStreets Geometry ID",
             "constraints": {
                 "required": true
@@ -14,8 +14,8 @@
         },
         {
             "name": "geometry",
-            "type": "any",
-            "description": "Optional. Link geometry, specific format could be WKT, GeoJSON, etc."
+            "type": "string",
+            "description": "Link geometry, in well-known text (WKT) format.  Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used."
         }
     ],
     "name": "geometry.schema.json",
