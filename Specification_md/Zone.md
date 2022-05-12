@@ -9,7 +9,7 @@ zone data dictionary
 | --------------------------------------- | -------- | --------- | -------------------------------------------------------------------------------------------------- |
 | <span class="underline">zone\_id</span> | Zone\_ID | Required  | Primary Key (Unique)                                                                               |
 | name                                    | TEXT     | Optional  |                                                                                                    |
-| boundary                                | Geometry | Required  | The zone polygon                                                                                   |
+| boundary                                | Geometry | Required  | The zone polygon in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used                                                                                   |
 | super\_zone                             | Zone\_ID | Optional  | If there is a hierarchy of zones (e.g., parcels and TAZs), indicates the zone of next higher level |
 
 Ad hoc fields may also be added.
