@@ -87,7 +87,7 @@ signal_timing_plan data dictionary
 | <span class="underline">controller\_id</span>           | Controller\_ID         | Required  | Foreign key (master controller for this timing plan)           |
 | <span class="underline">time_day</span>          | TimeDay\_Set     | Conditionally required  |  Define the availability/role of signal at different dates and times (either time_day or timeday_id is required)   |
 | <span class="underline">timeday\_id</span>        | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
-| <span class="underline">cycle\_length</span>      | INTEGER          | Optional  | Cycle length in seconds                                                  |
+| <span class="underline">cycle\_length</span>      | NUMERIC          | Optional  | Cycle length in seconds                                                  |
 
 ## signal_timing_phase
 
@@ -146,12 +146,12 @@ signal_timing_phase data dictionary
 | <span class="underline">timing\_phase\_id</span> | Timing\_Phase\_ID | Required  | Primary key                                                                                               |
 | <span class="underline">timing\_plan\_id</span>  | Timing\_Plan\_ID  | Required  | Foreign key. Connects to a timing_plan, associated with a controller                 |
 | <span class="underline">signal\_phase\_num</span>     | INTEGER           | Required | signal phase number.  Typically the NEMA phase number.                               |
-| <span class="underline">min\_green</span>        | INTEGER           | Optional  | The minimum green time in seconds for an actuated signal. Green time in seconds for a fixed time signal   |
-| <span class="underline">max\_green</span>        | INTEGER           | Optional  | The maximum green time in seconds for an actuated signal; the default is minimum green plus one extension |
-| extension                                        | INTEGER           | Optional  | The number of seconds the green time is extended each time vehicles are detected                          |
-| clearance                                        | INTEGER           | Optional  | Yellow interval plus all red interval                                                                     |
-| walk_time                                        | INTEGER           | Optional  | If a pedestrian phase exists, the walk time in seconds                                                                     |
-| ped_clearance                                        | INTEGER           | Optional  | If a pedestrian phase exists, the flashing don’t walk time.                         |
+| <span class="underline">min\_green</span>        | NUMERIC           | Optional  | The minimum green time in seconds for an actuated signal. Green time in seconds for a fixed time signal   |
+| <span class="underline">max\_green</span>        | NUMERIC           | Optional  | The maximum green time in seconds for an actuated signal; the default is minimum green plus one extension |
+| extension                                        | NUMERIC           | Optional  | The number of seconds the green time is extended each time vehicles are detected                          |
+| clearance                                        | NUMERIC           | Optional  | Yellow interval plus all red interval                                                                     |
+| walk_time                                        | NUMERIC           | Optional  | If a pedestrian phase exists, the walk time in seconds                                                                     |
+| ped_clearance                                        | NUMERIC           | Optional  | If a pedestrian phase exists, the flashing don’t walk time.                         |
 | <span class="underline">ring</span> | INTEGER  | Required  |                           |
 | <span class="underline">barrier</span> | INTEGER  | Required  |                           |
 | <span class="underline">position</span> | INTEGER  | Required  |                           |
