@@ -6,7 +6,7 @@
     "fields": [
         {
             "name": "lane_id",
-            "type": "any",
+            "type": "string",
             "description": "Primary key",
             "constraints": {
                 "required": true
@@ -14,7 +14,7 @@
         },
         {
             "name": "link_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "link.link_id",
             "description": "Required. Foreign key to link table.",
             "constraints": {
