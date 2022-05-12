@@ -6,7 +6,7 @@
     "fields": [
         {
             "name": "link_tod_id",
-            "type": "any",
+            "type": "string",
             "description": "Primary key",
             "constraints": {
                 "required": true
@@ -14,7 +14,7 @@
         },
         {
             "name": "link_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "link.link_id",
             "description": "Required. Foreign key, link table",
             "constraints": {
@@ -23,18 +23,18 @@
         },
         {
             "name": "timeday_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "time_set_definitions.timeday_id",
             "description": "Conditionally required (either timeday_id or time_day). Foreign key to time_set_definitions."
         },
         {
             "name": "time_day",
-            "type": "any",
+            "type": "string",
             "description": "Conditionally required (either timeday_id or time_day). XXXXXXXX_HHMM_HHMM, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times."
         },
         {
             "name": "capacity",
-            "type": "integer",
+            "type": "number",
             "description": "Optional. Capacity (veh / hr / lane)",
             "constraints": {
                 "minimum": 0
@@ -42,15 +42,15 @@
         },
         {
             "name": "free_speed",
-            "type": "integer",
-            "description": "Optional. Free flow speed ",
+            "type": "number",
+            "description": "Optional. Free flow speed in long_distance units per hour ",
             "constraints": {
                 "minimum": 0,
-                "maximum": 100
+                "maximum": 200
             },
             "warnings": {
                 "minimum": 1,
-                "maximum": 75
+                "maximum": 120
             }
         },
         {
@@ -112,8 +112,8 @@
         },
         {
             "name": "toll",
-            "type": "integer",
-            "description": "toll in cents.",
+            "type": "number",
+            "description": "toll in currency units.",
             "warning": {
                 "minimum": 0,
                 "maximum": 10000
