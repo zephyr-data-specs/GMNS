@@ -37,14 +37,14 @@ link_tod data dictionary
 | link\_id 		| Link\_ID 		| Required  | Foreign key, link table                    |
 | time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of lane at different dates and times (either time_day or timeday_id is required)   |
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
-| capacity 		| INTEGER 		| Optional  | Capacity (veh / hr / lane)   |
-| free_speed		| INTEGER		| Optional	| Free flow speed   |
+| capacity 		| NUMERIC		| Optional  | Capacity (veh / hr / lane)   |
+| free_speed		| NUMERIC		| Optional	| Free flow speed in long_length units per hour   |
 | lanes			| INTEGER		| Optional	| Number of lanes in the direction of travel   |
 | bike\_facility	| TEXT			| Optional	| Type of bicycle accommodation: unknown, none, wcl, bikelane, cycletrack   |
 | ped\_facility	| TEXT			| Optional	| Type of pedestrian accommodation: unknown, none, shoulder, sidewalk   |
 | parking	| TEXT			| Optional	|	Type of parking: unknown, none, parallel, angle, other    |
 | allowed\_uses | Use\_Set      | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
-| toll          | INTEGER       | Optional  | cents                                     |
+| toll          | NUMERIC       | Optional  | toll in currency units                                    |
 
 # segment_tod
 
@@ -59,8 +59,8 @@ segment_tod data dictionary
 | segment\_id 	| Segment\_ID 	| Required	| Foreign key, segment table.  |
 | time_day      | TimeDay\_Set 	| Conditionally required  | Define the availability/role of segment at different dates and times (either time_day or timeday_id is required)   |
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
-| capacity 		| INTEGER 		| Optional  | Capacity (veh / hr / lane)   |
-| free_speed		| INTEGER		| Optional	|Free flow speed   |
+| capacity 		| NUMERIC 		| Optional  | Capacity (veh / hr / lane)   |
+| free_speed		| NUMERIC 		| Optional	|Free flow speed in long_length units per hour   |
 | lanes			| INTEGER		| Optional	| Number of lanes in the direction of travel (must be consistent with link lanes + lanes added) 	 |
 | l\_lanes\_added	| INTEGER		| Optional	|	# of lanes added on the left of the link (negative indicates a lane drop).	 |
 | r\_lanes\_added	| INTEGER		| Optional	|	# of lanes added on the right of the link (negative indicates a lane drop).	 |
@@ -68,7 +68,7 @@ segment_tod data dictionary
 | ped\_facility	| TEXT			| Optional	| Type of pedestrian accommodation: unknown, none, shoulder, sidewalk   |
 | parking	| TEXT			| Optional	|	Type of parking: unknown, none, parallel, angle, other    |
 | allowed\_uses | Use\_Set      | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
-| toll          | INTEGER       | Optional  | cents                                     |
+| toll          | NUMERIC        | Optional  | toll in currency units                                     |
 
 # lane_tod
 
@@ -80,9 +80,9 @@ segment_tod data dictionary
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  | e.g., -1, 1, 2 (use left-to-right numbering)   |
 | allowed\_uses  | Use\_Set     | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
-| r_barrier      | Barrier_ID   | Optional  | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
-| l_barrier      | Barrier_ID   | Optional   | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
-| width          | DOUBLE       | Optional   | Width of the lane (short length units)   |
+| r_barrier      | TEXT   | Optional  | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
+| l_barrier      | TEXT   | Optional   | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
+| width          | NUMERIC       | Optional   | Width of the lane (short_length units)   |
 
 # segment_lane_tod
 
@@ -94,8 +94,8 @@ segment_tod data dictionary
 | timeday_id      | TimeDay\_ID 	| Conditionally required  | Used if times-of-day are defined on the time_set_definitions table   |
 | lane\_num      | INTEGER       | Required  | e.g., -1, 1, 2 (use left-to-right numbering)   |
 | allowed\_uses  | Use\_Set     | Optional  | Set of allowed uses: shoulder, parking, walk, all, bike, auto, hov2, hov3, truck, bus, etc.   |
-| r_barrier      | Barrier_ID   | Optional  | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
-| l_barrier      | Barrier_ID   | Optional   | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
-| width          | DOUBLE       | Optional   | Width of the lane (short length units)   |
+| r_barrier      | TEXT   | Optional  | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
+| l_barrier      | TEXT   | Optional   | Whether a barrier exists to prevent vehicles from changing lanes to the right (default is NONE)   |
+| width          | NUMERIC       | Optional   | Width of the lane (short_length units)   |
 
 Ad hoc fields, such as notes, may also be added to any of these tables.
