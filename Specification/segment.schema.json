@@ -155,7 +155,7 @@
         {
             "name": "toll",
             "type": "number",
-            "description": "Optional.  Toll on the segment, in cents."
+            "description": "Optional.  Toll on the segment, in currency units."
         },
         {
             "name": "jurisdiction",
