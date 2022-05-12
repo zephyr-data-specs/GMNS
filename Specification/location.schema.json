@@ -6,7 +6,7 @@
     "fields": [
         {
             "name": "loc_id",
-            "type": "any",
+            "type": "string",
             "description": "Primary key. Location ID.",
             "constraints": {
                 "required": true
@@ -14,7 +14,7 @@
         },
         {
             "name": "link_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "link.link_id",
             "description": "Required. Road Link ID. Foreign Key from Road_Link.",
             "constraints": {
@@ -23,7 +23,7 @@
         },
         {
             "name": "ref_node_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "node.node_id",
             "description": "Required. The From node of the link. Foreign Key from Node.",
             "constraints": {
@@ -33,7 +33,7 @@
         {
             "name": "lr",
             "type": "number",
-            "description": "Required. Linear Reference of the location, measured as distance along the link from the reference node.  If link_geometry exists, it is used. Otherwise, link geometry is assumed to be a crow-fly distance from A node to B node.",
+            "description": "Required. Linear Reference of the location, measured as distance in short_length units along the link from the reference node.  If link_geometry exists, it is used. Otherwise, link geometry is assumed to be a crow-fly distance from A node to B node.",
             "constraints": {
                 "required": true,
                 "minimum": 0
@@ -52,7 +52,7 @@
         {
             "name": "z_coord",
             "type": "number",
-            "description": "Optional. Altitude."
+            "description": "Optional. Altitude in short_length units."
         },
         {
             "name": "loc_type",
@@ -61,7 +61,7 @@
         },
         {
             "name": "zone_id",
-            "type": "any",
+            "type": "string",
             "description": "Optional. Foreign Key, Associated zone"
         },
         {
