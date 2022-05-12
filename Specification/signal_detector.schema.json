@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "detector_id",
-            "type": "any",
+            "type": "string",
             "description": "Primary key.",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "controller_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "signal_controller.controller_id",
             "description": "Required. Foreign key to signal_controller table.",
             "constraints": {
@@ -32,7 +32,7 @@
         },
         {
             "name": "link_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "link.link_id",
             "description": "Foreign key. The link covered by the detector.",
             "constraints": {
@@ -54,7 +54,7 @@
         },
         {
             "name": "ref_node_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "node.node_id",
             "description": "The detector is on the approach to this node.",
             "constraints": {
@@ -64,7 +64,7 @@
         {
             "name": "det_zone_lr",
             "type": "number",
-            "description": "Required. Distance from from the stop bar to detector.",
+            "description": "Required. Distance from from the stop bar to detector in short_distance units.",
             "constraints": {
                 "required": true
             }
@@ -72,12 +72,12 @@
         {
             "name": "det_zone_front",
             "type": "number",
-            "description": "Optional. Linear reference of front of detection zone."
+            "description": "Optional. Linear reference of front of detection zone in short_distance units."
         },
         {
             "name": "det_zone_back",
             "type": "number",
-            "description": "Optional. Linear reference of back of detection zone."
+            "description": "Optional. Linear reference of back of detection zone in short_distance units."
         },
         {
             "name": "det_type",
