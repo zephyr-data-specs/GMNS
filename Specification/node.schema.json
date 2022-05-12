@@ -6,7 +6,7 @@
     "fields": [
         {
             "name": "node_id",
-            "type": "any",
+            "type": "string",
             "description": "Primary key",
             "constraints": {
                 "required": true
@@ -36,7 +36,7 @@
         {
             "name": "z_coord",
             "type": "number",
-            "description": "Optional. Altitude."
+            "description": "Optional. Altitude in short_length units."
         },
         {
             "name": "node_type",
@@ -59,13 +59,13 @@
         },
         {
             "name": "zone_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "zone.zone_id",
             "description": "Optional. Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block."
         },
         {
             "name": "parent_node_id",
-            "type": "any",
+            "type": "string",
             "description": "Optional. Associated node. For example, if this node is a sidewalk, a parent_nodek_id could represent the intersection  it is associated with.",
             "foreign_key": ".node_id"
         }
