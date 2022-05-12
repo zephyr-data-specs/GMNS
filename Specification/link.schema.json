@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "link_id",
-            "type": "any",
+            "type": "string",
             "description": "Primary key - could be SharedStreets Reference ID",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "parent_link_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": ".link_id",
             "description": "Optional. The parent of this link. For example,for a sidewalk, this is the adjacent road."
         },
@@ -26,7 +26,7 @@
         },
         {
             "name": "from_node_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "node.node_id",
             "constraints": {
                 "required": true
@@ -34,7 +34,7 @@
         },
         {
             "name": "to_node_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "node.node_id",
             "constraints": {
                 "required": true
@@ -47,14 +47,14 @@
         },
         {
             "name": "geometry_id",
-            "type": "any",
+            "type": "string",
             "foreign_key": "geometry.geometry_id",
             "description": "Optional. Foreign key (Link_Geometry table)."
         },
         {
             "name": "geometry",
-            "type": "any",
-            "description": "Optional. Link geometry, specific format could be WKT, GeoJSON, etc."
+            "type": "string"",
+            "description": "Optional. Link geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used"
         },
         {
             "name": "dir_flag",
@@ -71,7 +71,7 @@
         {
             "name": "length",
             "type": "number",
-            "description": "Optional. Length of the link in long length units",
+            "description": "Optional. Length of the link in long_length units",
             "constraints": {
                 "minimum": 0
             }
@@ -96,7 +96,7 @@
         },
         {
             "name": "capacity",
-            "type": "integer",
+            "type": "number",
             "description": "Optional. Capacity (veh / hr / lane)",
             "constraints": {
                 "minimum": 0
@@ -104,15 +104,15 @@
         },
         {
             "name": "free_speed",
-            "type": "integer",
-            "description": "Optional. Free flow speed",
+            "type": "number",
+            "description": "Optional. Free flow speed, in long_length units per hour",
             "constraints": {
                 "minimum": 0,
-                "maximum": 100
+                "maximum": 200
             },
             "warnings": {
                 "minimum": 1,
-                "maximum": 75
+                "maximum": 120
             }
         },
         {
@@ -174,7 +174,7 @@
         },
         {
             "name": "toll",
-            "type": "integer",
+            "type": "number",
             "description": "Optional.  Toll on the link, in cents.",
             "warning": {
                 "minimum": 0,
@@ -189,7 +189,7 @@
         {
             "name": "row_width",
             "type": "number",
-            "description": "Optional. Width (short length units) of the entire right-of-way (both directions).",
+            "description": "Optional. Width (short_length units) of the entire right-of-way (both directions).",
             "constraints": {
                 "minimum": 0
             },
