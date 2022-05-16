@@ -151,5 +151,5 @@
     "currency":"cents"
   },
   "crs":"epsg:4326"
-  "geometry_field_format:"wkt"
+  "geometry_field_format":"wkt"
 }
