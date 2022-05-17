@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "segment_lane_id",
-            "type": "string",
+            "type": "any",
             "description": "Primary key.",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "segment_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "segment.segment_id",
             "description": "Required. Foreign key to the associated segment.",
             "constraints": {
@@ -34,7 +34,7 @@
         },
         {
             "name": "parent_lane_id",
-            "type": "string",
+            "type": "any",
             "description": "Optional. If a lane drops or changes characteristics on the segment, the lane_id for that lane."
         },
         {

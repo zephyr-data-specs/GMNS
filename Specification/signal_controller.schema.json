@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "controller_id",
-            "type": "string",
+            "type": "any",
             "description": "Primary key.",
             "constraints": {
                 "required": true

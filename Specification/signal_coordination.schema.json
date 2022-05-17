@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "coordination_id",
-            "type": "string",
+            "type": "any",
             "description": "Primary key.",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "timing_plan_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "signal_timing_plan.timing_plan_id",
             "description": "Required. Foreign key (Signal_timing_plan table).",
             "constraints": {
@@ -24,7 +24,7 @@
         },
         {
             "name": "controller_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "signal_controller.controller_id",
             "description": "Required. Foreign key (signal_controller table).",
             "constraints": {
@@ -33,7 +33,7 @@
         },
         {
             "name": "coord_contr_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "signal_controller.controller_id",
             "description": "Optional. For coordinated signals, the master signal controller for coordination."
         },

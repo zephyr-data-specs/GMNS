@@ -6,7 +6,7 @@
     "fields": [
         {
             "name": "loc_id",
-            "type": "string",
+            "type": "any",
             "description": "Primary key. Location ID.",
             "constraints": {
                 "required": true
@@ -14,7 +14,7 @@
         },
         {
             "name": "link_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "link.link_id",
             "description": "Required. Road Link ID. Foreign Key from Road_Link.",
             "constraints": {
@@ -23,7 +23,7 @@
         },
         {
             "name": "ref_node_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "node.node_id",
             "description": "Required. The From node of the link. Foreign Key from Node.",
             "constraints": {
@@ -61,7 +61,7 @@
         },
         {
             "name": "zone_id",
-            "type": "string",
+            "type": "any",
             "description": "Optional. Foreign Key, Associated zone"
         },
         {

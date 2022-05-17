@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "timing_phase_id",
-            "type": "string",
+            "type": "any",
             "description": "Primary key.",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "timing_plan_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "signal_timing_plan.timing_plan_id",
             "description": "Foreign key; connects to a timing_plan associated with a controller."
         },

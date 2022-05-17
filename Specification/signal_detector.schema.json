@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "detector_id",
-            "type": "string",
+            "type": "any",
             "description": "Primary key.",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "controller_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "signal_controller.controller_id",
             "description": "Required. Foreign key to signal_controller table.",
             "constraints": {
@@ -32,7 +32,7 @@
         },
         {
             "name": "link_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "link.link_id",
             "description": "Foreign key. The link covered by the detector.",
             "constraints": {
@@ -54,7 +54,7 @@
         },
         {
             "name": "ref_node_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "node.node_id",
             "description": "The detector is on the approach to this node.",
             "constraints": {

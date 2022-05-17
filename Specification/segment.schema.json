@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "segment_id",
-            "type": "string",
+            "type": "any",
             "description": "Primary key.",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "link_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "link.link_id",
             "description": "Required. Foreign key to road_links. The link that the segment is located on.",
             "constraints": {
@@ -24,7 +24,7 @@
         },
         {
             "name": "ref_node_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "node.node_id",
             "description": "Required. Foreign key to node where distance is 0.",
             "constraints": {

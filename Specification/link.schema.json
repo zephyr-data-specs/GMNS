@@ -7,7 +7,7 @@
     "fields": [
         {
             "name": "link_id",
-            "type": "string",
+            "type": "any",
             "description": "Primary key - could be SharedStreets Reference ID",
             "constraints": {
                 "required": true
@@ -15,7 +15,7 @@
         },
         {
             "name": "parent_link_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": ".link_id",
             "description": "Optional. The parent of this link. For example,for a sidewalk, this is the adjacent road."
         },
@@ -26,7 +26,7 @@
         },
         {
             "name": "from_node_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "node.node_id",
             "constraints": {
                 "required": true
@@ -34,7 +34,7 @@
         },
         {
             "name": "to_node_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "node.node_id",
             "constraints": {
                 "required": true
@@ -47,13 +47,13 @@
         },
         {
             "name": "geometry_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "geometry.geometry_id",
             "description": "Optional. Foreign key (Link_Geometry table)."
         },
         {
             "name": "geometry",
-            "type": "string"",
+            "type": "any",
             "description": "Optional. Link geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used"
         },
         {

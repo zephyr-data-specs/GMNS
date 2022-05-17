@@ -6,7 +6,7 @@
     "fields": [
         {
             "name": "link_tod_id",
-            "type": "string",
+            "type": "any",
             "description": "Primary key",
             "constraints": {
                 "required": true
@@ -14,7 +14,7 @@
         },
         {
             "name": "link_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "link.link_id",
             "description": "Required. Foreign key, link table",
             "constraints": {
@@ -23,7 +23,7 @@
         },
         {
             "name": "timeday_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "time_set_definitions.timeday_id",
             "description": "Conditionally required (either timeday_id or time_day). Foreign key to time_set_definitions."
         },

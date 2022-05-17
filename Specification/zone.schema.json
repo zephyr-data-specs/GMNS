@@ -6,7 +6,7 @@
     "fields": [
         {
             "name": "zone_id",
-            "type": "string",
+            "type": "any",
             "description": "Primary key.",
             "constraints": {
                 "required": true
@@ -19,7 +19,7 @@
         },
         {
             "name": "boundary",
-            "type": "string",
+            "type": "any",
             "description": "Optional. The polygon geometry of the zone in WKT or Polygon."
         },
         {
