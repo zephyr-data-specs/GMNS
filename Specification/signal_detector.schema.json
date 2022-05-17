@@ -64,7 +64,7 @@
         {
             "name": "det_zone_lr",
             "type": "number",
-            "description": "Required. Distance from from the stop bar to detector in short_distance units.",
+            "description": "Required. Distance from from the stop bar to detector in short_length units.",
             "constraints": {
                 "required": true
             }
@@ -72,12 +72,12 @@
         {
             "name": "det_zone_front",
             "type": "number",
-            "description": "Optional. Linear reference of front of detection zone in short_distance units."
+            "description": "Optional. Linear reference of front of detection zone in short_length units."
         },
         {
             "name": "det_zone_back",
             "type": "number",
-            "description": "Optional. Linear reference of back of detection zone in short_distance units."
+            "description": "Optional. Linear reference of back of detection zone in short_length units."
         },
         {
             "name": "det_type",

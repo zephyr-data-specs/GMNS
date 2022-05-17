@@ -72,7 +72,7 @@
         },
         {
             "name": "free_speed",
-            "type": "integer",
+            "type": "number",
             "description": "Optional. Free flow speed in long_length units per hour",
             "constraints": {
                 "minimum": 0,

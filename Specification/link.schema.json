@@ -175,7 +175,7 @@
         {
             "name": "toll",
             "type": "number",
-            "description": "Optional.  Toll on the link, in cents.",
+            "description": "Optional.  Toll on the link, in currency units.",
             "warning": {
                 "minimum": 0,
                 "maximum": 10000
