@@ -150,6 +150,6 @@
     "speed":"mph",
     "currency":"cents"
   },
-  "crs":"epsg:4326"
+  "crs":"epsg:4326",
   "geometry_field_format":"wkt"
 }
