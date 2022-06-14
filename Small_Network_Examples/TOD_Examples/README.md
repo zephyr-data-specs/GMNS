@@ -1,6 +1,6 @@
 # Time of Day Examples
 
-There are two small examples in this folder where the properties of the network are greatly affected by time of day.
+There are two small examples in this folder where the properties of the network are greatly affected by time of day. The examples were created using publicly available information in 2019-2020, prior to the Coronavirus pandemic, and are meant solely to illustrate GMNS concepts. They may not reflect current conditions.
 
 ## [Connecticut Ave, Washington DC](https://github.com/zephyr-data-specs/GMNS/blob/master/Small_Network_Examples/TOD_Examples/CT_Ave.md)
 
