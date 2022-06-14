@@ -1,6 +1,6 @@
 # Connecticut Avenue in Washington, DC 
 
-This example is a stretch of Connecticut Avenue in NW Washington, DC. It demonstrates lane Time of Day (TOD) attributes. 
+This example is a stretch of Connecticut Avenue in NW Washington, DC, with the reversible lanes that were in operation prior to the Coronavirus pandemic. It demonstrates lane Time of Day (TOD) attributes. 
 
 Street view of Connecticut Ave with Lanes labelled with Lane_IDs:
 
