@@ -54,7 +54,7 @@
         {
             "name": "geometry",
             "type": "any",
-            "description": "Optional. Link geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used"
+            "description": "Optional. Link geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used if specified in geometry_field_format in gmns.spec.json"
         },
         {
             "name": "dir_flag",

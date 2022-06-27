@@ -22,7 +22,7 @@ link data dictionary
 | to\_node_id                                | Node\_ID            | Required  | Foreign key (Nodes table)                                                                                                                                                     |
 | directed | boolean | Required | Whether the link is directed (travel only occurs from the from_node to the to_node) or undirected. |
 | geometry_id | Geometry_id | Optional  | Foreign key (Geometry table). Either the geometry_id OR the geometry is used  |
-| geometry                     | Geometry    | Optional  | Link geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used                              |
+| geometry                     | Geometry    | Optional  | Link geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used if specified in geometry_field_format in gmns.spec.json                              |
 |parent_link_id | link_id | Optional | The parent of this link. For example, for a sidewalk, this is the adjacent road.
 | dir\_flag                        | enum               | Optional  | 1 = shapepoints go from from_node to to_node;  -1 shapepoints go in the reverse direction; 0 = link is undirected or no geometry information is provided.                                               |
 | length  |  NUMERIC | Optional  | Length of the link in long_length units  |

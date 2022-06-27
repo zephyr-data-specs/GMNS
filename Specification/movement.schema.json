@@ -119,7 +119,7 @@
         {
             "name": "geometry",
             "type": "any",
-            "description": "Optional. Movement geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used"
+            "description": "Optional. Movement geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used if specified in geometry_field_format in gmns.spec.json"
         }
     ],
     "name": "movement.schema.json",

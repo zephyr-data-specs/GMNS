@@ -24,7 +24,7 @@ movement data dictionary
 | ctrl_type                                         | ControlType\_Set | Required  | From ControlType\_Set: no_control, yield, stop, stop_2_way, stop_4_way, signal_with_RTOR, signal. stop_2_way means that the movement has stop sign control, with at least one other conflicting movment uncontrolled.  stop_4_way means that all other conflicting movements also have stop sign control |
 | mvmt_code | TEXT             | Optional   | Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)  | 
 | allowed_uses  | TEXT             | Optional   | Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated  |    
-| geometry      | TEXT             | Optional   | Movement geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used  |                                                              |
+| geometry      | TEXT             | Optional   | Movement geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used if specified in geometry_field_format in gmns.spec.json  |                                                              |
 
 
 # movement_tod
