@@ -15,7 +15,7 @@
         {
             "name": "geometry",
             "type": "any",
-            "description": "Link geometry, in well-known text (WKT) format.  Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used."
+            "description": "Link geometry, in well-known text (WKT) format.  Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used. Geometry formats should be indicated in geometry_field_format in gmns.spec.json"
         }
     ],
     "name": "geometry.schema.json",
