@@ -28,7 +28,7 @@
         },
         {
             "name": "timeday_id",
-            "type": "string",
+            "type": "any",
             "foreign_key": "timeday.timeday_id",
             "description": "Time of day set. Used if times-of-day are defined on the time_set_definitions table"
         },
@@ -87,12 +87,12 @@
         },
         {
             "name": "penalty",
-            "type": "any",
+            "type": "number",
             "description": "Turn penalty (seconds)"
         },
         {
             "name": "capacity",
-            "type": "any",
+            "type": "number",
             "description": "Capacity in vehicles per hour."
         },
         {
@@ -113,7 +113,7 @@
         },
         {
             "name": "mvmt_code",
-            "type": "any",
+            "type": "string",
             "description": "Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)"
         },
         {

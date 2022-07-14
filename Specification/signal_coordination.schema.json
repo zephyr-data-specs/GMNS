@@ -60,7 +60,7 @@
         },
         {
             "name": "offset",
-            "type": "integer",
+            "type": "number",
             "description": "Optional. Offset in seconds.",
             "constraints": {
                 "minimum": 0

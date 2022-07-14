@@ -23,7 +23,7 @@
         },
         {
             "name": "name",
-            "type": "any",
+            "type": "string",
             "description": "Optional."
         },
         {
@@ -82,17 +82,17 @@
         },
         {
             "name": "penalty",
-            "type": "any",
+            "type": "number",
             "description": "Turn penalty (seconds)"
         },
         {
             "name": "capacity",
-            "type": "any",
+            "type": "number",
             "description": "Capacity in vehicles per hour."
         },
         {
             "name": "ctrl_type",
-            "type": "any",
+            "type": "string",
             "description": "Optional. .",
             "constraints": {
                 "enum": [
@@ -108,7 +108,7 @@
         },
         {
             "name": "mvmt_code",
-            "type": "any",
+            "type": "string",
             "description": "Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)"
         },
         {
@@ -119,7 +119,7 @@
         {
             "name": "geometry",
             "type": "any",
-            "description": "Optional. Movement geometry, specific format could be WKT, GeoJSON, etc."
+            "description": "Optional. Movement geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used if specified in geometry_field_format in gmns.spec.json"
         }
     ],
     "name": "movement.schema.json",

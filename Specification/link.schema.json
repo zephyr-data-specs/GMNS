@@ -54,7 +54,7 @@
         {
             "name": "geometry",
             "type": "any",
-            "description": "Optional. Link geometry, specific format could be WKT, GeoJSON, etc."
+            "description": "Optional. Link geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used if specified in geometry_field_format in gmns.spec.json"
         },
         {
             "name": "dir_flag",
@@ -71,7 +71,7 @@
         {
             "name": "length",
             "type": "number",
-            "description": "Optional. Length of the link in miles",
+            "description": "Optional. Length of the link in long_length units",
             "constraints": {
                 "minimum": 0
             }
@@ -96,7 +96,7 @@
         },
         {
             "name": "capacity",
-            "type": "integer",
+            "type": "number",
             "description": "Optional. Capacity (veh / hr / lane)",
             "constraints": {
                 "minimum": 0
@@ -104,15 +104,15 @@
         },
         {
             "name": "free_speed",
-            "type": "integer",
-            "description": "Optional. Free flow speed mph",
+            "type": "number",
+            "description": "Optional. Free flow speed, in long_length units per hour",
             "constraints": {
                 "minimum": 0,
-                "maximum": 100
+                "maximum": 200
             },
             "warnings": {
                 "minimum": 1,
-                "maximum": 75
+                "maximum": 120
             }
         },
         {
@@ -135,7 +135,7 @@
                     "sharrow",
                     "bikelane",
                     "cycletrack",
-                    "offstreet path"
+                    "offstreet_path"
                 ]
             }
         },
@@ -149,7 +149,7 @@
                     "none",
                     "shoulder",
                     "sidewalk",
-                    "offstreet path"
+                    "offstreet_path"
                 ]
             }
         },
@@ -174,8 +174,8 @@
         },
         {
             "name": "toll",
-            "type": "integer",
-            "description": "Optional.  Toll on the link, in cents.",
+            "type": "number",
+            "description": "Optional.  Toll on the link, in currency units.",
             "warning": {
                 "minimum": 0,
                 "maximum": 10000
@@ -189,7 +189,7 @@
         {
             "name": "row_width",
             "type": "number",
-            "description": "Optional. Width (feet) of the entire right-of-way (both directions).",
+            "description": "Optional. Width (short_length units) of the entire right-of-way (both directions).",
             "constraints": {
                 "minimum": 0
             },

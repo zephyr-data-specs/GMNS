@@ -14,7 +14,7 @@
         },
         {
             "name": "name",
-            "type": "any",
+            "type": "string",
             "description": "Optional."
         },
         {

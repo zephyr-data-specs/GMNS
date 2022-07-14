@@ -34,7 +34,7 @@
         {
             "name": "start_lr",
             "type": "number",
-            "description": "Required. Distance from `ref_node_id`.",
+            "description": "Required. Distance from `ref_node_id` in short_length units.",
             "constraints": {
                 "required": true,
                 "minimum": 0
@@ -43,7 +43,7 @@
         {
             "name": "end_lr",
             "type": "number",
-            "description": "Required. Distance from `ref_node_id`.",
+            "description": "Required. Distance from `ref_node_id`in short_length units.",
             "constraints": {
                 "required": true,
                 "minimum": 0
@@ -64,7 +64,7 @@
         },
         {
             "name": "capacity",
-            "type": "integer",
+            "type": "number",
             "description": "Optional. Capacity (veh/hr/ln)",
             "constraints": {
                 "minimum": 0
@@ -72,15 +72,15 @@
         },
         {
             "name": "free_speed",
-            "type": "integer",
-            "description": "Optional. Free flow speed (mph)",
+            "type": "number",
+            "description": "Optional. Free flow speed in long_length units per hour",
             "constraints": {
                 "minimum": 0,
-                "maximum": 100
+                "maximum": 200
             },
             "warnings": {
                 "minimum": 1,
-                "maximum": 75
+                "maximum": 120
             }
         },
         {
@@ -154,8 +154,8 @@
         },
         {
             "name": "toll",
-            "type": "integer",
-            "description": "Optional.  Toll on the segment, in cents."
+            "type": "number",
+            "description": "Optional.  Toll on the segment, in currency units."
         },
         {
             "name": "jurisdiction",
@@ -165,7 +165,7 @@
         {
             "name": "row_width",
             "type": "number",
-            "description": "Optional. Width (feet) of the entire right-of-way (both directions).",
+            "description": "Optional. Width (short_length units) of the entire right-of-way (both directions).",
             "constraints": {
                 "minimum": 0
             },

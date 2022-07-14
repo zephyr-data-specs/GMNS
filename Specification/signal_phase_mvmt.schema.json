@@ -46,7 +46,7 @@
         },
         {
             "name": "protection",
-            "type": "any",
+            "type": "string",
             "description": "Optional. Indicates whether the phase is protected, permitted, or right turn on red.",
             "constraints": {
                 "enum": [

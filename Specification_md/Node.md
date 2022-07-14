@@ -7,9 +7,9 @@ Field | Type | Required? | Comment
 ---|---|---|---
 node_id | Node_ID | Required | Unique key
 name | TEXT | Optional | 
-x_coord | DOUBLE | Required | Coordinate system specified in config file (longitude, UTM-easting etc.)
-y_coord | DOUBLE | Required | Coordinate system specified in config file (longitude, UTM-easting etc.)
-z_coord | DOUBLE | Optional | Altitude
+x_coord | NUMERIC | Required | Coordinate system specified in config file (longitude, UTM-easting etc.)
+y_coord | NUMERIC | Required | Coordinate system specified in config file (longitude, UTM-easting etc.)
+z_coord | NUMERIC | Optional | Altitude in short_length units
 node_type | TEXT | Optional | What it represents (intersection, transit station, park & ride)
 ctrl_type | ControlType_Set | Optional | Intersection control type, from ControlType_Set: no_control, yield, stop_2_way, stop_4_way, signal
 zone_id | Zone_ID | Optional | Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block

@@ -30,12 +30,12 @@
         },
         {
             "name": "time_day",
-            "type": "any",
+            "type": "string",
             "description": "Conditionally required (either timeday_id or time_day). XXXXXXXX_HHMM_HHMM, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times."
         },
         {
             "name": "capacity",
-            "type": "integer",
+            "type": "number",
             "description": "Optional. Capacity (veh/hr/ln)",
             "constraints": {
                 "minimum": 0
@@ -43,15 +43,15 @@
         },
         {
             "name": "free_speed",
-            "type": "integer",
-            "description": "Optional. Free flow speed (mph)",
+            "type": "number",
+            "description": "Optional. Free flow speed in short_length units per hour ",
             "constraints": {
                 "minimum": 0,
-                "maximum": 100
+                "maximum": 200
             },
             "warnings": {
                 "minimum": 1,
-                "maximum": 75
+                "maximum": 120
             }
         },
         {
@@ -115,8 +115,8 @@
         },
         {
             "name": "toll",
-            "type": "integer",
-            "description": "Optional. Toll in cents"
+            "type": "number",
+            "description": "Optional. Toll in currency units"
         },
         {
             "name": "allowed_uses",

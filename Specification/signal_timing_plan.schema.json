@@ -35,7 +35,7 @@
         },
         {
             "name": "cycle_length",
-            "type": "integer",
+            "type": "number",
             "description": "Cycle length in seconds.",
             "constraints": {
                 "minimum": 0,

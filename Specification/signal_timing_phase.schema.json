@@ -30,7 +30,7 @@
         },
         {
             "name": "min_green",
-            "type": "integer",
+            "type": "number",
             "description": "The minimum green time in seconds for an actuated signal. Green time in seconds for a fixed time signal.",
             "constraints": {
                 "minimum": 0
@@ -38,7 +38,7 @@
         },
         {
             "name": "max_green",
-            "type": "integer",
+            "type": "number",
             "description": "Optional.The maximum green time in seconds for an actuated signal; the default is minimum green plus one extension",
             "constraints": {
                 "minimum": 0
@@ -46,7 +46,7 @@
         },
         {
             "name": "extension",
-            "type": "integer",
+            "type": "number",
             "description": "Optional. The number of seconds the green time is extended each time vehicles are detected.",
             "constraints": {
                 "minimum": 0,
@@ -55,7 +55,7 @@
         },
         {
             "name": "clearance",
-            "type": "integer",
+            "type": "number",
             "description": "Yellow interval plus all red interval",
             "constraints": {
                 "minimum": 0,
@@ -64,7 +64,7 @@
         },
         {
             "name": "walk_time",
-            "type": "integer",
+            "type": "number",
             "description": "If a pedestrian phase exists, the walk time in seconds",
             "constraints": {
                 "minimum": 0,
@@ -73,7 +73,7 @@
         },
         {
             "name": "ped_clearance",
-            "type": "integer",
+            "type": "number",
             "description": "If a pedestrian phase exists, the flashing don't walk time.",
             "constraints": {
                 "minimum": 0,

@@ -33,7 +33,7 @@
         {
             "name": "lr",
             "type": "number",
-            "description": "Required. Linear Reference of the location, measured as distance along the link from the reference node.  If link_geometry exists, it is used. Otherwise, link geometry is assumed to be a crow-fly distance from A node to B node.",
+            "description": "Required. Linear Reference of the location, measured as distance in short_length units along the link from the reference node.  If link_geometry exists, it is used. Otherwise, link geometry is assumed to be a crow-fly distance from A node to B node.",
             "constraints": {
                 "required": true,
                 "minimum": 0
@@ -52,7 +52,7 @@
         {
             "name": "z_coord",
             "type": "number",
-            "description": "Optional. Altitude."
+            "description": "Optional. Altitude in short_length units."
         },
         {
             "name": "loc_type",

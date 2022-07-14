@@ -36,7 +36,7 @@
         {
             "name": "z_coord",
             "type": "number",
-            "description": "Optional. Altitude."
+            "description": "Optional. Altitude in short_length units."
         },
         {
             "name": "node_type",

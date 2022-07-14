@@ -29,12 +29,12 @@
         },
         {
             "name": "time_day",
-            "type": "any",
+            "type": "string",
             "description": "Conditionally required (either timeday_id or time_day). XXXXXXXX_HHMM_HHMM, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times."
         },
         {
             "name": "capacity",
-            "type": "integer",
+            "type": "number",
             "description": "Optional. Capacity (veh / hr / lane)",
             "constraints": {
                 "minimum": 0
@@ -42,15 +42,15 @@
         },
         {
             "name": "free_speed",
-            "type": "integer",
-            "description": "Optional. Free flow speed mph",
+            "type": "number",
+            "description": "Optional. Free flow speed in long_distance units per hour ",
             "constraints": {
                 "minimum": 0,
-                "maximum": 100
+                "maximum": 200
             },
             "warnings": {
                 "minimum": 1,
-                "maximum": 75
+                "maximum": 120
             }
         },
         {
@@ -73,7 +73,7 @@
                     "sharrow",
                     "bikelane",
                     "cycletrack",
-                    "offstreet path"
+                    "offstreet_path"
                 ]
             }
         },
@@ -87,7 +87,7 @@
                     "none",
                     "shoulder",
                     "sidewalk",
-                    "offstreet path"
+                    "offstreet_path"
                 ]
             }
         },
@@ -112,8 +112,8 @@
         },
         {
             "name": "toll",
-            "type": "integer",
-            "description": "toll in cents.",
+            "type": "number",
+            "description": "toll in currency units.",
             "warning": {
                 "minimum": 0,
                 "maximum": 10000

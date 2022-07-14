@@ -1,0 +1,6 @@
+loc_id,link_id,lr,x_coord,y_coord,z_coord,loc_type,zone_id,gtfs_stop_id,opt_walk_link
+2,21,410,,,,driveway,516,,211
+3,21,150,,,,driveway,516,,211
+8,51,100,,,,driveway,516,,501
+11,51,80,,,,bus_stop,516,2283,501
+12,52,280,,,,bus_stop,516,2259,502

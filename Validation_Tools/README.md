@@ -1,5 +1,5 @@
 # Validation Tools
-This directory includes demonstrations of code for each of these types of validation, stored in the Jupyter Notebook format. 
+This directory includes demonstrations of code for each of these types of validation, stored in the Jupyter Notebook format. These tools were developed for machines running Windows, and may not work with other operating systems.  
 
 ## [Format_Validation.ipynb](Format_Validation.ipynb)
 

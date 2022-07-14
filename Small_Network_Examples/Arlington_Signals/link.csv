@@ -1,6 +1,6 @@
 link_id,name,from_node_id,to_node_id,directed,geometry_id,geometry,parent_link_id,dir_flag,length,grade,facility_type,capacity,free_speed,lanes,bike_facility,ped_facility,parking,allowed_uses,toll,jurisdiction,row_width
-10,Minuteman Bikeway,1,6,1,,"LINESTRING(322754 4698346,322787 4698317,322857 4698216,322855 4698195,322841 4698178,322842 4698158)",,1,750,,BIKEWAY,0,12,0,shared_use_path,shared_use_path,none,"WALK, BIKE",,,20
-11,Minuteman Bikeway,6,1,1,,"LINESTRING(322754 4698346,322787 4698317,322857 4698216,322855 4698195,322841 4698178,322842 4698158)",,-1,750,,BIKEWAY,0,12,0,shared_use_path,shared_use_path,none,"WALK, BIKE",,,20
+10,Minuteman Bikeway,1,6,1,,"LINESTRING(322754 4698346,322787 4698317,322857 4698216,322855 4698195,322841 4698178,322842 4698158)",,1,750,,BIKEWAY,0,12,0,offstreet_path,offstreet_path,none,"WALK, BIKE",,,20
+11,Minuteman Bikeway,6,1,1,,"LINESTRING(322754 4698346,322787 4698317,322857 4698216,322855 4698195,322841 4698178,322842 4698158)",,-1,750,,BIKEWAY,0,12,0,offstreet_path,offstreet_path,none,"WALK, BIKE",,,20
 21,Mystic Street,2,6,1,,"LINESTRING(322990 4698276,322840 4698158)",,1,660,,ARTERIAL,500,25,2,none,sidewalk,none,ALL,,,42
 22,Mystic Street,6,2,1,,"LINESTRING(322844 4698158,322994 4698276)",,1,660,,ARTERIAL,500,25,2,none,sidewalk,none,ALL,,,36
 31,Mass. Ave,7,6,1,,"LINESTRING(322924 4698109,322842 4698160)",,1,330,,ARTERIAL,500,25,2,bikelane,sidewalk,parallel,ALL,,,58
@@ -11,8 +11,8 @@ link_id,name,from_node_id,to_node_id,directed,geometry_id,geometry,parent_link_i
 42,Pleasant St,6,4,1,,"LINESTRING(322674 4697988,322842 4698158)",,-1,790,,ARTERIAL,500,25,1,none,sidewalk,parallel,ALL,,,70
 52,Mass. Ave,5,6,1,,"LINESTRING(322716 4698210,322842 4698156)",,1,460,,ARTERIAL,500,25,2,none,sidewalk,parallel,ALL,,,98
 51,Mass. Ave,6,5,1,,"LINESTRING(322842 4698160,322716 4698214)",,,460,,ARTERIAL,500,25,2,none,sidewalk,parallel,ALL,,,98
-80,Minuteman Bikeway,7,8,1,,"LINESTRING(322924 4698107,322902 4698074,322917 4698000)",,1,390,,BIKEWAY,0,12,0,shared_use_path,shared_use_path,none,"WALK, BIKE",,,20
-81,Minuteman Bikeway,8,7,1,,"LINESTRING(322924 4698107,322902 4698074,322917 4698000)",,-1,390,,BIKEWAY,0,12,0,shared_use_path,shared_use_path,none,"WALK, BIKE",,,20
+80,Minuteman Bikeway,7,8,1,,"LINESTRING(322924 4698107,322902 4698074,322917 4698000)",,1,390,,BIKEWAY,0,12,0,offstreet_path,offstreet_path,none,"WALK, BIKE",,,20
+81,Minuteman Bikeway,8,7,1,,"LINESTRING(322924 4698107,322902 4698074,322917 4698000)",,-1,390,,BIKEWAY,0,12,0,offstreet_path,offstreet_path,none,"WALK, BIKE",,,20
 211,,21,61,0,,"LINESTRING(322973 4698279,322841 4698178)",21,0,560,,SIDEWALK,,,,,,,,,,6
 221,,62,22,0,,"LINESTRING(322986 4698250,322864 4698158)",22,0,510,,SIDEWALK,,,,,,,,,,6
 311,,71,62,0,,"LINESTRING(322864 4698158,322936 4698115)",31,0,280,,SIDEWALK,,,,,,,,,,10
