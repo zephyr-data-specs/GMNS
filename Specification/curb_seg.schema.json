@@ -1,0 +1,68 @@
+{
+    "primaryKey": "curb_seg_id",
+    "missingValues": [
+        "NaN",
+        ""
+    ],
+    "fields": [
+        {
+            "name": "curb_seg_id",
+            "type": "any",
+            "description": "Primary key.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "link_id",
+            "type": "any",
+            "foreign_key": "link.link_id",
+            "description": "Required. Foreign key to road_links. The link that the segment is located on.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "ref_node_id",
+            "type": "any",
+            "foreign_key": "node.node_id",
+            "description": "Required. Foreign key to node where distance is 0.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "start_lr",
+            "type": "number",
+            "description": "Required. Distance from `ref_node_id` in short_length units.",
+            "constraints": {
+                "required": true,
+                "minimum": 0
+            }
+        },
+        {
+            "name": "end_lr",
+            "type": "number",
+            "description": "Required. Distance from `ref_node_id`in short_length units.",
+            "constraints": {
+                "required": true,
+                "minimum": 0
+            }
+        },
+        {
+            "name": "regulation",
+            "type": "string",
+            "description": "Optional. Regulation on this curb segment."
+        },
+        {
+            "name": "width",
+            "type": "number",
+            "description": "Optional. Width (short_length units) of the curb segment.",
+            "constraints": {
+                "minimum": 0
+            }
+        }
+    ],
+    "name": "curb_seg.schema.json",
+    "description": "A portion of a link defined by `link_id`,`ref_node_id`, `start_lr`, and `end_lr`. Provides a space for curbside regulations. Segments and lanes should be use for travel facilities"
+}
