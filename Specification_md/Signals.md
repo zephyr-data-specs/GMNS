@@ -59,7 +59,7 @@ A signal detector is associated with a controller, a phase and a group of lanes.
 
 ## signal_phase_mvmt
 
-The `signal_phase_mvmt` table associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A
+The `signal_phase_mvmt` table associates Movements and pedestrian Links (e.g., crosswalks) with a signal_timing_phase. A
 signal phase may be associated with several Movements. A Movement may also run on more than one phase.
 
 signal_phase_mvmt data dictionary
@@ -67,8 +67,7 @@ signal_phase_mvmt data dictionary
 | Field                                          | Type            | Required?              | Comment                                                                                                                           |
 | ---------------------------------------------- | --------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | signal_phase_mvmt_id | signal_phase_mvmt_id | Required | Primary key |
-| <span class="underline">controller\_id</span>        | Controller\_ID        | Required               | Associated controller           |
-| <span class="underline">signal\_phase\_num</span>   | INTEGER         | Required               |  each phase has one or more Movements associated with it  
+| <span class="underline">timing\_phase\_id</span> | Timing\_Phase\_ID | Required  | Foreign key                                                                                               |
 | <span class="underline">mvmt\_id</span>  | Movement\_ID  | Conditionally Required | Foreign key. Either Movement\_ID (for phases used by vehicles), or Link\_id (for phases used by pedestrians) is required |
 | <span class="underline">link\_id</span> | Link\_ID | Conditionally Required | Foreign key                                                                                                                       |
 | protection                                       | TEXT              | Optional  | Indicates whether the phase is Protected or Permitted.                           |
