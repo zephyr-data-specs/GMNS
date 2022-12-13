@@ -14,21 +14,11 @@
             }
         },
         {
-            "name": "controller_id",
+            "name": "timing_phase_id",
             "type": "any",
-            "foreign_key": "signal_controller.controller_id",
-            "description": "Associated controller.",
+            "foreign_key": "signal_timing_phase.timing_phase_id",
+            "description": "Associated entry in the timing phase table.",
             "constraints": {
-                "required": true
-            }
-        },
-        {
-            "name": "signal_phase_num",
-            "type": "integer",
-            "description": "Each phase has one or more Movements associated with it.",
-            "constraints": {
-                "minimum": 0,
-                "maximum": 32,
                 "required": true
             }
         },
