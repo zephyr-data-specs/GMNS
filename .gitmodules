@@ -1,4 +1,4 @@
 [submodule "Validation_Tools/GMNSpy"]
 	path = Validation_Tools/GMNSpy
-	url = https://github.com/ianberg-volpe/GMNSpy
-	branch = hide_output
+	url = https://github.com/zephyr-data-specs/GMNSpy
+	branch = master
