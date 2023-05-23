@@ -142,6 +142,18 @@
      "description":"Locates zones (travel analysis zones, parcels) on a map. Zones are represented as polygons in geographic information systems.",
      "path": "zone.csv",
      "schema": "zone.schema.json"
+   },
+   {
+     "name":"config",
+     "description":"Configuration information for the dataset (units, coordinate systems, etc.).",
+     "path": "config.csv",
+     "schema": "config.schema.json"
+   },
+   {
+     "name":"curb_seg",
+     "description":"Provides a separate segment object for curbside regulations, which may change at different locations than segment-level changes to the travel lanes.",
+     "path": "curb_seg.csv",
+     "schema": "curb_seg.schema.json"
    }
   ]
 }

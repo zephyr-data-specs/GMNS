@@ -21,7 +21,7 @@
         {
             "name": "speed",
             "type": "any",
-            "description": "Units for speed. Usually long_length units per hour."
+            "description": "Units for speed. Usually long_length units per hour"
         },
         {
             "name": "crs",
@@ -40,8 +40,8 @@
         },
         {
             "name": "version_number",
-            "type": "any",
-            "description": "The version of the GMNS spec that this dataset conforms to."
+            "type": "number",
+            "description": "The version of the GMNS spec to which this dataset conforms"
         }
     ],
     "name": "config.schema.json",
