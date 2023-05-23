@@ -143,31 +143,5 @@
      "path": "zone.csv",
      "schema": "zone.schema.json"
    }
- ],
-  "units": {
-    "unit_group": "us_customary",
-    "enum": [
-      { 
-        "name": "us_customary",
-        "short_length":"foot",
-        "long_length":"mile",
-        "speed":"mile/hour"
-      },
-      { 
-        "name": "si1",
-        "short_length":"meter",
-        "long_length":"kilometer",
-        "speed":"kilometer/hour"
-      },
-      { 
-        "name": "si2",
-        "short_length":"meter",
-        "long_length":"meter",
-        "speed":"meter/second"
-      }
-  ],
-  "currency":"cents"
-  },
-  "crs":"epsg:4326",
-  "geometry_field_format":"wkt"
+  ]
 }

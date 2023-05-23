@@ -20,7 +20,7 @@
         {
             "name": "boundary",
             "type": "any",
-            "description": "Optional. The polygon geometry of the zone in WKT or Polygon."
+            "description": "Optional. The polygon geometry of the zone."
         },
         {
             "name": "super_zone",

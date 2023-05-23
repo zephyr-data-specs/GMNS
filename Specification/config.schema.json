@@ -1,0 +1,50 @@
+{
+    "missingValues": [
+        "NaN"
+    ],
+    "fields": [
+        {
+            "name": "dataset_name",
+            "type": "any",
+            "description": "Name used to describe this GMNS network"
+        },
+        {
+            "name": "short_length",
+            "type": "any",
+            "description": "Length unit used for lane/ROW widths and linear references for segments, locations, etc. along links"
+        },
+        {
+            "name": "long_length",
+            "type": "any",
+            "description": "Length unit used for link lengths"
+        },
+        {
+            "name": "speed",
+            "type": "any",
+            "description": "Units for speed. Usually long_length units per hour."
+        },
+        {
+            "name": "crs",
+            "type": "any",
+            "description": "Coordinate system used for geometry data in this dataset. Preferably a string that can be accepted by pyproj (e.g., EPSG code or proj string)"
+        },
+        {
+            "name": "geometry_field_format",
+            "type": "any",
+            "description": "The format used for geometry fields in the dataset. For example, `WKT` for files stored as plaintext"
+        },
+        {
+            "name": "currency",
+            "type": "any",
+            "description": "Currency used in toll fields"
+        },
+        {
+            "name": "version_number",
+            "type": "any",
+            "description": "The version of the GMNS spec that this dataset conforms to."
+        }
+    ],
+    "name": "config.schema.json",
+    "description": "Provides the units of measure, coordinate systems, and other metadata about a GMNS dataset. This table must contain a single row.",
+    "numRows": 1
+}
