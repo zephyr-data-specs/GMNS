@@ -117,7 +117,8 @@
                     "shared lane",
                     "shared use path",
                     "off-road unpaved trail",
-                    "other"
+                    "other",
+                    "none"
                 ]
             }
         },

@@ -34,6 +34,7 @@ The specification also provides for optional tables to define datatypes for use 
 - [signal_phase_mvmt](Signals.md#signal_phase_mvmt)  
 - [signal_timing_plan](Signals.md#signal_timing_plan)
 - [signal_timing_phase](Signals.md#signal_timing_phase)
+- [curb_seg](Curb_seg.md)
 
 ## Inheritance relationships
 ![Inheritance relationships](../Images/inheritance.png)

@@ -30,6 +30,7 @@ This folder contains a machine-readable version of GMNS, in a `.json` format com
 - [time_set_definitions](time_set_definitions.schema.json)
 - [use_definition](use_definition.schema.json)
 - [use_group](use_group.schema.json)
+- [curb_seg](curb_seg.schema.json)
 
 ## Inheritance relationships
 ![Inheritance relationships](../Images/inheritance.png)
