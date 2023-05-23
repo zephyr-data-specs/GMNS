@@ -126,18 +126,18 @@
         {
             "name": "bike_facility",
             "type": "string",
-            "description": "Optional. Types of bicycle accommodation as defined by the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)",
+            "description": "Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)",
             "constraints": {
                 "enum": [
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6",
-                    "7",
-                    "8",
-                    "Z"
+                    "unseparated bike lane",
+                    "buffered bike lane",
+                    "separated bike lane",
+                    "counter-flow bike lane",
+                    "paved shoulder",
+                    "shared lane",
+                    "shared use path",
+                    "off-road unpaved trail",
+                    "other"
                 ]
             }
         },
