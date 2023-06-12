@@ -94,11 +94,6 @@
             "description": "Optional. # of lanes added on the left of the road link (negative indicates a lane drop)."
         },
         {
-            "name": "l_lanes_added",
-            "type": "integer",
-            "description": "Optional. # of lanes added on the left of the road link (negative indicates a lane drop)."
-        },
-        {
             "name": "r_lanes_added",
             "type": "integer",
             "description": "Optional. # of lanes added on the right of the road link (negative indicates a lane drop)."
