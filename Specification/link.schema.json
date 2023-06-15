@@ -105,7 +105,7 @@
         {
             "name": "free_speed",
             "type": "number",
-            "description": "Optional. Free flow speed, in long_length units per hour",
+            "description": "Optional. Free flow speed, units defined by config file",
             "constraints": {
                 "minimum": 0,
                 "maximum": 200
@@ -126,16 +126,19 @@
         {
             "name": "bike_facility",
             "type": "string",
-            "description": "Optional. Type of bicycle accommodation: unknown, none, wcl, sharrow, bikelane, cycletrack, offstreet path",
+            "description": "Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)",
             "constraints": {
                 "enum": [
-                    "unknown",
-                    "none",
-                    "wcl",
-                    "sharrow",
-                    "bikelane",
-                    "cycletrack",
-                    "offstreet_path"
+                    "unseparated bike lane",
+                    "buffered bike lane",
+                    "separated bike lane",
+                    "counter-flow bike lane",
+                    "paved shoulder",
+                    "shared lane",
+                    "shared use path",
+                    "off-road unpaved trail",
+                    "other",
+                    "none"
                 ]
             }
         },

@@ -4,14 +4,12 @@ This folder contains a machine-readable version of GMNS, in a `.json` format com
 
 ## Specification Tables
 [Specification Overview](gmns.spec.json)
-- The specification overview file also contains config information about the units and coordinate system used in a particular implementation of GMNS. Common default values are shown in the JSON file here; These should be edited to match user needs. 
-	- `units` include two types of length units: short (e.g., for lane widths) and long (e.g., for link lengths), as well as speed. 
-	- `crs` should be a string accepted by pyproj (e.g., EPSG code or proj string). When parsing GMNS files, this should be referenced for the `x_coord` and `y_coord` fields in the node and location tables, and for geometry information provided using WKT.
 ### Basic Data Elements
 - [node](node.schema.json)  
 - [link](link.schema.json)
 - [geometry](geometry.schema.json)       
 - [zone](zone.schema.json)
+- [config](config.schema.json)
 ### Advanced Data Elements
 - [segment](segment.schema.json)  
 - [location](location.schema.json)  
@@ -32,6 +30,7 @@ This folder contains a machine-readable version of GMNS, in a `.json` format com
 - [time_set_definitions](time_set_definitions.schema.json)
 - [use_definition](use_definition.schema.json)
 - [use_group](use_group.schema.json)
+- [curb_seg](curb_seg.schema.json)
 
 ## Inheritance relationships
 ![Inheritance relationships](../Images/inheritance.png)

@@ -2,7 +2,7 @@
 
 ## Current examples
 Examples of small networks implemented include:
-- [Cambridge, MA](Cambridge_v090), a multimodal intersection near the Volpe Center. 
+- [Cambridge, MA](Cambridge_Intersection), a multimodal intersection near the Volpe Center. 
 - [Burlington, MA](Freeway_Interchange), an example of a freeway interchange.
 - [Arlington, MA](Arlington_Signals), an example of coordinated signals with multiple timing plans.
 - [Lima, OH](Lima/GMNS), an example of a small city.
