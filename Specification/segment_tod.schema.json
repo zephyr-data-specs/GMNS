@@ -72,16 +72,19 @@
         {
             "name": "bike_facility",
             "type": "string",
-            "description": "Optional. Type of bicycle accommodation: unknown, none,wcl, bikelane,cycletrack,wide_shoulder, offstreet_path.",
+            "description": "Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)",
             "constraints": {
                 "enum": [
-                    "unknown",
-                    "none",
-                    "wcl",
-                    "bikelane",
-                    "cycletrack",
-                    "wide_shoulder",
-                    "offstreet_path"
+                    "unseparated bike lane",
+                    "buffered bike lane",
+                    "separated bike lane",
+                    "counter-flow bike lane",
+                    "paved shoulder",
+                    "shared lane",
+                    "shared use path",
+                    "off-road unpaved trail",
+                    "other",
+                    "none"
                 ]
             }
         },

@@ -5,6 +5,7 @@ The following units are recommended:
 - Short lengths (linear references, lane widths, etc.): feet or meters
 - Long lengths (link lengths): miles or km
 - Speed: miles per hour or km / hr
+These are defined for each dataset in the [config](Config.md) file.
 
 The specification also provides for optional tables to define datatypes for use and time sets:
 - [use_definition and use_group](Use_Definition-and-Use_Group.md)  
@@ -33,6 +34,7 @@ The specification also provides for optional tables to define datatypes for use 
 - [signal_phase_mvmt](Signals.md#signal_phase_mvmt)  
 - [signal_timing_plan](Signals.md#signal_timing_plan)
 - [signal_timing_phase](Signals.md#signal_timing_phase)
+- [curb_seg](Curb_seg.md)
 
 ## Inheritance relationships
 ![Inheritance relationships](../Images/inheritance.png)
