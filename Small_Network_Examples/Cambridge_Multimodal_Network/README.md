@@ -28,7 +28,7 @@ The figure below is a closeup of the area just north of the Kendall / MIT subway
 * Two bicycle-only links (darker blue), including an off road path (with parallel pedestrian path), a two-way cycle track on a street right-of-way, and a short contraflow bike lane.  
 * Several pedestrian-only links that are not sidewalks (green).  They include the walkway by the Volpe Center parking lot, a mid-block crosswalk, and a passage through a hotel lobby that provides a shortcut to the subway station.  
 
-![Nodes and links between Main Street and Binney Street, as described above in the main text.](images/LinkNodeZoomed.png)
+![Nodes and links between Main Street and Binney Street, as described above in the main text.](images/LinkNode_Zoomed.png)
 
 GMNS is focused on the supply side of travel modeling.  It represents street infrastructure and policies, including, for example, the number of lanes, locations of transit stops, bike and pedestrian accommodation, and the types of uses allowed on each link.  If the user has the data, it can represent more detailed information, such as sidewalk condition and accessibility for persons with disabilities.  
 
