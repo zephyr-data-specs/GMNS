@@ -1,6 +1,6 @@
 # General Modeling Network Specification
 
-This folder contains a machine-readable version of GMNS, in a `.json` format compatible with the [frictionless data](https://specs.frictionlessdata.io/table-schema/) table schema standards. For more detailed information about each table, go to the [Markdown version](../Specification_md/README.md).
+This folder contains a machine-readable version of GMNS, in a `.json` format compatible with the [frictionless data](https://specs.frictionlessdata.io/table-schema/) table schema standards. For more detailed information about each table, go to the [Markdown version](../docs/spec/README.md).
 
 ## Specification Tables
 [Specification Overview](gmns.spec.json)
@@ -33,4 +33,4 @@ This folder contains a machine-readable version of GMNS, in a `.json` format com
 - [curb_seg](curb_seg.schema.json)
 
 ## Inheritance relationships
-![Inheritance relationships](../Images/inheritance.png)
+![Inheritance relationships](../docs/img/inheritance.png)
