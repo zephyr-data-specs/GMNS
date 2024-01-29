@@ -1,0 +1,7 @@
+link_type,link_type_id,description,lanes,lane_capacity,alpha,beta,gamma,delta,epsilon,zeta,iota,sigma,phi,tau
+centroid_connector,12,VIRTUAL centroid connectors only,10,10000,0.15,4,,,,,,,,
+default,99,Default general link type,2,900,0.15,4,,,,,,,,
+freeway,1,freeway,2,1800,0.15,4,,,,,,,,
+highway,2,highway,2,1500,0.15,4,,,,,,,,
+arterial,3,arterial,2,900,0.25,3,,,,,,,,
+on-ramp,4,on-ramp,1,1000,0.15,4,,,,,,,,

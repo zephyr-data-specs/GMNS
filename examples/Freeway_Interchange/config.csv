@@ -1,0 +1,2 @@
+dataset_name,short_length,long_length,speed,crs,geometry_field_format,currency,version_number
+Freeway_Interchange,foot,mile,mph,4326,wkt,US cents,0.94

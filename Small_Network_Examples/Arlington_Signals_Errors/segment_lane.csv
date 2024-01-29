@@ -1,9 +1,0 @@
-segment_lane_id,segment_id,lane_num,parent_lane_id,allowed_uses,r_barrier,l_barrier,width,opt_comment
-210,1,-1,,ALL,,,,Left turn pocket Mystic to Mass
-310,5,-1,,ALL,,,,Left turn pocket Mass to Pleasant
-313,6,3,363,ALL,,,,Right turn pocket Mass to Mystic
-314,6,40,,BIKE,,,5,Bike lane Mass WB
-440,7,-1,,ALL,,,,Left turn Pleasant to Mass
-442,7,2,442,ALL,,,,Right turn Pleasant to Mass
-560,9,-1,,ALL,,,,Left turn Mass to Mystic
-563,9,3,563,ALL,,,,Right turn Mass to Pleasant

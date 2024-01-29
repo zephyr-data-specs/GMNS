@@ -1,0 +1,9 @@
+coordination_id,timing_plan_id,controller_id,coord_contr_id,coord_phase,coord_ref_to,offset
+1,0,6,,,,
+2,1,6,6,2,begin_of_green,0
+3,2,6,6,2,begin_of_green,0
+4,3,6,6,2,begin_of_green,0
+5,0,7,,,,
+6,1,7,6,2,begin_of_green,104
+7,2,7,6,2,begin_of_green,97
+8,3,7,6,2,begin_of_green,89

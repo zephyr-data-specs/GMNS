@@ -1,0 +1,2 @@
+dataset_name,short_length,long_length,speed,crs,geometry_field_format,currency,version_number
+Arlington_Signals,foot,mile,mph,32619,wkt,US cents,0.94

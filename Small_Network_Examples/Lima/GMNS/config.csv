@@ -1,2 +1,0 @@
-dataset_name,short_length,long_length,speed,crs,geometry_field_format,currency,version_number
-Lima,foot,mile,mph,3735,wkt,US cents,0.94

@@ -1,0 +1,40 @@
+node_id,name,x_coord,y_coord,z_coord,node_type,ctrl_type,zone_id,parent_node_id
+1,,-71.0899422,42.3627194,,external,,,
+3,,-71.089439,42.3648088,,external,,,
+7,,-71.0881169,42.3626086,,,signal,,
+10,,-71.0876411,42.3600151,,external,,,
+11,,-71.0873463,42.3639782,,,signal,,
+17,,-71.0861564,42.3661139,,external,,,
+21,,-71.085119,42.362348,,,,,
+22,,-71.0843586,42.3627004,,,signal,,
+25,,-71.0838224,42.3622846,,,,,
+27,,-71.0830222,42.3621793,,external,,,
+28,,-71.0827978,42.3620211,,external,,,
+29,,-71.0827235,42.3651668,,external,,,
+12231,floating bus stop (see location 12231 for GTFS info),-71.087704,42.363498,,pedestrian,,,11
+1101,1122MB midblock crossing: in front of Mariott,-71.085966,42.363251,,pedestrian,,,
+1102,11NE,-71.087165,42.364,,pedestrian,signal,,11
+1103,11NW,-71.087488,42.364142,,pedestrian,signal,,11
+1104,11SE,-71.087329,42.363787,,pedestrian,signal,,11
+1105,11SW,-71.087665,42.363938,,pedestrian,signal,,11
+1701,17SE,-71.086029,42.366009,,pedestrian,signal,,17
+2211,2211MB midblock crossing: in front of Volpe,-71.085826,42.363431,,pedestrian,,,
+2201,22NW,-71.084404,42.362856,,pedestrian,signal,,22
+2202,22SW,-71.08458003,42.36260445,,pedestrian,signal,,22
+301,3NE,-71.08926739,42.36487489,,pedestrian,signal,,3
+302,3SE,-71.089331,42.364648,,pedestrian,signal,,3
+711,711MB across from floating bus stop 12231,-71.0876685,42.36342471,,pedestrian,,,
+701,7NE,-71.0880101,42.36264107,,pedestrian,signal,,7
+702,7NW,-71.088395,42.362683,,pedestrian,signal,,7
+703,7SW,-71.088335,42.362495,,pedestrian,signal,,7
+704,7SE,-71.088033,42.36246,,pedestrian,signal,,7
+2203,22SE,-71.084369,42.362476,,pedestrian,signal,,22
+2204,22NE,-71.0840678,42.362731,,pedestrian,signal,,22
+2101,21N,-71.085115,42.362435,,pedestrian,,,
+2102,21S,-71.085116,42.36226,,pedestrian,,,
+2501,25W,-71.083925,42.362269,,pedestrian,,,
+2502,25E,-71.083814,42.362205,,pedestrian,,,
+2701,27N,-71.083018,42.362254,,pedestrian,,,
+2802,28S,-71.082794,42.361942,,pedestrian,,,
+771,KendallOB,-71.0861,42.362494,,pedestrian,,,
+772,KendallIB,-71.086123,42.362327,,pedestrian,,,

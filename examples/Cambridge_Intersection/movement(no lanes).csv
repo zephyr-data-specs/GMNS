@@ -1,0 +1,21 @@
+mvmt_id,node_id,name,ib_link_id,start_ib_lane,end_ib_lane,ob_link_id,start_ob_lane,end_ob_lane,type,penalty,capacity,ctrl_type,notes
+1101,11,,711,,,1122,,,right,,,signal,Ames NB R to Broadway
+1102,11,,711,,,113,,,left,,,signal,Ames NB L to Broadway
+1103,11,,711,,,113,,,left,,,signal,Ames NB L to Broadway
+1104,11,,71101,,,1117,,,thru,,,signal,Ames Cycletrack to Volpe path
+1105,11,,71101,,,113,,,left,,,signal,Ames Cycletrack L to Broadway
+1106,11,,71101,,,1122,,,right,,,signal,Ames Cycletrack R to Broadway
+1107,11,,311,,,1122,,,thru,,,signal,Broadway EB thru @ Ames
+1108,11,,311,,,117,,,right,,,signal,Broadway EB R to Ames
+1109,11,,311,,,1122,,,thru,,,signal,Broadway EB thru @ Ames (bike)
+1110,11,,311,,,11701,,,right,,,signal,Broadway EB R to Ames (bike)
+1111,11,,311,,,1117,,,left,,,signal,Broadway EB L to Volpe path
+1112,11,,2211,,,117,,,left,,,signal,Broadway WB L to Ames
+1113,11,,2211,,,113,,,thru,,,signal,Broadway WB thru @ Ames
+1114,11,,2211,,,113,,,thru,,,signal,Broadway WB thru @ Ames
+1115,11,,2211,,,113,,,thru,,,signal,Broadway WB thru @ Ames (Bike)
+1116,11,,2211,,,1117,,,right,,,signal,Broadway WB R to Volpe path
+1117,11,,2211,,,11701,,,left,,,signal,Broadway WB L to Ames cycletrack
+1118,11,,1711,,,11701,,,thru,,,signal,Volpe path to Ames cycletrack
+1119,11,,1711,,,113,,,right,,,signal,Volpe path to Broadway WB
+1120,11,,1711,,,1122,,,left,,,signal,Volpe path to Broadway EB

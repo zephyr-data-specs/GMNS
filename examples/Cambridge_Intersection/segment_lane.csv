@@ -1,0 +1,11 @@
+segment_lane_id,segment_id,lane_num,parent_lane_id,allowed_uses,r_barrier,l_barrier,width,notes
+1122011,112201,-1,,all,,,,EB LT pocket
+11220202,112202,2,,all,,,,EB RT Pocket
+11220203,112202,3,1122002,bike,,,,EB Bike Lane during pocket
+2211011,221101,-1,,all,,,,WB LT Pocket @ node 11
+2211021,221102,-1,,all,,,,"WB LT Pocket (mid-block to parking garage, associated w/ Location #3)"
+3110102,31101,2,,all,,,,Broadway EB (Galileo to Ames)  RT pocket
+3110103,31101,3,311002,bike,,,,Broadway EB (Galileo to Ames) bike lane during pocket
+113011,11301,-1,,all,,,,Broadway WB LT pocket
+711011,71101,-1,,all,,,,Ames NB LT pocket
+117012,11701,2,,all,,,,Ames SB RT pocket
