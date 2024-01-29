@@ -1,0 +1,8 @@
+This maps out the directory renaming carried out on 29 January 2024 in the development branch.
+Syntax is FromDirectory -> ToDirectory
+Conversion_Tools ->  usage\conversion 
+Images -> docs\img
+Small_Network_Examples -> examples
+Specification -> spec
+Specification_md -> docs\spec
+Validation_Tools  -> usage\validation
