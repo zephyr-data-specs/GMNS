@@ -1,0 +1,5 @@
+use_group,uses,description
+auto,"sov,hov2,hov3+","all autos"
+hov,"hov2,hov3+,bus,motorcycle","high occupancy vehicles"
+motor,"auto,bus,truck,motorcycle","motorized uses"
+no_motor,"bike,walk","non-motorized uses"

@@ -1,0 +1,9 @@
+link_id,name,from_node_id,to_node_id,link_geom_id,dir_flag,capacity,free_speed,lanes,bike_facility,ped_facility,parking,allowed_uses,facility_type,grade,notes
+8614848,Broadway,3,11,8614848,1,1000,25,1,bikelane,sidewalk,parallel,"AUTO, BIKE",,,Broadway EB approaching Ames
+8615409,Third Street,22,29,8615409,1,1000,25,1,bikelane,sidewalk,parallel,"AUTO, BIKE",,,Third
+86154099,Third Street,29,22,8615409,-1,1000,25,1,bikelane,sidewalk,parallel,"AUTO, BIKE",,,
+34065677,Main Street,22,21,34065677,1,1000,25,1,bikelane,sidewalk,none,"AUTO, BIKE",,,Main WB approaching Ames
+42769910,Ames Street,10,7,42769910,1,1000,25,1,none,sidewalk,parallel,"AUTO, BIKE",,,Ames south of Main
+427699109,Ames Street,78,10,42769910,-1,1000,25,1,none,sidewalk,parallel,"AUTO, BIKE",,,
+302156851,Ames Street,7,11,302156851,1,1000,25,1,cycletrack,sidewalk,none,"AUTO, BIKE",,,Ames between Main and Broadway
+3021568519,Ames Street,11,7,302156851,-1,1000,25,1,cycletrack,sidewalk,none,"AUTO, BIKE",,,

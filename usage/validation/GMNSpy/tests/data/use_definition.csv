@@ -1,0 +1,9 @@
+use, persons_per_vehicle, pce, special_conditions, description
+sov,1,1,,"single occupancy vehicle"
+hov2,2,1,,"two-person vehicle"
+hov3+,3.5,1,,"three or more-person vehicle"
+truck,1.1,3,,"truck"
+bus,10,3,,"bus"
+bike,1.05,0.3,,"bicycle"
+walk,1,0.1,,"pedestrian"
+motorcycle,1.1,.5,,"motorcycle"

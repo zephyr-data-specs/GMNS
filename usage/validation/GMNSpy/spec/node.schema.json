@@ -1,0 +1,75 @@
+{
+    "primaryKey": "node_id",
+    "missingValues": [
+        "NaN"
+    ],
+    "fields": [
+        {
+            "name": "node_id",
+            "type": "any",
+            "description": "Primary key",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "description": ""
+        },
+        {
+            "name": "x_coord",
+            "type": "number",
+            "description": "Coordinate system specified in config file (longitude, UTM-easting etc.)",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "y_coord",
+            "type": "number",
+            "description": "Coordinate system specified in config file (latitude, UTM-northing etc.)",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "z_coord",
+            "type": "number",
+            "description": "Optional. Altitude."
+        },
+        {
+            "name": "node_type",
+            "type": "string",
+            "description": "Optional. What it represents (intersection, transit station, park & ride)."
+        },
+        {
+            "name": "ctrl_type",
+            "type": "string",
+            "description": "Optional. Intersection control type - one of ControlType_Set.",
+            "constraints": {
+                "enum": [
+                    "none",
+                    "yield",
+                    "stop",
+                    "4_stop",
+                    "signal"
+                ]
+            }
+        },
+        {
+            "name": "zone_id",
+            "type": "any",
+            "foreign_key": "zone.zone_id",
+            "description": "Optional. Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block."
+        },
+        {
+            "name": "parent_node_id",
+            "type": "any",
+            "description": "Optional. Associated node. For example, if this node is a sidewalk, a parent_nodek_id could represent the intersection  it is associated with.",
+            "foreign_key": ".node_id"
+        }
+    ],
+    "name": "node.schema.json",
+    "description": "A list of vertices that locate points on a map. Typically, they will represent intersections, but may also represent other points, such as a transition between divided and undivided highway. Nodes are the endpoints of a link (as opposed to the other type of vertex, location, which is used to represent points along a link)"
+}
