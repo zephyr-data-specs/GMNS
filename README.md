@@ -5,9 +5,9 @@ Volpe/FHWA partnership with [Zephyr Foundation](https://zephyrtransport.org).
 The General Modeling Network Specification (GMNS) defines a common machine (and human) readable format for sharing routable road network files.  It is designed to be used in multi-modal static and dynamic transportation planning and operations models.  
 
 How do I use GMNS?
-1.  Read the [__specification reference__](Specification) to learn about the GMNS format. 
-2.	Look at our [__small examples__](Small_Network_Examples), including a freeway interchange, a portion of a multimodal city network, and a small city.
-3.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](Conversion_Tools) and [__validation__](Validation_Tools).  
+1.  Read the [__specification reference__](spec) to learn about the GMNS format. 
+2.	Look at our [__small examples__](examples), including a freeway interchange, a portion of a multimodal city network, and a small city.
+3.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](usage/conversion) and [__validation__](usage/validation).  
 
 ## GMNS Overview
 Version 0.93 includes the following features for use in static models:
@@ -41,9 +41,9 @@ Members of the Zephyr Foundation project, [General Travel Network Data Standard 
 
 ## General GMNS Concepts
 ### Time of Day
-There are two parts to implementing a time of day change. First, the default behavior of a link, segment, or lane (how it operates the majority of the time) is recorded on the "main" link, segment, or lane tables. Then, [time-of-day](Specification_md/TOD.md) (TOD) tables can be used to modify how the component functions during certain time of day (and day of week) periods. 
+There are two parts to implementing a time of day change. First, the default behavior of a link, segment, or lane (how it operates the majority of the time) is recorded on the "main" link, segment, or lane tables. Then, [time-of-day](docs/spec/TOD.md) (TOD) tables can be used to modify how the component functions during certain time of day (and day of week) periods. 
 
-The first part is necessary even for components that do not exist outside of a specific time of day. For example, a reversible lane requires two records on the lanes table: one associated with the link it normally moves with, and one with the link in the opposite direction. The allowed_uses field will be None for these non-peak times on the opposite-direction link, but the lane is still necessary so that the TOD attributes can be linked to it. You can find our examples of reversible lanes and other time of day changes [here](Small_Network_Examples/TOD_Examples).
+The first part is necessary even for components that do not exist outside of a specific time of day. For example, a reversible lane requires two records on the lanes table: one associated with the link it normally moves with, and one with the link in the opposite direction. The allowed_uses field will be None for these non-peak times on the opposite-direction link, but the lane is still necessary so that the TOD attributes can be linked to it. You can find our examples of reversible lanes and other time of day changes [here](examples/TOD_Examples).
 ### Difference between Lane Field and Lanes Table
 On links and segments, there is a field called `lanes`. The number of lanes in the lanes table associated with a link may not always match this value. This  field is maintained for compatibility with static models, where the Lanes table may not be used. Here, it is treated as the number of permanent lanes (not including turn pockets) open to motor vehicles. 
 ### Inheritance
@@ -60,7 +60,7 @@ For additional information on GMNS goals, history and requirements, please see t
 ### What type of system can be represented in GMNS?
 GMNS is made to be flexible, multimodal, and multiresolution. Many of the fields and tables are optional depending on how detailed of information you have for your system. At a high level, GMNS simply models a network of nodes and links. However you can put in as much detail as required by adding lanes, movements, geometry information, etc.  
 ### How do I represent geometry shapepoints?
-There are two ways in GMNS to represent geometry shapepoints for links. Shapepoints can be recorded as well-known text (WKT) in the `geometry` field of the [link table](Specification_md/Link.md) or shapepoints can be placed in the separate [geometry table](Specification_md/Geometry.md) and keyed to the link table through the `geometry_id` field.
+There are two ways in GMNS to represent geometry shapepoints for links. Shapepoints can be recorded as well-known text (WKT) in the `geometry` field of the [link table](Specification_md/Link.md) or shapepoints can be placed in the separate [geometry table](docs/spec/Geometry.md) and keyed to the link table through the `geometry_id` field.
 ### How do I represent sidewalks?
 In the [link table](Specification_md/Link.md) there is a field to indicate a pedestrian facility (`ped_facility`). You can also represent the pedestrian network (sidewalks, crosswalks and other paths) as its own network with its own links.  See the [Cambridge example](Small_Network_Examples/Cambridge_Intersection).  
 ### How do I represent bicycle facilities?
