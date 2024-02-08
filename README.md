@@ -10,7 +10,7 @@ How do I use GMNS?
 3.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](usage/conversion) and [__validation__](usage/validation).  
 
 ## GMNS Overview
-Version 0.93 includes the following features for use in static models:
+Version 0.95 includes the following features for use in static models:
 -	Configuration information and use definitions.
 -	Node and link files, to establish a routable network. 
 
