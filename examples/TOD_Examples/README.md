@@ -17,7 +17,7 @@ It makes use of the following tables:
 
 ## [I-93, North of Boston](I-93.md)
 
-![Street view of I-93](/docs/img/Images/I-93_1.png)
+![Street view of I-93](/docs/img/I-93_1.png)
 
 In this example, a segment of the highway has a shoulder that is used for travel during peak hours.
 

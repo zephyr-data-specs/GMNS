@@ -2,7 +2,7 @@
 
 :warning: Several errors have been intentionally introduced into this example to demonstrate the utility of the [Format Validation notebook](../../Validation_Tools/Format_Validation.ipynb). If you're not testing that notebook, you probably want the [cleaned version](../Arlington_Signals) instead.
 
-This example shows the GMNS v0.90 specification implemented at two signalized intersections where [the Minuteman Bikeway crosses Massachusetts Avenue](https://www.google.com/maps/@42.4152638,-71.1524763,19z) in Arlington.  It includes:
+This example shows the GMNS specification implemented at two signalized intersections where [the Minuteman Bikeway crosses Massachusetts Avenue](https://www.google.com/maps/@42.4152638,-71.1524763,19z) in Arlington.  It includes:
 - Intermodal features:  shared use path, on-road bicycle accommodation, sidewalks, and bus stops
 - Two traffic signals that are coordinated at certain times of the day
 - Coordination and timing plans for AM peak, PM peak and Saturday, with actuated operation at other times
