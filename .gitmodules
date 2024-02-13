@@ -1,4 +1,0 @@
-[submodule "usage/validation/GMNSpy"]
-	path = usage/validation/GMNSpy
-	url = https://github.com/zephyr-data-specs/GMNSpy
-	branch = main
