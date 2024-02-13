@@ -3,7 +3,7 @@ This directory includes demonstrations of code for each of these types of valida
 
 ## [Format_Validation.ipynb](Format_Validation.ipynb)
 
-This notebook demonstrates validation of whether a GMNS network conforms to the specification. It uses a [modified version](https://github.com/ianberg-volpe/GMNSpy/tree/hide_output) of the GMNSpy package originally developed by [Elizabeth Sall](https://github.com/e-lo/GMNSpy). The script takes as input a directory containing a GMNS network stored as CSV files, and a machine-readable version of the specification stored as JSON files that are compatible with the [Frictionless Table Schema](https://specs.frictionlessdata.io/table-schema/). It checks each file that makes up the network for conformance to the specification, and reports failure and warning messages if it does not conform.
+This notebook demonstrates validation of whether a GMNS network conforms to the specification. It uses a [modified version](https://github.com/zephyr-data-specs/GMNSpy) of the GMNSpy package originally developed by [Elizabeth Sall](https://github.com/e-lo/GMNSpy). The script takes as input a directory containing a GMNS network stored as CSV files, and a machine-readable version of the specification stored as JSON files that are compatible with the [Frictionless Table Schema](https://specs.frictionlessdata.io/table-schema/). It checks each file that makes up the network for conformance to the specification, and reports failure and warning messages if it does not conform.
 
 ## [Graph_Validation.ipynb](Graph_Validation.ipynb)
 

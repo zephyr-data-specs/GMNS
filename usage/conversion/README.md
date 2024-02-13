@@ -45,7 +45,7 @@ The following GMNS-formatted tables are output by the script:
     An alternative (less precise, but perhaps more accurate) option would be to exclude lane information from the movement table (leave the `start_ib_lane`, `end_ib_lane`, `start_ob_lane` and `end_ob_lane` fields blank).
  
 ### Example  
-This script was tested on the Lima network provided with DynusT. [Inputs](../Small_Network_Examples/Lima/DynusT) and [outputs](../Small_Network_Examples/Lima/GMNS) are in the Small_Network_Examples subfolder.
+This script was tested on the Lima network provided with DynusT. [Inputs](/examples/Lima/source_network) and [outputs](/examples/Lima/GMNS) are in the examples folder.
 
 
 ## [OpenStreetMap](OSM/osm_to_gmns.py)  

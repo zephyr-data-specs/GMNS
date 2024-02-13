@@ -6,8 +6,6 @@
 
 .ipynb_checkpoints
 
-Validation_Tools/ATL.sqlite
-Validation_Tools/*.omx
-Validation_Tools/local.ipynb
+usage/validation/*.omx
 *.sqlite
 *.qgz

@@ -122,7 +122,7 @@ Finally, note that in the figure below, the phases connected by solid lines may 
 operate concurrently, while phases connected by dashed lines may operate
 concurrently.
 
-![Phase numbering convention, described in the body of the text.](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/signal_phase.png)  
+![Phase numbering convention, described in the body of the text.](/docs/img/signal_phase.png)  
 _Phase numbering convention._ Source: MassDOT, ACST Final Plan (2014)
 
 For signalized nodes, establishes phases that may run concurrently, using ring-barrier notation.  Each phase is associated with a ring and a barrier.  In order to run concurrently, two phases must be in:
@@ -156,4 +156,4 @@ signal_timing_phase data dictionary
 | <span class="underline">position</span> | INTEGER  | Required  |                           |
 
 ## Relationships
-![Relationships with and among the Signal tables](https://github.com/zephyr-data-specs/GMNS/blob/development/Images/SignalER5.png)
+![Relationships with and among the Signal tables](/docs/img/SignalER5.png)

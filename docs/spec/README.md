@@ -37,4 +37,4 @@ The specification also provides for optional tables to define datatypes for use 
 - [curb_seg](Curb_seg.md)
 
 ## Inheritance relationships
-![Inheritance relationships](../Images/inheritance.png)
+![Inheritance relationships](/docs/img/inheritance.png)

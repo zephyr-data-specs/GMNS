@@ -25,7 +25,7 @@ are dual-left turn lanes on the opposing traffic side of the centerline,
 they may be labeled -2 and -1.
 
 ![Depicts lanes, with lane -1 to the left of the centerline, and lanes 1, 2, 3 to
-the right of the centerline_](https://github.com/zephyr-data-specs/GMNS/raw/master/Images/spec_figure1.png)  
+the right of the centerline_](/docs/img/spec_figure1.png)  
 _Lanes leading to an intersection._ Source: MATSim documentation (2016), with text added by Volpe. 
 
 It is challenging to represent a lane that has different purposes on
