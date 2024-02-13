@@ -1,0 +1,3 @@
+[submodule "usage/validation/--force"]
+	path = usage/validation/--force
+	url = https://github.com/zephyr-data-specs/GMNSpy
