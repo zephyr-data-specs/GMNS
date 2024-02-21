@@ -1,4 +1,3 @@
-[submodule "Validation_Tools/GMNSpy"]
-	path = Validation_Tools/GMNSpy
+[submodule "usage/validation/GMNSpy"]
+	path = usage/validation/GMNSpy
 	url = https://github.com/zephyr-data-specs/GMNSpy
-	branch = master
