@@ -19,7 +19,7 @@ link_id,name,from_node_id,to_node_id,directed,geometry_id,geometry,parent_link_i
 14619,Main Street,21,7,TRUE,9013,,,-1,,,,1000,25,1,unseparated bike lane,sidewalk,parallel,"auto, bike",,,,
 8461,Main Street,21,25,TRUE,9014,,,1,,,,1000,25,1,unseparated bike lane,sidewalk,parallel,"auto, bike",,,,356678461
 7761,Main Street,7,1,TRUE,9015,,,1,288,,,1000,25,1,unseparated bike lane,sidewalk,parallel,"auto, bike",,,,370197761
-6011,Main Street,21,22,TRUE,9016,,,1,207,,,1000,25,1,unseparated bike lane,sidewalk,parallel,"auto, bike",,,,576786011
+6011,Main Street,21,22,TRUE,9016,,,1,207,,,1000,25,1,unseparated bike lane,sidewalk,parallel,"bike",,,,576786011
 7337,Main Street,1,7,TRUE,9017,,,1,483,,,1000,25,1,unseparated bike lane,sidewalk,parallel,"auto, bike",,,,591217337
 4222,Ames Street,11,7,TRUE,9009,,,1,541,,,1000,25,1,other,sidewalk,parallel,bike,,,,668954222
 9910,Ames Street,10,7,TRUE,9018,,,1,938,,,1000,25,1,unseparated bike lane,sidewalk,parallel,"auto, bike",,,,42769910
