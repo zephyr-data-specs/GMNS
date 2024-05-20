@@ -28,6 +28,7 @@
             "name": "from_node_id",
             "type": "any",
             "foreign_key": "node.node_id",
+            "description": "Required. Origin Node",
             "constraints": {
                 "required": true
             }
@@ -36,6 +37,7 @@
             "name": "to_node_id",
             "type": "any",
             "foreign_key": "node.node_id",
+            "description": "Required. Destination Node",
             "constraints": {
                 "required": true
             }
@@ -97,7 +99,7 @@
         {
             "name": "capacity",
             "type": "number",
-            "description": "Optional. Capacity (veh / hr / lane)",
+            "description": "Optional. Saturation capacity (passenger car equivalents / hr / lane)",
             "constraints": {
                 "minimum": 0
             }
