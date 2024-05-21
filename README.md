@@ -5,7 +5,7 @@ Volpe/FHWA partnership with [Zephyr Foundation](https://zephyrtransport.org).
 The General Modeling Network Specification (GMNS) defines a common machine (and human) readable format for sharing routable road network files.  It is designed to be used in multi-modal static and dynamic transportation planning and operations models.  
 
 How do I use GMNS?
-1.  Read the [__specification reference__](spec) to learn about the GMNS format. 
+1.  Read the [__specification reference__](spec) to learn about the GMNS format. GMNS is described in json files, and is implementation-agnostic.  A GMNS network might be stored as a series of delimited text files, as a relational database with several tables, or in some other way.   
 2.	Look at our [__small examples__](examples), including a freeway interchange, a portion of a multimodal city network, and a small city.
 3.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](usage/conversion) and [__validation__](usage/validation).  
 
