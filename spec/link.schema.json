@@ -14,12 +14,6 @@
             }
         },
         {
-            "name": "parent_link_id",
-            "type": "any",
-            "foreign_key": ".link_id",
-            "description": "Optional. The parent of this link. For example,for a sidewalk, this is the adjacent road."
-        },
-        {
             "name": "name",
             "type": "string",
             "description": "Optional. Street or Path Name"
@@ -57,6 +51,12 @@
             "name": "geometry",
             "type": "any",
             "description": "Optional. Link geometry, in well-known text (WKT) format. Optionally, other formats supported by geopandas (GeoJSON, PostGIS) may be used if specified in geometry_field_format in gmns.spec.json"
+        },
+        {
+            "name": "parent_link_id",
+            "type": "any",
+            "foreign_key": ".link_id",
+            "description": "Optional. The parent of this link. For example,for a sidewalk, this is the adjacent road."
         },
         {
             "name": "dir_flag",
