@@ -29,7 +29,7 @@
         {
             "name": "timeday_id",
             "type": "any",
-            "foreign_key": "timeday.timeday_id",
+            "foreign_key": "time_set_definitions.timeday_id",
             "description": "Time of day set. Used if times-of-day are defined on the time_set_definitions table"
         },
         {
