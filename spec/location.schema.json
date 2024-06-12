@@ -3,6 +3,22 @@
     "missingValues": [
         "NaN"
     ],
+    "foreignKeys": [
+        {
+            "fields": "link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        },
+        {
+            "fields": "ref_node_id",
+            "reference": {
+                "resource": "node",
+                "fields": "node_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "loc_id",
@@ -15,7 +31,6 @@
         {
             "name": "link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Required. Road Link ID. Foreign Key from Road_Link.",
             "constraints": {
                 "required": true
@@ -24,7 +39,6 @@
         {
             "name": "ref_node_id",
             "type": "any",
-            "foreign_key": "node.node_id",
             "description": "Required. The From node of the link. Foreign Key from Node.",
             "constraints": {
                 "required": true

@@ -4,6 +4,29 @@
         "NaN",
         ""
     ],
+    "foreignKeys": [
+        {
+            "fields": "controller_id",
+            "reference": {
+                "resource": "signal_controller",
+                "fields": "controller_id"
+            }
+        },
+        {
+            "fields": "link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        },
+        {
+            "fields": "ref_node_id",
+            "reference": {
+                "resource": "node",
+                "fields": "node_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "detector_id",
@@ -16,7 +39,6 @@
         {
             "name": "controller_id",
             "type": "any",
-            "foreign_key": "signal_controller.controller_id",
             "description": "Required. Foreign key to signal_controller table.",
             "constraints": {
                 "required": true
@@ -33,7 +55,6 @@
         {
             "name": "link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Foreign key. The link covered by the detector.",
             "constraints": {
                 "required": true
@@ -55,7 +76,6 @@
         {
             "name": "ref_node_id",
             "type": "any",
-            "foreign_key": "node.node_id",
             "description": "The detector is on the approach to this node.",
             "constraints": {
                 "required": true

@@ -3,6 +3,15 @@
     "missingValues": [
         "NaN"
     ],
+    "foreignKeys": [
+        {
+            "fields": "super_zone",
+            "reference": {
+                "resource": "",
+                "fields": "zone_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "zone_id",
@@ -25,7 +34,6 @@
         {
             "name": "super_zone",
             "type": "string",
-            "foreign_key": ".zone_id",
             "description": "Optional. If there is a hierarchy of zones (e.g., parcels and TAZs), indicates the zone of next higher level."
         }
     ],

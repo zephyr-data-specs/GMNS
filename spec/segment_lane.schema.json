@@ -4,6 +4,15 @@
         "NaN",
         ""
     ],
+    "foreignKeys": [
+        {
+            "fields": "segment_id",
+            "reference": {
+                "resource": "segment",
+                "fields": "segment_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "segment_lane_id",
@@ -16,7 +25,6 @@
         {
             "name": "segment_id",
             "type": "any",
-            "foreign_key": "segment.segment_id",
             "description": "Required. Foreign key to the associated segment.",
             "constraints": {
                 "required": true

@@ -4,6 +4,22 @@
         "NaN",
         ""
     ],
+    "foreignKeys": [
+        {
+            "fields": "link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        },
+        {
+            "fields": "ref_node_id",
+            "reference": {
+                "resource": "node",
+                "fields": "node_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "curb_seg_id",
@@ -16,7 +32,6 @@
         {
             "name": "link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Required. Foreign key to road_links. The link that the segment is located on.",
             "constraints": {
                 "required": true
@@ -25,7 +40,6 @@
         {
             "name": "ref_node_id",
             "type": "any",
-            "foreign_key": "node.node_id",
             "description": "Required. Foreign key to node where distance is 0.",
             "constraints": {
                 "required": true

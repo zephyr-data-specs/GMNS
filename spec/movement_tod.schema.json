@@ -3,6 +3,36 @@
     "missingValues": [
         "NaN"
     ],
+    "foreignKeys": [
+        {
+            "fields": "mvmt_id",
+            "reference": {
+                "resource": "movement",
+                "fields": "mvmt_id"
+            }
+        },
+        {
+            "fields": "timeday_id",
+            "reference": {
+                "resource": "timeday",
+                "fields": "timeday_id"
+            }
+        },
+        {
+            "fields": "ib_link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        },
+        {
+            "fields": "ob_link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "mvmt_tod_id",
@@ -15,7 +45,6 @@
         {
             "name": "mvmt_id",
             "type": "any",
-            "foreign_key": "movement.mvmt_id",
             "description": "The referenced movement.",
             "constraints": {
                 "required": true
@@ -29,13 +58,11 @@
         {
             "name": "timeday_id",
             "type": "any",
-            "foreign_key": "timeday.timeday_id",
             "description": "Time of day set. Used if times-of-day are defined on the time_set_definitions table"
         },
         {
             "name": "ib_link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Inbound link id.",
             "constraints": {
                 "required": true
@@ -54,7 +81,6 @@
         {
             "name": "ob_link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Outbound link id.",
             "constraints": {
                 "required": true
@@ -121,7 +147,7 @@
             "type": "string",
             "description": "Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated."
         }
-     ],
+    ],
     "name": "movement_tod.schema.json",
     "description": "Handles day-of-week and time-of-day restrictions on movements."
 }

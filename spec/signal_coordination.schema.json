@@ -4,6 +4,29 @@
         "NaN",
         ""
     ],
+    "foreignKeys": [
+        {
+            "fields": "timing_plan_id",
+            "reference": {
+                "resource": "signal_timing_plan",
+                "fields": "timing_plan_id"
+            }
+        },
+        {
+            "fields": "controller_id",
+            "reference": {
+                "resource": "signal_controller",
+                "fields": "controller_id"
+            }
+        },
+        {
+            "fields": "coord_contr_id",
+            "reference": {
+                "resource": "signal_controller",
+                "fields": "controller_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "coordination_id",
@@ -16,7 +39,6 @@
         {
             "name": "timing_plan_id",
             "type": "any",
-            "foreign_key": "signal_timing_plan.timing_plan_id",
             "description": "Required. Foreign key (Signal_timing_plan table).",
             "constraints": {
                 "required": true
@@ -25,7 +47,6 @@
         {
             "name": "controller_id",
             "type": "any",
-            "foreign_key": "signal_controller.controller_id",
             "description": "Required. Foreign key (signal_controller table).",
             "constraints": {
                 "required": true
@@ -34,7 +55,6 @@
         {
             "name": "coord_contr_id",
             "type": "any",
-            "foreign_key": "signal_controller.controller_id",
             "description": "Optional. For coordinated signals, the master signal controller for coordination."
         },
         {

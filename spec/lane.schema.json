@@ -3,6 +3,15 @@
     "missingValues": [
         "NaN"
     ],
+    "foreignKeys": [
+        {
+            "fields": "link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "lane_id",
@@ -15,7 +24,6 @@
         {
             "name": "link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Required. Foreign key to link table.",
             "constraints": {
                 "required": true
