@@ -14,7 +14,7 @@
         {
             "fields": "timeday_id",
             "reference": {
-                "resource": "timeday",
+                "resource": "time_set_definitions",
                 "fields": "timeday_id"
             }
         },
