@@ -1,16 +1,12 @@
 {
-    "json.schemas": [
+  "json.schemas": [
     {
-        "fileMatch": [
-            "/spec/datapackage.json",
-        ],
-        "url": "https://specs.frictionlessdata.io/schemas/data-package.json"
+      "fileMatch": ["/spec/datapackage.json"],
+      "url": "https://specs.frictionlessdata.io/schemas/data-package.json"
     },
     {
-        "fileMatch": [
-            "/spec/*.schema.json",
-        ],
-        "url": "https://specs.frictionlessdata.io/schemas/table-schema.json"
+      "fileMatch": ["/spec/*.schema.json"],
+      "url": "https://specs.frictionlessdata.io/schemas/table-schema.json"
     }
-]
+  ]
 }
