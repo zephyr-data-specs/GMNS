@@ -1,8 +1,8 @@
 {
-  "profile": "gmns-data-package",
-  "version": "0.0.95",
   "name": "gmns",
   "title": "General Modeling Network Specification (GMNS)",
+  "version": "0.0.95",
+  "profile": "data-package",
   "resources": [
     {
       "name": "link",
