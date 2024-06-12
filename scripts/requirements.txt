@@ -1,0 +1,4 @@
+frictionless
+pandas
+frictionless[pandas]
+tabulate

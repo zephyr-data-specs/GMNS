@@ -131,7 +131,7 @@
             "name": "toll",
             "type": "number",
             "description": "toll in currency units.",
-            "warning": {
+            "warnings": {
                 "minimum": 0,
                 "maximum": 10000
             }
