@@ -22,7 +22,10 @@ for file in onlyfiles:
         for index, resource in enumerate(json_data['resources']):
             if type(resource['schema']) is str:
                 with open((specs_path / resource['schema'])) as r:
-                    json_data['resources'][index]['schema'] = json.load(r)
+                    schema_data = json.load(r)
+                    del schema_data['name']
+                    del schema_data['description']
+                    json_data['resources'][index]['schema'] = schema_data
         package = Package(json_data)
         # er_diagram = package.to_er_diagram((docs_path / "diagram.dot").absolute().as_posix())
 
