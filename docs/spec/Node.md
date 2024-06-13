@@ -1,19 +1,13 @@
-#	Node	
-The node file is a list of vertices that locate points on a map. Typically, they will represent intersections, but may also represent other points, such as a transition between divided and undivided highway.  Nodes are the endpoints of a link (as opposed to the other type of vertex, [location](Location.md), which is used to represent points along a link).
+## `schema`
 
-node data dictionary
-
-Field | Type | Required? | Comment
----|---|---|---
-node_id | Node_ID | Required | Unique key
-name | TEXT | Optional | 
-x_coord | NUMERIC | Required | Coordinate system specified in config file (longitude, UTM-easting etc.)
-y_coord | NUMERIC | Required | Coordinate system specified in config file (longitude, UTM-easting etc.)
-z_coord | NUMERIC | Optional | Altitude in short_length units
-node_type | TEXT | Optional | What it represents (intersection, transit station, park & ride)
-ctrl_type | ControlType_Set | Optional | Intersection control type, from ControlType_Set: no_control, yield, stop_2_way, stop_4_way, signal
-zone_id | Zone_ID | Optional | Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block
-parent_node_id | Node_ID | Optional | The parent of this node; for example, a pedestrian node at one corner of an intersection's parent is the intersection itself.
-
-Ad hoc fields (e.g., area, subarea, associated GTFS stop) may also be added. 
-
+| name           | type   | description                                                                                                                                    | constraints                                             |
+|:---------------|:-------|:-----------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------|
+| node_id        | any    | Primary key                                                                                                                                    | {'required': True}                                      |
+| name           | string |                                                                                                                                                |                                                         |
+| x_coord        | number | Coordinate system specified in config file (longitude, UTM-easting etc.)                                                                       | {'required': True}                                      |
+| y_coord        | number | Coordinate system specified in config file (latitude, UTM-northing etc.)                                                                       | {'required': True}                                      |
+| z_coord        | number | Optional. Altitude in short_length units.                                                                                                      |                                                         |
+| node_type      | string | Optional. What it represents (intersection, transit station, park & ride).                                                                     |                                                         |
+| ctrl_type      | string | Optional. Intersection control type - one of ControlType_Set.                                                                                  | {'enum': ['none', 'yield', 'stop', '4_stop', 'signal']} |
+| zone_id        | any    | Optional. Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block.                                             |                                                         |
+| parent_node_id | any    | Optional. Associated node. For example, if this node is a sidewalk, a parent_nodek_id could represent the intersection  it is associated with. |                                                         |
