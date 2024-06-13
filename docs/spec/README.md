@@ -420,7 +420,7 @@
   - `description` Turn penalty (seconds)
   - `type` number
 ### `capacity`
-  - `description` Capacity in vehicles per hour.
+  - `description` Saturation capacity in passenger car equivalents per hour.
   - `type` number
 ### `ctrl_type`
   - `description` Optional. .
