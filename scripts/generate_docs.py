@@ -24,7 +24,7 @@ for file in onlyfiles:
                 with open((specs_path / resource['schema'])) as r:
                     json_data['resources'][index]['schema'] = json.load(r)
         package = Package(json_data)
-        er_diagram = package.to_er_diagram((docs_path / "diagram.dot").absolute().as_posix())
+        # er_diagram = package.to_er_diagram((docs_path / "diagram.dot").absolute().as_posix())
 
         # package.image = er_diagram
         # pprint(package)

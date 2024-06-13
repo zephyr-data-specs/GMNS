@@ -2,11 +2,11 @@
   "json.schemas": [
     {
       "fileMatch": ["/spec/datapackage.json"],
-      "url": "https://specs.frictionlessdata.io/schemas/data-package.json"
+      "url": "https://datapackage.org/profiles/2.0/datapackage.json"
     },
     {
       "fileMatch": ["/spec/*.schema.json"],
-      "url": "https://specs.frictionlessdata.io/schemas/table-schema.json"
+      "url": "https://datapackage.org/profiles/2.0/tableschema.json"
     }
   ]
 }

@@ -3,7 +3,7 @@
 This folder contains a machine-readable version of GMNS, in a `.json` format compatible with the [frictionless data](https://specs.frictionlessdata.io/table-schema/) table schema standards. For more detailed information about each table, go to the [Markdown version](/docs/spec/README.md).
 
 ## Specification Tables
-[Specification Overview](gmns.spec.json)
+[Specification Overview](datapackage.json)
 ### Basic Data Elements
 - [node](node.schema.json)  
 - [link](link.schema.json)
