@@ -1,0 +1,9 @@
+## `schema`
+
+| name           | type   | description                                                                                                                                                                                 | constraints                    |
+|:---------------|:-------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|
+| timing_plan_id | any    | Primary key.                                                                                                                                                                                | {'required': True}             |
+| controller_id  | any    | Required. Foreign key (signal_controller table).                                                                                                                                            | {'required': True}             |
+| timeday_id     | any    | Conditionally required (either timeday_id or time_day). Foreign key to time_set_definitions.                                                                                                |                                |
+| time_day       | any    | Conditionally required (either timeday_id or time_day). XXXXXXXX_HHMM_HHMM, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times. |                                |
+| cycle_length   | number | Cycle length in seconds.                                                                                                                                                                    | {'minimum': 0, 'maximum': 600} |
