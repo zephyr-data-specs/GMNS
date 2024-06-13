@@ -4,6 +4,22 @@
         "NaN",
         ""
     ],
+    "foreignKeys": [
+        {
+            "fields": "segment_id",
+            "reference": {
+                "resource": "segment",
+                "fields": "segment_id"
+            }
+        },
+        {
+            "fields": "timeday_id",
+            "reference": {
+                "resource": "time_set_definitions",
+                "fields": "timeday_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "segment_tod_id",
@@ -16,7 +32,6 @@
         {
             "name": "segment_id",
             "type": "any",
-            "foreign_key": "segment.segment_id",
             "description": "Foreign key to segment table.",
             "constraints": {
                 "required": true
@@ -25,7 +40,6 @@
         {
             "name": "timeday_id",
             "type": "any",
-            "foreign_key": "time_set_definitions.timeday_id",
             "description": "Conditionally required (either timeday_id or time_day). Foreign key to time_set_definitions."
         },
         {

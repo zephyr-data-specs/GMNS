@@ -3,6 +3,22 @@
     "missingValues": [
         "NaN"
     ],
+    "foreignKeys": [
+        {
+            "fields": "zone_id",
+            "reference": {
+                "resource": "zone",
+                "fields": "zone_id"
+            }
+        },
+        {
+            "fields": "parent_node_id",
+            "reference": {
+                "resource": "",
+                "fields": "node_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "node_id",
@@ -60,14 +76,12 @@
         {
             "name": "zone_id",
             "type": "any",
-            "foreign_key": "zone.zone_id",
             "description": "Optional. Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block."
         },
         {
             "name": "parent_node_id",
             "type": "any",
-            "description": "Optional. Associated node. For example, if this node is a sidewalk, a parent_nodek_id could represent the intersection  it is associated with.",
-            "foreign_key": ".node_id"
+            "description": "Optional. Associated node. For example, if this node is a sidewalk, a parent_nodek_id could represent the intersection  it is associated with."
         }
     ],
     "name": "node.schema.json",

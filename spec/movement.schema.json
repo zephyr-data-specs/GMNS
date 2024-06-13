@@ -3,6 +3,29 @@
     "missingValues": [
         "NaN"
     ],
+    "foreignKeys": [
+        {
+            "fields": "node_id",
+            "reference": {
+                "resource": "node",
+                "fields": "node_id"
+            }
+        },
+        {
+            "fields": "ib_link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        },
+        {
+            "fields": "ob_link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "mvmt_id",
@@ -15,7 +38,6 @@
         {
             "name": "node_id",
             "type": "any",
-            "foreign_key": "node.node_id",
             "description": "The node representing the junction.",
             "constraints": {
                 "required": true
@@ -29,7 +51,6 @@
         {
             "name": "ib_link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Inbound link id.",
             "constraints": {
                 "required": true
@@ -48,7 +69,6 @@
         {
             "name": "ob_link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Outbound link id.",
             "constraints": {
                 "required": true

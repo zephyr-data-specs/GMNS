@@ -4,6 +4,36 @@
         "NaN",
         ""
     ],
+    "foreignKeys": [
+        {
+            "fields": "from_node_id",
+            "reference": {
+                "resource": "node",
+                "fields": "node_id"
+            }
+        },
+        {
+            "fields": "to_node_id",
+            "reference": {
+                "resource": "node",
+                "fields": "node_id"
+            }
+        },
+        {
+            "fields": "geometry_id",
+            "reference": {
+                "resource": "geometry",
+                "fields": "geometry_id"
+            }
+        },
+        {
+            "fields": "parent_link_id",
+            "reference": {
+                "resource": "",
+                "fields": "link_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "link_id",
@@ -21,7 +51,6 @@
         {
             "name": "from_node_id",
             "type": "any",
-            "foreign_key": "node.node_id",
             "description": "Required. Origin Node",
             "constraints": {
                 "required": true
@@ -30,7 +59,6 @@
         {
             "name": "to_node_id",
             "type": "any",
-            "foreign_key": "node.node_id",
             "description": "Required. Destination Node",
             "constraints": {
                 "required": true
@@ -39,12 +67,14 @@
         {
             "name": "directed",
             "type": "boolean",
-            "description": "Required. Whether the link is directed (travel only occurs from the from_node to the to_node) or undirected."
+            "description": "Required. Whether the link is directed (travel only occurs from the from_node to the to_node) or undirected.",
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "geometry_id",
             "type": "any",
-            "foreign_key": "geometry.geometry_id",
             "description": "Optional. Foreign key (Link_Geometry table)."
         },
         {
@@ -55,7 +85,6 @@
         {
             "name": "parent_link_id",
             "type": "any",
-            "foreign_key": ".link_id",
             "description": "Optional. The parent of this link. For example,for a sidewalk, this is the adjacent road."
         },
         {
@@ -181,7 +210,7 @@
             "name": "toll",
             "type": "number",
             "description": "Optional.  Toll on the link, in currency units.",
-            "warning": {
+            "warnings": {
                 "minimum": 0,
                 "maximum": 10000
             }

@@ -4,6 +4,29 @@
         "NaN",
         ""
     ],
+    "foreignKeys": [
+        {
+            "fields": "timing_phase_id",
+            "reference": {
+                "resource": "signal_timing_phase",
+                "fields": "timing_phase_id"
+            }
+        },
+        {
+            "fields": "mvmt_id",
+            "reference": {
+                "resource": "movement",
+                "fields": "mvmt_id"
+            }
+        },
+        {
+            "fields": "link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "signal_phase_mvmt_id",
@@ -16,7 +39,6 @@
         {
             "name": "timing_phase_id",
             "type": "any",
-            "foreign_key": "signal_timing_phase.timing_phase_id",
             "description": "Associated entry in the timing phase table.",
             "constraints": {
                 "required": true
@@ -25,13 +47,11 @@
         {
             "name": "mvmt_id",
             "type": "any",
-            "foreign_key": "movement.mvmt_id",
             "description": "Foreign key. Either Movement_ID (for phases used by vehicles), or Link_id (for phases used by pedestrians) is required."
         },
         {
             "name": "link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Foreign key. Either Movement_ID (for phases used by vehicles), or Link_id (for phases used by pedestrians) is required."
         },
         {

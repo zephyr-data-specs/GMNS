@@ -4,6 +4,15 @@
         "NaN",
         ""
     ],
+    "foreignKeys": [
+        {
+            "fields": "timing_plan_id",
+            "reference": {
+                "resource": "signal_timing_plan",
+                "fields": "timing_plan_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "timing_phase_id",
@@ -16,7 +25,6 @@
         {
             "name": "timing_plan_id",
             "type": "any",
-            "foreign_key": "signal_timing_plan.timing_plan_id",
             "description": "Foreign key; connects to a timing_plan associated with a controller."
         },
         {
