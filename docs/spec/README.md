@@ -265,7 +265,7 @@
   - `description` Conditionally required (either timeday_id or time_day). XXXXXXXX_HHMM_HHMM, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times.
   - `type` string
 ### `capacity`
-  - `description` Optional. Capacity (veh / hr / lane)
+  - `description` Optional.Saturation capacity (pce / hr / lane)
   - `type` number
   - `constraints`:
 ### `free_speed`
@@ -680,7 +680,7 @@
     - `maximum` 100
     - `minimum` -100
 ### `capacity`
-  - `description` Optional. Capacity (veh/hr/ln)
+  - `description` Optional. Saturation capacity (pce/hr/ln)
   - `type` number
   - `constraints`:
 ### `free_speed`
@@ -1093,7 +1093,7 @@
   - `description` Conditionally required (either timeday_id or time_day). XXXXXXXX_HHMM_HHMM, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times.
   - `type` string
 ### `capacity`
-  - `description` Optional. Capacity (veh/hr/ln)
+  - `description` Optional. Saturation capacity  pce / hr / lane
   - `type` number
   - `constraints`:
 ### `free_speed`

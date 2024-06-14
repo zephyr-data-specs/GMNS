@@ -49,7 +49,7 @@
         {
             "name": "capacity",
             "type": "number",
-            "description": "Optional. Capacity (veh / hr / lane)",
+            "description": "Optional.Saturation capacity (pce / hr / lane)",
             "constraints": {
                 "minimum": 0
             }
