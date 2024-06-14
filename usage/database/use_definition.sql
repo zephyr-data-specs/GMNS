@@ -1,8 +1,8 @@
-CREATE TABLE IF NOT EXISTS use_definition (
-    use VARCHAR(255) NOT NULL,  -- Primary key
-    persons_per_vehicle FLOAT NOT NULL,  -- Required.
-    pce FLOAT NOT NULL,  -- Required. Passenger car equivalent.
-    special_conditions VARCHAR(255),  -- Optional.
-    description VARCHAR(255),  -- Optional 
-    PRIMARY KEY (use)
-);
+CREATE TABLE use_definition (
+	use TEXT NOT NULL, 
+	persons_per_vehicle FLOAT NOT NULL CHECK (persons_per_vehicle >= 0), 
+	pce FLOAT NOT NULL CHECK (pce >= 0), 
+	special_conditions TEXT, 
+	description TEXT, 
+	PRIMARY KEY (use)
+)
