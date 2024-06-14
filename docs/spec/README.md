@@ -1266,7 +1266,7 @@
   - `description` Optional.
   - `type` string
 ### `boundary`
-  - `description` Optional. The polygon geometry of the zone.
+  - `description` Optional. The polygon geometry of the zone, as well-known text.
   - `type` any
 ### `super_zone`
   - `description` Optional. If there is a hierarchy of zones (e.g., parcels and TAZs), indicates the zone of next higher level.
