@@ -25,23 +25,23 @@ for file in onlyfiles:
                     del json_data["resources"][index]["schema"]["name"]
                     del json_data["resources"][index]["schema"]["description"]
 
-                    path = (docs_path / f"{split(json_data["resources"][index]['name'])[-1].split('.')[0]}.md")
+                    filename = (
+                        json_data["resources"][index]["name"].split(".")[0] + ".md"
+                    )
+
+                    path = docs_path / filename
 
                     resource = Resource(json_data["resources"][index])
                     generated_markdown = resource.to_markdown(
-                        path
-                        .absolute()
-                        .as_posix(),
+                        path.absolute().as_posix(),
                         True,
                     )
 
                     new_markdown = generated_markdown.replace("  | name", "\n  | name")
-                    print(new_markdown)
 
                     with open(path, "w") as file1:
                         file1.write(new_markdown)
 
-                    
         package = Package(json_data)
         # er_diagram = package.to_er_diagram((docs_path / "diagram.dot").absolute().as_posix())
 
