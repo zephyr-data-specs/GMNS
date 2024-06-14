@@ -208,7 +208,7 @@
   - `constraints`:
     - `required` True
 ### `lane_num`
-  - `description` Required. e.g., -1, 1, 2 (use left-to-right numbering).
+  - `description` Required. e.g., -1, 1, 2 (use left-to-right numbering). By convention, the left-most through lane is 1. Left-turn lanes have negative numbers
   - `type` integer
   - `constraints`:
     - `required` True
