@@ -1,6 +1,17 @@
-## `schema`
+## `signal_timing_phase`
+  - `description` For signalized nodes, provides signal timing and establishes phases that may run concurrently.
+  - `path` signal_timing_phase.csv
+  - `schema`
+      - `missingValues` ['NaN', '']
+    - `primaryKey` ['timing_phase_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['timing_plan_id']
+        - `reference`
+          - `resource` signal_timing_plan
+          - `fields` ['timing_plan_id']
 
-| name             | type    | description                                                                                                        | constraints                                     |
+  | name             | type    | description                                                                                                        | constraints                                     |
 |:-----------------|:--------|:-------------------------------------------------------------------------------------------------------------------|:------------------------------------------------|
 | timing_phase_id  | any     | Primary key.                                                                                                       | {'required': True}                              |
 | timing_plan_id   | any     | Foreign key; connects to a timing_plan associated with a controller.                                               |                                                 |

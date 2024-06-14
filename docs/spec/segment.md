@@ -1,6 +1,22 @@
-## `schema`
+## `segment`
+  - `description` A portion of a link defined by `link_id`,`ref_node_id`, `start_lr`, and `end_lr`. Values in the segment will override they value specified in the link table. When one segment is fully contained within another, its value prevails.
+  - `path` segment.csv
+  - `schema`
+      - `missingValues` ['NaN', '']
+    - `primaryKey` ['segment_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['link_id']
+        - `reference`
+          - `resource` link
+          - `fields` ['link_id']
+      - [2]
+        - `fields` ['ref_node_id']
+        - `reference`
+          - `resource` node
+          - `fields` ['node_id']
 
-| name          | type    | description                                                                                                                                                                      | constraints                                                                                                                                                                                               | warnings                        |
+  | name          | type    | description                                                                                                                                                                      | constraints                                                                                                                                                                                               | warnings                        |
 |:--------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------|
 | segment_id    | any     | Primary key.                                                                                                                                                                     | {'required': True}                                                                                                                                                                                        |                                 |
 | link_id       | any     | Required. Foreign key to road_links. The link that the segment is located on.                                                                                                    | {'required': True}                                                                                                                                                                                        |                                 |

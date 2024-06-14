@@ -1,6 +1,22 @@
-## `schema`
+## `node`
+  - `description` A list of vertices that locate points on a map. Typically, they will represent intersections, but may also represent other points, such as a transition between divided and undivided highway. Nodes are the endpoints of a link (as opposed to the other type of vertex, location, which is used to represent points along a link)
+  - `path` node.csv
+  - `schema`
+      - `missingValues` ['NaN']
+    - `primaryKey` ['node_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['zone_id']
+        - `reference`
+          - `resource` zone
+          - `fields` ['zone_id']
+      - [2]
+        - `fields` ['parent_node_id']
+        - `reference`
+          - `resource` 
+          - `fields` ['node_id']
 
-| name           | type   | description                                                                                                                                    | constraints                                             |
+  | name           | type   | description                                                                                                                                    | constraints                                             |
 |:---------------|:-------|:-----------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------|
 | node_id        | any    | Primary key                                                                                                                                    | {'required': True}                                      |
 | name           | string |                                                                                                                                                |                                                         |

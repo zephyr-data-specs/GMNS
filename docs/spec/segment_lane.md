@@ -1,6 +1,17 @@
-## `schema`
+## `segment_lane`
+  - `description` Defines added and dropped lanes, and changes to lane parameters. If a lane is added, it has no parent. If it is changed or dropped, the parent_lane_id field keys to the associated lane on the lane table.
+  - `path` segment_lane.csv
+  - `schema`
+      - `missingValues` ['NaN', '']
+    - `primaryKey` ['segment_lane_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['segment_id']
+        - `reference`
+          - `resource` segment
+          - `fields` ['segment_id']
 
-| name            | type    | description                                                                                                         | constraints                                       |
+  | name            | type    | description                                                                                                         | constraints                                       |
 |:----------------|:--------|:--------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------|
 | segment_lane_id | any     | Primary key.                                                                                                        | {'required': True}                                |
 | segment_id      | any     | Required. Foreign key to the associated segment.                                                                    | {'required': True}                                |

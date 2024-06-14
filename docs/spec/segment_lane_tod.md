@@ -1,6 +1,22 @@
-## `schema`
+## `segment_lane_tod`
+  - `description` An optional file that handles day-of-week and time-of-day restrictions on lanes within segments of links.
+  - `path` segment_lane_tod.csv
+  - `schema`
+      - `missingValues` ['NaN', '']
+    - `primaryKey` ['segment_lane_tod_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['segment_lane_id']
+        - `reference`
+          - `resource` segment_lane
+          - `fields` ['segment_lane_id']
+      - [2]
+        - `fields` ['timeday_id']
+        - `reference`
+          - `resource` time_set_definitions
+          - `fields` ['timeday_id']
 
-| name                | type    | description                                                                                                                                                                                                                                                                                                                                                                                                                                               | constraints                                       |
+  | name                | type    | description                                                                                                                                                                                                                                                                                                                                                                                                                                               | constraints                                       |
 |:--------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------|
 | segment_lane_tod_id | any     | Primary key.                                                                                                                                                                                                                                                                                                                                                                                                                                              | {'required': True}                                |
 | segment_lane_id     | any     | Required. Foreign key, segment_lane table                                                                                                                                                                                                                                                                                                                                                                                                                 | {'required': True}                                |

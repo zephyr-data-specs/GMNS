@@ -1,6 +1,22 @@
-## `schema`
+## `signal_timing_plan`
+  - `description` For signalized nodes, establishes timing plans.
+  - `path` signal_timing_plan.csv
+  - `schema`
+      - `missingValues` ['NaN', '']
+    - `primaryKey` ['timing_plan_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['controller_id']
+        - `reference`
+          - `resource` signal_controller
+          - `fields` ['controller_id']
+      - [2]
+        - `fields` ['timeday_id']
+        - `reference`
+          - `resource` time_set_definitions
+          - `fields` ['timeday_id']
 
-| name           | type   | description                                                                                                                                                                                 | constraints                    |
+  | name           | type   | description                                                                                                                                                                                 | constraints                    |
 |:---------------|:-------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|
 | timing_plan_id | any    | Primary key.                                                                                                                                                                                | {'required': True}             |
 | controller_id  | any    | Required. Foreign key (signal_controller table).                                                                                                                                            | {'required': True}             |

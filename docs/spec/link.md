@@ -1,6 +1,32 @@
-## `schema`
+## `link`
+  - `description` A link is an edge in a network, defined by the nodes it travels from and to. It may have associated geometry information. Links have three types of attributes:<br>  - Those that define the physical location of the link (e.g., `shape` `information`, `length`, `width`)<br>  - Those that define the link's directionality: `from_node`, `to_node`<br>  - Those that define properties in the direction of travel: capacity, free flow speed, number of lanes, permitted uses, grade, facility type
+  - `path` link.csv
+  - `schema`
+      - `missingValues` ['NaN', '']
+    - `primaryKey` ['link_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['from_node_id']
+        - `reference`
+          - `resource` node
+          - `fields` ['node_id']
+      - [2]
+        - `fields` ['to_node_id']
+        - `reference`
+          - `resource` node
+          - `fields` ['node_id']
+      - [3]
+        - `fields` ['geometry_id']
+        - `reference`
+          - `resource` geometry
+          - `fields` ['geometry_id']
+      - [4]
+        - `fields` ['parent_link_id']
+        - `reference`
+          - `resource` 
+          - `fields` ['link_id']
 
-| name           | type    | description                                                                                                                                                                                       | constraints                                                                                                                                                                                               | warnings                         |
+  | name           | type    | description                                                                                                                                                                                       | constraints                                                                                                                                                                                               | warnings                         |
 |:---------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------|
 | link_id        | any     | Primary key - could be SharedStreets Reference ID                                                                                                                                                 | {'required': True}                                                                                                                                                                                        |                                  |
 | name           | string  | Optional. Street or Path Name                                                                                                                                                                     |                                                                                                                                                                                                           |                                  |

@@ -1,6 +1,22 @@
-## `schema`
+## `link_tod`
+  - `description` Handles day-of-week and time-of-day restrictions on links
+  - `path` link_tod.csv
+  - `schema`
+      - `missingValues` ['NaN']
+    - `primaryKey` ['link_tod_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['link_id']
+        - `reference`
+          - `resource` link
+          - `fields` ['link_id']
+      - [2]
+        - `fields` ['timeday_id']
+        - `reference`
+          - `resource` time_set_definitions
+          - `fields` ['timeday_id']
 
-| name          | type    | description                                                                                                                                                                                 | constraints                                                                                                                                                                                               | warnings                         |
+  | name          | type    | description                                                                                                                                                                                 | constraints                                                                                                                                                                                               | warnings                         |
 |:--------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------|
 | link_tod_id   | any     | Primary key                                                                                                                                                                                 | {'required': True}                                                                                                                                                                                        |                                  |
 | link_id       | any     | Required. Foreign key, link table                                                                                                                                                           | {'required': True}                                                                                                                                                                                        |                                  |

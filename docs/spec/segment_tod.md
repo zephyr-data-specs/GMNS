@@ -1,6 +1,22 @@
-## `schema`
+## `segment_tod`
+  - `description` An optional file that handles day-of-week and time-of-day restrictions on segments. It is used for part-time changes in segment capacity and number of lanes.
+  - `path` segment_tod.csv
+  - `schema`
+      - `missingValues` ['NaN', '']
+    - `primaryKey` ['segment_tod_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['segment_id']
+        - `reference`
+          - `resource` segment
+          - `fields` ['segment_id']
+      - [2]
+        - `fields` ['timeday_id']
+        - `reference`
+          - `resource` time_set_definitions
+          - `fields` ['timeday_id']
 
-| name           | type    | description                                                                                                                                                                                 | constraints                                                                                                                                                                                               | warnings                       |
+  | name           | type    | description                                                                                                                                                                                 | constraints                                                                                                                                                                                               | warnings                       |
 |:---------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|
 | segment_tod_id | any     | Primary key.                                                                                                                                                                                | {'required': True}                                                                                                                                                                                        |                                |
 | segment_id     | any     | Foreign key to segment table.                                                                                                                                                               | {'required': True}                                                                                                                                                                                        |                                |

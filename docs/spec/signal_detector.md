@@ -1,6 +1,27 @@
-## `schema`
+## `signal_detector`
+  - `description` A signal detector is associated with a controller, a phase and a group of lanes.
+  - `path` signal_detector.csv
+  - `schema`
+      - `missingValues` ['NaN', '']
+    - `primaryKey` ['detector_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['controller_id']
+        - `reference`
+          - `resource` signal_controller
+          - `fields` ['controller_id']
+      - [2]
+        - `fields` ['link_id']
+        - `reference`
+          - `resource` link
+          - `fields` ['link_id']
+      - [3]
+        - `fields` ['ref_node_id']
+        - `reference`
+          - `resource` node
+          - `fields` ['node_id']
 
-| name             | type    | description                                                                  | constraints        |
+  | name             | type    | description                                                                  | constraints        |
 |:-----------------|:--------|:-----------------------------------------------------------------------------|:-------------------|
 | detector_id      | any     | Primary key.                                                                 | {'required': True} |
 | controller_id    | any     | Required. Foreign key to signal_controller table.                            | {'required': True} |

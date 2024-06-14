@@ -1,6 +1,22 @@
-## `schema`
+## `lane_tod`
+  - `description` An optional file that handles day-of-week and time-of-day restrictions on lanes that traverse entire links.
+  - `path` lane_tod.csv
+  - `schema`
+      - `missingValues` ['NaN', '']
+    - `primaryKey` ['lane_tod_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['lane_id']
+        - `reference`
+          - `resource` lane
+          - `fields` ['lane_id']
+      - [2]
+        - `fields` ['timeday_id']
+        - `reference`
+          - `resource` time_set_definitions
+          - `fields` ['timeday_id']
 
-| name         | type    | description                                                                                                                                                                                                                                                                                                                                                                                                                                                | constraints                                       |
+  | name         | type    | description                                                                                                                                                                                                                                                                                                                                                                                                                                                | constraints                                       |
 |:-------------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------|
 | lane_tod_id  | any     | Primary key.                                                                                                                                                                                                                                                                                                                                                                                                                                               | {'required': True}                                |
 | lane_id      | any     | Required. Foreign key to `lane`                                                                                                                                                                                                                                                                                                                                                                                                                            | {'required': True}                                |

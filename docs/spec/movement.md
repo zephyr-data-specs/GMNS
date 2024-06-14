@@ -1,6 +1,27 @@
-## `schema`
+## `movement`
+  - `description` Describes how inbound and outbound links connect at an intersection.
+  - `path` movement.csv
+  - `schema`
+      - `missingValues` ['NaN']
+    - `primaryKey` ['mvmt_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['node_id']
+        - `reference`
+          - `resource` node
+          - `fields` ['node_id']
+      - [2]
+        - `fields` ['ib_link_id']
+        - `reference`
+          - `resource` link
+          - `fields` ['link_id']
+      - [3]
+        - `fields` ['ob_link_id']
+        - `reference`
+          - `resource` link
+          - `fields` ['link_id']
 
-| name          | type    | description                                                                                                                                                                                                                                                                                           | constraints                                                                                         |
+  | name          | type    | description                                                                                                                                                                                                                                                                                           | constraints                                                                                         |
 |:--------------|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
 | mvmt_id       | any     | Primary key.                                                                                                                                                                                                                                                                                          | {'required': True}                                                                                  |
 | node_id       | any     | The node representing the junction.                                                                                                                                                                                                                                                                   | {'required': True}                                                                                  |

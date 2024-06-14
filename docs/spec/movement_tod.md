@@ -1,6 +1,32 @@
-## `schema`
+## `movement_tod`
+  - `description` Handles day-of-week and time-of-day restrictions on movements.
+  - `path` movement_tod.csv
+  - `schema`
+      - `missingValues` ['NaN']
+    - `primaryKey` ['mvmt_tod_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['mvmt_id']
+        - `reference`
+          - `resource` movement
+          - `fields` ['mvmt_id']
+      - [2]
+        - `fields` ['timeday_id']
+        - `reference`
+          - `resource` time_set_definitions
+          - `fields` ['timeday_id']
+      - [3]
+        - `fields` ['ib_link_id']
+        - `reference`
+          - `resource` link
+          - `fields` ['link_id']
+      - [4]
+        - `fields` ['ob_link_id']
+        - `reference`
+          - `resource` link
+          - `fields` ['link_id']
 
-| name          | type    | description                                                                                                                                                                                                                                                                                           | constraints                                                                                         |
+  | name          | type    | description                                                                                                                                                                                                                                                                                           | constraints                                                                                         |
 |:--------------|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
 | mvmt_tod_id   | any     | Primary key.                                                                                                                                                                                                                                                                                          | {'required': True}                                                                                  |
 | mvmt_id       | any     | The referenced movement.                                                                                                                                                                                                                                                                              | {'required': True}                                                                                  |

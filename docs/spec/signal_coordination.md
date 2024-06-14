@@ -1,6 +1,27 @@
-## `schema`
+## `signal_coordination`
+  - `description` Establishes coordination for several signal controllers, associated with a timing_plan.
+  - `path` signal_coordination.csv
+  - `schema`
+      - `missingValues` ['NaN', '']
+    - `primaryKey` ['coordination_id']
+    - `foreignKeys`
+      - [1]
+        - `fields` ['timing_plan_id']
+        - `reference`
+          - `resource` signal_timing_plan
+          - `fields` ['timing_plan_id']
+      - [2]
+        - `fields` ['controller_id']
+        - `reference`
+          - `resource` signal_controller
+          - `fields` ['controller_id']
+      - [3]
+        - `fields` ['coord_contr_id']
+        - `reference`
+          - `resource` signal_controller
+          - `fields` ['controller_id']
 
-| name            | type    | description                                                                                                                        | constraints                                                     |
+  | name            | type    | description                                                                                                                        | constraints                                                     |
 |:----------------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------|
 | coordination_id | any     | Primary key.                                                                                                                       | {'required': True}                                              |
 | timing_plan_id  | any     | Required. Foreign key (Signal_timing_plan table).                                                                                  | {'required': True}                                              |
