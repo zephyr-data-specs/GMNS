@@ -1,4 +1,4 @@
-CREATE TABLE signal_timing_plan (
+CREATE TABLE IF NOT EXISTS signal_timing_plan (
 	timing_plan_id TEXT NOT NULL, 
 	controller_id TEXT NOT NULL, 
 	timeday_id TEXT, 

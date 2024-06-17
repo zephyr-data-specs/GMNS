@@ -1,9 +1,9 @@
-CREATE TABLE lane_tod (
+CREATE TABLE IF NOT EXISTS lane_tod (
 	lane_tod_id TEXT NOT NULL, 
 	lane_id TEXT NOT NULL, 
 	timeday_id TEXT, 
 	time_day TEXT, 
-	lane_num INTEGER NOT NULL CHECK (lane_num <= 10) CHECK (lane_num >= -10), 
+	lane_num INTEGER NOT NULL CHECK (lane_num >= -10) CHECK (lane_num <= 10), 
 	allowed_uses TEXT, 
 	r_barrier VARCHAR(10), 
 	l_barrier VARCHAR(10), 

@@ -1,4 +1,4 @@
-CREATE TABLE movement_tod (
+CREATE TABLE IF NOT EXISTS movement_tod (
 	mvmt_tod_id TEXT NOT NULL, 
 	mvmt_id TEXT NOT NULL, 
 	time_day TEXT, 

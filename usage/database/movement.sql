@@ -1,4 +1,4 @@
-CREATE TABLE movement (
+CREATE TABLE IF NOT EXISTS movement (
 	mvmt_id TEXT NOT NULL, 
 	node_id TEXT NOT NULL, 
 	name TEXT, 
@@ -16,7 +16,7 @@ CREATE TABLE movement (
 	allowed_uses TEXT, 
 	geometry TEXT, 
 	PRIMARY KEY (mvmt_id), 
-	FOREIGN KEY(node_id) REFERENCES node (node_id), 
 	FOREIGN KEY(ib_link_id) REFERENCES link (link_id), 
-	FOREIGN KEY(ob_link_id) REFERENCES link (link_id)
+	FOREIGN KEY(ob_link_id) REFERENCES link (link_id), 
+	FOREIGN KEY(node_id) REFERENCES node (node_id)
 )

@@ -1,4 +1,4 @@
-CREATE TABLE location (
+CREATE TABLE IF NOT EXISTS location (
 	loc_id TEXT NOT NULL, 
 	link_id TEXT NOT NULL, 
 	ref_node_id TEXT NOT NULL, 

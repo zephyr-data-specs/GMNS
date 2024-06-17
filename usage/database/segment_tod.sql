@@ -1,10 +1,10 @@
-CREATE TABLE segment_tod (
+CREATE TABLE IF NOT EXISTS segment_tod (
 	segment_tod_id TEXT NOT NULL, 
 	segment_id TEXT NOT NULL, 
 	timeday_id TEXT, 
 	time_day TEXT, 
 	capacity FLOAT CHECK (capacity >= 0), 
-	free_speed FLOAT CHECK (free_speed >= 0) CHECK (free_speed <= 200), 
+	free_speed FLOAT CHECK (free_speed <= 200) CHECK (free_speed >= 0), 
 	lanes INTEGER, 
 	l_lanes_added INTEGER, 
 	r_lanes_added INTEGER, 

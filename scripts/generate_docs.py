@@ -63,13 +63,14 @@ for file in onlyfiles:
         # https://alpha.sqliteviewer.app/
         os.remove(db_path / "gmns.sqlite")
         create_db = package.publish(f"sqlite:///{(db_path / "gmns.sqlite").absolute().as_posix()}")
-        
+
         connection = sqlite3.connect(f"{db_path.absolute().as_posix()}/gmns.sqlite")
         cursor = connection.cursor()
         cursor.execute("SELECT name, sql FROM sqlite_master WHERE type='table';")
         list_of_tables = cursor.fetchall()
         for table_name, table_sql in list_of_tables:
             with open(db_path / f"{table_name}.sql", "w") as table_file:
+                table_sql = table_sql.replace("CREATE TABLE", "CREATE TABLE IF NOT EXISTS")
                 table_file.write(table_sql)
         cursor.close()
         connection.close()

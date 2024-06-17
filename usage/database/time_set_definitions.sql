@@ -1,4 +1,4 @@
-CREATE TABLE time_set_definitions (
+CREATE TABLE IF NOT EXISTS time_set_definitions (
 	timeday_id TEXT NOT NULL, 
 	monday BOOLEAN NOT NULL, 
 	tuesday BOOLEAN NOT NULL, 

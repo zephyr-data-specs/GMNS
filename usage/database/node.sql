@@ -1,4 +1,4 @@
-CREATE TABLE node (
+CREATE TABLE IF NOT EXISTS node (
 	node_id TEXT NOT NULL, 
 	name TEXT, 
 	x_coord FLOAT NOT NULL, 

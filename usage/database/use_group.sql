@@ -1,4 +1,4 @@
-CREATE TABLE use_group (
+CREATE TABLE IF NOT EXISTS use_group (
 	use_group TEXT NOT NULL, 
 	uses TEXT NOT NULL, 
 	description TEXT, 

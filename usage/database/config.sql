@@ -1,4 +1,4 @@
-CREATE TABLE config (
+CREATE TABLE IF NOT EXISTS config (
 	dataset_name TEXT, 
 	short_length TEXT, 
 	long_length TEXT, 

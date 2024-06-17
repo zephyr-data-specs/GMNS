@@ -1,4 +1,4 @@
-CREATE TABLE zone (
+CREATE TABLE IF NOT EXISTS zone (
 	zone_id TEXT NOT NULL, 
 	name TEXT, 
 	boundary TEXT, 
