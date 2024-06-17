@@ -22,8 +22,8 @@ CREATE TABLE link (
 	jurisdiction TEXT, 
 	row_width FLOAT CHECK (row_width >= 0), 
 	PRIMARY KEY (link_id), 
-	FOREIGN KEY(to_node_id) REFERENCES node (node_id), 
+	FOREIGN KEY(from_node_id) REFERENCES node (node_id), 
 	FOREIGN KEY(geometry_id) REFERENCES geometry (geometry_id), 
 	FOREIGN KEY(parent_link_id) REFERENCES link (link_id), 
-	FOREIGN KEY(from_node_id) REFERENCES node (node_id)
+	FOREIGN KEY(to_node_id) REFERENCES node (node_id)
 )

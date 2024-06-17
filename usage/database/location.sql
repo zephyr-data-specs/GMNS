@@ -10,6 +10,6 @@ CREATE TABLE location (
 	zone_id TEXT, 
 	gtfs_stop_id TEXT, 
 	PRIMARY KEY (loc_id), 
-	FOREIGN KEY(ref_node_id) REFERENCES node (node_id), 
-	FOREIGN KEY(link_id) REFERENCES link (link_id)
+	FOREIGN KEY(link_id) REFERENCES link (link_id), 
+	FOREIGN KEY(ref_node_id) REFERENCES node (node_id)
 )

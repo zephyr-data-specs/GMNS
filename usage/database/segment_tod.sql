@@ -14,6 +14,6 @@ CREATE TABLE segment_tod (
 	toll FLOAT, 
 	allowed_uses TEXT, 
 	PRIMARY KEY (segment_tod_id), 
-	FOREIGN KEY(timeday_id) REFERENCES time_set_definitions (timeday_id), 
-	FOREIGN KEY(segment_id) REFERENCES segment (segment_id)
+	FOREIGN KEY(segment_id) REFERENCES segment (segment_id), 
+	FOREIGN KEY(timeday_id) REFERENCES time_set_definitions (timeday_id)
 )

@@ -1,4 +1,5 @@
 import json
+import os
 import sqlite3
 from frictionless import FrictionlessException, Package, Resource
 import pathlib
@@ -52,19 +53,26 @@ for file in onlyfiles:
 
         package.to_markdown((docs_path / "README.md").absolute().as_posix())
 
-        # for _, resource in enumerate(package.resources):
-        #     if type(resource.path) is str:
-        #         resource.path = ""
+        files_to_delete = []
+        for _, resource in enumerate(package.resources):
+            if type(resource.path) is str:
+                file_to_create = resource.path
+                if not os.path.exists(file_to_create):
+                    with open(file_to_create, "a+"): files_to_delete.append(file_to_create)
+
         # https://alpha.sqliteviewer.app/
-        try:
-            test = package.publish(f"sqlite:///{db_path.absolute().as_posix()}/gmns.sqlite")
-        except FrictionlessException as e:
-            connection = sqlite3.connect(f"{db_path.absolute().as_posix()}/gmns.sqlite")
-            cursor = connection.cursor()
-            cursor.execute("SELECT name, sql FROM sqlite_master WHERE type='table';")
-            list_of_tables = cursor.fetchall()
-            for table_name, table_sql in list_of_tables:
-                with open(db_path / f"{table_name}.sql", "w") as table_file:
-                    table_file.write(table_sql)
-            cursor.close()
-            connection.close()
+        os.remove(db_path / "gmns.sqlite")
+        create_db = package.publish(f"sqlite:///{(db_path / "gmns.sqlite").absolute().as_posix()}")
+        
+        connection = sqlite3.connect(f"{db_path.absolute().as_posix()}/gmns.sqlite")
+        cursor = connection.cursor()
+        cursor.execute("SELECT name, sql FROM sqlite_master WHERE type='table';")
+        list_of_tables = cursor.fetchall()
+        for table_name, table_sql in list_of_tables:
+            with open(db_path / f"{table_name}.sql", "w") as table_file:
+                table_file.write(table_sql)
+        cursor.close()
+        connection.close()
+
+        for file_to_delete in files_to_delete:
+            os.remove(file_to_delete)
