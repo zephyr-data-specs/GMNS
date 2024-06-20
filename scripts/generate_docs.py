@@ -71,15 +71,11 @@ create_db = package.publish(
 
 # Get list of every table and its schema
 connection = sqlite3.connect(db_path / "gmns.sqlite")
-cursor = connection.cursor()
-cursor.execute("SELECT name, sql FROM sqlite_master WHERE type='table';")
-list_of_tables = cursor.fetchall()
-for table_name, table_sql in list_of_tables:
+for table_name, table_sql in connection.execute("SELECT name, sql FROM sqlite_master WHERE type='table';"):
     with open(db_path / f"{table_name}.sql", "w") as table_file:
         # Add "IF NOT EXISTS" condition
         table_sql = table_sql.replace("CREATE TABLE", "CREATE TABLE IF NOT EXISTS")
         table_file.write(table_sql)
-cursor.close()
 connection.close()
 
 # Remove temp files we created earlier
