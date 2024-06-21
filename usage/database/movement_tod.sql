@@ -16,8 +16,8 @@ CREATE TABLE IF NOT EXISTS movement_tod (
 	mvmt_code TEXT, 
 	allowed_uses TEXT, 
 	PRIMARY KEY (mvmt_tod_id), 
-	FOREIGN KEY(timeday_id) REFERENCES time_set_definitions (timeday_id), 
-	FOREIGN KEY(ib_link_id) REFERENCES link (link_id), 
 	FOREIGN KEY(ob_link_id) REFERENCES link (link_id), 
-	FOREIGN KEY(mvmt_id) REFERENCES movement (mvmt_id)
+	FOREIGN KEY(mvmt_id) REFERENCES movement (mvmt_id), 
+	FOREIGN KEY(timeday_id) REFERENCES time_set_definitions (timeday_id), 
+	FOREIGN KEY(ib_link_id) REFERENCES link (link_id)
 )
