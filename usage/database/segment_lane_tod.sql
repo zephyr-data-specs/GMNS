@@ -9,6 +9,6 @@ CREATE TABLE IF NOT EXISTS segment_lane_tod (
 	l_barrier VARCHAR(10), 
 	width FLOAT CHECK (width >= 0), 
 	PRIMARY KEY (segment_lane_tod_id), 
-	FOREIGN KEY(segment_lane_id) REFERENCES segment_lane (segment_lane_id), 
-	FOREIGN KEY(timeday_id) REFERENCES time_set_definitions (timeday_id)
+	FOREIGN KEY(timeday_id) REFERENCES time_set_definitions (timeday_id), 
+	FOREIGN KEY(segment_lane_id) REFERENCES segment_lane (segment_lane_id)
 )
