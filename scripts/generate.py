@@ -1,18 +1,19 @@
 import os
 import sqlite3
 
-from shared import db_path, docs_path, get_package, get_resources
+from shared import DB_PATH, DOCS_PATH, get_package, get_resources
 
 package = get_package()
 resources = get_resources()
 
 
 def generate_docs():
-    package.to_markdown((docs_path / "README.md").absolute().as_posix())
+    # Make package markdown file as README.md for documentation folder
+    package.to_markdown((DOCS_PATH / "README.md").absolute().as_posix())
 
     for resource in resources:
         filename = resource.name + ".md"
-        path = docs_path / filename
+        path = DOCS_PATH / filename
 
         generated_markdown = resource.to_markdown(
             path.absolute().as_posix(),
@@ -37,15 +38,15 @@ def generate_db():
                     files_to_delete.append(file_to_create)
 
     # Use https://alpha.sqliteviewer.app/ for verification!
-    os.remove(db_path / "gmns.sqlite")
-    package.publish("sqlite:///" + (db_path / "gmns.sqlite").absolute().as_posix())
+    os.remove(DB_PATH / "gmns.sqlite")
+    package.publish("sqlite:///" + (DB_PATH / "gmns.sqlite").absolute().as_posix())
 
     # Get list of every table and its schema
-    connection = sqlite3.connect(db_path / "gmns.sqlite")
+    connection = sqlite3.connect(DB_PATH / "gmns.sqlite")
     for table_name, table_sql in connection.execute(
         "SELECT name, sql FROM sqlite_master WHERE type='table';"
     ):
-        with open(db_path / f"{table_name}.sql", "w") as table_file:
+        with open(DB_PATH / f"{table_name}.sql", "w") as table_file:
             # Add "IF NOT EXISTS" condition
             table_sql = table_sql.replace("CREATE TABLE", "CREATE TABLE IF NOT EXISTS")
             table_file.write(table_sql)
