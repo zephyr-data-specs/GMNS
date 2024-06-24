@@ -33,7 +33,7 @@ jobs:
         run: pip install -r ${{env.SCRIPTS_FOLDER}}/requirements.txt
 
       - name: Run example preparer
-        run: python ${{env.SCRIPTS_FOLDER}}/generate.py
+        run: python ${{env.SCRIPTS_FOLDER}}/examples.py
 
       - name: Validate data
         uses: frictionlessdata/frictionless-ci@v2
