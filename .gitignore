@@ -242,5 +242,5 @@ rsconnect/
 # End of https://www.toptal.com/developers/gitignore/api/r,python,jupyternotebooks
 
 usage/validation/*.omx
-*.sqlite
+# *.sqlite
 *.qgz
