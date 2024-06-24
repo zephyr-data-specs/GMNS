@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS segment_lane (
 	segment_lane_id TEXT NOT NULL, 
 	segment_id TEXT NOT NULL, 
-	lane_num INTEGER NOT NULL CHECK (lane_num <= 10) CHECK (lane_num >= -10), 
+	lane_num INTEGER NOT NULL CHECK (lane_num >= -10) CHECK (lane_num <= 10), 
 	parent_lane_id TEXT, 
 	allowed_uses TEXT, 
 	r_barrier VARCHAR(10), 
