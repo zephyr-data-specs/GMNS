@@ -38,5 +38,5 @@ jobs:
 
       - name: Validate data
         uses: frictionlessdata/frictionless-ci@v2
-        with:
-            packages: "examples/**/datapackage.json"
+        # with:
+        #     packages: "examples/**/datapackage.json"
