@@ -9,22 +9,25 @@ resources = get_resources()
 
 def generate_docs():
     # Make package markdown file as README.md for documentation folder
-    package.to_markdown((DOCS_PATH / "README.md").absolute().as_posix())
+    package_md_path = DOCS_PATH / "README.md"
+
+    package_md = package.to_markdown(package_md_path.absolute().as_posix()).replace(
+        "- `description`", "\n- `description`"
+    )
+
+    with open(package_md_path, "w") as package_doc:
+        package_doc.write(package_md)
 
     for resource in resources:
-        filename = resource.name + ".md"
-        path = DOCS_PATH / filename
+        resource_md_path = DOCS_PATH / (resource.name + ".md")
 
-        generated_markdown = resource.to_markdown(
-            path.absolute().as_posix(),
+        resource_markdown = resource.to_markdown(
+            resource_md_path.absolute().as_posix(),
             True,
-        )
+        ).replace("  | name", "\n  | name")
 
-        # Fix formatting to make table display properly
-        new_markdown = generated_markdown.replace("  | name", "\n  | name")
-
-        with open(path, "w") as resource_doc:
-            resource_doc.write(new_markdown)
+        with open(resource_md_path, "w") as resource_doc:
+            resource_doc.write(resource_markdown)
 
 
 def generate_db():
