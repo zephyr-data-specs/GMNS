@@ -30,6 +30,7 @@ jobs:
         if: steps.getDiff.outputs.diff || github.event_name == 'workflow_dispatch'
         with:
           python-version: "3.12"
+          cache: 'pip'
 
       - name: Install requirements
         run: pip install -r ${{env.SCRIPTS_FOLDER}}/requirements.txt
