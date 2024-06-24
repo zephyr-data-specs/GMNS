@@ -1,8 +1,7 @@
 import os
 import sqlite3
 
-from frictionless_loader import get_package, get_resources
-from shared import db_path, docs_path
+from shared import db_path, docs_path, get_package, get_resources
 
 package = get_package()
 resources = get_resources()

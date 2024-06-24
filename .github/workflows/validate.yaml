@@ -10,6 +10,12 @@ on:
       - main
       - develop
 
+env:
+  BASE_BRANCH: main
+  SPEC_FOLDER: spec
+  SCRIPTS_FOLDER: scripts
+  DOCS_FOLDER: docs/spec
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -19,8 +25,19 @@ jobs:
         with:
           lfs: true # add this to download LFS files
           submodules: true # add this to download submodules
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install requirements
+        run: pip install -r ${{env.SCRIPTS_FOLDER}}/requirements.txt
+
+      - name: Run example preparer
+        run: python ${{env.SCRIPTS_FOLDER}}/generate.py
+
       - name: Validate data
         uses: frictionlessdata/frictionless-ci@v2
         with:
-            packages: "spec/datapackage.json"
+            packages: "examples/**/datapackage.json"
             tables: "examples/**/*.csv"
