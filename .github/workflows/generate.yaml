@@ -1,4 +1,4 @@
-name: Generate GMNS Documentation (.md)
+name: Generate GMNS Documentation (.md) and DB (sqlite)
 
 on: [push, workflow_dispatch]
 
@@ -41,7 +41,7 @@ jobs:
 
       - name: Run schema generator
         if: steps.getDiff.outputs.diff || github.event_name == 'workflow_dispatch'
-        run: python ${{env.SCRIPTS_FOLDER}}/generate_docs.py
+        run: python ${{env.SCRIPTS_FOLDER}}/generate.py
 
       - name: Create Pull Request
         id: create_pr
