@@ -82,3 +82,5 @@ if __name__ == "__main__":
 
     # with open(SCRIPT_PATH / "datapackage.json", "w+") as file:
     #     json.dump(get_package_json(), file)
+
+    pass
