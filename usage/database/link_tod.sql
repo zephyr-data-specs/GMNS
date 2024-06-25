@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS link_tod (
 	timeday_id TEXT, 
 	time_day TEXT, 
 	capacity FLOAT CHECK (capacity >= 0), 
-	free_speed FLOAT CHECK (free_speed >= 0) CHECK (free_speed <= 200), 
+	free_speed FLOAT CHECK (free_speed <= 200) CHECK (free_speed >= 0), 
 	lanes INTEGER CHECK (lanes >= 0), 
 	bike_facility VARCHAR(22), 
 	ped_facility VARCHAR(14), 

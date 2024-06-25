@@ -119,7 +119,7 @@
         {
             "name": "capacity",
             "type": "number",
-            "description": "Capacity in vehicles per hour."
+            "description": "Saturation capacity in passenger car equivalents per hour."
         },
         {
             "name": "ctrl_type",
