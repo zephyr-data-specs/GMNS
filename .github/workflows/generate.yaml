@@ -1,6 +1,10 @@
-name: Generate GMNS Documentation (.md)
+name: Generate GMNS Documentation and DB
 
-on: [push, workflow_dispatch]
+on: 
+  push:
+    branches:
+      - main
+      - develop
 
 permissions:
   contents: write
@@ -27,25 +31,26 @@ jobs:
             ${{env.SPEC_FOLDER}}/*
 
       - uses: actions/setup-python@v5
-        if: steps.getDiff.outputs.diff || github.event_name == 'workflow_dispatch'
+        if: steps.getDiff.outputs.diff
         with:
           python-version: "3.12"
+          cache: 'pip'
 
       - name: Install requirements
         run: pip install -r ${{env.SCRIPTS_FOLDER}}/requirements.txt
-        if: steps.getDiff.outputs.diff || github.event_name == 'workflow_dispatch'
+        if: steps.getDiff.outputs.diff
 
       - name: Remove previous files
-        if: steps.getDiff.outputs.diff || github.event_name == 'workflow_dispatch'
+        if: steps.getDiff.outputs.diff
         run: rm ${{env.DOCS_FOLDER}}/*
 
       - name: Run schema generator
-        if: steps.getDiff.outputs.diff || github.event_name == 'workflow_dispatch'
-        run: python ${{env.SCRIPTS_FOLDER}}/generate_docs.py
+        if: steps.getDiff.outputs.diff
+        run: python ${{env.SCRIPTS_FOLDER}}/generate.py
 
       - name: Create Pull Request
         id: create_pr
-        if: steps.getDiff.outputs.diff || github.event_name == 'workflow_dispatch'
+        if: steps.getDiff.outputs.diff
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: Update documentation

@@ -91,7 +91,7 @@
         {
             "name": "ring",
             "type": "integer",
-            "description": "Required. Set of phases that conflict with each other. ",
+            "description": "Required. Phases that may operate sequentially. Two non-conflicting phases may operate at the same time with dual-rings",
             "constraints": {
                 "required": true,
                 "minimum": 0,
@@ -101,7 +101,7 @@
         {
             "name": "barrier",
             "type": "integer",
-            "description": "Required. Set of phases that can operate other.",
+            "description": "Required. Set of phases in both rings that must end at the same time",
             "constraints": {
                 "required": true,
                 "minimum": 0,
