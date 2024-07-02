@@ -91,7 +91,7 @@
         {
             "name": "ring",
             "type": "integer",
-            "description": "Required. Phases that may operate sequentially. Two non-conflicting phases may operate at the same time with dual-rings",
+            "description": "Required. Phases that may operate sequentially. With dual rings, two non-conflicting phases may operate at the same time",
             "constraints": {
                 "required": true,
                 "minimum": 0,
