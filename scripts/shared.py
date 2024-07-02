@@ -9,26 +9,27 @@ from pathlib import Path
 
 from frictionless import Package
 
+SCRIPT_PATH = pathlib.Path(__file__).parent.resolve()
+SPECS_PATH = SCRIPT_PATH / ".." / "spec"
+DOCS_PATH = SCRIPT_PATH / ".." / "docs" / "spec"
+DB_PATH = SCRIPT_PATH / ".." / "usage" / "database"
+EXAMPLES_PATH = SCRIPT_PATH / ".." / "examples"
+
 
 class GMNS:
     """GMNS class that can be reused throughout different scripts"""
 
     # Define paths to various folders
-    SCRIPT_PATH = pathlib.Path(__file__).parent.resolve()
-    SPECS_PATH = SCRIPT_PATH / ".." / "spec"
-    DOCS_PATH = SCRIPT_PATH / ".." / "docs" / "spec"
-    DB_PATH = SCRIPT_PATH / ".." / "usage" / "database"
-    EXAMPLES_PATH = SCRIPT_PATH / ".." / "examples"
 
     def __init__(self):
         # Grab general package data
-        with open(self.SPECS_PATH / "datapackage.json") as spec_file:
+        with open(SPECS_PATH / "datapackage.json") as spec_file:
             json_data = json.load(spec_file)
 
         # Combine every schema file into one datapackage
         for index, resource in enumerate(json_data["resources"]):
             if type(resource["schema"]) is str:
-                with open((self.SPECS_PATH / resource["schema"])) as r:
+                with open((SPECS_PATH / resource["schema"])) as r:
                     schema_data = json.load(r)
 
                     json_data["resources"][index]["schema"] = schema_data
@@ -57,11 +58,11 @@ class GMNS:
         """Get the generated raw JSON data for the GMNS package"""
         return self._json_data
 
-    def generate_docs(self):
+    def generate_docs(self, base_path=DOCS_PATH):
         """Create various documentation files inside the `DOCS_FOLDER` directory."""
 
         # Make package markdown file as README.md for documentation folder
-        package_md_path = self.DOCS_PATH / "README.md"
+        package_md_path = base_path / "README.md"
 
         package_md = self._package.to_markdown(
             package_md_path.absolute().as_posix()
@@ -71,7 +72,7 @@ class GMNS:
             package_doc.write(package_md)
 
         for resource in self._package.resources:
-            resource_md_path = self.DOCS_PATH / (resource.name + ".md")
+            resource_md_path = base_path / (resource.name + ".md")
 
             resource_markdown = resource.to_markdown(
                 resource_md_path.absolute().as_posix(),
@@ -85,18 +86,16 @@ class GMNS:
         """Create a GMNS database according to the specification"""
 
         # Create blank CSV files so that we don't get errors when creating the SQLite DB
-        files_to_delete = []
+        os.chdir(SCRIPT_PATH)
+        files_to_delete: list[Path] = []
         for resource in self._package.resources:
             if type(resource.path) is str:
-                resource.path = (
-                    (base_path / resource.path)
-                    .relative_to(self.SCRIPT_PATH / "..")
-                    .as_posix()
-                )
-                file_to_create = resource.path
-                if not os.path.exists(file_to_create):
-                    with open(file_to_create, "a+"):
-                        files_to_delete.append(file_to_create)
+                new_resource_path = base_path / resource.path
+                resource.path = new_resource_path.relative_to(SCRIPT_PATH).as_posix()
+
+                if not os.path.exists(new_resource_path):
+                    with open(new_resource_path, "a+"):
+                        files_to_delete.append(new_resource_path)
 
         # Use https://alpha.sqliteviewer.app/ for verification!
         if isfile(base_path / f"{db_name}.sqlite"):

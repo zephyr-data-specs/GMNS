@@ -1,8 +1,6 @@
 from pathlib import Path
 
-from shared import gmns
-
-EXAMPLES_PATH = gmns.EXAMPLES_PATH
+from shared import EXAMPLES_PATH, gmns
 
 # List of tuples with the database name and path to the relevant example folder
 EXAMPLE_PATHS: list[tuple[str, Path]] = [
