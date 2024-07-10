@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from shared import EXAMPLES_PATH, gmns
@@ -15,5 +16,13 @@ FILES_TO_COPY: list[tuple[str, Path]] = [
 
 
 if __name__ == "__main__":
+    # for _, example_path in EXAMPLE_PATHS:
+    #     report = gmns.validate_example(example_path)
+    #     if not report.valid:
+    #         with open(example_path / "errors.txt", "w") as f:
+    #             f.write(report.to_summary())
+    #     else:
+    #         os.remove(example_path / "errors.txt")
+
     gmns.prep_examples(EXAMPLE_PATHS, FILES_TO_COPY)
     pass

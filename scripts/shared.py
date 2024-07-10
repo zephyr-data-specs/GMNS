@@ -87,10 +87,14 @@ class GMNS:
 
         # Create blank CSV files so that we don't get errors when creating the SQLite DB
         os.chdir(SCRIPT_PATH)
+        new_to_old: dict[str, str] = {}
         files_to_delete: list[Path] = []
         for resource in self._package.resources:
             if type(resource.path) is str:
                 new_resource_path = base_path / resource.path
+                new_to_old[new_resource_path.relative_to(SCRIPT_PATH).as_posix()] = (
+                    resource.path
+                )
                 resource.path = new_resource_path.relative_to(SCRIPT_PATH).as_posix()
 
                 if not os.path.exists(new_resource_path):
@@ -121,6 +125,11 @@ class GMNS:
         for file_to_delete in files_to_delete:
             os.remove(file_to_delete)
 
+        # Change all resource paths back
+        for resource in self._package.resources:
+            if type(resource.path) is str:
+                resource.path = new_to_old[resource.path]
+
     def prep_examples(
         self,
         examples: list[tuple[str, Path]] | None = None,
@@ -146,6 +155,34 @@ class GMNS:
 
         for file_to_delete in files_to_delete:
             os.remove(file_to_delete)
+
+    def validate_example(self, example_path: Path, create_blank_files: bool = False):
+        os.chdir(SCRIPT_PATH)
+
+        new_to_old: dict[str, str] = {}
+        files_to_delete: list[Path] = []
+        for resource in self._package.resources:
+            if type(resource.path) is str:
+                new_resource_path = example_path / resource.path
+                new_to_old[new_resource_path.relative_to(SCRIPT_PATH).as_posix()] = (
+                    resource.path
+                )
+                resource.path = new_resource_path.relative_to(SCRIPT_PATH).as_posix()
+
+                if not os.path.exists(new_resource_path) and create_blank_files:
+                    with open(new_resource_path, "a+"):
+                        files_to_delete.append(new_resource_path)
+
+        report = self._package.validate()
+
+        for file_to_delete in files_to_delete:
+            os.remove(file_to_delete)
+
+        for resource in self._package.resources:
+            if type(resource.path) is str:
+                resource.path = new_to_old[resource.path]
+
+        return report
 
 
 gmns = GMNS()
