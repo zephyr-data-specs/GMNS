@@ -44,6 +44,17 @@
             "name": "version_number",
             "type": "number",
             "description": "The version of the GMNS spec to which this dataset conforms"
+        },
+        {
+            "name": "id_type",
+            "type": "string",
+            "description": "The type of primary key IDs for interopability. Must be either string or integer.",
+            "constraints": {
+                "enum": [
+                    "string",
+                    "integer"
+                ]
+            }
         }
     ],
     "name": "config.schema.json",

@@ -1518,6 +1518,12 @@
   
 - `description` The version of the GMNS spec to which this dataset conforms
   - `type` number
+### `id_type`
+  
+- `description` The type of primary key IDs for interopability. Must be either string or integer.
+  - `type` string
+  - `constraints`:
+    - `enum` ['string', 'integer']
 ## `curb_seg`
   
 - `description` Provides a separate segment object for curbside regulations, which may change at different locations than segment-level changes to the travel lanes.

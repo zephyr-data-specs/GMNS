@@ -9,6 +9,6 @@ CREATE TABLE IF NOT EXISTS lane_tod (
 	l_barrier TEXT, 
 	width FLOAT CHECK (width >= 0), 
 	PRIMARY KEY (lane_tod_id), 
-	FOREIGN KEY(timeday_id) REFERENCES time_set_definitions (timeday_id), 
-	FOREIGN KEY(lane_id) REFERENCES lane (lane_id)
+	FOREIGN KEY(lane_id) REFERENCES lane (lane_id), 
+	FOREIGN KEY(timeday_id) REFERENCES time_set_definitions (timeday_id)
 )
