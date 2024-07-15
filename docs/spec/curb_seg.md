@@ -15,8 +15,9 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-
-  | name        | type   | description                                                                   | constraints                      |
+    - `fieldsMatch` subset
+  
+| name        | type   | description                                                                   | constraints                      |
 |:------------|:-------|:------------------------------------------------------------------------------|:---------------------------------|
 | curb_seg_id | any    | Primary key.                                                                  | {'required': True}               |
 | link_id     | any    | Required. Foreign key to road_links. The link that the segment is located on. | {'required': True}               |

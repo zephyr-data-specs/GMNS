@@ -2,10 +2,11 @@
   - `description` Configuration information for the dataset (units, coordinate systems, etc.).
   - `path` config.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
+    - `fieldsMatch` subset
     - `numRows` 1
-
-  | name                  | type   | description                                                                                                                                   |
+  
+| name                  | type   | description                                                                                                                                   |
 |:----------------------|:-------|:----------------------------------------------------------------------------------------------------------------------------------------------|
 | dataset_name          | any    | Name used to describe this GMNS network                                                                                                       |
 | short_length          | any    | Length unit used for lane/ROW widths and linear references for segments, locations, etc. along links                                          |

@@ -15,8 +15,9 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-
-  | name           | type   | description                                                                                                                                                                                 | constraints                    |
+    - `fieldsMatch` subset
+  
+| name           | type   | description                                                                                                                                                                                 | constraints                    |
 |:---------------|:-------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|
 | timing_plan_id | any    | Primary key.                                                                                                                                                                                | {'required': True}             |
 | controller_id  | any    | Required. Foreign key (signal_controller table).                                                                                                                                            | {'required': True}             |

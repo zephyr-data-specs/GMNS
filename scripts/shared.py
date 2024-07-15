@@ -34,10 +34,12 @@ class GMNS:
 
                     json_data["resources"][index]["schema"] = schema_data
 
-                    # Get rid of duplicate info...
+                    # Get rid of duplicate or uneccessary info...
                     del json_data["resources"][index]["schema"]["name"]
                     del json_data["resources"][index]["schema"]["description"]
+                    del json_data["resources"][index]["schema"]["$schema"]
 
+        del json_data["$schema"]
         self._package = Package(json_data)
         self._json_data = json_data
 
@@ -77,7 +79,7 @@ class GMNS:
             resource_markdown = resource.to_markdown(
                 resource_md_path.absolute().as_posix(),
                 True,
-            ).replace("  | name", "\n  | name")
+            ).replace("  | name", "  \n| name")
 
             with open(resource_md_path, "w") as resource_doc:
                 resource_doc.write(resource_markdown)
@@ -156,8 +158,16 @@ class GMNS:
         for file_to_delete in files_to_delete:
             os.remove(file_to_delete)
 
-    def validate_example(self, example_path: Path, create_blank_files: bool = False):
+    def validate_example(
+        self,
+        example_path: Path,
+        copy_files: list[tuple[str, Path]] | None = None,
+        create_blank_files: bool = False,
+    ):
         os.chdir(SCRIPT_PATH)
+
+        if copy_files is None:
+            copy_files = []
 
         new_to_old: dict[str, str] = {}
         files_to_delete: list[Path] = []
@@ -172,6 +182,13 @@ class GMNS:
                 if not os.path.exists(new_resource_path) and create_blank_files:
                     with open(new_resource_path, "a+"):
                         files_to_delete.append(new_resource_path)
+
+        for name_of_file_to_copy, path_of_file_to_copy in copy_files:
+            if name_of_file_to_copy not in listdir(example_path):
+                shutil.copyfile(
+                    path_of_file_to_copy, example_path / name_of_file_to_copy
+                )
+                files_to_delete.append(example_path / name_of_file_to_copy)
 
         report = self._package.validate()
 

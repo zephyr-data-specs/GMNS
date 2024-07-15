@@ -4,8 +4,9 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['timeday_id']
-
-  | name       | type    | description                                                                                                                        | constraints        |
+    - `fieldsMatch` subset
+  
+| name       | type    | description                                                                                                                        | constraints        |
 |:-----------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------|:-------------------|
 | timeday_id | any     | Primary key.Primary key, similar to `service_id` in GTFS. Unique name of the time of day. Preferable legible rather than a number. | {'required': True} |
 | monday     | boolean | Required. Whether Mondays are included.                                                                                            | {'required': True} |

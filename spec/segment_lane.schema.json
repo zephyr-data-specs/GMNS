@@ -4,6 +4,7 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
     "foreignKeys": [
         {
             "fields": "segment_id",
@@ -54,25 +55,21 @@
             "name": "r_barrier",
             "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is none)",
-            "constraints": {
-                "enum": [
-                    "none",
-                    "regulatory",
-                    "physical"
-                ]
-            }
+            "categories": [
+                "none",
+                "regulatory",
+                "physical"
+            ]
         },
         {
             "name": "l_barrier",
             "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left (default is none)",
-            "constraints": {
-                "enum": [
-                    "none",
-                    "regulatory",
-                    "physical"
-                ]
-            }
+            "categories": [
+                "none",
+                "regulatory",
+                "physical"
+            ]
         },
         {
             "name": "width",
@@ -84,5 +81,6 @@
         }
     ],
     "name": "segment_lane.schema.json",
-    "description": "Defines added and dropped lanes, and changes to lane parameters. If a lane is added, it has no parent. If it is changed or dropped, the parent_lane_id field keys to the associated lane on the lane table."
+    "description": "Defines added and dropped lanes, and changes to lane parameters. If a lane is added, it has no parent. If it is changed or dropped, the parent_lane_id field keys to the associated lane on the lane table.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

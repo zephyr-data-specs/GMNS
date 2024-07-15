@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS movement_tod (
 	ob_link_id TEXT NOT NULL, 
 	start_ob_lane INTEGER, 
 	end_ob_lane INTEGER, 
-	type VARCHAR(5) NOT NULL, 
+	type TEXT NOT NULL, 
 	penalty FLOAT, 
 	capacity FLOAT, 
 	ctrl_type TEXT, 

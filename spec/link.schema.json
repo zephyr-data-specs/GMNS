@@ -4,6 +4,7 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
     "foreignKeys": [
         {
             "fields": "from_node_id",
@@ -91,13 +92,20 @@
             "name": "dir_flag",
             "type": "integer",
             "description": "Optional. <br>1  shapepoints go from from_node to to_node;<br>-1 shapepoints go in the reverse direction;<br>0  link is undirected or no geometry information is provided.",
-            "constraints": {
-                "enum": [
-                    -1,
-                    0,
-                    1
-                ]
-            }
+            "categories": [
+                {
+                    "value": 1,
+                    "label": "forwards"
+                },
+                {
+                    "value": -1,
+                    "label": "reverse"
+                },
+                {
+                    "value": 0,
+                    "label": "no-information"
+                }
+            ]
         },
         {
             "name": "length",
@@ -158,48 +166,42 @@
             "name": "bike_facility",
             "type": "string",
             "description": "Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)",
-            "constraints": {
-                "enum": [
-                    "unseparated bike lane",
-                    "buffered bike lane",
-                    "separated bike lane",
-                    "counter-flow bike lane",
-                    "paved shoulder",
-                    "shared lane",
-                    "shared use path",
-                    "off-road unpaved trail",
-                    "other",
-                    "none"
-                ]
-            }
+            "categories": [
+                "unseparated bike lane",
+                "buffered bike lane",
+                "separated bike lane",
+                "counter-flow bike lane",
+                "paved shoulder",
+                "shared lane",
+                "shared use path",
+                "off-road unpaved trail",
+                "other",
+                "none"
+            ]
         },
         {
             "name": "ped_facility",
             "type": "string",
             "description": "Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path",
-            "constraints": {
-                "enum": [
-                    "unknown",
-                    "none",
-                    "shoulder",
-                    "sidewalk",
-                    "offstreet_path"
-                ]
-            }
+            "categories": [
+                "unknown",
+                "none",
+                "shoulder",
+                "sidewalk",
+                "offstreet_path"
+            ]
         },
         {
             "name": "parking",
             "type": "string",
             "description": "Optional. Type of parking: unknown, none, parallel, angle, other",
-            "constraints": {
-                "enum": [
-                    "unknown",
-                    "none",
-                    "parallel",
-                    "angle",
-                    "other"
-                ]
-            }
+            "categories": [
+                "unknown",
+                "none",
+                "parallel",
+                "angle",
+                "other"
+            ]
         },
         {
             "name": "allowed_uses",
@@ -233,5 +235,6 @@
         }
     ],
     "name": "link.schema.json",
-    "description": "A link is an edge in a network, defined by the nodes it travels from and to. It may have associated geometry information. Links have three types of attributes:<br>  - Those that define the physical location of the link (e.g., `shape` `information`, `length`, `width`)<br>  - Those that define the directionality of the link: `from_node`, `to_node`<br>  - Those that define properties in the direction of travel: capacity,free flow speed, number of lanes, permitted uses, grade, facility type"
+    "description": "A link is an edge in a network, defined by the nodes it travels from and to. It may have associated geometry information. Links have three types of attributes:<br>  - Those that define the physical location of the link (e.g., `shape` `information`, `length`, `width`)<br>  - Those that define the directionality of the link: `from_node`, `to_node`<br>  - Those that define properties in the direction of travel: capacity,free flow speed, number of lanes, permitted uses, grade, facility type",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

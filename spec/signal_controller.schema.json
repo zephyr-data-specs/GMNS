@@ -4,6 +4,7 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
     "fields": [
         {
             "name": "controller_id",
@@ -15,5 +16,6 @@
         }
     ],
     "name": "signal_controller.schema.json",
-    "description": "The signal controller is associated with an intersection or a cluster of intersections."
+    "description": "The signal controller is associated with an intersection or a cluster of intersections.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

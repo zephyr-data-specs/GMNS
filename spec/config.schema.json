@@ -1,7 +1,9 @@
 {
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
     ],
+    "fieldsMatch": "subset",
     "fields": [
         {
             "name": "dataset_name",
@@ -46,5 +48,6 @@
     ],
     "name": "config.schema.json",
     "description": "Provides the units of measure, coordinate systems, and other metadata about a GMNS dataset. This table must contain a single row.",
-    "numRows": 1
+    "numRows": 1,
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

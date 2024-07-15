@@ -4,6 +4,7 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
     "foreignKeys": [
         {
             "fields": "timing_plan_id",
@@ -70,13 +71,11 @@
             "name": "coord_ref_to",
             "type": "string",
             "description": "Optional. For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red.",
-            "constraints": {
-                "enum": [
-                    "begin_of_green",
-                    "begin_of_yellow",
-                    "begin_of_red"
-                ]
-            }
+            "categories": [
+                "begin_of_green",
+                "begin_of_yellow",
+                "begin_of_red"
+            ]
         },
         {
             "name": "offset",
@@ -88,5 +87,6 @@
         }
     ],
     "name": "signal_coordination.schema.json",
-    "description": "Establishes coordination for several signal controllers, associated with a timing_plan."
+    "description": "Establishes coordination for several signal controllers, associated with a timing_plan.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

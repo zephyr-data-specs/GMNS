@@ -4,6 +4,7 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
     "foreignKeys": [
         {
             "fields": "controller_id",
@@ -58,5 +59,6 @@
         }
     ],
     "name": "signal_timing_plan.schema.json",
-    "description": "For signalized nodes, establishes timing plans."
+    "description": "For signalized nodes, establishes timing plans.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

@@ -2,7 +2,7 @@
   - `description` A location is a vertex that is associated with a specific location along a link. Locations may be used to represent places where activities occur (e.g., driveways and bus stops). Its attributes are nearly the same as those for a node, except that the location includes an associated link and node, with location specified as distance along the link from the node.
   - `path` location.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['loc_id']
     - `foreignKeys`
       - [1]
@@ -15,8 +15,9 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-
-  | name         | type   | description                                                                                                                                                                                                                                               | constraints                      |
+    - `fieldsMatch` subset
+  
+| name         | type   | description                                                                                                                                                                                                                                               | constraints                      |
 |:-------------|:-------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------|
 | loc_id       | any    | Primary key. Location ID.                                                                                                                                                                                                                                 | {'required': True}               |
 | link_id      | any    | Required. Road Link ID. Foreign Key from Road_Link.                                                                                                                                                                                                       | {'required': True}               |

@@ -1,14 +1,4 @@
 {
-  "json.schemas": [
-    {
-      "fileMatch": ["/spec/datapackage.json"],
-      "url": "https://datapackage.org/profiles/2.0/datapackage.json"
-    },
-    {
-      "fileMatch": ["/spec/*.schema.json"],
-      "url": "https://datapackage.org/profiles/2.0/tableschema.json"
-    }
-  ],
   "python.analysis.autoImportCompletions": true,
   "python.analysis.typeCheckingMode": "basic",
   "[python]": {
@@ -17,6 +7,13 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true
   },
   "isort.args": ["--profile", "black"]
 }

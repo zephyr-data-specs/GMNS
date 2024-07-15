@@ -4,6 +4,7 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
     "foreignKeys": [
         {
             "fields": "lane_id",
@@ -66,25 +67,21 @@
             "name": "r_barrier",
             "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
-            "constraints": {
-                "enum": [
-                    "none",
-                    "regulatory",
-                    "physical"
-                ]
-            }
+            "categories": [
+                "none",
+                "regulatory",
+                "physical"
+            ]
         },
         {
             "name": "l_barrier",
             "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default).  Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
-            "constraints": {
-                "enum": [
-                    "none",
-                    "regulatory",
-                    "physical"
-                ]
-            }
+            "categories": [
+                "none",
+                "regulatory",
+                "physical"
+            ]
         },
         {
             "name": "width",
@@ -96,5 +93,6 @@
         }
     ],
     "name": "lane_tod.schema.json",
-    "description": "An optional file that handles day-of-week and time-of-day restrictions on lanes that traverse entire links."
+    "description": "An optional file that handles day-of-week and time-of-day restrictions on lanes that traverse entire links.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

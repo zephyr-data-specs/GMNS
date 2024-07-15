@@ -17,7 +17,7 @@ FILES_TO_COPY: list[tuple[str, Path]] = [
 
 if __name__ == "__main__":
     # for _, example_path in EXAMPLE_PATHS:
-    #     report = gmns.validate_example(example_path)
+    #     report = gmns.validate_example(example_path, FILES_TO_COPY)
     #     if not report.valid:
     #         with open(example_path / "errors.txt", "w") as f:
     #             f.write(report.to_summary())

@@ -30,6 +30,7 @@
         - `reference`
           - `resource` 
           - `fields` ['link_id']
+    - `fieldsMatch` subset
 ### `link_id`
   
 - `description` Primary key - could be SharedStreets Reference ID
@@ -74,8 +75,6 @@
   
 - `description` Optional. <br>1  shapepoints go from from_node to to_node;<br>-1 shapepoints go in the reverse direction;<br>0  link is undirected or no geometry information is provided.
   - `type` integer
-  - `constraints`:
-    - `enum` [-1, 0, 1]
 ### `length`
   
 - `description` Optional. Length of the link in long_length units
@@ -112,20 +111,14 @@
   
 - `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)
   - `type` string
-  - `constraints`:
-    - `enum` ['unseparated bike lane', 'buffered bike lane', 'separated bike lane', 'counter-flow bike lane', 'paved shoulder', 'shared lane', 'shared use path', 'off-road unpaved trail', 'other', 'none']
 ### `ped_facility`
   
 - `description` Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path
   - `type` string
-  - `constraints`:
-    - `enum` ['unknown', 'none', 'shoulder', 'sidewalk', 'offstreet_path']
 ### `parking`
   
 - `description` Optional. Type of parking: unknown, none, parallel, angle, other
   - `type` string
-  - `constraints`:
-    - `enum` ['unknown', 'none', 'parallel', 'angle', 'other']
 ### `allowed_uses`
   
 - `description` Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated.
@@ -148,7 +141,7 @@
 - `description` A list of vertices that locate points on a map. Typically, they will represent intersections, but may also represent other points, such as a transition between divided and undivided highway. Nodes are the endpoints of a link (as opposed to the other type of vertex, location, which is used to represent points along a link)
   - `path` node.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['node_id']
     - `foreignKeys`
       - [1]
@@ -161,6 +154,7 @@
         - `reference`
           - `resource` 
           - `fields` ['node_id']
+    - `fieldsMatch` subset
 ### `node_id`
   
 - `description` Primary key
@@ -193,8 +187,6 @@
   
 - `description` Optional. Intersection control type - one of ControlType_Set.
   - `type` string
-  - `constraints`:
-    - `enum` ['none', 'yield', 'stop', '4_stop', 'signal']
 ### `zone_id`
   
 - `description` Optional. Could be a Transportation Analysis Zone (TAZ) or city, or census tract, or census block.
@@ -208,8 +200,9 @@
 - `description` The geometry is an optional file that contains geometry information (shapepoints) for a line object. It is similar to Geometries in the SharedStreets reference system. The specification also allows for geometry information to be stored directly on the link table.
   - `path` geometry.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['geometry_id']
+    - `fieldsMatch` subset
 ### `geometry_id`
   
 - `description` Primary key - could be SharedStreets Geometry ID
@@ -225,7 +218,7 @@
 - `description` The lane file allocates portions of the physical right-of-way that might be used for travel. It might be a travel lane, bike lane, or a parking lane. Lanes only are included in directed links; undirected links are assumed to have no lane controls or directionality. If a lane is added, dropped, or changes properties along the link, those changes are recorded on the `segment_link` table. Lanes are numbered sequentially, starting at either the centerline (two-way street) or the left shoulder (one-way street or divided highway with two centerlines).
   - `path` lane.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['lane_id']
     - `foreignKeys`
       - [1]
@@ -233,6 +226,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
+    - `fieldsMatch` subset
 ### `lane_id`
   
 - `description` Primary key
@@ -261,14 +255,10 @@
   
 - `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
   - `type` string
-  - `constraints`:
-    - `enum` ['none', 'regulatory', 'physical']
 ### `l_barrier`
   
 - `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
   - `type` string
-  - `constraints`:
-    - `enum` ['none', 'regulatory', 'physical']
 ### `width`
   
 - `description` Optional. Width of the lane, short_length units.
@@ -279,7 +269,7 @@
 - `description` Handles day-of-week and time-of-day restrictions on links
   - `path` link_tod.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['link_tod_id']
     - `foreignKeys`
       - [1]
@@ -292,6 +282,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
+    - `fieldsMatch` subset
 ### `link_tod_id`
   
 - `description` Primary key
@@ -332,20 +323,14 @@
   
 - `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)
   - `type` string
-  - `constraints`:
-    - `enum` ['unseparated bike lane', 'buffered bike lane', 'separated bike lane', 'counter-flow bike lane', 'paved shoulder', 'shared lane', 'shared use path', 'off-road unpaved trail', 'other', 'none']
 ### `ped_facility`
   
 - `description` Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path
   - `type` string
-  - `constraints`:
-    - `enum` ['unknown', 'none', 'shoulder', 'sidewalk', 'offstreet_path']
 ### `parking`
   
 - `description` Optional. Type of parking: unknown, none, parallel, angle, other
   - `type` string
-  - `constraints`:
-    - `enum` ['unknown', 'none', 'parallel', 'angle', 'other']
 ### `allowed_uses`
   
 - `description` Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated.
@@ -359,7 +344,7 @@
 - `description` A location is a vertex that is associated with a specific location along a link. Locations may be used to represent places where activities occur (e.g., driveways and bus stops). Its attributes are nearly the same as those for a node, except that the location includes an associated link and node, with location specified as distance along the link from the node.
   - `path` location.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['loc_id']
     - `foreignKeys`
       - [1]
@@ -372,6 +357,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
+    - `fieldsMatch` subset
 ### `loc_id`
   
 - `description` Primary key. Location ID.
@@ -425,7 +411,7 @@
 - `description` Describes how inbound and outbound links connect at an intersection.
   - `path` movement.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['mvmt_id']
     - `foreignKeys`
       - [1]
@@ -443,6 +429,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
+    - `fieldsMatch` subset
 ### `mvmt_id`
   
 - `description` Primary key.
@@ -493,7 +480,6 @@
   - `type` string
   - `constraints`:
     - `required` True
-    - `enum` ['left', 'right', 'uturn', 'thru', 'merge', 'diverge']
 ### `penalty`
   
 - `description` Turn penalty (seconds)
@@ -506,8 +492,6 @@
   
 - `description` Optional. .
   - `type` string
-  - `constraints`:
-    - `enum` ['no_control', 'yield', 'stop', 'stop_2_way', 'stop_4_way', 'signal_with_RTOR', 'signal']
 ### `mvmt_code`
   
 - `description` Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)
@@ -525,7 +509,7 @@
 - `description` Handles day-of-week and time-of-day restrictions on movements.
   - `path` movement_tod.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['mvmt_tod_id']
     - `foreignKeys`
       - [1]
@@ -548,6 +532,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
+    - `fieldsMatch` subset
 ### `mvmt_tod_id`
   
 - `description` Primary key.
@@ -602,7 +587,6 @@
   - `type` string
   - `constraints`:
     - `required` True
-    - `enum` ['left', 'right', 'uturn', 'thru', 'merge']
 ### `penalty`
   
 - `description` Turn penalty (seconds)
@@ -615,8 +599,6 @@
   
 - `description` Optional. .
   - `type` any
-  - `constraints`:
-    - `enum` ['no_control', 'yield', 'stop', 'stop_2_way', 'stop_4_way', 'signal_with_RTOR', 'signal']
 ### `mvmt_code`
   
 - `description` Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)
@@ -630,8 +612,9 @@
 - `description` The Use_Definition file defines the characteristics of each vehicle type or non-travel purpose (e.g., a shoulder or parking lane). A two-way left turn lane (TWLTL) is also a use.
   - `path` use_definition.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['use']
+    - `fieldsMatch` subset
 ### `use`
   
 - `description` Primary key
@@ -663,8 +646,9 @@
 - `description` Defines groupings of uses, to reduce the size of the allowed_uses lists in the other tables.
   - `path` use_group.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['use_group']
+    - `fieldsMatch` subset
 ### `use_group`
   
 - `description` Primary key.
@@ -688,6 +672,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['timeday_id']
+    - `fieldsMatch` subset
 ### `timeday_id`
   
 - `description` Primary key.Primary key, similar to `service_id` in GTFS. Unique name of the time of day. Preferable legible rather than a number.
@@ -772,6 +757,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
+    - `fieldsMatch` subset
 ### `segment_id`
   
 - `description` Primary key.
@@ -836,20 +822,14 @@
   
 - `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)
   - `type` string
-  - `constraints`:
-    - `enum` ['unseparated bike lane', 'buffered bike lane', 'separated bike lane', 'counter-flow bike lane', 'paved shoulder', 'shared lane', 'shared use path', 'off-road unpaved trail', 'other', 'none']
 ### `ped_facility`
   
 - `description` Optional. Type of pedestrian accommodation:unknown,none,shoulder,sidewalk,offstreet_path.
   - `type` string
-  - `constraints`:
-    - `enum` ['unknown', 'none', 'shoulder', 'sidewalk', 'offstreet_path']
 ### `parking`
   
 - `description` Optional. Type of parking: unknown,none,shoulder,sidewalk,offstreet_path.
   - `type` string
-  - `constraints`:
-    - `enum` ['unknown', 'none', 'shoulder', 'sidewalk', 'offstreet_path']
 ### `allowed_uses`
   
 - `description` Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated.
@@ -880,6 +860,7 @@
         - `reference`
           - `resource` segment
           - `fields` ['segment_id']
+    - `fieldsMatch` subset
 ### `segment_lane_id`
   
 - `description` Primary key.
@@ -912,14 +893,10 @@
   
 - `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is none)
   - `type` string
-  - `constraints`:
-    - `enum` ['none', 'regulatory', 'physical']
 ### `l_barrier`
   
 - `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left (default is none)
   - `type` string
-  - `constraints`:
-    - `enum` ['none', 'regulatory', 'physical']
 ### `width`
   
 - `description` Optional. Width of the lane (short_length units)
@@ -932,6 +909,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['controller_id']
+    - `fieldsMatch` subset
 ### `controller_id`
   
 - `description` Primary key.
@@ -961,6 +939,7 @@
         - `reference`
           - `resource` signal_controller
           - `fields` ['controller_id']
+    - `fieldsMatch` subset
 ### `coordination_id`
   
 - `description` Primary key.
@@ -993,8 +972,6 @@
   
 - `description` Optional. For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red.
   - `type` string
-  - `constraints`:
-    - `enum` ['begin_of_green', 'begin_of_yellow', 'begin_of_red']
 ### `offset`
   
 - `description` Optional. Offset in seconds.
@@ -1023,6 +1000,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
+    - `fieldsMatch` subset
 ### `signal_phase_mvmt_id`
   
 - `description` Primary key.
@@ -1047,8 +1025,6 @@
   
 - `description` Optional. Indicates whether the phase is protected, permitted, or right turn on red.
   - `type` string
-  - `constraints`:
-    - `enum` ['protected', 'permitted', 'rtor']
 ## `signal_timing_plan`
   
 - `description` For signalized nodes, establishes timing plans.
@@ -1067,6 +1043,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
+    - `fieldsMatch` subset
 ### `timing_plan_id`
   
 - `description` Primary key.
@@ -1106,6 +1083,7 @@
         - `reference`
           - `resource` signal_timing_plan
           - `fields` ['timing_plan_id']
+    - `fieldsMatch` subset
 ### `timing_phase_id`
   
 - `description` Primary key.
@@ -1199,6 +1177,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
+    - `fieldsMatch` subset
 ### `detector_id`
   
 - `description` Primary key.
@@ -1275,6 +1254,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
+    - `fieldsMatch` subset
 ### `segment_tod_id`
   
 - `description` Primary key.
@@ -1322,20 +1302,14 @@
   
 - `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)
   - `type` string
-  - `constraints`:
-    - `enum` ['unseparated bike lane', 'buffered bike lane', 'separated bike lane', 'counter-flow bike lane', 'paved shoulder', 'shared lane', 'shared use path', 'off-road unpaved trail', 'other', 'none']
 ### `ped_facility`
   
 - `description` Optional. Type of pedestrian accommodation: unknown,none,shoulder,sidewalk,offstreet_path.
   - `type` string
-  - `constraints`:
-    - `enum` ['unknown', 'none', 'shoulder', 'sidewalk', 'offstreet_path']
 ### `parking`
   
 - `description` Optional. Type of parking: unknown,none,shoulder,sidewalk,offstreet_path.
   - `type` string
-  - `constraints`:
-    - `enum` ['unknown', 'none', 'shoulder', 'sidewalk', 'offstreet_path']
 ### `toll`
   
 - `description` Optional. Toll in currency units
@@ -1362,6 +1336,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
+    - `fieldsMatch` subset
 ### `lane_tod_id`
   
 - `description` Primary key.
@@ -1398,14 +1373,10 @@
   
 - `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
   - `type` string
-  - `constraints`:
-    - `enum` ['none', 'regulatory', 'physical']
 ### `l_barrier`
   
 - `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default).  Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
   - `type` string
-  - `constraints`:
-    - `enum` ['none', 'regulatory', 'physical']
 ### `width`
   
 - `description` Optional. Width of the lane, short_length units.
@@ -1429,6 +1400,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
+    - `fieldsMatch` subset
 ### `segment_lane_tod_id`
   
 - `description` Primary key.
@@ -1465,14 +1437,10 @@
   
 - `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
   - `type` string
-  - `constraints`:
-    - `enum` ['none', 'regulatory', 'physical']
 ### `l_barrier`
   
 - `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
   - `type` string
-  - `constraints`:
-    - `enum` ['none', 'regulatory', 'physical']
 ### `width`
   
 - `description` Optional. Width of the lane, short_length units.
@@ -1483,7 +1451,7 @@
 - `description` Locates zones (travel analysis zones, parcels) on a map. Zones are represented as polygons in geographic information systems.
   - `path` zone.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['zone_id']
     - `foreignKeys`
       - [1]
@@ -1491,6 +1459,7 @@
         - `reference`
           - `resource` 
           - `fields` ['zone_id']
+    - `fieldsMatch` subset
 ### `zone_id`
   
 - `description` Primary key.
@@ -1514,7 +1483,8 @@
 - `description` Configuration information for the dataset (units, coordinate systems, etc.).
   - `path` config.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
+    - `fieldsMatch` subset
     - `numRows` 1
 ### `dataset_name`
   
@@ -1566,6 +1536,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
+    - `fieldsMatch` subset
 ### `curb_seg_id`
   
 - `description` Primary key.
