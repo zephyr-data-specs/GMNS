@@ -84,6 +84,8 @@ class GMNS:
             with open(resource_md_path, "w") as resource_doc:
                 resource_doc.write(resource_markdown)
 
+        return package_md
+
     def generate_db(self, base_path=DB_PATH, db_name="gmns", gen_sql_files=True):
         """Create a GMNS database according to the specification"""
 
