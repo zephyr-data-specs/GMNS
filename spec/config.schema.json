@@ -48,7 +48,7 @@
         {
             "name": "id_type",
             "type": "string",
-            "description": "The type of primary key IDs for interopability. Must be either string or integer.",
+            "description": "The type of primary key IDs for interopability (node_id, zone_id, ...). May be enforced by user, database schema, downstream software, etc. Must be either string or integer.",
             "constraints": {
                 "enum": [
                     "string",
