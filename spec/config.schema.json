@@ -47,7 +47,7 @@
         },
         {
             "name": "id_type",
-            "type": "integer",
+            "type": "string",
             "description": "The type of primary key IDs for interopability. Must be either string or integer.",
             "constraints": {
                 "enum": [
