@@ -90,7 +90,6 @@ class GMNS:
         """Create a GMNS database according to the specification"""
 
         # Create blank CSV files so that we don't get errors when creating the SQLite DB
-        os.chdir(SCRIPT_PATH)
         new_to_old: dict[str, str] = {}
         files_to_delete: list[Path] = []
         for resource in self._package.resources:
