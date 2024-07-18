@@ -1520,7 +1520,7 @@
   - `type` number
 ### `id_type`
   
-- `description` The type of primary key IDs for interopability (node_id, zone_id, ...). May be enforced by user, database schema, downstream software, etc. Must be either string or integer.
+- `description` The type of primary key IDs for interopability (node_id, zone_id, etc.). May be enforced by user, database schema, or downstream software. Must be either string or integer.
   - `type` string
   - `constraints`:
     - `enum` ['string', 'integer']

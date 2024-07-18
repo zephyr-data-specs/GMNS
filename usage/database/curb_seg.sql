@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS curb_seg (
 	regulation TEXT, 
 	width FLOAT CHECK (width >= 0), 
 	PRIMARY KEY (curb_seg_id), 
-	FOREIGN KEY(link_id) REFERENCES link (link_id), 
-	FOREIGN KEY(ref_node_id) REFERENCES node (node_id)
+	FOREIGN KEY(ref_node_id) REFERENCES node (node_id), 
+	FOREIGN KEY(link_id) REFERENCES link (link_id)
 )
