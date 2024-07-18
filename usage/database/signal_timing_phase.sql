@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS signal_timing_phase (
 	clearance FLOAT CHECK (clearance >= 0) CHECK (clearance <= 120), 
 	walk_time FLOAT CHECK (walk_time <= 120) CHECK (walk_time >= 0), 
 	ped_clearance FLOAT CHECK (ped_clearance <= 120) CHECK (ped_clearance >= 0), 
-	ring INTEGER NOT NULL CHECK (ring <= 12) CHECK (ring >= 0), 
+	ring INTEGER NOT NULL CHECK (ring >= 0) CHECK (ring <= 12), 
 	barrier INTEGER NOT NULL CHECK (barrier <= 12) CHECK (barrier >= 0), 
 	position INTEGER NOT NULL, 
 	PRIMARY KEY (timing_phase_id), 

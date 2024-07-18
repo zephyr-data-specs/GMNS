@@ -17,6 +17,6 @@ CREATE TABLE IF NOT EXISTS movement (
 	geometry TEXT, 
 	PRIMARY KEY (mvmt_id), 
 	FOREIGN KEY(node_id) REFERENCES node (node_id), 
-	FOREIGN KEY(ib_link_id) REFERENCES link (link_id), 
-	FOREIGN KEY(ob_link_id) REFERENCES link (link_id)
+	FOREIGN KEY(ob_link_id) REFERENCES link (link_id), 
+	FOREIGN KEY(ib_link_id) REFERENCES link (link_id)
 )
