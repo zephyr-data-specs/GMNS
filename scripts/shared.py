@@ -96,10 +96,12 @@ class GMNS:
         for resource in self._package.resources:
             if type(resource.path) is str:
                 new_resource_path = base_path / resource.path
-                new_to_old[new_resource_path.relative_to(SCRIPT_PATH).as_posix()] = (
-                    resource.path
-                )
-                resource.path = new_resource_path.relative_to(SCRIPT_PATH).as_posix()
+                new_to_old[
+                    new_resource_path.relative_to(SCRIPT_PATH / "..").as_posix()
+                ] = resource.path
+                resource.path = new_resource_path.relative_to(
+                    SCRIPT_PATH / ".."
+                ).as_posix()
 
                 if not os.path.exists(new_resource_path):
                     with open(new_resource_path, "a+"):
