@@ -59,7 +59,7 @@
         {
             "name": "free_speed",
             "type": "number",
-            "description": "Optional. Free flow speed in short_length units per hour ",
+            "description": "Optional. Free flow speed in units defined by config file",
             "constraints": {
                 "minimum": 0,
                 "maximum": 200
