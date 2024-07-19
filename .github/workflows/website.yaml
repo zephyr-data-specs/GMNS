@@ -2,7 +2,7 @@ name: Deploy Documentation Website
 
 on: 
   push:
-    branches: ["main"]
+    branches: ["main", "develop-test-pages"]
   workflow_dispatch: {}
 
 permissions:
