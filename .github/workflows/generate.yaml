@@ -40,10 +40,6 @@ jobs:
         run: pip install -r ${{env.SCRIPTS_FOLDER}}/requirements.txt
         if: steps.getDiff.outputs.diff
 
-      - name: Remove previous files
-        if: steps.getDiff.outputs.diff
-        run: rm ${{env.DOCS_FOLDER}}/*
-
       - name: Run schema generator
         if: steps.getDiff.outputs.diff
         run: python ${{env.SCRIPTS_FOLDER}}/generate.py
