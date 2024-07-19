@@ -6,5 +6,6 @@ CREATE TABLE IF NOT EXISTS config (
 	crs TEXT, 
 	geometry_field_format TEXT, 
 	currency TEXT, 
-	version_number FLOAT
+	version_number FLOAT, 
+	id_type VARCHAR(7)
 )

@@ -1,8 +1,10 @@
 {
     "primaryKey": "zone_id",
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
     ],
+    "fieldsMatch": "subset",
     "foreignKeys": [
         {
             "fields": "super_zone",
@@ -38,5 +40,6 @@
         }
     ],
     "name": "zone.schema.json",
-    "description": "Locates zones (travel analysis zones, parcels) on a map. Zones are represented as polygons in geographic information systems."
+    "description": "Locates zones (travel analysis zones, parcels) on a map. Zones are represented as polygons in geographic information systems.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

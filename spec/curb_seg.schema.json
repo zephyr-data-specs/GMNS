@@ -4,6 +4,7 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
     "foreignKeys": [
         {
             "fields": "link_id",
@@ -78,5 +79,6 @@
         }
     ],
     "name": "curb_seg.schema.json",
-    "description": "A portion of a link defined by `link_id`,`ref_node_id`, `start_lr`, and `end_lr`. Provides a space for curbside regulations. Segments and lanes should be use for travel facilities"
+    "description": "A portion of a link defined by `link_id`,`ref_node_id`, `start_lr`, and `end_lr`. Provides a space for curbside regulations. Segments and lanes should be use for travel facilities",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

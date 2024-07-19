@@ -20,13 +20,14 @@
         - `reference`
           - `resource` signal_controller
           - `fields` ['controller_id']
-
-  | name            | type    | description                                                                                                                        | constraints                                                     |
-|:----------------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------|
-| coordination_id | any     | Primary key.                                                                                                                       | {'required': True}                                              |
-| timing_plan_id  | any     | Required. Foreign key (Signal_timing_plan table).                                                                                  | {'required': True}                                              |
-| controller_id   | any     | Required. Foreign key (signal_controller table).                                                                                   | {'required': True}                                              |
-| coord_contr_id  | any     | Optional. For coordinated signals, the master signal controller for coordination.                                                  |                                                                 |
-| coord_phase     | integer | Optional. For coordinated signals, the phase at which coordination starts (time 0).                                                | {'minimum': 0, 'maximum': 32}                                   |
-| coord_ref_to    | string  | Optional. For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red. | {'enum': ['begin_of_green', 'begin_of_yellow', 'begin_of_red']} |
-| offset          | number  | Optional. Offset in seconds.                                                                                                       | {'minimum': 0}                                                  |
+    - `fieldsMatch` subset
+  
+| name            | type    | description                                                                                                                        | constraints                   | categories                                            |
+|:----------------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------|:------------------------------|:------------------------------------------------------|
+| coordination_id | any     | Primary key.                                                                                                                       | {'required': True}            |                                                       |
+| timing_plan_id  | any     | Required. Foreign key (Signal_timing_plan table).                                                                                  | {'required': True}            |                                                       |
+| controller_id   | any     | Required. Foreign key (signal_controller table).                                                                                   | {'required': True}            |                                                       |
+| coord_contr_id  | any     | Optional. For coordinated signals, the master signal controller for coordination.                                                  |                               |                                                       |
+| coord_phase     | integer | Optional. For coordinated signals, the phase at which coordination starts (time 0).                                                | {'minimum': 0, 'maximum': 32} |                                                       |
+| coord_ref_to    | string  | Optional. For coordinated signals, the part of the phase where coordination starts: begin_of_green, begin_of_yellow, begin_of_red. |                               | ['begin_of_green', 'begin_of_yellow', 'begin_of_red'] |
+| offset          | number  | Optional. Offset in seconds.                                                                                                       | {'minimum': 0}                |                                                       |

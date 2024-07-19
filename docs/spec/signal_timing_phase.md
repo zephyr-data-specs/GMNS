@@ -10,8 +10,9 @@
         - `reference`
           - `resource` signal_timing_plan
           - `fields` ['timing_plan_id']
-
-  | name             | type    | description                                                                                                              | constraints                                     |
+    - `fieldsMatch` subset
+  
+| name             | type    | description                                                                                                              | constraints                                     |
 |:-----------------|:--------|:-------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------|
 | timing_phase_id  | any     | Primary key.                                                                                                             | {'required': True}                              |
 | timing_plan_id   | any     | Foreign key; connects to a timing_plan associated with a controller.                                                     |                                                 |

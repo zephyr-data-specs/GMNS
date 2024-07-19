@@ -2,7 +2,7 @@
   - `description` Locates zones (travel analysis zones, parcels) on a map. Zones are represented as polygons in geographic information systems.
   - `path` zone.csv
   - `schema`
-      - `missingValues` ['NaN']
+      - `missingValues` ['NaN', '']
     - `primaryKey` ['zone_id']
     - `foreignKeys`
       - [1]
@@ -10,8 +10,9 @@
         - `reference`
           - `resource` 
           - `fields` ['zone_id']
-
-  | name       | type   | description                                                                                                   | constraints        |
+    - `fieldsMatch` subset
+  
+| name       | type   | description                                                                                                   | constraints        |
 |:-----------|:-------|:--------------------------------------------------------------------------------------------------------------|:-------------------|
 | zone_id    | any    | Primary key.                                                                                                  | {'required': True} |
 | name       | string | Optional.                                                                                                     |                    |

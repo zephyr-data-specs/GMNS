@@ -20,8 +20,9 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-
-  | name             | type    | description                                                                  | constraints        |
+    - `fieldsMatch` subset
+  
+| name             | type    | description                                                                  | constraints        |
 |:-----------------|:--------|:-----------------------------------------------------------------------------|:-------------------|
 | detector_id      | any     | Primary key.                                                                 | {'required': True} |
 | controller_id    | any     | Required. Foreign key to signal_controller table.                            | {'required': True} |

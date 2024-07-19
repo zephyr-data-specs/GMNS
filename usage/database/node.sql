@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS node (
 	y_coord FLOAT NOT NULL, 
 	z_coord FLOAT, 
 	node_type TEXT, 
-	ctrl_type VARCHAR(6), 
+	ctrl_type TEXT, 
 	zone_id TEXT, 
 	parent_node_id TEXT, 
 	PRIMARY KEY (node_id), 

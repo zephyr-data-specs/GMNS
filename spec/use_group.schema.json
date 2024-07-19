@@ -1,8 +1,10 @@
 {
     "primaryKey": "use_group",
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
     ],
+    "fieldsMatch": "subset",
     "fields": [
         {
             "name": "use_group",
@@ -27,5 +29,6 @@
         }
     ],
     "name": "use_group.schema.json",
-    "description": "Defines groupings of uses, to reduce the size of the allowed_uses lists in the other tables."
+    "description": "Defines groupings of uses, to reduce the size of the allowed_uses lists in the other tables.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

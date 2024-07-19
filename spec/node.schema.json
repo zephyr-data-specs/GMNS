@@ -1,8 +1,10 @@
 {
     "primaryKey": "node_id",
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
     ],
+    "fieldsMatch": "subset",
     "foreignKeys": [
         {
             "fields": "zone_id",
@@ -63,15 +65,13 @@
             "name": "ctrl_type",
             "type": "string",
             "description": "Optional. Intersection control type - one of ControlType_Set.",
-            "constraints": {
-                "enum": [
-                    "none",
-                    "yield",
-                    "stop",
-                    "4_stop",
-                    "signal"
-                ]
-            }
+            "categories": [
+                "none",
+                "yield",
+                "stop",
+                "4_stop",
+                "signal"
+            ]
         },
         {
             "name": "zone_id",
@@ -85,5 +85,6 @@
         }
     ],
     "name": "node.schema.json",
-    "description": "A list of vertices that locate points on a map. Typically, they will represent intersections, but may also represent other points, such as a transition between divided and undivided highway. Nodes are the endpoints of a link (as opposed to the other type of vertex, location, which is used to represent points along a link)"
+    "description": "A list of vertices that locate points on a map. Typically, they will represent intersections, but may also represent other points, such as a transition between divided and undivided highway. Nodes are the endpoints of a link (as opposed to the other type of vertex, location, which is used to represent points along a link)",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

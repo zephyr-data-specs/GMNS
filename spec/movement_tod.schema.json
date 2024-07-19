@@ -1,8 +1,10 @@
 {
     "primaryKey": "mvmt_tod_id",
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
     ],
+    "fieldsMatch": "subset",
     "foreignKeys": [
         {
             "fields": "mvmt_id",
@@ -100,15 +102,15 @@
             "name": "type",
             "type": "string",
             "description": "Optional. Describes the type of movement (left, right, thru, etc.).",
+            "categories": [
+                "left",
+                "right",
+                "uturn",
+                "thru",
+                "merge"
+            ],
             "constraints": {
-                "required": true,
-                "enum": [
-                    "left",
-                    "right",
-                    "uturn",
-                    "thru",
-                    "merge"
-                ]
+                "required": true
             }
         },
         {
@@ -125,17 +127,15 @@
             "name": "ctrl_type",
             "type": "any",
             "description": "Optional. .",
-            "constraints": {
-                "enum": [
-                    "no_control",
-                    "yield",
-                    "stop",
-                    "stop_2_way",
-                    "stop_4_way",
-                    "signal_with_RTOR",
-                    "signal"
-                ]
-            }
+            "categories": [
+                "no_control",
+                "yield",
+                "stop",
+                "stop_2_way",
+                "stop_4_way",
+                "signal_with_RTOR",
+                "signal"
+            ]
         },
         {
             "name": "mvmt_code",
@@ -149,5 +149,6 @@
         }
     ],
     "name": "movement_tod.schema.json",
-    "description": "Handles day-of-week and time-of-day restrictions on movements."
+    "description": "Handles day-of-week and time-of-day restrictions on movements.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

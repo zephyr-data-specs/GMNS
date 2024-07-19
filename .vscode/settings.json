@@ -1,14 +1,4 @@
 {
-  "json.schemas": [
-    {
-      "fileMatch": ["/spec/datapackage.json"],
-      "url": "https://datapackage.org/profiles/2.0/datapackage.json"
-    },
-    {
-      "fileMatch": ["/spec/*.schema.json"],
-      "url": "https://datapackage.org/profiles/2.0/tableschema.json"
-    }
-  ],
   "python.analysis.autoImportCompletions": true,
   "python.analysis.typeCheckingMode": "basic",
   "[python]": {
@@ -18,5 +8,23 @@
       "source.organizeImports": "explicit"
     }
   },
-  "isort.args": ["--profile", "black"]
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true
+  },
+  "isort.args": ["--profile", "black"],
+  "yaml.schemas": {
+    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+  },
+  "yaml.customTags": [ 
+    "!ENV scalar",
+    "!ENV sequence",
+    "!relative scalar",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+    "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
+  ]
 }

@@ -1,8 +1,10 @@
 {
     "primaryKey": "loc_id",
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
     ],
+    "fieldsMatch": "subset",
     "foreignKeys": [
         {
             "fields": "link_id",
@@ -85,5 +87,6 @@
         }
     ],
     "name": "location.schema.json",
-    "description": "A location is a vertex that is associated with a specific location along a link. Locations may be used to represent places where activities occur (e.g., driveways and bus stops). Its attributes are nearly the same as those for a node, except that the location includes an associated link and node, with location specified as distance along the link from the node."
+    "description": "A location is a vertex that is associated with a specific location along a link. Locations may be used to represent places where activities occur (e.g., driveways and bus stops). Its attributes are nearly the same as those for a node, except that the location includes an associated link and node, with location specified as distance along the link from the node.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

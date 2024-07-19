@@ -1,0 +1,62 @@
+site_name: GMNS Docs
+site_url: https://zephyr-data-specs.github.io/GMNS/
+repo_url: https://github.com/zephyr-data-specs/GMNS/
+edit_uri: 'edit/main/docs/'
+site_description: The General Modeling Network Specification (GMNS) defines a common machine (and human) readable format for sharing routable road network files. It is designed to be used in multi-modal static and dynamic transportation planning and operations models.
+site_author: Volpe/FHWA partnership with Zephyr Foundation
+nav:
+  - Home: README.md
+  - Full Specification: spec/README.md
+  - Tables:
+    - config: spec/config.md
+    - use_definition: spec/use_definition.md
+    - use_group: spec/use_group.md
+    - time_set_definition: spec/time_set_definitions.md
+    - node: spec/node.md
+    - link: spec/link.md
+    - geometry: spec/geometry.md
+    - zone: spec/zone.md
+    - segment: spec/segment.md
+    - location: spec/location.md
+    - lane: spec/lane.md
+    - segment_lane: spec/segment_lane.md
+    - link_tod: spec/link_tod.md
+    - segment_tod: spec/segment_tod.md
+    - lane_tod: spec/lane_tod.md
+    - segment_lane_tod: spec/segment_lane_tod.md
+    - movement: spec/movement.md
+    - movement_tod: spec/movement_tod.md
+    - signal_controller: spec/signal_controller.md
+    - signal_coordination: spec/signal_coordination.md
+    - signal_detector: spec/signal_detector.md
+    - signal_phase_mvmt: spec/signal_phase_mvmt.md
+    - signal_timing_plan: spec/signal_timing_plan.md
+    - signal_timing_phase: spec/signal_timing_phase.md
+    - curb_seg: spec/curb_seg.md
+theme:
+  name: material
+  icon:
+    logo: material/transit-detour
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: cyan
+      accent: cyan
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: cyan
+      accent: cyan
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - tables
