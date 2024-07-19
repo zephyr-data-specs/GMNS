@@ -1282,7 +1282,7 @@
   - `constraints`:
 ### `free_speed`
   
-- `description` Optional. Free flow speed in short_length units per hour 
+- `description` Optional. Free flow speed in units defined by config file
   - `type` number
   - `constraints`:
     - `maximum` 200
