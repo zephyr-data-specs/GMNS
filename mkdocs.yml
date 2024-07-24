@@ -8,10 +8,6 @@ nav:
   - Home: README.md
   - Full Specification: spec/README.md
   - Tables:
-    - config: spec/config.md
-    - use_definition: spec/use_definition.md
-    - use_group: spec/use_group.md
-    - time_set_definition: spec/time_set_definitions.md
     - node: spec/node.md
     - link: spec/link.md
     - geometry: spec/geometry.md
@@ -33,6 +29,10 @@ nav:
     - signal_timing_plan: spec/signal_timing_plan.md
     - signal_timing_phase: spec/signal_timing_phase.md
     - curb_seg: spec/curb_seg.md
+    - config: spec/config.md
+    - use_definition: spec/use_definition.md
+    - use_group: spec/use_group.md
+    - time_set_definition: spec/time_set_definitions.md
 theme:
   name: material
   icon:
