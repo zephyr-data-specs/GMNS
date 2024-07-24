@@ -1,34 +1,40 @@
 # General Modeling Network Specification: Spec Documentation
-Here, you can find human-readable information on the possible values in the specification. For information on GMNS in general, please view the [repository README.md file](https://github.com/zephyr-data-specs/GMNS/tree/main/README.md)
+The General Modeling Network Specification (GMNS) defines a common machine (and human) readable format for sharing routable road network files. It is designed to be used in multi-modal static and dynamic transportation planning and operations models. Here, you can find human-readable information on the possible values in the specification. For more information on GMNS, please view the [repository README.md file](https://github.com/zephyr-data-specs/GMNS/tree/main/README.md)
 
-## Configuration
-The following units are recommended:
-- Short lengths (linear references, lane widths, etc.): feet or meters
-- Long lengths (link lengths): miles or km
-- Speed: miles per hour or km / hr
+## Specification Tables
 
-These are defined for each dataset in the [`config`](spec/config.md) file.
+### Basic Data Elements
+- [`node`](spec/node.md)  
+- [`link`](spec/link.md)
+- [`geometry`](spec/geometry.md)       
+- [`zone`](spec/zone.md)
 
-The specification also provides for optional tables to define datatypes for use and time sets.
+### Advanced Data Elements
+- [`segment`](spec/segment.md)  
+- [`location`](spec/location.md)  
+- [`lane`](spec/lane.md)  
+- [`segment_lane`](spec/segment_lane.md)
+- [`link_tod`](spec/link_tod.md)  
+- [`segment_tod`](spec/segment_tod.md)  
+- [`lane_tod`](spec/lane_tod.md)  
+- [`segment_lane_tod`](spec/segment_lane_tod.md)  
+- [`movement`](spec/movement.md)  
+- [`movement_tod`](spec/movement_tod.md) 
+- [`signal_controller`](spec/signal_controller.md)
+- [`signal_coordination`](spec/signal_coordination.md)
+- [`signal_detector`](spec/signal_detector.md)  
+- [`signal_phase_mvmt`](spec/signal_phase_mvmt.md)  
+- [`signal_timing_plan`](spec/signal_timing_plan.md)
+- [`signal_timing_phase`](spec/signal_timing_phase.md)
+- [`curb_seg`](spec/curb_seg.md)
 
-### Use Definition and Use Group
-Two classes define the characteristics of each use, and of the items in a use set. 
-- The [`use_definition`](spec/use_definition.md) file defines the characteristics of each vehicle type or non-travel purpose (e.g., a shoulder or parking lane). A two-way left turn lane (TWLTL) is also a use.
-- The optional [`use_group`](spec/use_group.md) file defines groupings of uses, to reduce the size of the Allowed_Uses lists in the other tables.
+### Configuration
+- [`config`](spec/config.md)
+- [`use_definition`](spec/use_definition.md)
+- [`use_group`](spec/use_group.md)
+- [`time_set_definition`](spec/time_set_definitions.md)
 
-### Time Set Definitions
-Four time-of-day files handle day-of-week and time-of-day restrictions and other attributes on links, segments, lanes, lane_segments and movements.
-- [`time_set_definitions`](spec/time_set_definitions.md) currently allows for times of day to be represented in the following format: 
-    - `XXXXXXXX_HHMM_HHMM`, where `XXXXXXXX` is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times. This is adapted from the Synchro Universal Traffic Data Format (UTDF) TimeOfDay table structure. For example, Monday-Friday 0700-0900 would be `01111100_0700_0900`. 
-    - Alternatively, these can be coded in the following time_set_definitions table and `timeday_id` referenced instead of this format. 
-- [`link_tod`](spec/link.md) is an optional file that handles day-of-week and time-of-day restrictions on links. It is used for tolls (which may differ by time-of-day), and part-time changes in link capacity. Since tolls often vary by time of day, they are placed in this file.
-- [`segment_tod`](spec/segment_tod.md) is an optional file that handles day-of-week and time-of-day restrictions on segments. It is used for part-time changes in segment capacity and number of lanes.
-- [`lane_tod`](spec/lane_tod.md)
-- [`segment_lane_tod`](spec/segment_lane_tod.md)
-
-Ad hoc fields, such as notes, may also be added to any of these tables. A full specification of the data package may be viewed [here](spec/README.md).
-
-## Additional Details
+## Additional Table Details
 
 ### Lanes
 
@@ -100,38 +106,32 @@ Traffic signals call for several additional files:
 
 The movement file describes how inbound and outbound `road_links` connect at an intersection. The simplified structure for `offroad_links` implies that travel can occur from a given offroad link to any offroad link sharing a node (including U-turn movements); no movements table is necessary.
 
-## Specification Tables
+## Configuration
+The following units are recommended:
+- Short lengths (linear references, lane widths, etc.): feet or meters
+- Long lengths (link lengths): miles or km
+- Speed: miles per hour or km / hr
 
-### Configuration
-- [`config`](spec/config.md)
-- [`use_definition`](spec/use_definition.md)
-- [`use_group`](spec/use_group.md)
-- [`time_set_definition`](spec/time_set_definitions.md)
+These are defined for each dataset in the [`config`](spec/config.md) file.
 
-### Basic Data Elements
-- [`node`](spec/node.md)  
-- [`link`](spec/link.md)
-- [`geometry`](spec/geometry.md)       
-- [`zone`](spec/zone.md)
+The specification also provides for optional tables to define datatypes for use and time sets.
 
-### Advanced Data Elements
-- [`segment`](spec/segment.md)  
-- [`location`](spec/location.md)  
-- [`lane`](spec/lane.md)  
-- [`segment_lane`](spec/segment_lane.md)
-- [`link_tod`](spec/link_tod.md)  
-- [`segment_tod`](spec/segment_tod.md)  
-- [`lane_tod`](spec/lane_tod.md)  
-- [`segment_lane_tod`](spec/segment_lane_tod.md)  
-- [`movement`](spec/movement.md)  
-- [`movement_tod`](spec/movement_tod.md) 
-- [`signal_controller`](spec/signal_controller.md)
-- [`signal_coordination`](spec/signal_coordination.md)
-- [`signal_detector`](spec/signal_detector.md)  
-- [`signal_phase_mvmt`](spec/signal_phase_mvmt.md)  
-- [`signal_timing_plan`](spec/signal_timing_plan.md)
-- [`signal_timing_phase`](spec/signal_timing_phase.md)
-- [`curb_seg`](spec/curb_seg.md)
+### Use Definition and Use Group
+Two classes define the characteristics of each use, and of the items in a use set. 
+- The [`use_definition`](spec/use_definition.md) file defines the characteristics of each vehicle type or non-travel purpose (e.g., a shoulder or parking lane). A two-way left turn lane (TWLTL) is also a use.
+- The optional [`use_group`](spec/use_group.md) file defines groupings of uses, to reduce the size of the Allowed_Uses lists in the other tables.
+
+### Time Set Definitions
+Four time-of-day files handle day-of-week and time-of-day restrictions and other attributes on links, segments, lanes, lane_segments and movements.
+- [`time_set_definitions`](spec/time_set_definitions.md) currently allows for times of day to be represented in the following format: 
+    - `XXXXXXXX_HHMM_HHMM`, where `XXXXXXXX` is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times. This is adapted from the Synchro Universal Traffic Data Format (UTDF) TimeOfDay table structure. For example, Monday-Friday 0700-0900 would be `01111100_0700_0900`. 
+    - Alternatively, these can be coded in the following [`time_set_definitions`](spec/time_set_definitions.md) table and `timeday_id` referenced instead of this format. 
+- [`link_tod`](spec/link.md) is an optional file that handles day-of-week and time-of-day restrictions on links. It is used for tolls (which may differ by time-of-day), and part-time changes in link capacity. Since tolls often vary by time of day, they are placed in this file.
+- [`segment_tod`](spec/segment_tod.md) is an optional file that handles day-of-week and time-of-day restrictions on segments. It is used for part-time changes in segment capacity and number of lanes.
+- [`lane_tod`](spec/lane_tod.md)
+- [`segment_lane_tod`](spec/segment_lane_tod.md)
+
+Ad hoc fields, such as notes, may also be added to any of these tables. A full specification of the data package may be viewed [here](spec/README.md).
 
 ## Inheritance Relationship Diagram
 <!-- ![Inheritance relationships](/docs/img/inheritance.png) -->
@@ -160,7 +160,7 @@ flowchart TD;
     segment_lane --> segment_lane_tod;
 ```
 
-## How this is generated
+## Documentation Generation
 
 This documentation is automatically generated by a GitHub action. It performs the following actions:
 1. The action first checks if there is a difference in any file in the [`spec` folder](https://github.com/zephyr-data-specs/GMNS/tree/main/spec) from one commit to the next. If so, it proceeds.
@@ -177,7 +177,7 @@ title: Autogenerated Docs Flowchart
 ---
 flowchart TD
     A["A commit is made"]
-    B["Check if a file in the _spec_ folder changed"]
+    B["Check if a file in the spec folder changed"]
 
     C["End."]
     D["Generate new documentation and database files"]
