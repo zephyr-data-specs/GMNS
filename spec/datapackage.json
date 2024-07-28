@@ -2,7 +2,7 @@
   "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
   "name": "gmns",
   "title": "General Modeling Network Specification (GMNS)",
-  "version": "0.95",
+  "version": "0.96",
   "description": "The General Modeling Network Specification (GMNS) defines a common machine (and human) readable format for sharing routable road network files. It is designed to be used in multi-modal static and dynamic transportation planning and operations models.",
   "homepage": "https://github.com/zephyr-data-specs/GMNS",
   "resources": [
