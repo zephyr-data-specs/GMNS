@@ -1,7 +1,7 @@
 # `gmns` General Modeling Network Specification (GMNS)
 - `description` The General Modeling Network Specification (GMNS) defines a common machine (and human) readable format for sharing routable road network files. It is designed to be used in multi-modal static and dynamic transportation planning and operations models.
 - `homepage` https://github.com/zephyr-data-specs/GMNS
-- `version` 0.95
+- `version` 0.96
 ## `link`
   
 - `description` A link is an edge in a network, defined by the nodes it travels from and to. It may have associated geometry information. Links have three types of attributes:<br>  - Those that define the physical location of the link (e.g., `shape` `information`, `length`, `width`)<br>  - Those that define the link's directionality: `from_node`, `to_node`<br>  - Those that define properties in the direction of travel: capacity, free flow speed, number of lanes, permitted uses, grade, facility type
