@@ -5,7 +5,8 @@ from shared import EXAMPLES_PATH, gmns
 
 # List of tuples with the database name and path to the relevant example folder
 EXAMPLE_PATHS: list[tuple[str, Path]] = [
-    ("cambridge", EXAMPLES_PATH / "Cambridge_Intersection"),
+    ("cambridge_intersection", EXAMPLES_PATH / "Cambridge_Intersection"),
+    ("arlington_signals", EXAMPLES_PATH / "Arlington_Signals"),
 ]
 
 # Template files that should be present in every example
