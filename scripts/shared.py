@@ -1,3 +1,4 @@
+import csv
 import json
 import os
 import pathlib
@@ -6,14 +7,19 @@ import sqlite3
 from os import listdir
 from os.path import isfile
 from pathlib import Path
+from typing import Callable
 
-from frictionless import Package
+from frictionless import Field, Package
 
 SCRIPT_PATH = pathlib.Path(__file__).parent.resolve()
 SPECS_PATH = SCRIPT_PATH / ".." / "spec"
 DOCS_PATH = SCRIPT_PATH / ".." / "docs" / "spec"
 DB_PATH = SCRIPT_PATH / ".." / "usage" / "database"
 EXAMPLES_PATH = SCRIPT_PATH / ".." / "examples"
+
+
+def check_if_id(field: Field):
+    return "_id" in field.name
 
 
 class GMNS:
@@ -156,10 +162,36 @@ class GMNS:
                         path_of_file_to_copy, example_path / name_of_file_to_copy
                     )
                     files_to_delete.append(example_path / name_of_file_to_copy)
+
+            id_type = "any"
+            try:
+                with open(example_path / "config.csv", "r") as config_file:
+                    config_found = True
+                    config = csv.DictReader(config_file)
+                    for row in config:
+                        id_type = row["id_type"]
+            except:
+                config_found = False
+
+            if config_found:
+                self.edit_spec_types(check_if_id, id_type)
+
             self.generate_db(example_path, example_name, False)
+
+            if config_found:
+                self.edit_spec_types(check_if_id, "any")
 
         for file_to_delete in files_to_delete:
             os.remove(file_to_delete)
+
+    def edit_spec_types(
+        self, check_field: Callable[[Field], bool], change_type_to: str
+    ):
+        for resource in self._package.resources:
+            schema = resource.schema
+            for field in schema.fields:
+                if check_field(field):
+                    schema.set_field_type(field.name, change_type_to)
 
     def validate_example(
         self,
@@ -205,4 +237,5 @@ class GMNS:
         return report
 
 
+gmns = GMNS()
 gmns = GMNS()
