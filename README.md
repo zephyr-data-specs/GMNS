@@ -10,7 +10,7 @@ How do I use GMNS?
 3.	Read the [__documentation__](https://zephyr-data-specs.github.io/GMNS/), which describes the specification in markdown.  
 4.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](usage/conversion) and [__validation__](usage/validation).
 
-[Changelog](docs/Changelog.md) for recent releases.  
+[Changelog](docs/changelog.md) for recent releases.  
 
 ## GMNS Overview
 Version 0.96 includes the following features for use in static models:
