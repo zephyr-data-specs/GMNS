@@ -8,7 +8,9 @@ How do I use GMNS?
 1.  Read the [__specification reference__](spec) to learn about the GMNS format. GMNS is described in json files, and is implementation-agnostic.  A GMNS network might be stored as a series of delimited text files, as a [relational database with several tables](usage/database), or in some other way.   
 2.	Look at our [__small examples__](examples), including a freeway interchange, a portion of a multimodal city network, and a small city.
 3.	Read the [__documentation__](https://zephyr-data-specs.github.io/GMNS/), which describes the specification in markdown.  
-4.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](usage/conversion) and [__validation__](usage/validation).  
+4.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](usage/conversion) and [__validation__](usage/validation).
+
+[Changelog](docs/Changelog.md) for recent releases.  
 
 ## GMNS Overview
 Version 0.96 includes the following features for use in static models:
