@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)<!-- , and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) -->.
 
-## [0.96] = 2024-08-08
+## [0.96] - 2024-08-08
 
 ### Added
 
@@ -46,6 +46,11 @@ Note that In the json schema files, the ID fields (`node_id`, `link_id`, etc.) h
 - Config information is now stored as a new `config` table at the dataset level (fixes #59)
 - New `curb`_seg table to provide a separate segment object for curbside regulations, which may change at different locations (and more frequently) than segment-level changes to the travel lanes
 - Addition of zone tables to two examples (fixed #56)
+
+[unreleased]: https://github.com/zephyr-data-specs/GMNS/compare/v0.96...HEAD
+[0.96]: https://github.com/zephyr-data-specs/GMNS/compare/v0.95...v0.96
+[0.95]: https://github.com/zephyr-data-specs/GMNS/compare/v0.94...v0.95
+[0.94]: https://github.com/zephyr-data-specs/GMNS/releases/tag/v0.94
 
 ### Changed
 
