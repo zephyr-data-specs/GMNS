@@ -47,14 +47,14 @@ Note that In the json schema files, the ID fields (`node_id`, `link_id`, etc.) h
 - New `curb`_seg table to provide a separate segment object for curbside regulations, which may change at different locations (and more frequently) than segment-level changes to the travel lanes
 - Addition of zone tables to two examples (fixed #56)
 
-[unreleased]: https://github.com/zephyr-data-specs/GMNS/compare/v0.96...HEAD
-[0.96]: https://github.com/zephyr-data-specs/GMNS/compare/v0.95...v0.96
-[0.95]: https://github.com/zephyr-data-specs/GMNS/compare/v0.94...v0.95
-[0.94]: https://github.com/zephyr-data-specs/GMNS/releases/tag/v0.94
-
 ### Changed
 
 - Adjustments to the signal phasing tables to fix #57
 - Standardized `bike_facility` type names to fix #58
 - Updates to validation code to use Zephyr-hosted repo (GMNSpy#2)
 - Minor updates to reflect spec changes above
+
+[unreleased]: https://github.com/zephyr-data-specs/GMNS/compare/v0.96...HEAD
+[0.96]: https://github.com/zephyr-data-specs/GMNS/compare/v0.95...v0.96
+[0.95]: https://github.com/zephyr-data-specs/GMNS/compare/v0.94...v0.95
+[0.94]: https://github.com/zephyr-data-specs/GMNS/releases/tag/v0.94
