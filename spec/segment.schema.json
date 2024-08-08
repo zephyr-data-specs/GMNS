@@ -4,6 +4,23 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
+    "foreignKeys": [
+        {
+            "fields": "link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        },
+        {
+            "fields": "ref_node_id",
+            "reference": {
+                "resource": "node",
+                "fields": "node_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "segment_id",
@@ -16,7 +33,6 @@
         {
             "name": "link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Required. Foreign key to road_links. The link that the segment is located on.",
             "constraints": {
                 "required": true
@@ -25,7 +41,6 @@
         {
             "name": "ref_node_id",
             "type": "any",
-            "foreign_key": "node.node_id",
             "description": "Required. Foreign key to node where distance is 0.",
             "constraints": {
                 "required": true
@@ -65,7 +80,7 @@
         {
             "name": "capacity",
             "type": "number",
-            "description": "Optional. Capacity (veh/hr/ln)",
+            "description": "Optional. Saturation capacity (pce/hr/ln)",
             "constraints": {
                 "minimum": 0
             }
@@ -102,48 +117,42 @@
             "name": "bike_facility",
             "type": "string",
             "description": "Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)",
-            "constraints": {
-                "enum": [
-                    "unseparated bike lane",
-                    "buffered bike lane",
-                    "separated bike lane",
-                    "counter-flow bike lane",
-                    "paved shoulder",
-                    "shared lane",
-                    "shared use path",
-                    "off-road unpaved trail",
-                    "other",
-                    "none"
-                ]
-            }
+            "categories": [
+                "unseparated bike lane",
+                "buffered bike lane",
+                "separated bike lane",
+                "counter-flow bike lane",
+                "paved shoulder",
+                "shared lane",
+                "shared use path",
+                "off-road unpaved trail",
+                "other",
+                "none"
+            ]
         },
         {
             "name": "ped_facility",
             "type": "string",
             "description": "Optional. Type of pedestrian accommodation:unknown,none,shoulder,sidewalk,offstreet_path.",
-            "constraints": {
-                "enum": [
-                    "unknown",
-                    "none",
-                    "shoulder",
-                    "sidewalk",
-                    "offstreet_path"
-                ]
-            }
+            "categories": [
+                "unknown",
+                "none",
+                "shoulder",
+                "sidewalk",
+                "offstreet_path"
+            ]
         },
         {
             "name": "parking",
             "type": "string",
             "description": "Optional. Type of parking: unknown,none,shoulder,sidewalk,offstreet_path.",
-            "constraints": {
-                "enum": [
-                    "unknown",
-                    "none",
-                    "shoulder",
-                    "sidewalk",
-                    "offstreet_path"
-                ]
-            }
+            "categories": [
+                "unknown",
+                "none",
+                "shoulder",
+                "sidewalk",
+                "offstreet_path"
+            ]
         },
         {
             "name": "allowed_uses",
@@ -173,5 +182,6 @@
         }
     ],
     "name": "segment.schema.json",
-    "description": "A portion of a link defined by `link_id`,`ref_node_id`, `start_lr`, and `end_lr`. Values in the segment will override they value specified in the link table. When one segment is fully contained within another, its value prevails."
+    "description": "A portion of a link defined by `link_id`,`ref_node_id`, `start_lr`, and `end_lr`. Values in the segment will override they value specified in the link table. When one segment is fully contained within another, its value prevails.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

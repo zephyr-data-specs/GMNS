@@ -1,7 +1,25 @@
 {
     "primaryKey": "loc_id",
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
+    ],
+    "fieldsMatch": "subset",
+    "foreignKeys": [
+        {
+            "fields": "link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        },
+        {
+            "fields": "ref_node_id",
+            "reference": {
+                "resource": "node",
+                "fields": "node_id"
+            }
+        }
     ],
     "fields": [
         {
@@ -15,7 +33,6 @@
         {
             "name": "link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Required. Road Link ID. Foreign Key from Road_Link.",
             "constraints": {
                 "required": true
@@ -24,7 +41,6 @@
         {
             "name": "ref_node_id",
             "type": "any",
-            "foreign_key": "node.node_id",
             "description": "Required. The From node of the link. Foreign Key from Node.",
             "constraints": {
                 "required": true
@@ -71,5 +87,6 @@
         }
     ],
     "name": "location.schema.json",
-    "description": "A location is a vertex that is associated with a specific location along a link. Locations may be used to represent places where activities occur (e.g., driveways and bus stops). Its attributes are nearly the same as those for a node, except that the location includes an associated link and node, with location specified as distance along the link from the node."
+    "description": "A location is a vertex that is associated with a specific location along a link. Locations may be used to represent places where activities occur (e.g., driveways and bus stops). Its attributes are nearly the same as those for a node, except that the location includes an associated link and node, with location specified as distance along the link from the node.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

@@ -4,6 +4,16 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
+    "foreignKeys": [
+        {
+            "fields": "timing_plan_id",
+            "reference": {
+                "resource": "signal_timing_plan",
+                "fields": "timing_plan_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "timing_phase_id",
@@ -16,7 +26,6 @@
         {
             "name": "timing_plan_id",
             "type": "any",
-            "foreign_key": "signal_timing_plan.timing_plan_id",
             "description": "Foreign key; connects to a timing_plan associated with a controller."
         },
         {
@@ -83,7 +92,7 @@
         {
             "name": "ring",
             "type": "integer",
-            "description": "Required. Set of phases that conflict with each other. ",
+            "description": "Required. Phases that may operate sequentially. With dual rings, two non-conflicting phases may operate at the same time",
             "constraints": {
                 "required": true,
                 "minimum": 0,
@@ -93,7 +102,7 @@
         {
             "name": "barrier",
             "type": "integer",
-            "description": "Required. Set of phases that can operate other.",
+            "description": "Required. Set of phases in both rings that must end at the same time",
             "constraints": {
                 "required": true,
                 "minimum": 0,
@@ -110,5 +119,6 @@
         }
     ],
     "name": "signal_timing_phase.schema.json",
-    "description": "For signalized nodes, provides signal timing and establishes phases that may run concurrently."
+    "description": "For signalized nodes, provides signal timing and establishes phases that may run concurrently.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

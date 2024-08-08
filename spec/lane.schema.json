@@ -1,7 +1,18 @@
 {
     "primaryKey": "lane_id",
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
+    ],
+    "fieldsMatch": "subset",
+    "foreignKeys": [
+        {
+            "fields": "link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        }
     ],
     "fields": [
         {
@@ -15,7 +26,6 @@
         {
             "name": "link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Required. Foreign key to link table.",
             "constraints": {
                 "required": true
@@ -24,7 +34,7 @@
         {
             "name": "lane_num",
             "type": "integer",
-            "description": "Required. e.g., -1, 1, 2 (use left-to-right numbering).",
+            "description": "Required. e.g., -1, 1, 2 (use left-to-right numbering). By convention, the left-most through lane is 1. Left-turn lanes have negative numbers",
             "constraints": {
                 "required": true,
                 "minimum": -10,
@@ -40,25 +50,21 @@
             "name": "r_barrier",
             "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
-            "constraints": {
-                "enum": [
-                    "none",
-                    "regulatory",
-                    "physical"
-                ]
-            }
+            "categories": [
+                "none",
+                "regulatory",
+                "physical"
+            ]
         },
         {
             "name": "l_barrier",
             "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
-            "constraints": {
-                "enum": [
-                    "none",
-                    "regulatory",
-                    "physical"
-                ]
-            }
+            "categories": [
+                "none",
+                "regulatory",
+                "physical"
+            ]
         },
         {
             "name": "width",
@@ -70,5 +76,6 @@
         }
     ],
     "name": "lane.schema.json",
-    "description": "The lane file allocates portions of the physical right-of-way that might be used for travel. It might be a travel lane, bike lane, or a parking lane. Lanes only are included in directed links; undirected links are assumed to have no lane controls or directionality. If a lane is added, dropped, or changes properties along the link, those changes are recorded on the `segment_link` table. Lanes are numbered sequentially, starting at either the centerline (two-way street) or the left shoulder (one-way street or divided highway with two centerlines)."
+    "description": "The lane file allocates portions of the physical right-of-way that might be used for travel. It might be a travel lane, bike lane, or a parking lane. Lanes only are included in directed links; undirected links are assumed to have no lane controls or directionality. If a lane is added, dropped, or changes properties along the link, those changes are recorded on the `segment_link` table. Lanes are numbered sequentially, starting at either the centerline (two-way street) or the left shoulder (one-way street or divided highway with two centerlines).",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

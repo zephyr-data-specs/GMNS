@@ -4,6 +4,30 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
+    "foreignKeys": [
+        {
+            "fields": "timing_phase_id",
+            "reference": {
+                "resource": "signal_timing_phase",
+                "fields": "timing_phase_id"
+            }
+        },
+        {
+            "fields": "mvmt_id",
+            "reference": {
+                "resource": "movement",
+                "fields": "mvmt_id"
+            }
+        },
+        {
+            "fields": "link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "signal_phase_mvmt_id",
@@ -16,7 +40,6 @@
         {
             "name": "timing_phase_id",
             "type": "any",
-            "foreign_key": "signal_timing_phase.timing_phase_id",
             "description": "Associated entry in the timing phase table.",
             "constraints": {
                 "required": true
@@ -25,28 +48,25 @@
         {
             "name": "mvmt_id",
             "type": "any",
-            "foreign_key": "movement.mvmt_id",
             "description": "Foreign key. Either Movement_ID (for phases used by vehicles), or Link_id (for phases used by pedestrians) is required."
         },
         {
             "name": "link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Foreign key. Either Movement_ID (for phases used by vehicles), or Link_id (for phases used by pedestrians) is required."
         },
         {
             "name": "protection",
             "type": "string",
             "description": "Optional. Indicates whether the phase is protected, permitted, or right turn on red.",
-            "constraints": {
-                "enum": [
-                    "protected",
-                    "permitted",
-                    "rtor"
-                ]
-            }
+            "categories": [
+                "protected",
+                "permitted",
+                "rtor"
+            ]
         }
     ],
     "name": "signal_phase_mvmt.schema.json",
-    "description": "Associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A signal phase may be associated with several movements. A Movement may also run on more than one phase."
+    "description": "Associates Movements and pedestrian Links (e.g., crosswalks) with signal phases. A signal phase may be associated with several movements. A Movement may also run on more than one phase.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

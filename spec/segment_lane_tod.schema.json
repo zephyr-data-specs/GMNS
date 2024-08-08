@@ -4,6 +4,23 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
+    "foreignKeys": [
+        {
+            "fields": "segment_lane_id",
+            "reference": {
+                "resource": "segment_lane",
+                "fields": "segment_lane_id"
+            }
+        },
+        {
+            "fields": "timeday_id",
+            "reference": {
+                "resource": "time_set_definitions",
+                "fields": "timeday_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "segment_lane_tod_id",
@@ -16,7 +33,6 @@
         {
             "name": "segment_lane_id",
             "type": "any",
-            "foreign_key": "segment_lane.segment_lane_id",
             "description": "Required. Foreign key, segment_lane table",
             "constraints": {
                 "required": true
@@ -25,7 +41,6 @@
         {
             "name": "timeday_id",
             "type": "any",
-            "foreign_key": "time_set_definitions.timeday_id",
             "description": "Conditionally required (either timeday_id or time_day). Foreign key to time_set_definitions."
         },
         {
@@ -52,25 +67,21 @@
             "name": "r_barrier",
             "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
-            "constraints": {
-                "enum": [
-                    "none",
-                    "regulatory",
-                    "physical"
-                ]
-            }
+            "categories": [
+                "none",
+                "regulatory",
+                "physical"
+            ]
         },
         {
             "name": "l_barrier",
             "type": "string",
             "description": "Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.",
-            "constraints": {
-                "enum": [
-                    "none",
-                    "regulatory",
-                    "physical"
-                ]
-            }
+            "categories": [
+                "none",
+                "regulatory",
+                "physical"
+            ]
         },
         {
             "name": "width",
@@ -82,5 +93,6 @@
         }
     ],
     "name": "segment_lane_tod.schema.json",
-    "description": "An optional file that handles day-of-week and time-of-day restrictions on lanes within segments of links."
+    "description": "An optional file that handles day-of-week and time-of-day restrictions on lanes within segments of links.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

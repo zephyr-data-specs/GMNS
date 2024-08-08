@@ -4,6 +4,23 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
+    "foreignKeys": [
+        {
+            "fields": "controller_id",
+            "reference": {
+                "resource": "signal_controller",
+                "fields": "controller_id"
+            }
+        },
+        {
+            "fields": "timeday_id",
+            "reference": {
+                "resource": "time_set_definitions",
+                "fields": "timeday_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "timing_plan_id",
@@ -16,7 +33,6 @@
         {
             "name": "controller_id",
             "type": "any",
-            "foreign_key": "signal_controller.controller_id",
             "description": "Required. Foreign key (signal_controller table).",
             "constraints": {
                 "required": true
@@ -25,7 +41,6 @@
         {
             "name": "timeday_id",
             "type": "any",
-            "foreign_key": "time_set_definitions.timeday_id",
             "description": "Conditionally required (either timeday_id or time_day). Foreign key to time_set_definitions."
         },
         {
@@ -44,5 +59,6 @@
         }
     ],
     "name": "signal_timing_plan.schema.json",
-    "description": "For signalized nodes, establishes timing plans."
+    "description": "For signalized nodes, establishes timing plans.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

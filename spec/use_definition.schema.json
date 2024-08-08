@@ -1,8 +1,10 @@
 {
     "primaryKey": "use",
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
     ],
+    "fieldsMatch": "subset",
     "fields": [
         {
             "name": "use",
@@ -42,5 +44,6 @@
         }
     ],
     "name": "use_definition.schema.json",
-    "description": "The Use_Definition file defines the characteristics of each vehicle type or non-travel purpose (e.g., a shoulder or parking lane). A two-way left turn lane (TWLTL) is also a use."
+    "description": "The Use_Definition file defines the characteristics of each vehicle type or non-travel purpose (e.g., a shoulder or parking lane). A two-way left turn lane (TWLTL) is also a use.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

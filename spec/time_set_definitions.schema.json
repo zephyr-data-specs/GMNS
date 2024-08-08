@@ -4,6 +4,7 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
     "fields": [
         {
             "name": "timeday_id",
@@ -95,5 +96,6 @@
         }
     ],
     "name": "time_set_definitions.schema.json",
-    "description": "The time_set_definitions file is an optional representation of time-of-day and day-of-week sets to enable time restrictions through `_tod` files."
+    "description": "The time_set_definitions file is an optional representation of time-of-day and day-of-week sets to enable time restrictions through `_tod` files.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

@@ -4,6 +4,23 @@
         "NaN",
         ""
     ],
+    "fieldsMatch": "subset",
+    "foreignKeys": [
+        {
+            "fields": "link_id",
+            "reference": {
+                "resource": "link",
+                "fields": "link_id"
+            }
+        },
+        {
+            "fields": "ref_node_id",
+            "reference": {
+                "resource": "node",
+                "fields": "node_id"
+            }
+        }
+    ],
     "fields": [
         {
             "name": "curb_seg_id",
@@ -16,7 +33,6 @@
         {
             "name": "link_id",
             "type": "any",
-            "foreign_key": "link.link_id",
             "description": "Required. Foreign key to road_links. The link that the segment is located on.",
             "constraints": {
                 "required": true
@@ -25,7 +41,6 @@
         {
             "name": "ref_node_id",
             "type": "any",
-            "foreign_key": "node.node_id",
             "description": "Required. Foreign key to node where distance is 0.",
             "constraints": {
                 "required": true
@@ -64,5 +79,6 @@
         }
     ],
     "name": "curb_seg.schema.json",
-    "description": "A portion of a link defined by `link_id`,`ref_node_id`, `start_lr`, and `end_lr`. Provides a space for curbside regulations. Segments and lanes should be use for travel facilities"
+    "description": "A portion of a link defined by `link_id`,`ref_node_id`, `start_lr`, and `end_lr`. Provides a space for curbside regulations. Segments and lanes should be use for travel facilities",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

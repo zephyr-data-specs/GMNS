@@ -5,12 +5,15 @@ Volpe/FHWA partnership with [Zephyr Foundation](https://zephyrtransport.org).
 The General Modeling Network Specification (GMNS) defines a common machine (and human) readable format for sharing routable road network files.  It is designed to be used in multi-modal static and dynamic transportation planning and operations models.  
 
 How do I use GMNS?
-1.  Read the [__specification reference__](spec) to learn about the GMNS format. 
+1.  Read the [__specification reference__](spec) to learn about the GMNS format. GMNS is described in json files, and is implementation-agnostic.  A GMNS network might be stored as a series of delimited text files, as a [database](usage/database), or in some other way.   
 2.	Look at our [__small examples__](examples), including a freeway interchange, a portion of a multimodal city network, and a small city.
-3.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](usage/conversion) and [__validation__](usage/validation).  
+3.	Read the [__documentation__](https://zephyr-data-specs.github.io/GMNS/), which describes the specification in markdown.  
+4.	Build and test your own small network. We have basic tools in Python and R for [__conversion__](usage/conversion) and [__validation__](usage/validation).
+
+[Changelog](docs/changelog.md) for recent releases.  
 
 ## GMNS Overview
-Version 0.95 includes the following features for use in static models:
+Version 0.96 includes the following features for use in static models:
 -	Configuration information and use definitions.
 -	Node and link files, to establish a routable network. 
 
@@ -49,9 +52,9 @@ On links and segments, there is a field called `lanes`. The number of lanes in t
 ### Inheritance
 Much of this specification works in terms of inheritance and parent/child relationships. For example, segments (child) inherit attributes from links (parent). To avoid repetitive data, GMNS assumes that attributes left blank on a child are the same as its parent. See the [inheritance relationship chart for more details](spec#inheritance-relationships).
 ### Pedestrian Facilities vs Allowed Uses vs Separate Links
-Whether pedestrians are allowed on a link on the network can be represented in multiple ways. The `ped_facility` field in a link or segment describes the type (if any) of built facilities specifically for accommodating pedestrian travel. The `allowed_uses` field is more general and shows if it is possible for a pedestrian to walk along this link. For example, there could be a low-traffic road with no pedestrian facility but has walk as a purpose. For more detailed networks, GMNS also allows undirected links to be used to specifically represent pedestrian facilities, such as sidewalks. 
+Whether pedestrians are allowed on a link on the network can be represented in multiple ways. The `ped_facility` field in a link or segment describes the type (if any) of built facilities specifically for accommodating pedestrian travel. The `allowed_uses` field is more general and shows if it is possible for a pedestrian to walk along this link. For example, there could be a low-traffic road with no explicit pedestrian facility, but is part of the pedestrian network. For more detailed networks, GMNS also allows undirected links to be used to specifically represent pedestrian facilities, such as sidewalks. 
 ### Approach to Transit
-We recommend incorporating GTFS for transit modeling needs. GTFS (General Transit Feed Specification) is a widely used and well-defined specification for transit. GMNS allows locations that represent transit stops to link to GTFS stops with the `gtfs_stop_id` field and ad hoc fields can always be added to meet your needs. 
+We recommend incorporating GTFS for transit modeling needs. GTFS (General Transit Feed Specification) is a widely used and well-defined specification for transit. GMNS allows [locations](docs/spec/Location.md) that represent transit stops to link to GTFS stops with the `gtfs_stop_id` field and ad hoc fields can always be added to meet your needs. 
 
 ## FAQ
 ### What are the goals of GMNS?
@@ -64,9 +67,9 @@ There are two ways in GMNS to represent geometry shapepoints for links. Shapepoi
 ### How do I represent sidewalks?
 In the [link table](docs/spec/Link.md) there is a field to indicate a pedestrian facility (`ped_facility`). You can also represent the pedestrian network (sidewalks, crosswalks and other paths) as its own network with its own links.  See the [Cambridge example](examples/Cambridge_Intersection).  
 ### How do I represent bicycle facilities?
-In the [link table](docs/spec/Link.md) there is a field to indicate a bicycle facility (`bike_facility`). To represent a bicycle network in more detail, additional options include representing on-road bike lanes as explicit lanes in the [lane table](docs/spec/Lane.md) or representing other bicycle facilities (e.g., shared use paths, separated bike lanes) as their own links.    
+In the [link table](docs/spec/Link.md) there is a field to indicate a bicycle facility (`bike_facility`). To represent a bicycle network in more detail, additional options include representing on-road bike lanes as explicit lanes in the [lane table](docs/spec/Lane.md) or representing other bicycle facilities (e.g., shared use paths, separated bike lanes, contra-flow bike lanes) as their own links.    
 ### How do I represent street furniture and curbside regulations?
-Locations and segments can be used for purposes like these. The [location table](docs/spec/Location.md) is way to represent point information on a link and the [segment table](docs/spec/Segment.md) can represent information for a portion of a link. Both are defined by a linear reference along a link. Remember, the user may add ad hoc fields to any table in GMNS to represent any type of information that is important to their network.
+Locations and segments can be used for purposes like these. The [location table](docs/spec/Location.md) is way to represent point information on a link and the [curb_seg table](docs/spec/Curb_seg.md) or [segment table](docs/spec/Segment.md) can represent information for a portion of a link. Both are defined by a linear reference along a link. Remember, the user may add ad hoc fields to any table in GMNS to represent any type of information that is important to their network.
 ### What counts as a lane for the lanes field on a link or segment table?
 Only vehicle travel lanes traversing the entire link are counted in the `lanes` field in the [link table](docs/spec/Link.md). This may not be the same as the number of associated records in the [lanes table](docs/spec/Lane.md), which can represent lanes of any type, such as bike lanes, shoulders, or reversible lanes (more on reverisble lanes in [our time of day change examples](examples/TOD_Examples).
 ### What is needed to define a time-of-day (TOD) change?

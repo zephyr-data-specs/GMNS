@@ -1,8 +1,10 @@
 {
     "primaryKey": "geometry_id",
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
     ],
+    "fieldsMatch": "subset",
     "fields": [
         {
             "name": "geometry_id",
@@ -19,5 +21,6 @@
         }
     ],
     "name": "geometry.schema.json",
-    "description": "The geometry is an optional file that contains geometry information (shapepoints) for a line object. It is similar to Geometries in the SharedStreets reference system. The specification also allows for geometry information to be stored directly on the link table."
+    "description": "The geometry is an optional file that contains geometry information (shapepoints) for a line object. It is similar to Geometries in the SharedStreets reference system. The specification also allows for geometry information to be stored directly on the link table.",
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

@@ -1,7 +1,9 @@
 {
     "missingValues": [
-        "NaN"
+        "NaN",
+        ""
     ],
+    "fieldsMatch": "subset",
     "fields": [
         {
             "name": "dataset_name",
@@ -42,9 +44,21 @@
             "name": "version_number",
             "type": "number",
             "description": "The version of the GMNS spec to which this dataset conforms"
+        },
+        {
+            "name": "id_type",
+            "type": "string",
+            "description": "The type of primary key IDs for interopability (node_id, zone_id, etc.). May be enforced by user, database schema, or downstream software. Must be either string or integer.",
+            "constraints": {
+                "enum": [
+                    "string",
+                    "integer"
+                ]
+            }
         }
     ],
     "name": "config.schema.json",
     "description": "Provides the units of measure, coordinate systems, and other metadata about a GMNS dataset. This table must contain a single row.",
-    "numRows": 1
+    "numRows": 1,
+    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

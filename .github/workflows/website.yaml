@@ -1,0 +1,60 @@
+name: Deploy Documentation Website
+
+on: 
+  push:
+    branches: ["main", "develop"] # remove "develop" for prod
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+env:
+  BUILD_PATH: "."
+  SCRIPTS_FOLDER: scripts
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: 'pip'
+
+      - name: Setup Pages 
+        uses: actions/configure-pages@v5
+
+      - name: Install requirements
+        run: pip install -r ${{env.SCRIPTS_FOLDER}}/requirements.txt
+        working-directory: ${{ env.BUILD_PATH }}
+
+        # Placed in /site folder
+      - name: Build with MkDocs
+        run: mkdocs build 
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BUILD_PATH }}/site
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
