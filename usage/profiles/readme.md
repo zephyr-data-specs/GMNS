@@ -7,3 +7,5 @@ optional. This document presents several use cases, showing which parts
 of GMNS are required for each use case, and which are not. Each section
 briefly describes each use case, followed by an indication of which GMNS
 tables and fields are required to support that use case.
+
+(Case 1 - simple node link)[GMNSProfileCase1.md]
