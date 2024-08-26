@@ -4,7 +4,7 @@ frictionless[sql]==5.17.0
 pandas==2.2.2
 tabulate==0.9.0
 mkdocs==1.6.0
-mkdocs-material==9.5.31
+mkdocs-material==9.5.33
 mkdocs-material[imaging]==9.5.31
 cairosvg==2.7.1
 Pillow==10.4.0
