@@ -9,3 +9,4 @@ briefly describes each use case, followed by an indication of which GMNS
 tables and fields are required to support that use case.
 
 [Case 1 - simple node link](GMNSProfileCase1.md)
+[Case 2 - bike/ped access to destinations on a node-link network](GMNSProfileCase2.md)
