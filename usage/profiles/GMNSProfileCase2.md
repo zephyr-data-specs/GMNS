@@ -53,11 +53,11 @@ Table   Link table for case 2
 | grade | number | % grade, negative is downhill | No  | Could be useful in a hilly network    |
 | facility_type | string | Facility type (e.g., freeway, arterial, etc.) | Yes  | Since few links had directly-measured traffic volumes, facility_type was used as a proxy for traffic volume, as an input to the traffic stress calculation    |
 | capacity | number | Optional. Saturation capacity (passenger car equivalents / hr / lane) | No | Refers to motor vehicle capacity.  Assuming bike/ped is uncapacitated |
-| free_speed | number | Optional. Free flow speed, units defined by config file | Maybe | Motor vehicle speed, could go into the traffic stress computation |
+| free_speed | number | Optional. Free flow speed, units defined by config file | Maybe | Motor vehicle speed could go into the traffic stress computation |
 | lanes | integer | Optional. Number of permanent lanes (not including turn pockets) in the direction of travel open to motor vehicles. It does not include bike lanes, shoulders or parking lanes. | Yes | Motor-vehicle lanes could go into the traffic stress computation |
 | bike_facility | string | Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf) | Yes  | Important for this example    |
-| ped_facility | string | Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path | No  |     |
-| parking | string | Optional. Type of parking: unknown, none, parallel, angle, other | Yes  | Important for this example    |
+| ped_facility | string | Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path | Yes |   Important for this example    |
+| parking | string | Optional. Type of parking: unknown, none, parallel, angle, other | Maybe  | If motor vehicle parking enters the traffic stress computation    |
 | allowed_uses | string | Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated. | Yes  | Indicates whether bicycles or pedestrians can use the link at all    |
 | toll | number | Optional. Toll on the link, in currency units. | No  | No tolls in this network    |
 | jurisdiction | string | Optional. Owner/operator of the link. | No  |     |
