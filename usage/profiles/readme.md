@@ -1,5 +1,6 @@
 
 # Introduction
+# Note that this is a work in progress, subject to substantial revision
 
 GMNS is a large specification, but a particular application is unlikely
 to need every field in every table. This is why most fields are
