@@ -1,4 +1,4 @@
-frictionless==5.17.0
+frictionless==5.17.1
 frictionless[pandas]==5.17.0
 frictionless[sql]==5.17.0
 pandas==2.2.2
