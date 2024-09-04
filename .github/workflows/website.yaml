@@ -2,7 +2,7 @@ name: Deploy Documentation Website
 
 on: 
   push:
-    branches: ["main", "develop"] # remove "develop" for prod
+    branches: ["main"] # remove "develop" for prod
   workflow_dispatch: {}
 
 permissions:
