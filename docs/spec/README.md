@@ -109,7 +109,7 @@
   - `constraints`:
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)
+- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A) See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
   - `type` string
 ### `ped_facility`
   
@@ -321,7 +321,7 @@
   - `constraints`:
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)
+- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template Table 1-A.  See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
   - `type` string
 ### `ped_facility`
   
@@ -820,7 +820,7 @@
   - `type` integer
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)
+- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A) See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
   - `type` string
 ### `ped_facility`
   
@@ -1300,7 +1300,7 @@
   - `type` integer
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A at https://nmtdev.ornl.gov/assets/templates/NBN_DataTemplates_final.pdf)
+- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template Table 1-A.  See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
   - `type` string
 ### `ped_facility`
   

@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS lane_tod (
 	lane_id TEXT NOT NULL, 
 	timeday_id TEXT, 
 	time_day TEXT, 
-	lane_num INTEGER NOT NULL CHECK (lane_num >= -10) CHECK (lane_num <= 10), 
+	lane_num INTEGER NOT NULL CHECK (lane_num <= 10) CHECK (lane_num >= -10), 
 	allowed_uses TEXT, 
 	r_barrier TEXT, 
 	l_barrier TEXT, 
