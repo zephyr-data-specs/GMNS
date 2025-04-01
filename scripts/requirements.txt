@@ -4,4 +4,4 @@ tabulate==0.9.0
 mkdocs==1.6.1
 mkdocs-material[imaging]==9.6.6
 cairosvg==2.7.1
-Pillow==11.1.0
+Pillow==11.2.0
