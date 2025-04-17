@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS segment (
 	end_lr FLOAT NOT NULL CHECK (end_lr >= 0), 
 	grade FLOAT CHECK (grade <= 100) CHECK (grade >= -100), 
 	capacity FLOAT CHECK (capacity >= 0), 
-	free_speed FLOAT CHECK (free_speed <= 200) CHECK (free_speed >= 0), 
+	free_speed FLOAT CHECK (free_speed >= 0) CHECK (free_speed <= 200), 
 	lanes INTEGER, 
 	l_lanes_added INTEGER, 
 	r_lanes_added INTEGER, 

@@ -18,6 +18,6 @@ CREATE TABLE IF NOT EXISTS segment (
 	jurisdiction TEXT, 
 	row_width FLOAT CHECK (row_width >= 0), 
 	PRIMARY KEY (segment_id), 
-	FOREIGN KEY(ref_node_id) REFERENCES node (node_id), 
-	FOREIGN KEY(link_id) REFERENCES link (link_id)
+	FOREIGN KEY(link_id) REFERENCES link (link_id), 
+	FOREIGN KEY(ref_node_id) REFERENCES node (node_id)
 )
