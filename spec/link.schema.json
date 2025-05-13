@@ -4,7 +4,7 @@
         "NaN",
         ""
     ],
-    "fieldsMatch": "subset",
+    "fieldsMatch": ["subset"],
     "foreignKeys": [
         {
             "fields": "from_node_id",

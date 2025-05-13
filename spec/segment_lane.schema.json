@@ -4,7 +4,7 @@
         "NaN",
         ""
     ],
-    "fieldsMatch": "subset",
+    "fieldsMatch": ["subset"],
     "foreignKeys": [
         {
             "fields": "segment_id",

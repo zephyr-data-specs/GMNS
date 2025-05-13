@@ -3,7 +3,7 @@
         "NaN",
         ""
     ],
-    "fieldsMatch": "subset",
+    "fieldsMatch": ["subset"],
     "fields": [
         {
             "name": "dataset_name",
