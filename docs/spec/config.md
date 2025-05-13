@@ -3,7 +3,7 @@
   - `path` config.csv
   - `schema`
       - `missingValues` ['NaN', '']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
     - `numRows` 1
   
 | name                  | type   | description                                                                                                                                                                  | constraints                     |

@@ -30,7 +30,7 @@
         - `reference`
           - `resource` 
           - `fields` ['link_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `link_id`
   
 - `description` Primary key - could be SharedStreets Reference ID
@@ -154,7 +154,7 @@
         - `reference`
           - `resource` 
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `node_id`
   
 - `description` Primary key
@@ -202,7 +202,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['geometry_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `geometry_id`
   
 - `description` Primary key - could be SharedStreets Geometry ID
@@ -226,7 +226,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `lane_id`
   
 - `description` Primary key
@@ -282,7 +282,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `link_tod_id`
   
 - `description` Primary key
@@ -357,7 +357,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `loc_id`
   
 - `description` Primary key. Location ID.
@@ -429,7 +429,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `mvmt_id`
   
 - `description` Primary key.
@@ -532,7 +532,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `mvmt_tod_id`
   
 - `description` Primary key.
@@ -614,7 +614,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['use']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `use`
   
 - `description` Primary key
@@ -648,7 +648,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['use_group']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `use_group`
   
 - `description` Primary key.
@@ -672,7 +672,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `timeday_id`
   
 - `description` Primary key.Primary key, similar to `service_id` in GTFS. Unique name of the time of day. Preferable legible rather than a number.
@@ -757,7 +757,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `segment_id`
   
 - `description` Primary key.
@@ -860,7 +860,7 @@
         - `reference`
           - `resource` segment
           - `fields` ['segment_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `segment_lane_id`
   
 - `description` Primary key.
@@ -909,7 +909,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['controller_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `controller_id`
   
 - `description` Primary key.
@@ -939,7 +939,7 @@
         - `reference`
           - `resource` signal_controller
           - `fields` ['controller_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `coordination_id`
   
 - `description` Primary key.
@@ -1000,7 +1000,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `signal_phase_mvmt_id`
   
 - `description` Primary key.
@@ -1043,7 +1043,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `timing_plan_id`
   
 - `description` Primary key.
@@ -1083,7 +1083,7 @@
         - `reference`
           - `resource` signal_timing_plan
           - `fields` ['timing_plan_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `timing_phase_id`
   
 - `description` Primary key.
@@ -1177,7 +1177,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `detector_id`
   
 - `description` Primary key.
@@ -1254,7 +1254,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `segment_tod_id`
   
 - `description` Primary key.
@@ -1336,7 +1336,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `lane_tod_id`
   
 - `description` Primary key.
@@ -1400,7 +1400,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `segment_lane_tod_id`
   
 - `description` Primary key.
@@ -1459,7 +1459,7 @@
         - `reference`
           - `resource` 
           - `fields` ['zone_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `zone_id`
   
 - `description` Primary key.
@@ -1484,7 +1484,7 @@
   - `path` config.csv
   - `schema`
       - `missingValues` ['NaN', '']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
     - `numRows` 1
 ### `dataset_name`
   
@@ -1542,7 +1542,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `curb_seg_id`
   
 - `description` Primary key.
