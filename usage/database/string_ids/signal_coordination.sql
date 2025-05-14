@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS signal_coordination (
 	timing_plan_id TEXT NOT NULL, 
 	controller_id TEXT NOT NULL, 
 	coord_contr_id TEXT, 
-	coord_phase INTEGER CHECK (coord_phase <= 32) CHECK (coord_phase >= 0), 
+	coord_phase INTEGER CHECK (coord_phase >= 0) CHECK (coord_phase <= 32), 
 	coord_ref_to TEXT, 
 	"offset" FLOAT CHECK ("offset" >= 0), 
 	PRIMARY KEY (coordination_id), 

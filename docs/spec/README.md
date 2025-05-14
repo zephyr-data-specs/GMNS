@@ -109,15 +109,15 @@
   - `constraints`:
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A) See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
+- `description` Optional. Type of bike facility along the link.
   - `type` string
 ### `ped_facility`
   
-- `description` Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path
+- `description` Optional. Type of pedestrian accommodation along the link
   - `type` string
 ### `parking`
   
-- `description` Optional. Type of parking: unknown, none, parallel, angle, other
+- `description` Optional. Type of parking along the link.
   - `type` string
 ### `allowed_uses`
   
@@ -185,7 +185,7 @@
   - `type` string
 ### `ctrl_type`
   
-- `description` Optional. Intersection control type - one of ControlType_Set.
+- `description` Optional. Intersection control type.
   - `type` string
 ### `zone_id`
   
@@ -253,11 +253,11 @@
   - `type` string
 ### `r_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.
   - `type` string
 ### `l_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left
   - `type` string
 ### `width`
   
@@ -321,15 +321,15 @@
   - `constraints`:
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template Table 1-A.  See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
+- `description` Optional. Type of bike facility along the link.
   - `type` string
 ### `ped_facility`
   
-- `description` Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path
+- `description` Optional. Type of pedestrian accommodation along the link
   - `type` string
 ### `parking`
   
-- `description` Optional. Type of parking: unknown, none, parallel, angle, other
+- `description` Optional. Type of parking along the link.
   - `type` string
 ### `allowed_uses`
   
@@ -478,8 +478,6 @@
   
 - `description` Optional. Describes the type of movement (left, right, thru, etc.).
   - `type` string
-  - `constraints`:
-    - `required` True
 ### `penalty`
   
 - `description` Turn penalty (seconds)
@@ -490,7 +488,7 @@
   - `type` number
 ### `ctrl_type`
   
-- `description` Optional. .
+- `description` Optional.
   - `type` string
 ### `mvmt_code`
   
@@ -585,8 +583,6 @@
   
 - `description` Optional. Describes the type of movement (left, right, thru, etc.).
   - `type` string
-  - `constraints`:
-    - `required` True
 ### `penalty`
   
 - `description` Turn penalty (seconds)
@@ -597,8 +593,8 @@
   - `type` number
 ### `ctrl_type`
   
-- `description` Optional. .
-  - `type` any
+- `description` Optional.
+  - `type` string
 ### `mvmt_code`
   
 - `description` Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)
@@ -820,15 +816,15 @@
   - `type` integer
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A) See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
+- `description` Optional. Type of bike facility along the segment.
   - `type` string
 ### `ped_facility`
   
-- `description` Optional. Type of pedestrian accommodation:unknown,none,shoulder,sidewalk,offstreet_path.
+- `description` Optional. Type of pedestrian accommodation along the segment
   - `type` string
 ### `parking`
   
-- `description` Optional. Type of parking: unknown,none,shoulder,sidewalk,offstreet_path.
+- `description` Optional. Type of parking along the segment.
   - `type` string
 ### `allowed_uses`
   
@@ -891,11 +887,11 @@
   - `type` string
 ### `r_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is none)
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.
   - `type` string
 ### `l_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left (default is none)
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left
   - `type` string
 ### `width`
   
@@ -1300,15 +1296,15 @@
   - `type` integer
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template Table 1-A.  See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
+- `description` Optional. Type of bike facility along the segment.
   - `type` string
 ### `ped_facility`
   
-- `description` Optional. Type of pedestrian accommodation: unknown,none,shoulder,sidewalk,offstreet_path.
+- `description` Optional. Type of pedestrian accommodation along the segment
   - `type` string
 ### `parking`
   
-- `description` Optional. Type of parking: unknown,none,shoulder,sidewalk,offstreet_path.
+- `description` Optional. Type of parking along the segment.
   - `type` string
 ### `toll`
   
@@ -1371,11 +1367,11 @@
   - `type` string
 ### `r_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.
   - `type` string
 ### `l_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default).  Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left
   - `type` string
 ### `width`
   
@@ -1435,11 +1431,11 @@
   - `type` string
 ### `r_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.
   - `type` string
 ### `l_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left
   - `type` string
 ### `width`
   

@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS movement (
 	ob_link_id TEXT NOT NULL, 
 	start_ob_lane INTEGER, 
 	end_ob_lane INTEGER, 
-	type TEXT NOT NULL, 
+	type TEXT, 
 	penalty FLOAT, 
 	capacity FLOAT, 
 	ctrl_type TEXT, 
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS movement (
 	allowed_uses TEXT, 
 	geometry TEXT, 
 	PRIMARY KEY (mvmt_id), 
-	FOREIGN KEY(ib_link_id) REFERENCES link (link_id), 
+	FOREIGN KEY(node_id) REFERENCES node (node_id), 
 	FOREIGN KEY(ob_link_id) REFERENCES link (link_id), 
-	FOREIGN KEY(node_id) REFERENCES node (node_id)
+	FOREIGN KEY(ib_link_id) REFERENCES link (link_id)
 )
