@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - develop
+      - feature-shared-categories
+  workflow_dispatch: {}
 
 permissions:
   contents: write
