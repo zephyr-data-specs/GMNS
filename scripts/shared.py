@@ -201,6 +201,7 @@ class GMNS:
         copy_files: list[tuple[str, Path]] | None = None,
         create_blank_files: bool = False,
     ):
+        current_dir = os.getcwd()
         os.chdir(SCRIPT_PATH)
 
         if copy_files is None:
@@ -227,7 +228,9 @@ class GMNS:
                 )
                 files_to_delete.append(example_path / name_of_file_to_copy)
 
+        os.chdir(current_dir)
         report = self._package.validate()
+        os.chdir(SCRIPT_PATH)
 
         for file_to_delete in files_to_delete:
             os.remove(file_to_delete)
@@ -236,8 +239,8 @@ class GMNS:
             if type(resource.path) is str:
                 resource.path = new_to_old[resource.path]
 
+        os.chdir(current_dir)
         return report
 
 
-gmns = GMNS()
 gmns = GMNS()
