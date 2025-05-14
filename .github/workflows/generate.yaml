@@ -3,9 +3,7 @@ name: Generate GMNS Documentation and DB
 on: 
   push:
     branches:
-      - main
-      - develop
-      - feature-shared-categories
+      - '*'
   workflow_dispatch: {}
 
 permissions:
