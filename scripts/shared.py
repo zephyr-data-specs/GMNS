@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Callable
 
 from frictionless import Field, Package
+import jsonref 
 
 SCRIPT_PATH = pathlib.Path(__file__).parent.resolve()
 SPECS_PATH = SCRIPT_PATH / ".." / "spec"
@@ -46,6 +47,7 @@ class GMNS:
                     del json_data["resources"][index]["schema"]["$schema"]
 
         del json_data["$schema"]
+        json_data = jsonref.replace_refs(json_data, base_uri=Path("../spec/datapackage.json").resolve().as_uri())
         self._package = Package(json_data)
         self._json_data = json_data
 
