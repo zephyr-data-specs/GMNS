@@ -109,7 +109,6 @@
         "$ref": "shared_categories.json#/ctrl_type/categories"
       }
     },
-    },
     {
       "name": "mvmt_code",
       "type": "string",
