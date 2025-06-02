@@ -3,5 +3,3 @@ pandas==2.2.3
 tabulate==0.9.0
 mkdocs==1.6.1
 mkdocs-material[imaging]==9.6.14
-cairosvg==2.7.1
-Pillow==11.2.1
