@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS signal_detector (
 	det_zone_back FLOAT, 
 	det_type TEXT, 
 	PRIMARY KEY (detector_id), 
+	FOREIGN KEY(ref_node_id) REFERENCES node (node_id), 
 	FOREIGN KEY(controller_id) REFERENCES signal_controller (controller_id), 
-	FOREIGN KEY(link_id) REFERENCES link (link_id), 
-	FOREIGN KEY(ref_node_id) REFERENCES node (node_id)
+	FOREIGN KEY(link_id) REFERENCES link (link_id)
 )
