@@ -124,7 +124,10 @@
     {
       "name": "mvmt_code",
       "type": "string",
-      "description": "Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)"
+      "description": "Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)",
+      "constraints": {
+        "pattern": "^[NSEW][EWB][RLT]\\d?$"
+      }
     },
     {
       "name": "allowed_uses",
