@@ -494,6 +494,8 @@
   
 - `description` Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)
   - `type` string
+  - `constraints`:
+    - `pattern` `^[NSEW][EWB][RLT]\d?$`
 ### `allowed_uses`
   
 - `description` Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated.
@@ -599,6 +601,8 @@
   
 - `description` Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)
   - `type` string
+  - `constraints`:
+    - `pattern` `^[NSEW][EWB][RLT]\d?$`
 ### `allowed_uses`
   
 - `description` Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated.

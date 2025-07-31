@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS movement (
 	penalty FLOAT, 
 	capacity FLOAT, 
 	ctrl_type TEXT, 
-	mvmt_code TEXT, 
+	mvmt_code TEXT CHECK (mvmt_code REGEXP '^[NSEW][EWB][RLT]\d?$'), 
 	allowed_uses TEXT, 
 	geometry TEXT, 
 	PRIMARY KEY (mvmt_id), 
