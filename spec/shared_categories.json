@@ -34,7 +34,7 @@
     "source": "National Bikeway Network Data Template, Table 1-A. https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/"
   },
   "ped_facility_categories": {
-    "categories": ["unknown", "none", "shoulder", "sidewalk", "offstreet_path"],
+    "categories": ["unknown", "none", "shoulder", "sidewalk", "offstreet_path", "crosswalk"],
     "description": "GMNS suggested default values for pedestrian facility types as link/segment attributes",
     "source": ""
   },
