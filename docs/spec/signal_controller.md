@@ -4,7 +4,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['controller_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
   
 | name          | type   | description   | constraints        |
 |:--------------|:-------|:--------------|:-------------------|

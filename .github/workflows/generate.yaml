@@ -3,8 +3,8 @@ name: Generate GMNS Documentation and DB
 on: 
   push:
     branches:
-      - main
-      - develop
+      - '*'
+  workflow_dispatch: {}
 
 permissions:
   contents: write

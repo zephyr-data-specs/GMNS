@@ -4,7 +4,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
   
 | name       | type    | description                                                                                                                        | constraints        |
 |:-----------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------|:-------------------|

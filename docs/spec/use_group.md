@@ -4,7 +4,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['use_group']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
   
 | name        | type   | description                   | constraints        |
 |:------------|:-------|:------------------------------|:-------------------|
