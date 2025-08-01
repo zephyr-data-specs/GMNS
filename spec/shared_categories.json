@@ -11,7 +11,7 @@
       },
       {
         "value": "physical",
-        "label": "a physical barrier (e.g., a curb, Jersey barrier) is in place"
+        "label": "a physical barrier (e.g., a bollard, curb, Jersey barrier) is in place"
       }
     ],
     "description": "GMNS suggested default values for lane barrier types",
