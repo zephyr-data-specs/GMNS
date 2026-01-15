@@ -13,6 +13,23 @@ How do I use GMNS?
 [Changelog](docs/changelog.md) for recent releases.  
 
 ## GMNS Overview
+
+Development of GMNS has followed these principles:
+
+1. GMNS is a data specification, not tied to any specific software tool
+2. GMNS is extensible, not universal
+    - The only required files are nodes and links, to support static network assignment
+    - Specification accommodates user-defined fields
+    - Extensions include data needed for dynamic, multi-modal networks
+3. GMNS reflects infrastructure, services and policies: 
+    - physical roads
+    - intersections
+    - traffic controls
+    - tolls
+    - time-of-day restrictions
+4. GMNS is machine and human readable
+    - Although the small examples are sets of .csv files, it may be desirable to encapsulate larger examples in a more efficient format. 
+
 Version 0.96 includes the following features for use in static models:
 -	Configuration information and use definitions.
 -	Node and link files, to establish a routable network. 
