@@ -30,7 +30,7 @@ Development of GMNS has followed these principles:
 4. GMNS is machine and human readable
     - Although the small examples are sets of .csv files, it may be desirable to encapsulate larger examples in a more efficient format. 
 
-Version 0.96 includes the following features for use in static models:
+Version 0.97 includes the following features for use in static models:
 -	Configuration information and use definitions.
 -	Node and link files, to establish a routable network. 
 
