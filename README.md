@@ -80,7 +80,7 @@ For additional information on GMNS goals, history and requirements, please see t
 ### What type of system can be represented in GMNS?
 GMNS is made to be flexible, multimodal, and multiresolution. Many of the fields and tables are optional depending on how detailed of information you have for your system. At a high level, GMNS simply models a network of nodes and links. However you can put in as much detail as required by adding lanes, movements, geometry information, etc.  
 ### Must my network be stored as a set of .csv files?
-No. You may store the network in a relational database, as a geoparquet file, or some other format.  Optional [SQL create statements](usage/database) are available, intended for a SQLite database.
+No. You may store the network in a relational database, as a geopackage, or some other format.  Optional [SQL create statements](usage/database) are available, intended for a SQLite database.
 ### How do I represent geometry shapepoints?
 There are two ways in GMNS to represent geometry shapepoints for links. Shapepoints can be recorded as well-known text (WKT) in the `geometry` field of the [link table](docs/spec/Link.md) or shapepoints can be placed in the separate [geometry table](docs/spec/Geometry.md) and keyed to the link table through the `geometry_id` field.
 ### How do I represent sidewalks?
