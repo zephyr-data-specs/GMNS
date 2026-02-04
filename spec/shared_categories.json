@@ -1,0 +1,64 @@
+{
+  "barrier_categories": {
+    "categories": [
+      {
+        "value": "none",
+        "label": "a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane"
+      },
+      {
+        "value": "regulatory",
+        "label": "a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier"
+      },
+      {
+        "value": "physical",
+        "label": "a physical barrier (e.g., a bollard, curb, Jersey barrier) is in place"
+      }
+    ],
+    "description": "GMNS suggested default values for lane barrier types",
+    "source": ""
+  },
+  "bike_facility_categories": {
+    "categories": [
+      "unseparated bike lane",
+      "buffered bike lane",
+      "separated bike lane",
+      "counter-flow bike lane",
+      "paved shoulder",
+      "shared lane",
+      "shared use path",
+      "off-road unpaved trail",
+      "other",
+      "none"
+    ],
+    "description": "GMNS suggested default values for bike facility types as link/segment attributes",
+    "source": "National Bikeway Network Data Template, Table 1-A. https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/"
+  },
+  "ped_facility_categories": {
+    "categories": ["unknown", "none", "shoulder", "sidewalk", "offstreet_path", "crosswalk"],
+    "description": "GMNS suggested default values for pedestrian facility types as link/segment attributes",
+    "source": ""
+  },
+  "parking_categories": {
+    "categories": ["unknown", "none", "parallel", "angle", "other"],
+    "description": "GMNS suggested default values for curbside parking types as link/segment attributes",
+    "source": ""
+  },
+  "movement_type": {
+    "categories": ["left", "right", "uturn", "thru", "merge", "diverge"],
+    "description": "GMNS suggested default values for movement types",
+    "source": ""
+  },
+  "ctrl_type": {
+    "categories": [
+      "no_control",
+      "yield",
+      "stop",
+      "stop_2_way",
+      "stop_4_way",
+      "signal_with_RTOR",
+      "signal"
+    ],
+    "description": "GMNS suggested default values for intersection/movement control types",
+    "source": ""
+  }
+}

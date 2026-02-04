@@ -10,7 +10,7 @@
         - `reference`
           - `resource` signal_timing_plan
           - `fields` ['timing_plan_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
   
 | name             | type    | description                                                                                                              | constraints                                     |
 |:-----------------|:--------|:-------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------|

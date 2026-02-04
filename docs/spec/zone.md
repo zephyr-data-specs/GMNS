@@ -10,7 +10,7 @@
         - `reference`
           - `resource` 
           - `fields` ['zone_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
   
 | name       | type   | description                                                                                                   | constraints        |
 |:-----------|:-------|:--------------------------------------------------------------------------------------------------------------|:-------------------|

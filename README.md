@@ -13,7 +13,24 @@ How do I use GMNS?
 [Changelog](docs/changelog.md) for recent releases.  
 
 ## GMNS Overview
-Version 0.96 includes the following features for use in static models:
+
+Development of GMNS has followed these principles:
+
+1. GMNS is a data specification, not tied to any specific software tool
+2. GMNS is extensible, not universal
+    - The only required files are nodes and links, to support static network assignment
+    - Specification accommodates user-defined fields
+    - Extensions include data needed for dynamic, multi-modal networks
+3. GMNS reflects infrastructure, services and policies: 
+    - physical roads
+    - intersections
+    - traffic controls
+    - tolls
+    - time-of-day restrictions
+4. GMNS is machine and human readable
+    - Although the small examples are sets of .csv files, it may be desirable to encapsulate larger examples in a more efficient format. 
+
+Version 0.97 includes the following features for use in static models:
 -	Configuration information and use definitions.
 -	Node and link files, to establish a routable network. 
 
@@ -62,6 +79,8 @@ The objective of General Modeling Network Specification (GMNS) is to provide a c
 For additional information on GMNS goals, history and requirements, please see the [wiki](https://github.com/zephyr-data-specs/GMNS/wiki).  
 ### What type of system can be represented in GMNS?
 GMNS is made to be flexible, multimodal, and multiresolution. Many of the fields and tables are optional depending on how detailed of information you have for your system. At a high level, GMNS simply models a network of nodes and links. However you can put in as much detail as required by adding lanes, movements, geometry information, etc.  
+### Must my network be stored as a set of .csv files?
+No. You may store the network in a relational database, as a geopackage, or some other format.  Optional [SQL create statements](usage/database) are available, intended for a SQLite database.
 ### How do I represent geometry shapepoints?
 There are two ways in GMNS to represent geometry shapepoints for links. Shapepoints can be recorded as well-known text (WKT) in the `geometry` field of the [link table](docs/spec/Link.md) or shapepoints can be placed in the separate [geometry table](docs/spec/Geometry.md) and keyed to the link table through the `geometry_id` field.
 ### How do I represent sidewalks?

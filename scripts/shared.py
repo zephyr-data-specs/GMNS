@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Callable
 
 from frictionless import Field, Package
+import jsonref 
 
 SCRIPT_PATH = pathlib.Path(__file__).parent.resolve()
 SPECS_PATH = SCRIPT_PATH / ".." / "spec"
@@ -46,6 +47,7 @@ class GMNS:
                     del json_data["resources"][index]["schema"]["$schema"]
 
         del json_data["$schema"]
+        json_data = jsonref.replace_refs(json_data, base_uri=Path("./spec/datapackage.json").resolve().as_uri())
         self._package = Package(json_data)
         self._json_data = json_data
 
@@ -199,6 +201,7 @@ class GMNS:
         copy_files: list[tuple[str, Path]] | None = None,
         create_blank_files: bool = False,
     ):
+        current_dir = os.getcwd()
         os.chdir(SCRIPT_PATH)
 
         if copy_files is None:
@@ -225,7 +228,9 @@ class GMNS:
                 )
                 files_to_delete.append(example_path / name_of_file_to_copy)
 
+        os.chdir(current_dir)
         report = self._package.validate()
+        os.chdir(SCRIPT_PATH)
 
         for file_to_delete in files_to_delete:
             os.remove(file_to_delete)
@@ -234,8 +239,8 @@ class GMNS:
             if type(resource.path) is str:
                 resource.path = new_to_old[resource.path]
 
+        os.chdir(current_dir)
         return report
 
 
-gmns = GMNS()
 gmns = GMNS()

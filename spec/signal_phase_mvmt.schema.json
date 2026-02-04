@@ -4,7 +4,7 @@
         "NaN",
         ""
     ],
-    "fieldsMatch": "subset",
+    "fieldsMatch": ["subset"],
     "foreignKeys": [
         {
             "fields": "timing_phase_id",

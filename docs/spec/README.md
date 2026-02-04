@@ -30,7 +30,7 @@
         - `reference`
           - `resource` 
           - `fields` ['link_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `link_id`
   
 - `description` Primary key - could be SharedStreets Reference ID
@@ -109,15 +109,15 @@
   - `constraints`:
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A) See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
+- `description` Optional. Type of bike facility along the link.
   - `type` string
 ### `ped_facility`
   
-- `description` Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path
+- `description` Optional. Type of pedestrian accommodation along the link
   - `type` string
 ### `parking`
   
-- `description` Optional. Type of parking: unknown, none, parallel, angle, other
+- `description` Optional. Type of parking along the link.
   - `type` string
 ### `allowed_uses`
   
@@ -154,7 +154,7 @@
         - `reference`
           - `resource` 
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `node_id`
   
 - `description` Primary key
@@ -185,7 +185,7 @@
   - `type` string
 ### `ctrl_type`
   
-- `description` Optional. Intersection control type - one of ControlType_Set.
+- `description` Optional. Intersection control type.
   - `type` string
 ### `zone_id`
   
@@ -202,7 +202,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['geometry_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `geometry_id`
   
 - `description` Primary key - could be SharedStreets Geometry ID
@@ -226,7 +226,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `lane_id`
   
 - `description` Primary key
@@ -253,11 +253,11 @@
   - `type` string
 ### `r_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.
   - `type` string
 ### `l_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left
   - `type` string
 ### `width`
   
@@ -282,7 +282,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `link_tod_id`
   
 - `description` Primary key
@@ -321,15 +321,15 @@
   - `constraints`:
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template Table 1-A.  See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
+- `description` Optional. Type of bike facility along the link.
   - `type` string
 ### `ped_facility`
   
-- `description` Optional. Type of pedestrian accommodation: unknown, none, shoulder, sidewalk, offstreet path
+- `description` Optional. Type of pedestrian accommodation along the link
   - `type` string
 ### `parking`
   
-- `description` Optional. Type of parking: unknown, none, parallel, angle, other
+- `description` Optional. Type of parking along the link.
   - `type` string
 ### `allowed_uses`
   
@@ -357,7 +357,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `loc_id`
   
 - `description` Primary key. Location ID.
@@ -429,7 +429,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `mvmt_id`
   
 - `description` Primary key.
@@ -478,8 +478,6 @@
   
 - `description` Optional. Describes the type of movement (left, right, thru, etc.).
   - `type` string
-  - `constraints`:
-    - `required` True
 ### `penalty`
   
 - `description` Turn penalty (seconds)
@@ -490,12 +488,14 @@
   - `type` number
 ### `ctrl_type`
   
-- `description` Optional. .
+- `description` Optional.
   - `type` string
 ### `mvmt_code`
   
 - `description` Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)
   - `type` string
+  - `constraints`:
+    - `pattern` `^[NSEW][EWB][RLT]\d?$`
 ### `allowed_uses`
   
 - `description` Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated.
@@ -532,7 +532,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `mvmt_tod_id`
   
 - `description` Primary key.
@@ -585,8 +585,6 @@
   
 - `description` Optional. Describes the type of movement (left, right, thru, etc.).
   - `type` string
-  - `constraints`:
-    - `required` True
 ### `penalty`
   
 - `description` Turn penalty (seconds)
@@ -597,12 +595,14 @@
   - `type` number
 ### `ctrl_type`
   
-- `description` Optional. .
-  - `type` any
+- `description` Optional.
+  - `type` string
 ### `mvmt_code`
   
 - `description` Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)
   - `type` string
+  - `constraints`:
+    - `pattern` `^[NSEW][EWB][RLT]\d?$`
 ### `allowed_uses`
   
 - `description` Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated.
@@ -614,7 +614,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['use']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `use`
   
 - `description` Primary key
@@ -648,7 +648,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['use_group']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `use_group`
   
 - `description` Primary key.
@@ -672,7 +672,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `timeday_id`
   
 - `description` Primary key.Primary key, similar to `service_id` in GTFS. Unique name of the time of day. Preferable legible rather than a number.
@@ -757,7 +757,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `segment_id`
   
 - `description` Primary key.
@@ -820,15 +820,15 @@
   - `type` integer
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template (Table 1-A) See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
+- `description` Optional. Type of bike facility along the segment.
   - `type` string
 ### `ped_facility`
   
-- `description` Optional. Type of pedestrian accommodation:unknown,none,shoulder,sidewalk,offstreet_path.
+- `description` Optional. Type of pedestrian accommodation along the segment
   - `type` string
 ### `parking`
   
-- `description` Optional. Type of parking: unknown,none,shoulder,sidewalk,offstreet_path.
+- `description` Optional. Type of parking along the segment.
   - `type` string
 ### `allowed_uses`
   
@@ -860,7 +860,7 @@
         - `reference`
           - `resource` segment
           - `fields` ['segment_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `segment_lane_id`
   
 - `description` Primary key.
@@ -891,11 +891,11 @@
   - `type` string
 ### `r_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right (default is none)
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.
   - `type` string
 ### `l_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left (default is none)
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left
   - `type` string
 ### `width`
   
@@ -909,7 +909,7 @@
   - `schema`
       - `missingValues` ['NaN', '']
     - `primaryKey` ['controller_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `controller_id`
   
 - `description` Primary key.
@@ -939,7 +939,7 @@
         - `reference`
           - `resource` signal_controller
           - `fields` ['controller_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `coordination_id`
   
 - `description` Primary key.
@@ -1000,7 +1000,7 @@
         - `reference`
           - `resource` link
           - `fields` ['link_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `signal_phase_mvmt_id`
   
 - `description` Primary key.
@@ -1043,7 +1043,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `timing_plan_id`
   
 - `description` Primary key.
@@ -1083,7 +1083,7 @@
         - `reference`
           - `resource` signal_timing_plan
           - `fields` ['timing_plan_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `timing_phase_id`
   
 - `description` Primary key.
@@ -1177,7 +1177,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `detector_id`
   
 - `description` Primary key.
@@ -1254,7 +1254,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `segment_tod_id`
   
 - `description` Primary key.
@@ -1300,15 +1300,15 @@
   - `type` integer
 ### `bike_facility`
   
-- `description` Optional. Types of bicycle accommodation based on the National Bikeway Network Data Template Table 1-A.  See https://data.transportation.gov/stories/s/National-Bicycle-Network/88zh-3rqb/
+- `description` Optional. Type of bike facility along the segment.
   - `type` string
 ### `ped_facility`
   
-- `description` Optional. Type of pedestrian accommodation: unknown,none,shoulder,sidewalk,offstreet_path.
+- `description` Optional. Type of pedestrian accommodation along the segment
   - `type` string
 ### `parking`
   
-- `description` Optional. Type of parking: unknown,none,shoulder,sidewalk,offstreet_path.
+- `description` Optional. Type of parking along the segment.
   - `type` string
 ### `toll`
   
@@ -1336,7 +1336,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `lane_tod_id`
   
 - `description` Primary key.
@@ -1371,11 +1371,11 @@
   - `type` string
 ### `r_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.
   - `type` string
 ### `l_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default).  Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left
   - `type` string
 ### `width`
   
@@ -1400,7 +1400,7 @@
         - `reference`
           - `resource` time_set_definitions
           - `fields` ['timeday_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `segment_lane_tod_id`
   
 - `description` Primary key.
@@ -1435,11 +1435,11 @@
   - `type` string
 ### `r_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.
   - `type` string
 ### `l_barrier`
   
-- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the right.<br>- `none` (the default). Indicates that a vehicle can change lanes, provided that the vehicle-type is permitted in the destination lane<br>- `Regulatory`. There is a regulatory prohibition (e.g., a double-white solid line) against changing lanes, but no physical barrier<br>- `Physical`. A physical barrier (e.g., a curb, Jersey barrier) is in place.
+- `description` Optional. Whether a barrier exists to prevent vehicles from changing lanes to the left
   - `type` string
 ### `width`
   
@@ -1459,7 +1459,7 @@
         - `reference`
           - `resource` 
           - `fields` ['zone_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `zone_id`
   
 - `description` Primary key.
@@ -1484,7 +1484,7 @@
   - `path` config.csv
   - `schema`
       - `missingValues` ['NaN', '']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
     - `numRows` 1
 ### `dataset_name`
   
@@ -1542,7 +1542,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
 ### `curb_seg_id`
   
 - `description` Primary key.

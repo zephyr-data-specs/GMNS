@@ -1,154 +1,141 @@
 {
-    "primaryKey": "mvmt_tod_id",
-    "missingValues": [
-        "NaN",
-        ""
-    ],
-    "fieldsMatch": "subset",
-    "foreignKeys": [
-        {
-            "fields": "mvmt_id",
-            "reference": {
-                "resource": "movement",
-                "fields": "mvmt_id"
-            }
-        },
-        {
-            "fields": "timeday_id",
-            "reference": {
-                "resource": "time_set_definitions",
-                "fields": "timeday_id"
-            }
-        },
-        {
-            "fields": "ib_link_id",
-            "reference": {
-                "resource": "link",
-                "fields": "link_id"
-            }
-        },
-        {
-            "fields": "ob_link_id",
-            "reference": {
-                "resource": "link",
-                "fields": "link_id"
-            }
-        }
-    ],
-    "fields": [
-        {
-            "name": "mvmt_tod_id",
-            "type": "any",
-            "description": "Primary key.",
-            "constraints": {
-                "required": true
-            }
-        },
-        {
-            "name": "mvmt_id",
-            "type": "any",
-            "description": "The referenced movement.",
-            "constraints": {
-                "required": true
-            }
-        },
-        {
-            "name": "time_day",
-            "type": "string",
-            "description": "Time of day in XXXXXXXX_HHMM_HHMM format, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times."
-        },
-        {
-            "name": "timeday_id",
-            "type": "any",
-            "description": "Time of day set. Used if times-of-day are defined on the time_set_definitions table"
-        },
-        {
-            "name": "ib_link_id",
-            "type": "any",
-            "description": "Inbound link id.",
-            "constraints": {
-                "required": true
-            }
-        },
-        {
-            "name": "start_ib_lane",
-            "type": "integer",
-            "description": "Innermost lane number the movement applies to at the inbound end."
-        },
-        {
-            "name": "end_ib_lane",
-            "type": "integer",
-            "description": "Outermost lane number the movement applies to at the inbound end. Blank indicates a movement with a single inbound lane."
-        },
-        {
-            "name": "ob_link_id",
-            "type": "any",
-            "description": "Outbound link id.",
-            "constraints": {
-                "required": true
-            }
-        },
-        {
-            "name": "start_ob_lane",
-            "type": "integer",
-            "description": "Innermost lane number the movement applies to at the outbound end."
-        },
-        {
-            "name": "end_ob_lane",
-            "type": "integer",
-            "description": "Outermost lane number the movement applies to at the outbound end. Blank indicates a movement with a single outbound lane."
-        },
-        {
-            "name": "type",
-            "type": "string",
-            "description": "Optional. Describes the type of movement (left, right, thru, etc.).",
-            "categories": [
-                "left",
-                "right",
-                "uturn",
-                "thru",
-                "merge"
-            ],
-            "constraints": {
-                "required": true
-            }
-        },
-        {
-            "name": "penalty",
-            "type": "number",
-            "description": "Turn penalty (seconds)"
-        },
-        {
-            "name": "capacity",
-            "type": "number",
-            "description": "Saturation capacity in passenger car equivalents per hour."
-        },
-        {
-            "name": "ctrl_type",
-            "type": "any",
-            "description": "Optional. .",
-            "categories": [
-                "no_control",
-                "yield",
-                "stop",
-                "stop_2_way",
-                "stop_4_way",
-                "signal_with_RTOR",
-                "signal"
-            ]
-        },
-        {
-            "name": "mvmt_code",
-            "type": "string",
-            "description": "Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)"
-        },
-        {
-            "name": "allowed_uses",
-            "type": "string",
-            "description": "Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated."
-        }
-    ],
-    "name": "movement_tod.schema.json",
-    "description": "Handles day-of-week and time-of-day restrictions on movements.",
-    "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
+  "primaryKey": "mvmt_tod_id",
+  "missingValues": ["NaN", ""],
+  "fieldsMatch": ["subset"],
+  "foreignKeys": [
+    {
+      "fields": "mvmt_id",
+      "reference": {
+        "resource": "movement",
+        "fields": "mvmt_id"
+      }
+    },
+    {
+      "fields": "timeday_id",
+      "reference": {
+        "resource": "time_set_definitions",
+        "fields": "timeday_id"
+      }
+    },
+    {
+      "fields": "ib_link_id",
+      "reference": {
+        "resource": "link",
+        "fields": "link_id"
+      }
+    },
+    {
+      "fields": "ob_link_id",
+      "reference": {
+        "resource": "link",
+        "fields": "link_id"
+      }
+    }
+  ],
+  "fields": [
+    {
+      "name": "mvmt_tod_id",
+      "type": "any",
+      "description": "Primary key.",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "mvmt_id",
+      "type": "any",
+      "description": "The referenced movement.",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "time_day",
+      "type": "string",
+      "description": "Time of day in XXXXXXXX_HHMM_HHMM format, where XXXXXXXX is a bitmap of days of the week, Sunday-Saturday, Holiday. The HHMM are the start and end times."
+    },
+    {
+      "name": "timeday_id",
+      "type": "any",
+      "description": "Time of day set. Used if times-of-day are defined on the time_set_definitions table"
+    },
+    {
+      "name": "ib_link_id",
+      "type": "any",
+      "description": "Inbound link id.",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "start_ib_lane",
+      "type": "integer",
+      "description": "Innermost lane number the movement applies to at the inbound end."
+    },
+    {
+      "name": "end_ib_lane",
+      "type": "integer",
+      "description": "Outermost lane number the movement applies to at the inbound end. Blank indicates a movement with a single inbound lane."
+    },
+    {
+      "name": "ob_link_id",
+      "type": "any",
+      "description": "Outbound link id.",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "start_ob_lane",
+      "type": "integer",
+      "description": "Innermost lane number the movement applies to at the outbound end."
+    },
+    {
+      "name": "end_ob_lane",
+      "type": "integer",
+      "description": "Outermost lane number the movement applies to at the outbound end. Blank indicates a movement with a single outbound lane."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "description": "Optional. Describes the type of movement (left, right, thru, etc.).",
+      "categories": {
+        "$ref": "shared_categories.json#/movement_type/categories"
+      }
+    },
+    {
+      "name": "penalty",
+      "type": "number",
+      "description": "Turn penalty (seconds)"
+    },
+    {
+      "name": "capacity",
+      "type": "number",
+      "description": "Saturation capacity in passenger car equivalents per hour."
+    },
+    {
+      "name": "ctrl_type",
+      "type": "string",
+      "description": "Optional.",
+      "categories": {
+        "$ref": "shared_categories.json#/ctrl_type/categories"
+      }
+    },
+    {
+      "name": "mvmt_code",
+      "type": "string",
+      "description": "Optional. Movement code (e.g., SBL).  Syntax is DDTN, where DD is the direction (e.g., SB, NB, EB, WB, NE, NW, SE, SW). T is the turning movement (e.g., R, L, T) and N is an optional turning movement number (e.g., distinguishing between bearing right and a sharp right at a 6-way intersection)",
+      "constraints": {
+        "pattern": "^[NSEW][EWB][RLT]\\d?$"
+      }
+    },
+    {
+      "name": "allowed_uses",
+      "type": "string",
+      "description": "Optional. Set of allowed uses that should appear in either the use_definition or use_group tables; comma-separated."
+    }
+  ],
+  "name": "movement_tod.schema.json",
+  "description": "Handles day-of-week and time-of-day restrictions on movements.",
+  "$schema": "https://datapackage.org/profiles/2.0/tableschema.json"
 }

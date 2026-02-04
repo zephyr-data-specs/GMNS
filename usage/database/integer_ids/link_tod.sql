@@ -12,6 +12,6 @@ CREATE TABLE IF NOT EXISTS link_tod (
 	allowed_uses TEXT, 
 	toll FLOAT, 
 	PRIMARY KEY (link_tod_id), 
-	FOREIGN KEY(link_id) REFERENCES link (link_id), 
-	FOREIGN KEY(timeday_id) REFERENCES time_set_definitions (timeday_id)
+	FOREIGN KEY(timeday_id) REFERENCES time_set_definitions (timeday_id), 
+	FOREIGN KEY(link_id) REFERENCES link (link_id)
 )

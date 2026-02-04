@@ -20,7 +20,7 @@
         - `reference`
           - `resource` node
           - `fields` ['node_id']
-    - `fieldsMatch` subset
+    - `fieldsMatch` ['subset']
   
 | name             | type    | description                                                                  | constraints        |
 |:-----------------|:--------|:-----------------------------------------------------------------------------|:-------------------|

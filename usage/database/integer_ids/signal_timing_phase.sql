@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS signal_timing_phase (
 	min_green FLOAT CHECK (min_green >= 0), 
 	max_green FLOAT CHECK (max_green >= 0), 
 	extension FLOAT CHECK (extension <= 120) CHECK (extension >= 0), 
-	clearance FLOAT CHECK (clearance <= 120) CHECK (clearance >= 0), 
+	clearance FLOAT CHECK (clearance >= 0) CHECK (clearance <= 120), 
 	walk_time FLOAT CHECK (walk_time >= 0) CHECK (walk_time <= 120), 
 	ped_clearance FLOAT CHECK (ped_clearance >= 0) CHECK (ped_clearance <= 120), 
 	ring INTEGER NOT NULL CHECK (ring >= 0) CHECK (ring <= 12), 
