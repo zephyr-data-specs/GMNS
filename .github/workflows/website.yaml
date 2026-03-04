@@ -40,8 +40,8 @@ jobs:
         working-directory: ${{ env.BUILD_PATH }}
 
         # Placed in /site folder
-      - name: Build with MkDocs
-        run: mkdocs build 
+      - name: Build with Zensical
+        run: zensical build --clean
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
