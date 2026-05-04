@@ -33,7 +33,7 @@ jobs:
           cache: 'pip'
 
       - name: Setup Pages 
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Install requirements
         run: pip install -r ${{env.SCRIPTS_FOLDER}}/requirements.txt
@@ -57,4 +57,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
