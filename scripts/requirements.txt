@@ -1,5 +1,5 @@
 frictionless[pandas, sql]==5.19.0
-pandas==3.0.2
+pandas==3.0.3
 tabulate==0.10.0
 zensical==0.0.39
 jsonref==1.1.0
