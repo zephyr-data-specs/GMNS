@@ -30,7 +30,7 @@ jobs:
           PATTERNS: |
             ${{env.SPEC_FOLDER}}/*
 
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         if: steps.getDiff.outputs.diff
         with:
           python-version: "3.12"
